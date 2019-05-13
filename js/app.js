@@ -2,7 +2,8 @@ const app = new Vue({
     el: '#app',
     data() {
         return {
-            users: []
+            users: [],
+            show: true
         }
     },
     methods: {
