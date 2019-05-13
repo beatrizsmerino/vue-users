@@ -102,4 +102,31 @@ h1 {
 .icon-close:hover {
     color: #3F3F3F;
 }
+
+
+
+
+
+/* 
+VUE TRANSITIONS
+-----------------------------------------
+*/
+
+
+/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
+.v-enter {
+    opacity: 0;
+}
+
+.v-enter-active {
+    transition: opacity 1s;
+}
+
+.v-leave-to {
+    opacity: 0;
+}
+
+.v-leave-active {
+    transition: opacity 0.5s linear 0.5s;
+}
 }
