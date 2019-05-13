@@ -129,4 +129,22 @@ VUE TRANSITIONS
 .v-leave-active {
     transition: opacity 0.5s linear 0.5s;
 }
+
+
+/* animation list (WITH THE NAME SLIDE) */
+.slide-enter {
+    transform: translateX(500px);
+}
+
+.slide-enter-active {
+    transition: all 1s;
+}
+
+.slide-leave-to {
+    transform: translateX(-500px);
+}
+
+.slide-leave-active {
+    transition: all 1s;
+}
 }
