@@ -8,6 +8,9 @@ const app = new Vue({
     methods: {
         userRemove(userToRemove) {
             this.users.splice(userToRemove, 1);
+        },
+        random() {
+            this.users.sort(() => Math.random() - 0.5)
         }
     },
     created() {

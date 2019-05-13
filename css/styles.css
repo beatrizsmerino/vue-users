@@ -147,4 +147,9 @@ VUE TRANSITIONS
 .slide-leave-active {
     transition: all 1s;
 }
+
+
+/* animation button random (WITH THE NAME SLIDE)*/
+.slide-move {
+    transition: all 0.5s;
 }
