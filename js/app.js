@@ -2,12 +2,16 @@ const app = new Vue({
     el: '#app',
     data() {
         return {
-            users: []
+            users: [],
+            show: true
         }
     },
     methods: {
         userRemove(userToRemove) {
             this.users.splice(userToRemove, 1);
+        },
+        random() {
+            this.users.sort(() => Math.random() - 0.5)
         }
     },
     created() {

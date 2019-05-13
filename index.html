@@ -11,9 +11,14 @@
 
 <body>
     <div id="app" v-cloak>
-        <h1>My users</h1>
+        <button @click="show = !show">CLICK</button>
+        <button @click="random">RANDOM</button>
 
-        <ul id="user-list" class="loaded">
+        <transition name="fade">
+            <h1 v-if="show">My users</h1>
+        </transition>
+
+        <transition-group tag="ul" name="slide" id="user-list">
             <li v-for="user in users" :key="user.username">
                 <img :src="user.image" :alt="user.name.first + ' ' + user.name.last">
                 <div>
@@ -31,10 +36,10 @@
                         <span class="description__text description__item">{{user.address}}</span>
                     </p>
                 </div>
-
+                
                 <span class="icon-close fas fa-times-circle" @click="userRemove(user)"></span>
             </li>
-        </ul>
+        </transition-group>
 
     </div>
     <script src="js/vue.js"></script>
