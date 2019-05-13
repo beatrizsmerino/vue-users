@@ -5,6 +5,11 @@ const app = new Vue({
             users: []
         }
     },
+    methods: {
+        userRemove(userToRemove) {
+            this.users.splice(userToRemove, 1);
+        }
+    },
     created() {
         fetch('https://randomuser.me/api/?results=10')
             .then(res => res.json())
