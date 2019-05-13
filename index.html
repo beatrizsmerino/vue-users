@@ -11,9 +11,12 @@
 
 <body>
     <div id="app" v-cloak>
-        <h1>My users</h1>
+        <button @click="show = !show">CLICK</button>
         <button @click="random">RANDOM</button>
 
+        <transition name="fade">
+            <h1 v-if="show">My users</h1>
+        </transition>
 
         <transition-group tag="ul" name="slide" id="user-list">
             <li v-for="user in users" :key="user.username">
