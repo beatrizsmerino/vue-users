@@ -15,7 +15,7 @@
 
         <ul id="user-list" class="loaded">
             <li v-for="user in users" :key="user.username">
-                <img :src="user.image" :alt="user.name">
+                <img :src="user.image" :alt="user.name.first + ' ' + user.name.last">
                 <div>
                     <p>
                         <span class="name">
