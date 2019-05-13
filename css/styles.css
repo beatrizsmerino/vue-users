@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
 [v-cloak]{
     display: none;
@@ -49,13 +49,6 @@ h1 {
     vertical-align: middle;
 }
 
-#user-list>li span {
-    padding: .1rem .2rem;
-    display: block;
-    clear: both;
-    font-size: 1rem;
-}
-
 #user-list>li span.name {
     margin-bottom: .25rem;
     text-transform: capitalize;
@@ -69,12 +62,13 @@ h1 {
     align-items: center;
 }
 .description__icon{
-    font-size: 2rem;
     margin-right: .25rem;
+    padding: 0.1rem 0.2rem;
+    font-size: 1rem;
     opacity: .75;
 }
 .description__text{
-
+    font-size: 1.5rem;
 }
 
 #user-list>li img {
@@ -84,33 +78,24 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-#user-list>li:hover .name,
-#user-list>li.active .name {
+#user-list>li:hover .name {
     text-shadow: 1px 1px 3px rgba(10, 10, 10, 0.2);
     font-weight: 600;
 }
 
-#user-list>li:hover img,
-#user-list>li.active img {
-    -webkit-transform: scale(1.15);
+#user-list>li:hover img {
     transform: scale(1.15);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-#user-list>li.active img {
-    border-color: #333;
-    box-shadow: 0 0 10px rgba(10, 10, 10, 0.75);
-}
-
-#user-list>li.active:after {
-    content: '\f00c';
+.icon-close{
     display: inline-block;
-    margin: 1rem 2rem;
     position: absolute;
-    top: 0;
-    right: 0;
-    font-family: FontAwesome;
-    font-size: 3rem;
-    color: green;
-    text-shadow: 0 0 5px rgba(50, 50, 50, 0.25);
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: lightcoral;
+}
+.icon-close:hover{
+    color: #3F3F3F;
 }
