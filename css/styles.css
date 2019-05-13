@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+[v-cloak] {
+    display: none;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FAFAFA;
+    color: #3F3F3F;
+    padding: 1em;
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Oxygen', Helvetica, sans-serif;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: lightcoral;
+}
+
+#user-list {
+    max-width: 550px;
+    margin: 2em auto;
+    padding: 0;
+}
+
+#user-list>li {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 10px;
+    position: relative;
+    list-style: none;
+    background-color: rgba(221, 51, 51, 0.2);
+    cursor: pointer;
+}
+
+#user-list>li div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#user-list>li span.name {
+    margin-bottom: .25rem;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 200;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.description {
+    display: flex;
+    align-items: center;
+}
+
+.description__icon {
+    margin-right: .25rem;
+    padding: 0.1rem 0.2rem;
+    font-size: 1rem;
+    opacity: .75;
+}
+
+.description__text {
+    font-size: 1.5rem;
+}
+
+#user-list>li img {
+    margin: 0 1rem;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#user-list>li:hover .name {
+    text-shadow: 1px 1px 3px rgba(10, 10, 10, 0.2);
+    font-weight: 600;
+}
+
+#user-list>li:hover img {
+    transform: scale(1.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.icon-close {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: lightcoral;
+}
+
+.icon-close:hover {
+    color: #3F3F3F;
+}
+
+
+
+
+
+/* 
+VUE TRANSITIONS
+-----------------------------------------
+*/
+
+
+/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
+.v-enter {
+    opacity: 0;
+}
+
+.v-enter-active {
+    transition: opacity 1s;
+}
+
+.v-leave-to {
+    opacity: 0;
+}
+
+.v-leave-active {
+    transition: opacity 0.5s linear 0.5s;
+}
+
+
+/* animation title (WITH NAME FADE) */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    transition: opacity 1s;
+}
+
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-leave-active {
+    transition: opacity 1s;
+}
+
+
+/* animation list (WITH THE NAME SLIDE) */
+.slide-enter {
+    transform: translateX(500px);
+}
+
+.slide-enter-active {
+    transition: all 1s;
+}
+
+.slide-leave-to {
+    transform: translateX(-500px);
+}
+
+.slide-leave-active {
+    transition: all 1s;
+}
+
+
+/* animation button random (WITH THE NAME SLIDE)*/
+.slide-move {
+    transition: all 0.5s;
+}
