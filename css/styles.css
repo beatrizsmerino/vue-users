@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
-[v-cloak]{
+[v-cloak] {
     display: none;
 }
 
@@ -57,17 +57,19 @@ h1 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.description{
+.description {
     display: flex;
     align-items: center;
 }
-.description__icon{
+
+.description__icon {
     margin-right: .25rem;
     padding: 0.1rem 0.2rem;
     font-size: 1rem;
     opacity: .75;
 }
-.description__text{
+
+.description__text {
     font-size: 1.5rem;
 }
 
@@ -88,7 +90,7 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.icon-close{
+.icon-close {
     display: inline-block;
     position: absolute;
     top: 20px;
@@ -96,6 +98,8 @@ h1 {
     font-size: 1.8rem;
     color: lightcoral;
 }
-.icon-close:hover{
+
+.icon-close:hover {
     color: #3F3F3F;
+}
 }
