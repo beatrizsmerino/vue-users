@@ -11,8 +11,8 @@
 
 <body>
     <div id="app" v-cloak>
-        <button @click="show = !show">CLICK</button>
-        <button @click="random">RANDOM</button>
+        <button @click="show = !show" class="button">CLICK</button>
+        <button @click="random" class="button">RANDOM</button>
 
         <transition name="fade">
             <h1 v-if="show">My users</h1>
