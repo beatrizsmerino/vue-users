@@ -70,7 +70,7 @@ h1 {
 }
 
 .description__text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #user-list>li img {
@@ -103,6 +103,13 @@ h1 {
     color: #3F3F3F;
 }
 
+.button:not(:last-child){
+    margin-right: 10px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    background-color: #3F3F3F;
+}
 
 
 
