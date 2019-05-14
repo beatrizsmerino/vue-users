@@ -1,3 +1,68 @@
+<template>
+  <div id="app" v-cloak>
+    <button @click="show = !show" class="button">CLICK</button>
+    <button @click="random" class="button">RANDOM</button>
+
+    <transition name="fade">
+      <h1 v-if="show">My users</h1>
+    </transition>
+
+    <transition-group tag="ul" name="slide" id="user-list">
+      <li v-for="user in users" :key="user.username">
+        <img :src="user.image" :alt="user.name.first + ' ' + user.name.last">
+        <div>
+          <p>
+            <span class="name">{{user.name.first}} {{user.name.last}}</span>
+          </p>
+          <p class="description">
+            <span class="fa fa-user description__icon description__item"></span>
+            <span class="description__text description__item">{{user.username}}</span>
+          </p>
+          <p class="description">
+            <span class="fa fa-map-marker loc description__icon description__item"></span>
+            <span class="description__text description__item">{{user.address}}</span>
+          </p>
+        </div>
+
+        <span class="icon-close fas fa-times-circle" @click="userRemove(user)"></span>
+      </li>
+    </transition-group>
+  </div>
+</template>
+
+<script>
+export default {
+	data() {
+        return {
+            users: [],
+            show: true
+        }
+    },
+    methods: {
+        userRemove(userToRemove) {
+            this.users.splice(userToRemove, 1);
+        },
+        random() {
+            this.users.sort(() => Math.random() - 0.5)
+        }
+    },
+    created() {
+        fetch('https://randomuser.me/api/?results=10')
+            .then(res => res.json())
+            .then(data => {
+                this.users = data.results.map(user => ({
+                    name: user.name,
+                    username: user.login.username,
+                    address: user.location.street,
+                    image: user.picture.medium
+                }))
+            })
+    },
+};
+</script>
+
+
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
@@ -178,3 +243,4 @@ VUE TRANSITIONS
 .slide-move {
     transition: all 0.5s;
 }
+</style>
