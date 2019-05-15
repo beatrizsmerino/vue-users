@@ -1,24 +1,33 @@
 <template>
-    <transition-group tag="ul" name="slide" id="user-list">
-      <li v-for="user in users" :key="user.username">
-        <img :src="user.image" :alt="user.name.first + ' ' + user.name.last">
-        <div>
-          <p>
-            <span class="name">{{user.name.first}} {{user.name.last}}</span>
-          </p>
-          <p class="description">
-            <span class="fa fa-user description__icon description__item"></span>
-            <span class="description__text description__item">{{user.username}}</span>
-          </p>
-          <p class="description">
-            <span class="fa fa-map-marker loc description__icon description__item"></span>
-            <span class="description__text description__item">{{user.address}}</span>
-          </p>
-        </div>
+    <div>
+        <slot></slot>
+        <transition-group tag="ul" name="slide" id="user-list">
+            <li v-for="user in users" :key="user.username">
+                <img :src="user.image" :alt="user.name.first + ' ' + user.name.last">
+                <div>
+                    <p>
+                        <span class="name">
+                            <slot name="title" :use="user">
+                                {{user.name.first}} {{user.name.last}}
+                            </slot>
+                        </span>
+                    </p>
+                    <slot name="subtitle" :user="user">
+                        <p class="description">
+                            <span class="fa fa-user description__icon description__item"></span>
+                            <span class="description__text description__item">{{user.username}}</span>
+                        </p>
+                    </slot>
+                    <p class="description">
+                        <span class="fa fa-map-marker loc description__icon description__item"></span>
+                        <span class="description__text description__item">{{user.address}}</span>
+                    </p>
+                </div>
 
-        <span class="icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
-      </li>
-    </transition-group>
+                <span class="icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
+            </li>
+        </transition-group>
+    </div>
 </template>
 
 <script>

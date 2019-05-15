@@ -7,7 +7,18 @@
       <h1 v-if="show">My users</h1>
     </transition>
 
-    <users-list :users="users" @remove="userRemove"></users-list>
+    <users-list :users="users" @remove="userRemove">
+        <template v-slot:title="{ user }">
+            <span v-if="user">
+                {{user.name.last}} {{user.name.first}}
+            </span>
+        </template>
+        <template v-slot:subtitle="{ user }">
+            <span v-if="user">
+                RUBEN
+            </span>
+        </template>
+    </users-list>
   </div>
 </template>
 
