@@ -1,32 +1,48 @@
-@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
-@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+<template>
+    <div>
+        <slot></slot>
+        <transition-group tag="ul" name="slide" id="user-list">
+            <li v-for="user in users" :key="user.username">
+                <img :src="user.image" :alt="user.name.first + ' ' + user.name.last">
+                <div>
+                    <p>
+                        <span class="name">
+                            <slot name="title" :use="user">
+                                {{user.name.first}} {{user.name.last}}
+                            </slot>
+                        </span>
+                    </p>
+                    <slot name="subtitle" :user="user">
+                        <p class="description">
+                            <span class="fa fa-user description__icon description__item"></span>
+                            <span class="description__text description__item">{{user.username}}</span>
+                        </p>
+                    </slot>
+                    <p class="description">
+                        <span class="fa fa-map-marker loc description__icon description__item"></span>
+                        <span class="description__text description__item">{{user.address}}</span>
+                    </p>
+                </div>
 
-[v-cloak] {
-    display: none;
-}
+                <span class="icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
+            </li>
+        </transition-group>
+    </div>
+</template>
 
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
+<script>
+export default {
+    props: ['users'],
+    methods: {
+        userRemoveEmit(userToRemove) {
+            this.$emit("remove", userToRemove);
+        },
+    },
 }
+</script>
 
-body {
-    background: #FAFAFA;
-    color: #3F3F3F;
-    padding: 1em;
-    font-size: 62.5%;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Oxygen', Helvetica, sans-serif;
-}
 
-h1 {
-    margin: auto;
-    text-align: center;
-    font-size: 3rem;
-    line-height: 1.5;
-    color: lightcoral;
-}
+<style lang="scss">
 
 #user-list {
     max-width: 550px;
@@ -103,13 +119,6 @@ h1 {
     color: #3F3F3F;
 }
 
-.button:not(:last-child){
-    margin-right: 10px;
-    padding: 10px;
-    color: #fff;
-    border: none;
-    background-color: #3F3F3F;
-}
 
 
 
@@ -118,24 +127,6 @@ h1 {
 VUE TRANSITIONS
 -----------------------------------------
 */
-
-
-/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
-.v-enter {
-    opacity: 0;
-}
-
-.v-enter-active {
-    transition: opacity 1s;
-}
-
-.v-leave-to {
-    opacity: 0;
-}
-
-.v-leave-active {
-    transition: opacity 0.5s linear 0.5s;
-}
 
 
 /* animation title (WITH NAME FADE) */
@@ -178,3 +169,4 @@ VUE TRANSITIONS
 .slide-move {
     transition: all 0.5s;
 }
+</style>
