@@ -1,14 +1,14 @@
 <template>
-  <div class="home">
-    <users-list :users="users" @remove="userRemove">
-      <template v-slot:title="{ user }">
-        <span v-if="user">{{user.name.last}} {{user.name.first}}</span>
-      </template>
-      <template v-slot:subtitle="{ user }">
-        <span v-if="user">RUBEN</span>
-      </template>
-    </users-list>
-  </div>
+	<div class="home">
+		<users-list :users="users" @remove="userRemove">
+			<template v-slot:title="{ user }">
+				<span v-if="user">{{user.name.last}} {{user.name.first}}</span>
+			</template>
+			<template v-slot:subtitle="{ user }">
+				<span v-if="user">RUBEN</span>
+			</template>
+		</users-list>
+	</div>
 </template>
 
 
@@ -20,16 +20,14 @@ export default {
 	components: {
 		UsersList
 	},
-	props: ['users'],
-	data(){
-		return{
-			
-		}
+	props: ["users"],
+	data() {
+		return {};
 	},
-    methods: {
-        userRemove(userToRemove) {
-            this.users.splice(userToRemove, 1);
-        },
+	methods: {
+		userRemove(userToRemove) {
+			this.users.splice(userToRemove, 1);
+		}
 	}
 };
 </script>

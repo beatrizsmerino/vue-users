@@ -1,8 +1,8 @@
 <template>
 	<header class="page-header">
 		<div class="page-header__item">
-			<button @click="show = !show" class="button">CLICK</button>
-			<button @click="randomEmit" class="button">RANDOM</button>
+			<button @click="setShowEmit" class="button">CLICK</button>
+			<button @click="setRandomEmit" class="button">RANDOM</button>
 		</div>
 		<div class="page-header__item">
 			<nav class="nav">
@@ -19,8 +19,11 @@
 export default {
 	props: ['users', 'show'],
     methods: {
-        randomEmit() {
-			this.$emit("random");
+		setShowEmit(){
+			this.$emit("setShow")
+		},
+        setRandomEmit() {
+			this.$emit("setRandom");
         }
 	},
 }
