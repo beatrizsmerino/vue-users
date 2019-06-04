@@ -1,6 +1,6 @@
 <template>
 	<div id="app" v-cloak>
-		<page-header :users="users" :show="show" @random="random">
+		<page-header :users="users" @setShow="setShow" @setRandom="setRandom">
 		</page-header>
 
 		<page-title :show="show">
@@ -28,7 +28,10 @@
 			}
 		},
 		methods: {
-			random() {
+			setShow(){ 
+				this.show = !this.show;
+			},
+			setRandom() {
 				this.users.sort(() => Math.random() - 0.5)
 			}
 		},
