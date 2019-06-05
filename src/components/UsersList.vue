@@ -20,7 +20,7 @@
                     </slot>
                     <p class="description">
                         <span class="fa fa-map-marker loc description__icon description__item"></span>
-                        <span class="description__text description__item">{{user.address}}</span>
+                        <span class="description__text description__item">{{user.state}}</span>
                     </p>
                 </div>
 
