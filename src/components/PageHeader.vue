@@ -7,7 +7,7 @@
 		<div class="page-header__item">
 			<nav class="nav">
 				<router-link to="/" class="nav__item">Home</router-link>
-				<router-link to="/about" class="nav__item">About</router-link>
+				<router-link to="/users" class="nav__item">Users</router-link>
 			</nav>
 		</div>
 	</header>
@@ -37,7 +37,7 @@ export default {
 	padding: 0 2rem;
 	display: flex;
 	justify-content: space-between;
-	align-items:center;
+	align-items: center;
 
 	&__item{
 		display: flex;
