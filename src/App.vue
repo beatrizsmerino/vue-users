@@ -40,10 +40,23 @@
 				.then(res => res.json())
 				.then(data => {
 					this.users = data.results.map(user => ({
+						gender: user.gender,
 						name: user.name,
+						id: user.login.uuid,
 						username: user.login.username,
-						address: user.location.street,
-						image: user.picture.medium
+						street: user.location.street,
+						city: user.location.city,
+						state: user.location.state,
+						postcode: user.location.postcode,
+						latitude: user.location.coordinates.latitude,
+						longitude: user.location.coordinates.longitude,
+						email: user.email,
+						registered: user.registered.date,
+						phone: user.phone,
+						cell: user.cell,
+						dni: user.id.value,
+						image: user.picture.medium,
+						nationality: user.nat
 					}))
 				})
 		},
