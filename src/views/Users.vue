@@ -23,8 +23,8 @@ export default {
 	props: ["users"],
 	methods: {
 		userRemove(userToRemove) {
-			this.users.splice(userToRemove, 1);
-		}
+			this.users.splice(this.users.indexOf(userToRemove), 1);
+		},
 	}
 };
 </script>
