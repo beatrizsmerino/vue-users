@@ -42,7 +42,6 @@
 					this.users = data.results.map(user => ({
 						gender: user.gender,
 						name: user.name,
-						id: user.login.uuid,
 						username: user.login.username,
 						street: user.location.street,
 						city: user.location.city,
@@ -54,7 +53,6 @@
 						registered: user.registered.date,
 						phone: user.phone,
 						cell: user.cell,
-						dni: user.id.value,
 						image: user.picture.medium,
 						nationality: user.nat
 					}))
