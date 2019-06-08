@@ -17,44 +17,43 @@
 
 <script>
 export default {
-	props: ['users', 'show'],
-    methods: {
-		setShowEmit(){
-			this.$emit("setShow")
+	props: ["users", "show"],
+	methods: {
+		setShowEmit() {
+			this.$emit("setShow");
 		},
-        setRandomEmit() {
+		setRandomEmit() {
 			this.$emit("setRandom");
-        }
-	},
-}
+		}
+	}
+};
 </script>
 
 
 
 <style lang="scss">
-
-.page-header{
+.page-header {
 	padding: 0 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	&__item{
+	&__item {
 		display: flex;
 	}
 }
 
-.nav{
+.nav {
 	font-size: 1.5rem;
 
-	&__item{
-		&:not(:last-child){
+	&__item {
+		&:not(:last-child) {
 			margin-right: 2rem;
 		}
 	}
 }
 
-.button{
+.button {
 	padding: 1rem;
 	color: #fff;
 	border: none;
@@ -65,5 +64,4 @@ export default {
 		margin-right: 1rem;
 	}
 }
-
 </style>
