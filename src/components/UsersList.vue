@@ -22,10 +22,11 @@
                         <span class="fa fa-map-marker loc description__icon description__item"></span>
                         <span class="description__text description__item">{{user.state}}</span>
                     </p>
-                    <div class="button-line">
-                        <span class="button-line__icon fas fa-info" @click="goToDetailEmit(user.id)"></span>
+
+                    <router-link :to="`/user/${user.username}`" class="button-line">
+                        <span class="button-line__icon fas fa-info"></span>
                         <span>more info</span>
-                    </div>
+                    </router-link>
                 </div>
                 
                 <span class="icon icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
@@ -42,9 +43,6 @@ export default {
     methods: {
         userRemoveEmit(userToRemove) {
             this.$emit("remove", userToRemove);
-        },
-        goToDetailEmit(userId){
-            this.$emit("goToDetail", userId);
         }
     },
 }
