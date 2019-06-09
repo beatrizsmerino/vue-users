@@ -1,15 +1,9 @@
 <template>
 	<header class="page-header">
-		<div class="page-header__item">
-			<button @click="setShowEmit" class="button">CLICK</button>
-			<button @click="setRandomEmit" class="button">RANDOM</button>
-		</div>
-		<div class="page-header__item">
-			<nav class="nav">
-				<router-link to="/" class="nav__item">Home</router-link>
-				<router-link to="/users" class="nav__item">Users</router-link>
-			</nav>
-		</div>
+		<nav class="nav">
+			<router-link to="/" class="nav__item">Home</router-link>
+			<router-link to="/users" class="nav__item">Users</router-link>
+		</nav>
 	</header>
 </template>
 
@@ -17,15 +11,7 @@
 
 <script>
 export default {
-	props: ["users", "show"],
-	methods: {
-		setShowEmit() {
-			this.$emit("setShow");
-		},
-		setRandomEmit() {
-			this.$emit("setRandom");
-		}
-	}
+
 };
 </script>
 
@@ -33,10 +19,13 @@ export default {
 
 <style lang="scss">
 .page-header {
-	margin-bottom: 4rem;
-	padding: 0 2rem;
+	padding: 1.5rem;
+	position: fixed;
+	top: 0;
+	right:0;
+	z-index: 999;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 
 	&__item {
@@ -53,22 +42,10 @@ export default {
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}
-		
+
 		&.router-link-exact-active {
 			color: var(--color-brand-1);
 		}
-	}
-}
-
-.button {
-	padding: 1rem;
-	color: #fff;
-	border: none;
-	background-color: var(--color-brand-2);
-	cursor: pointer;
-
-	&:not(:last-child) {
-		margin-right: 1rem;
 	}
 }
 </style>
