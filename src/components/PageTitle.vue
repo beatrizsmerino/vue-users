@@ -21,10 +21,10 @@
 
 <style lang="scss">
 	.page-title {
-		margin: auto;
+		margin-bottom: 2rem;
 		text-align: center;
 		font-size: 3rem;
 		line-height: 1.5;
-		color: lightcoral;
+		color: var(--color-brand-1);
 	}
 </style>

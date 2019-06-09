@@ -33,6 +33,7 @@ export default {
 
 <style lang="scss">
 .page-header {
+	margin-bottom: 4rem;
 	padding: 0 2rem;
 	display: flex;
 	justify-content: space-between;
@@ -47,8 +48,14 @@ export default {
 	font-size: 1.5rem;
 
 	&__item {
+		color: var(--color-brand-2);
+
 		&:not(:last-child) {
 			margin-right: 2rem;
+		}
+		
+		&.router-link-exact-active {
+			color: var(--color-brand-1);
 		}
 	}
 }
@@ -57,7 +64,7 @@ export default {
 	padding: 1rem;
 	color: #fff;
 	border: none;
-	background-color: #3f3f3f;
+	background-color: var(--color-brand-2);
 	cursor: pointer;
 
 	&:not(:last-child) {
