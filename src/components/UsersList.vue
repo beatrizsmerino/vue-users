@@ -3,7 +3,7 @@
         <slot></slot>
         <transition-group tag="ul" name="slide" class="user-list">
             <li v-for="user in users" :key="user.username" class="user">
-                <img :src="user.image" :alt="user.name.first + ' ' + user.name.last" class="user__img">
+                <img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img">
                 <div class="user__content">
                     <p>
                         <span class="user__name">
