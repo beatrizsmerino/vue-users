@@ -1,125 +1,165 @@
 <template>
     <div>
-        <slot></slot>
-        <transition-group tag="ul" name="slide" id="user-list">
-            <li v-for="user in users" :key="user.username">
-                <img :src="user.image" :alt="user.name.first + ' ' + user.name.last">
-                <div>
-                    <p>
-                        <span class="name">
-                            <slot name="title" :use="user">
-                                {{user.name.first}} {{user.name.last}}
-                            </slot>
-                        </span>
-                    </p>
-                    <slot name="subtitle" :user="user">
-                        <p class="description">
-                            <span class="fa fa-user description__icon description__item"></span>
-                            <span class="description__text description__item">{{user.username}}</span>
+        <transition-group tag="ul" name="slide" class="user-list" :class="{ isSmall: isSmall }">
+            <li v-for="user in users" :key="user.username" class="user">
+                <img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img">
+                
+                <transition name="fade">
+                    <div v-if="show" class="user__content">
+                        <p>
+                            <span class="user__name">
+                                <slot name="title" :use="user">
+                                    {{user.name.first}} {{user.name.last}}
+                                </slot>
+                            </span>
                         </p>
-                    </slot>
-                    <p class="description">
-                        <span class="fa fa-map-marker loc description__icon description__item"></span>
-                        <span class="description__text description__item">{{user.address}}</span>
-                    </p>
-                </div>
+                        <slot name="user__subtitle" :user="user">
+                            <p class="description">
+                                <span class="fa fa-user description__icon description__item"></span>
+                                <span class="description__text description__item">{{user.username}}</span>
+                            </p>
+                        </slot>
+                        <p class="description">
+                            <span class="fa fa-map-marker loc description__icon description__item"></span>
+                            <span class="description__text description__item">{{user.state}}</span>
+                        </p>
 
-                <span class="icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
+                        <router-link :to="`/user/${user.username}`" class="button-line">
+                            <span class="button-line__icon fas fa-info"></span>
+                            <span>more info</span>
+                        </router-link>
+                    </div>
+                </transition>
+                
+                <span class="icon icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
             </li>
         </transition-group>
     </div>
 </template>
 
+
+
 <script>
 export default {
-    props: ['users'],
+    props: ['users', 'show', 'isSmall'],
     methods: {
         userRemoveEmit(userToRemove) {
             this.$emit("remove", userToRemove);
-        },
+        }
     },
 }
 </script>
 
 
+
 <style lang="scss">
 
-#user-list {
+.user-list {
     max-width: 550px;
     margin: 2em auto;
     padding: 0;
+
+    &.isSmall {
+        max-width: 700px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: all 0.5s linear 3s;
+
+        .user {
+            width: 30%;
+            margin: 2%;
+            transition: all 0.5s linear 3s;
+        }
+    }
 }
 
-#user-list>li {
-    width: 100%;
-    margin: 1rem auto;
-    padding: 10px;
+.user {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 20px;
+    display: flex;
     position: relative;
     list-style: none;
-    background-color: rgba(221, 51, 51, 0.2);
-    cursor: pointer;
+    background-color: var(--color-brand-2);
+
+
+    &__content {
+        margin-left: 1rem;
+        display: inline-block;
+        color: #fff;
+    }
+
+    &__name{
+        margin-bottom: .25rem;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        font-weight: 200;
+    }
+
+    &__img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
 }
 
-#user-list>li div {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#user-list>li span.name {
-    margin-bottom: .25rem;
-    text-transform: capitalize;
-    font-size: 1.6rem;
-    font-weight: 200;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-}
 
 .description {
     display: flex;
     align-items: center;
+
+    &__icon {
+        margin-right: .25rem;
+        padding: 0.1rem 0.2rem;
+        font-size: 1rem;
+        opacity: .75;
+    }
+    &__text {
+        font-size: 1.2rem;
+    }
 }
 
-.description__icon {
-    margin-right: .25rem;
-    padding: 0.1rem 0.2rem;
-    font-size: 1rem;
-    opacity: .75;
-}
-
-.description__text {
+.button-line {
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
     font-size: 1.2rem;
+    color: var(--color-brand-1);
+    font-weight: 700;
+    border: 2px solid var(--color-brand-1);
+    cursor: pointer;
+
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    &:hover{
+        color: #fff;
+        border-color: #fff;
+    }
 }
 
-#user-list>li img {
-    margin: 0 1rem;
-    vertical-align: middle;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+
+.icon {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: var(--color-brand-1);
+
+    &:hover {
+        color: #fff;
+    }
 }
 
-#user-list>li:hover .name {
-    text-shadow: 1px 1px 3px rgba(10, 10, 10, 0.2);
-    font-weight: 600;
-}
-
-#user-list>li:hover img {
-    transform: scale(1.15);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
 
 .icon-close {
-    display: inline-block;
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 1.8rem;
-    color: lightcoral;
+    cursor: pointer;
 }
-
-.icon-close:hover {
-    color: #3F3F3F;
-}
-
-
 
 
 
