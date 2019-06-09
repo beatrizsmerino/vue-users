@@ -1,7 +1,6 @@
 <template>
 	<div id="app" v-cloak>
-		<page-header :users="users">
-		</page-header>
+		<page-header></page-header>
 
 		<page-title></page-title>
 
