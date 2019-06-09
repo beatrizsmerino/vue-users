@@ -1,30 +1,25 @@
 <template>
-    <transition name="fade">
-        <h1 v-if="show" class="page-title">
-			{{ $route.meta.title }}
-		</h1>
-    </transition>
+	<h1 class="page-title">
+		{{ $route.meta.title }}
+	</h1>
 </template>
 
 
 
 <script>
-	export default {
-		props: ['show'],
-		methods: {
-
-		},
-	}
+export default {
+	
+};
 </script>
 
 
 
 <style lang="scss">
-	.page-title {
-		margin-bottom: 2rem;
-		text-align: center;
-		font-size: 3rem;
-		line-height: 1.5;
-		color: var(--color-brand-1);
-	}
+.page-title {
+	margin-bottom: 2rem;
+	text-align: center;
+	font-size: 3rem;
+	line-height: 1.5;
+	color: var(--color-brand-1);
+}
 </style>

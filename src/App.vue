@@ -1,10 +1,9 @@
 <template>
 	<div id="app" v-cloak>
-		<page-header :users="users" @setShow="setShow" @setRandom="setRandom">
+		<page-header :users="users">
 		</page-header>
 
-		<page-title :show="show">
-		</page-title>
+		<page-title></page-title>
 
 		<router-view :users="users"/>
 	</div>
@@ -23,17 +22,11 @@
 		},
 		data() {
 			return {
-				users: [],
-				show: true
+				users: []
 			}
 		},
 		methods: {
-			setShow(){ 
-				this.show = !this.show;
-			},
-			setRandom() {
-				this.users.sort(() => Math.random() - 0.5)
-			}
+
 		},
 		created() {
 			fetch('https://randomuser.me/api/?results=10')
@@ -89,7 +82,7 @@
 	}
 
 	body {
-		padding: 1em;
+		padding-top: 6rem;
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
 		font-size: 62.5%;

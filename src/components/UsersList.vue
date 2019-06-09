@@ -1,33 +1,35 @@
 <template>
     <div>
-        <slot></slot>
         <transition-group tag="ul" name="slide" class="user-list">
             <li v-for="user in users" :key="user.username" class="user">
                 <img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img">
-                <div class="user__content">
-                    <p>
-                        <span class="user__name">
-                            <slot name="title" :use="user">
-                                {{user.name.first}} {{user.name.last}}
-                            </slot>
-                        </span>
-                    </p>
-                    <slot name="user__subtitle" :user="user">
-                        <p class="description">
-                            <span class="fa fa-user description__icon description__item"></span>
-                            <span class="description__text description__item">{{user.username}}</span>
+                
+                <transition name="fade">
+                    <div v-if="show" class="user__content">
+                        <p>
+                            <span class="user__name">
+                                <slot name="title" :use="user">
+                                    {{user.name.first}} {{user.name.last}}
+                                </slot>
+                            </span>
                         </p>
-                    </slot>
-                    <p class="description">
-                        <span class="fa fa-map-marker loc description__icon description__item"></span>
-                        <span class="description__text description__item">{{user.state}}</span>
-                    </p>
+                        <slot name="user__subtitle" :user="user">
+                            <p class="description">
+                                <span class="fa fa-user description__icon description__item"></span>
+                                <span class="description__text description__item">{{user.username}}</span>
+                            </p>
+                        </slot>
+                        <p class="description">
+                            <span class="fa fa-map-marker loc description__icon description__item"></span>
+                            <span class="description__text description__item">{{user.state}}</span>
+                        </p>
 
-                    <router-link :to="`/user/${user.username}`" class="button-line">
-                        <span class="button-line__icon fas fa-info"></span>
-                        <span>more info</span>
-                    </router-link>
-                </div>
+                        <router-link :to="`/user/${user.username}`" class="button-line">
+                            <span class="button-line__icon fas fa-info"></span>
+                            <span>more info</span>
+                        </router-link>
+                    </div>
+                </transition>
                 
                 <span class="icon icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
             </li>
@@ -39,7 +41,7 @@
 
 <script>
 export default {
-    props: ['users'],
+    props: ['users', 'show'],
     methods: {
         userRemoveEmit(userToRemove) {
             this.$emit("remove", userToRemove);
@@ -66,7 +68,6 @@ export default {
     position: relative;
     list-style: none;
     background-color: var(--color-brand-2);
-    cursor: pointer;
 
     &__content {
         margin-left: 1rem;
@@ -114,6 +115,7 @@ export default {
     color: var(--color-brand-1);
     font-weight: 700;
     border: 2px solid var(--color-brand-1);
+    cursor: pointer;
 
     &__icon {
         margin-right: 1rem;
@@ -141,6 +143,7 @@ export default {
     position: absolute;
     top: 20px;
     right: 20px;
+    cursor: pointer;
 }
 
 
