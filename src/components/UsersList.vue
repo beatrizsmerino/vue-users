@@ -65,7 +65,7 @@ export default {
     display: flex;
     position: relative;
     list-style: none;
-    background-color: rgba(221, 51, 51, 0.3);
+    background-color: var(--color-brand-2);
     cursor: pointer;
 
     &__content {
@@ -85,7 +85,7 @@ export default {
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        border: 2px solid #fff;
+        border: 3px solid #fff;
     }
 }
 
@@ -111,17 +111,17 @@ export default {
     display: inline-block;
     text-align: center;
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--color-brand-1);
     font-weight: 700;
-    border: 3px solid #fff;
+    border: 2px solid var(--color-brand-1);
 
     &__icon {
         margin-right: 1rem;
     }
 
     &:hover{
-        color: #3F3F3F;
-        border-color: #3F3F3F;
+        color: #fff;
+        border-color: #fff;
     }
 }
 
@@ -129,10 +129,10 @@ export default {
 .icon {
     display: inline-block;
     font-size: 1.8rem;
-    color: lightcoral;
+    color: var(--color-brand-1);
 
     &:hover {
-        color: #3F3F3F;
+        color: #fff;
     }
 }
 
