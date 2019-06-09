@@ -10,7 +10,7 @@ export default new Router({
 	mode: 'history',
 	routes: [
 		{
-			path: '/',
+			path: '',
 			name: 'home',
 			component: Home,
 			meta: {
@@ -33,6 +33,11 @@ export default new Router({
 			meta: {
 				title: 'My user',
 			}
-		}
+		},
+		{
+			path: '*',
+			redirect: '/',
+			component: Home,
+		},
 	]
 })
