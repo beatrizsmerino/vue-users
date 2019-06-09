@@ -1,6 +1,6 @@
 <template>
     <div>
-        <transition-group tag="ul" name="slide" class="user-list">
+        <transition-group tag="ul" name="slide" class="user-list" :class="{ isSmall: isSmall }">
             <li v-for="user in users" :key="user.username" class="user">
                 <img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img">
                 
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-    props: ['users', 'show'],
+    props: ['users', 'show', 'isSmall'],
     methods: {
         userRemoveEmit(userToRemove) {
             this.$emit("remove", userToRemove);
@@ -58,16 +58,31 @@ export default {
     max-width: 550px;
     margin: 2em auto;
     padding: 0;
+
+    &.isSmall {
+        max-width: 700px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: all 0.5s linear 3s;
+
+        .user {
+            width: 30%;
+            margin: 2%;
+            transition: all 0.5s linear 3s;
+        }
+    }
 }
 
 .user {
-    width: 100%;
-    margin: 1rem auto;
+    width: calc(100% - 2rem);
+    margin: 1rem;
     padding: 20px;
     display: flex;
     position: relative;
     list-style: none;
     background-color: var(--color-brand-2);
+
 
     &__content {
         margin-left: 1rem;

@@ -8,7 +8,7 @@
 				RANDOM USERS
 			</button>
 		</div>
-		<users-list :users="users" :show="show" @remove="userRemove">
+		<users-list :users="users" :show="show" :isSmall="isSmall" @remove="userRemove">
 			<template v-slot:title="{ user }">
 				<span v-if="user">{{user.name.last}} {{user.name.first}}</span>
 			</template>
@@ -31,12 +31,14 @@ export default {
 	props: ["users"],
 	data() {
 		return {
-			show: true
+			show: true,
+			isSmall: false
 		};
 	},
 	methods: {
 		setShow() {
 			this.show = !this.show;
+			this.isSmall = !this.isSmall;
 		},
 		setRandom() {
 			this.users.sort(() => Math.random() - 0.5);
