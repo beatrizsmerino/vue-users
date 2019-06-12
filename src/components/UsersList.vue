@@ -1,6 +1,6 @@
 <template>
     <div>
-        <transition-group tag="ul" name="slide" class="user-list" :class="{ isSmall: isSmall }">
+        <transition-group tag="ul" name="slide" class="users-list" :class="{ isSmall: isSmall }">
             <li v-for="user in users" :key="user.username" class="user">
                 <img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img">
                 
@@ -53,7 +53,7 @@ export default {
 
 
 <style lang="scss" scoped>
-.user-list {
+.users-list {
     max-width: 550px;
     margin: 2em auto;
     padding: 0;
