@@ -17,7 +17,7 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-header {
 	padding: 1.5rem;
 	position: fixed;
