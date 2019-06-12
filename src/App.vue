@@ -93,6 +93,11 @@
 		text-decoration: none;
 	}
 
+	button{
+		appearance: none;
+		outline: none;
+	}
+
 	/* 
 	VUE TRANSITIONS
 	-----------------------------------------
