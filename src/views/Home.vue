@@ -25,7 +25,7 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .logo-vue {
   text-align: center;
 }

@@ -52,8 +52,7 @@ export default {
 
 
 
-<style lang="scss">
-
+<style lang="scss" scoped>
 .user-list {
     max-width: 550px;
     margin: 2em auto;

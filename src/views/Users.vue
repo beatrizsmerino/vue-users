@@ -53,7 +53,7 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .buttons-top {
 	width: 100%;
 	padding: 1.5rem;
