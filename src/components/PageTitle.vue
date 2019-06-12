@@ -14,7 +14,7 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-title {
 	margin-bottom: 2rem;
 	text-align: center;
