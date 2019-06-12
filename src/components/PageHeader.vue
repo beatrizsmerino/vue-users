@@ -19,14 +19,16 @@ export default {
 
 <style lang="scss" scoped>
 .page-header {
-	padding: 1.5rem;
-	position: fixed;
-	top: 0;
-	right:0;
-	z-index: 999;
+	width: 100%;
+	padding: 1.5rem 3rem;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left:0;
+	z-index: 999;
+	background-color: var(--color-light);
 
 	&__item {
 		display: flex;
