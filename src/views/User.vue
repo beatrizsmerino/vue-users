@@ -23,6 +23,14 @@ export default {
 		user() {
 			return this.users.find(user => user.username === this.username);
 		},
+	},
+	mounted() {
+		let rootUpdated = this.$route.params.username;
+		let rootFind = this.users.find(user => user.username === rootUpdated);
+
+		if(rootFind === undefined){
+			this.$router.push({name: 'users'});
+		}
 	}
 };
 </script>
