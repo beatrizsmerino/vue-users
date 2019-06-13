@@ -5,7 +5,7 @@
                 <img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img">
                 
                 <transition name="fade">
-                    <div v-if="show" class="user__content">
+                    <div class="user__content" :class="{ isHidden: isHidden }">
                         <p>
                             <span class="user__name">
                                 <slot name="title" :use="user">
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-    props: ['users', 'show', 'isSmall'],
+    props: ['users', 'isHidden', 'isSmall'],
     methods: {
         userRemoveEmit(userToRemove) {
             this.$emit("remove", userToRemove);
@@ -53,6 +53,7 @@ export default {
 
 
 <style lang="scss" scoped>
+
 .users-list {
     max-width: 550px;
     margin: 2em auto;
@@ -63,12 +64,12 @@ export default {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        transition: all 0.5s linear 3s;
+        transition: all 0.5s ease-out 0.8s;
 
         .user {
             width: 30%;
             margin: 2%;
-            transition: all 0.5s linear 3s;
+            transition: all 0.5s ease-out 0.5s;
         }
     }
 }
@@ -87,6 +88,12 @@ export default {
         margin-left: 1rem;
         display: inline-block;
         color: #fff;
+
+        &.isHidden{
+            opacity: 0;
+            display: none;
+            transition: all 0.5s ease-out 0s;
+        }
     }
 
     &__name{
@@ -170,11 +177,11 @@ VUE TRANSITIONS
 
 /* animation title (WITH NAME FADE) */
 .fade-enter {
-    opacity: 0;
+    opacity: 1;
 }
 
 .fade-enter-active {
-    transition: opacity 1s;
+    transition: all 1s ease-in-out 0s;
 }
 
 .fade-leave-to {
@@ -182,30 +189,32 @@ VUE TRANSITIONS
 }
 
 .fade-leave-active {
-    transition: opacity 1s;
+    transition: all 0.5s ease-out 0s;
 }
 
 
 /* animation list (WITH THE NAME SLIDE) */
 .slide-enter {
+    opacity: 1;
     transform: translateX(500px);
 }
 
 .slide-enter-active {
-    transition: all 1s;
+    transition: all 1s ease-in-out 0s !important;
 }
 
 .slide-leave-to {
+    opacity: 0;
     transform: translateX(-500px);
 }
 
 .slide-leave-active {
-    transition: all 1s;
+    transition: all 1s ease-in-out 0s !important;
 }
 
 
 /* animation button random (WITH THE NAME SLIDE)*/
 .slide-move {
-    transition: all 0.5s;
+    transition: all 0.5s ease-out 0s !important;
 }
 </style>

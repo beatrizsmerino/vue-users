@@ -1,7 +1,7 @@
 <template>
 	<div class="users">
 		<users-buttons :users="users" :show="show" :isSmall="isSmall" @random="setRandom" @show="setShow"></users-buttons>
-		<users-list :users="users" :show="show" :isSmall="isSmall" @remove="userRemove">
+		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove">
 			<template v-slot:title="{ user }">
 				<span v-if="user">{{user.name.last}} {{user.name.first}}</span>
 			</template>
@@ -26,13 +26,13 @@ export default {
 	props: ["users"],
 	data() {
 		return {
-			show: true,
+			isHidden: false,
 			isSmall: false
 		};
 	},
 	methods: {
 		setShow() {
-			this.show = !this.show;
+			this.isHidden = !this.isHidden;
 			this.isSmall = !this.isSmall;
 		},
 		setRandom() {
