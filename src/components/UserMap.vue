@@ -1,21 +1,12 @@
 <template>
-	<div>
-		{{user.latitude}}
-		<br>
-		{{user.longitude}}
-		<br>
-		<GoogleMapLoader :mapConfig="mapConfig" apiKey class="user-map">
-			<template slot-scope="{ google, map }">
-				<GoogleMapMarker
-					v-for="marker in markers"
-					:key="marker.id"
-					:marker="marker"
-					:google="google"
-					:map="map"
-				/>
-			</template>
-		</GoogleMapLoader>
-	</div>
+	<GoogleMapLoader
+		:mapConfig="mapConfig"
+		apiKey="AIzaSyBXWWIWi9ERuFzOKpYdMzJC2tOn6YiA4Pk"
+		class="user-map">
+		<template #default="{ google, map }">
+			<GoogleMapMarker :marker="marker" :google="google" :map="map"/>
+		</template>
+	</GoogleMapLoader>
 </template>
 
 <script>
@@ -30,31 +21,25 @@ export default {
 		GoogleMapMarker
 	},
 	props: ["user"],
-	data() {
-		return {
-			markers: [
-				{
-					id: "a",
-					position: {
-						lat: 3,
-						lng: 101
-					}
-				}
-			]
-		};
-	},
-
 	computed: {
+		marker(){
+			return {
+				position: {
+					lat: parseFloat(this.user.latitude),
+					lng: parseFloat(this.user.longitude),
+				}
+			}
+		},
+		mapCenter() {
+			return this.marker.position;
+		},
 		mapConfig() {
 			return {
 				...mapSettings,
 				center: this.mapCenter
 			};
 		},
-		mapCenter() {
-			return this.markers[0].position;
-		}
-	},
+	}
 };
 </script>
 
