@@ -19,11 +19,11 @@ const COLORS = {
 const POINT_MARKER_ICON_CONFIG = {
 	path: "M 0, 0 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0",
 	strokeOpacity: 0.7,
-	strokeWeight: 4,
+	strokeWeight: 6,
 	strokeColor: COLORS.POINT,
 	fillColor: COLORS.POINT_FILL,
 	fillOpacity: 0.7,
-	scale: 1
+	scale: 3
 };
 
 
@@ -37,7 +37,7 @@ const mapSettings = {
 	zoomControlOptions: {
 		style: "SMALL"
 	},
-	zoom: 5,
+	zoom: 8,
 	minZoom: 2,
 	maxZoom: 8,
 	styles: [
