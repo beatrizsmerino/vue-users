@@ -1,6 +1,7 @@
 <template>
 	<div class="user-detail">
 		<user-detail v-if="user" :user="user"></user-detail>
+		<user-map v-if="user" :user="user"></user-map>
 	</div>
 </template>
 
@@ -8,10 +9,12 @@
 
 <script>
 import UserDetail from "../components/UserDetail.vue";
+import UserMap from "../components/UserMap.vue";
 
 export default {
 	components: {
-		UserDetail
+		UserDetail,
+		UserMap
 	},
 	props: ["users", "username"],
 	data(){
