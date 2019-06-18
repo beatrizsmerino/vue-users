@@ -1,8 +1,8 @@
 <template>
-	<div class="user-detail">
+	<main class="user-detail">
 		<user-detail v-if="user" :user="user"></user-detail>
 		<user-map v-if="user" :user="user"></user-map>
-	</div>
+	</main>
 </template>
 
 
