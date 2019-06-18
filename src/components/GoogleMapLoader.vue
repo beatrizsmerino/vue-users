@@ -7,6 +7,8 @@
 	</div>
 </template>
 
+
+
 <script>
 import GoogleMapsApiLoader from "google-maps-api-loader";
 
@@ -39,6 +41,8 @@ export default {
 	}
 };
 </script>
+
+
 
 <style scoped>
 .google-map {
