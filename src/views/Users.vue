@@ -1,5 +1,5 @@
 <template>
-	<div class="users">
+	<main class="users">
 		<users-buttons @random="setRandom" @show="setShow"></users-buttons>
 		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove">
 			<template v-slot:title="{ user }">
@@ -9,7 +9,7 @@
 				<span v-if="user">RUBEN</span>
 			</template>
 		</users-list>
-	</div>
+	</main>
 </template>
 
 
@@ -49,7 +49,7 @@ export default {
 
 
 <style lang="scss" scoped>
-body {
-	padding: 6rem 0;
+main {
+	padding-bottom: 6rem;
 }
 </style>

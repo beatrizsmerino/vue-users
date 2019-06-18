@@ -1,5 +1,5 @@
 <template>
-	<div class="home">
+	<main class="home">
 		<div class="logo-vue">
 			<img src="../assets/logo.png" alt="Vue logo">
 		</div>
@@ -8,7 +8,7 @@
 				List of users with vue.js
 			</p>
 		</div>
-	</div>
+	</main>
 </template>
 
 
