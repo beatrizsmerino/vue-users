@@ -81,7 +81,6 @@
 	}
 
 	body {
-		padding-top: 6rem;
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
 		font-size: 62.5%;
@@ -89,8 +88,17 @@
 		background-color: var(--color-light);
 	}
 
+	main{
+		padding-top: 6rem;
+	}
+
 	a {
 		text-decoration: none;
+	}
+
+	button{
+		appearance: none;
+		outline: none;
 	}
 
 	/* 

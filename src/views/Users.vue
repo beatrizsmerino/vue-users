@@ -1,14 +1,7 @@
 <template>
-	<div class="users">
-		<div class="buttons-top">
-			<button @click="setShow" class="buttons-top__item">
-				HIDE USER INFO
-			</button>
-			<button @click="setRandom" class="buttons-top__item">
-				RANDOM USERS
-			</button>
-		</div>
-		<users-list :users="users" :show="show" :isSmall="isSmall" @remove="userRemove">
+	<main class="users">
+		<users-buttons @random="setRandom" @show="setShow"></users-buttons>
+		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove">
 			<template v-slot:title="{ user }">
 				<span v-if="user">{{user.name.last}} {{user.name.first}}</span>
 			</template>
@@ -16,28 +9,30 @@
 				<span v-if="user">RUBEN</span>
 			</template>
 		</users-list>
-	</div>
+	</main>
 </template>
 
 
 
 <script>
 import UsersList from "../components/UsersList.vue";
+import UsersButtons from "../components/UsersButtons.vue";
 
 export default {
 	components: {
-		UsersList
+		UsersList,
+		UsersButtons
 	},
 	props: ["users"],
 	data() {
 		return {
-			show: true,
+			isHidden: false,
 			isSmall: false
 		};
 	},
 	methods: {
 		setShow() {
-			this.show = !this.show;
+			this.isHidden = !this.isHidden;
 			this.isSmall = !this.isSmall;
 		},
 		setRandom() {
@@ -53,24 +48,8 @@ export default {
 
 
 
-<style lang="scss">
-.buttons-top {
-	width: 100%;
-	padding: 1.5rem;
-	position: fixed;
-	top: 0;
-	left: 0;
-
-	&__item {
-		padding: 1rem;
-		color: #fff;
-		border: none;
-		background-color: var(--color-brand-2);
-		cursor: pointer;
-
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
-	}
+<style lang="scss" scoped>
+main {
+	padding-bottom: 6rem;
 }
 </style>
