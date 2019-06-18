@@ -81,15 +81,12 @@
 	}
 
 	body {
+		padding-top: 6rem;
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
 		font-size: 62.5%;
 		color: var(--color-gray-1);
 		background-color: var(--color-light);
-	}
-
-	main{
-		padding-top: 6rem;
 	}
 
 	a {
