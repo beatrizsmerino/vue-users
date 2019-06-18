@@ -1,3 +1,8 @@
+<template>
+</template>
+
+
+
 <script>
 import { POINT_MARKER_ICON_CONFIG } from "@/constants/mapSettings";
 
