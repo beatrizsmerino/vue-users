@@ -70,7 +70,7 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .user-detail-data{
 	max-width: 800px;
 	margin: 0 auto;
