@@ -6,15 +6,15 @@
 # Vue Users
 ### Vue Users is an application that obtains a list of users from an API and manipulates the information. It has 3 views: the home, the user list and the user detail. There are several buttons with different actions to delete, hide and select random users. By clicking on a user you can see the complete information of the selected user, this page has a map f google maps.
 
-![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/vue-users-1.png)
+![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/images/vue-users-1.png)
 
-![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/vue-users-2.png)
+![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/images/vue-users-2.png)
 
-![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/vue-users-3.png)
+![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/images/vue-users-3.png)
 
-![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/vue-users-4.png)
+![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/images/vue-users-4.png)
 
-![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/vue-users-5.png)
+![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/feature/documentation/documentation/images/vue-users-5.png)
 
 
 ## Development interface
