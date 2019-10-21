@@ -1,7 +1,7 @@
 <template>
 	<main class="users">
 		<users-buttons @random="setRandom" @show="setShow"></users-buttons>
-		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove">
+		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove" @scroll="setScrollToTop">
 			<template v-slot:title="{ user }">
 				<span v-if="user">{{user.name.last}} {{user.name.first}}</span>
 			</template>
@@ -31,6 +31,9 @@ export default {
 		};
 	},
 	methods: {
+		setScrollToTop() {
+			window.scrollTo(0, 0);
+		},
 		setShow() {
 			this.isHidden = !this.isHidden;
 			this.isSmall = !this.isSmall;
