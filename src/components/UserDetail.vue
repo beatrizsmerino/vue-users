@@ -48,7 +48,7 @@
 				<strong class="user-detail-data__label">Cell:</strong> {{user.cell}}
 			</p>
 		</div>
-		
+
 		<div class="user-detail-data__group">
 			<p>
 				<strong class="user-detail-data__label">Registered:</strong> {{user.registered}}
@@ -64,6 +64,12 @@ export default {
 	props: ["user"],
 	data() {
 		return {};
+	},
+	beforeCreate(){
+		window.scroll({
+			top: 0,
+			left: 0
+		});
 	}
 };
 </script>
@@ -87,4 +93,3 @@ export default {
 	}
 }
 </style>
-
