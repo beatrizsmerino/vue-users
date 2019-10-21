@@ -24,7 +24,7 @@
                             <span class="description__text description__item">{{user.state}}</span>
                         </p>
 
-                        <router-link :to="`/user/${user.username}`" class="button-line">
+                        <router-link :to="`/user/${user.username}`" class="button-line" @click="setScrollToTopEmit">
                             <span class="button-line__icon fas fa-info"></span>
                             <span>more info</span>
                         </router-link>
@@ -43,6 +43,9 @@
 export default {
     props: ['users', 'isHidden', 'isSmall'],
     methods: {
+        setScrollToTopEmit() {
+            this.$emit("scroll");
+        },
         userRemoveEmit(userToRemove) {
             this.$emit("remove", userToRemove);
         }
