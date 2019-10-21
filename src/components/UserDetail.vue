@@ -30,7 +30,7 @@
 				<strong class="user-detail-data__label">City:</strong> {{user.city}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">Street:</strong> {{user.street}}
+				<strong class="user-detail-data__label">Street:</strong> {{user.streetName + user.streetNumber}}
 			</p>
 			<p>
 				<strong class="user-detail-data__label">Postcode:</strong> {{user.postcode}}
