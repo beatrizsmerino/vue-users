@@ -1,8 +1,8 @@
 <template>
-	<main class="user-detail">
-		<user-detail v-if="user" :user="user"></user-detail>
-		<user-map v-if="user" :user="user"></user-map>
-	</main>
+  <main class="user-detail">
+    <user-detail v-if="user" :user="user"></user-detail>
+    <user-map v-if="user" :user="user"></user-map>
+  </main>
 </template>
 
 
@@ -12,33 +12,26 @@ import UserDetail from "../components/UserDetail.vue";
 import UserMap from "../components/UserMap.vue";
 
 export default {
-	components: {
-		UserDetail,
-		UserMap
-	},
-	props: ["users", "username"],
-	data(){
-		return{
-			
-		}
-	},
-	computed: {
-		user() {
-			return this.users.find(user => user.username === this.username);
-		},
-	},
-	mounted() {
-		let rootUpdated = this.$route.params.username;
-		let rootFind = this.users.find(user => user.username === rootUpdated);
+  components: {
+    UserDetail,
+    UserMap
+  },
+  props: ["users", "username"],
+  data() {
+    return {};
+  },
+  computed: {
+    user() {
+      return this.users.find(user => user.username === this.username);
+    }
+  },
+  mounted() {
+    let rootUpdated = this.$route.params.username;
+    let rootFind = this.users.find(user => user.username === rootUpdated);
 
-		if(rootFind === undefined){
-			this.$router.push({name: 'users'});
-		}
-	}
+    if (rootFind === undefined) {
+      this.$router.push({ name: "users" });
+    }
+  }
 };
 </script>
-
-
-
-<style lang="scss" scoped>
-</style>
