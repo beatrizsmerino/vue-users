@@ -1,49 +1,32 @@
 <template>
-  <GoogleMapLoader :mapConfig="mapConfig" apiKey="XXXXXX" class="user-map">
-    <template #default="{ google, map }">
-      <GoogleMapMarker :marker="marker" :google="google" :map="map"/>
-    </template>
-  </GoogleMapLoader>
+	<div class="user-map">
+		<google-map v-if="status" :user="user"></google-map>
+		<leaflet-map v-else :user="user"></leaflet-map>
+	</div>
 </template>
 
 <script>
-import GoogleMapLoader from "./GoogleMapLoader";
-import GoogleMapMarker from "./GoogleMapMarker";
-
-import { mapSettings } from "@/constants/mapSettings";
+import GoogleMap from "../components/GoogleMap.vue";
+import LeafletMap from "../components/LeafletMap.vue";
 
 export default {
-  components: {
-    GoogleMapLoader,
-    GoogleMapMarker
-  },
-  props: ["user"],
-  computed: {
-    marker() {
-      return {
-        position: {
-          lat: parseFloat(this.user.latitude),
-          lng: parseFloat(this.user.longitude)
-        }
-      };
-    },
-    mapCenter() {
-      return this.marker.position;
-    },
-    mapConfig() {
-      return {
-        ...mapSettings,
-        center: this.mapCenter
-      };
-    }
-  }
+	components: {
+		GoogleMap,
+		LeafletMap
+	},
+	props: ["user"],
+	data() {
+		return {
+			status: false
+		};
+	}
 };
 </script>
 
-
 <style lang="scss" scoped>
 .user-map {
-  height: 400px;
-  margin-top: 5rem;
+	width: 100%;
+	height: 500px;
+	margin-top: 5rem;
 }
 </style>
