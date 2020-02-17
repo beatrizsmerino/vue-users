@@ -1,25 +1,23 @@
 <template>
-	<main class="home">
+	<section class="home">
 		<div class="logo-vue">
-			<img src="../assets/logo.png" alt="Vue logo">
+			<img src="../assets/logo.png" alt="Vue logo" />
 		</div>
 		<div class="definition">
-			<p>
-				List of users with vue.js
-			</p>
+			<p>List of users with vue.js</p>
 		</div>
-	</main>
+	</section>
 </template>
 
 
 
 <script>
 export default {
-	components: {	
+	components: {
 	},
-	props: ["users"],
-	methods: {
-	}
+	props: {
+		users: Array
+	},
 };
 </script>
 
@@ -27,9 +25,9 @@ export default {
 
 <style lang="scss" scoped>
 .logo-vue {
-  text-align: center;
+	text-align: center;
 }
-.definition{
+.definition {
 	text-align: center;
 	color: var(--color-brand-1);
 	font-size: 1.5rem;

@@ -22,7 +22,6 @@ export default {
 			required: true
 		}
 	},
-
 	mounted() {
 		const { Marker } = this.google.maps;
 

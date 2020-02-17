@@ -31,13 +31,16 @@ export default {
 	bottom: 0;
 	left: 0;
 	z-index: 999;
-	background-color: var(--color-silver);
+	background-color: var(--color-brand-1);
+	box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.3);
 
 	&__item {
 		padding: 1rem;
-		color: #fff;
+		font-weight: 600;
+		font-size: 0.8rem;
+		color: var(--color-brand-2);
 		border: none;
-		background-color: var(--color-brand-1);
+		background-color: var(--color-silver);
 		cursor: pointer;
 
 		&:not(:last-child) {
@@ -45,6 +48,7 @@ export default {
 		}
 
 		&:hover {
+			color: var(--color-silver);
 			background-color: var(--color-brand-2);
 		}
 	}
