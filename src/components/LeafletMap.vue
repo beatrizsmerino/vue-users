@@ -1,6 +1,6 @@
 <template>
 	<div class="map">
-		<leaflet-map-loader :user="user"> </leaflet-map-loader>
+		<leaflet-map-loader :marker="marker"></leaflet-map-loader>
 	</div>
 </template>
 
@@ -10,7 +10,9 @@ export default {
 	components: {
 		LeafletMapLoader
 	},
-	props: ["user"],
+	props: {
+		user: Object
+	},
 	computed: {
 		marker() {
 			return {
@@ -18,14 +20,6 @@ export default {
 					lat: parseFloat(this.user.latitude),
 					lng: parseFloat(this.user.longitude)
 				}
-			};
-		},
-		mapCenter() {
-			return this.marker.position;
-		},
-		mapConfig() {
-			return {
-				center: this.mapCenter
 			};
 		}
 	}

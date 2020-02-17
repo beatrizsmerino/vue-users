@@ -1,5 +1,5 @@
 <template>
-	<div class="map-loader">
+	<div class="leaflet-map">
 		<l-map
 			style="height: 100%"
 			v-if="showMap"
@@ -12,61 +12,53 @@
 			<l-tile-layer :url="url" :attribution="attribution" />
 			<l-marker :lat-lng="withPopup">
 				<l-popup>
-					<div @click="innerClick">
-						I am a popup
-						<p v-show="showParagraph">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Quisque sed pretium nisl, ut sagittis sapien.
-							Sed vel sollicitudin nisi. Donec finibus semper
-							metus id malesuada.
-						</p>
-					</div>
+					Current location:
+					<p>
+						Latitude: {{this.marker.position.lat}}
+						<br />
+						Longitude: {{this.marker.position.lng}}
+					</p>
 				</l-popup>
-			</l-marker>
-			<l-marker :lat-lng="withTooltip">
-				<l-tooltip :options="{ permanent: true, interactive: true }">
-					<div @click="innerClick">
-						I am a tooltip
-						<p v-show="showParagraph">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Quisque sed pretium nisl, ut sagittis sapien.
-							Sed vel sollicitudin nisi. Donec finibus semper
-							metus id malesuada.
-						</p>
-					</div>
-				</l-tooltip>
 			</l-marker>
 		</l-map>
 	</div>
 </template>
 
 <script>
-import { latLng } from "leaflet";
-import { LMap, LTileLayer, LMarker, LPopup, LTooltip } from "vue2-leaflet";
 import "leaflet/dist/leaflet.css";
+import { latLng, Icon } from "leaflet";
+import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
+
+
+delete Icon.Default.prototype._getIconUrl;
+Icon.Default.mergeOptions({
+	iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+	iconUrl: require('leaflet/dist/images/marker-icon.png'),
+	shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
 
 export default {
-	name: "Example",
+	props: {
+		marker: Object
+	},
 	components: {
 		LMap,
 		LTileLayer,
 		LMarker,
-		LPopup,
-		LTooltip
+		LPopup
 	},
 	data() {
 		return {
-			zoom: 13,
-			center: latLng(47.41322, -1.219482),
 			url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-			attribution:
-				'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-			withPopup: latLng(47.41322, -1.219482),
-			withTooltip: latLng(47.41422, -1.250482),
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+			center: latLng(this.marker.position.lat, this.marker.position.lng),
+			currentCenter: latLng(this.marker.position.lat, this.marker.position.lng),
+			withPopup: latLng(this.marker.position.lat, this.marker.position.lng),
+			zoom: 3,
 			currentZoom: 11.5,
-			currentCenter: latLng(47.41322, -1.219482),
-			showParagraph: false,
 			mapOptions: {
+				minZoom: 2,
+				maxZoom: 10,
 				zoomSnap: 0.5
 			},
 			showMap: true
@@ -78,19 +70,13 @@ export default {
 		},
 		centerUpdate(center) {
 			this.currentCenter = center;
-		},
-		showLongText() {
-			this.showParagraph = !this.showParagraph;
-		},
-		innerClick() {
-			alert("Click!");
 		}
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-.map-loader {
+.leaflet-map {
 	width: 100%;
 	height: 100%;
 }

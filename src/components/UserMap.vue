@@ -14,7 +14,9 @@ export default {
 		GoogleMap,
 		LeafletMap
 	},
-	props: ["user"],
+	props: {
+		user: Object
+	},
 	data() {
 		return {
 			status: false

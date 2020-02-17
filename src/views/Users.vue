@@ -1,15 +1,8 @@
 <template>
-	<main class="users">
+	<section class="users">
+		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove"></users-list>
 		<users-buttons @random="setRandom" @show="setShow"></users-buttons>
-		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove">
-			<template v-slot:title="{ user }">
-				<span v-if="user">{{user.name.last}} {{user.name.first}}</span>
-			</template>
-			<template v-slot:subtitle="{ user }">
-				<span v-if="user">RUBEN</span>
-			</template>
-		</users-list>
-	</main>
+	</section>
 </template>
 
 
@@ -23,7 +16,9 @@ export default {
 		UsersList,
 		UsersButtons
 	},
-	props: ["users"],
+	props: {
+		users: Array
+	},
 	data() {
 		return {
 			isHidden: false,
@@ -49,7 +44,7 @@ export default {
 
 
 <style lang="scss" scoped>
-main {
+.users {
 	padding-bottom: 6rem;
 }
 </style>

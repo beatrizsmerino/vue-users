@@ -17,7 +17,14 @@ export default {
 		GoogleMapLoader,
 		GoogleMapMarker
 	},
-	props: ["user"],
+	props: {
+		user: Object
+	},
+	data() {
+		return {
+
+		}
+	},
 	computed: {
 		marker() {
 			return {
@@ -36,6 +43,9 @@ export default {
 				center: this.mapCenter
 			};
 		}
+	},
+	methods: {
+
 	}
 };
 </script>
