@@ -72,38 +72,38 @@
 
 
 <script>
-export default {
-	props: {
-		user: Object
-	},
-	data() {
-		return {};
-	},
-	beforeCreate() {
-		window.scroll({
-			top: 0,
-			left: 0
-		});
-	}
-};
+	export default {
+		props: {
+			user: Object
+		},
+		data() {
+			return {};
+		},
+		beforeCreate() {
+			window.scroll({
+				top: 0,
+				left: 0
+			});
+		}
+	};
 </script>
 
 
 
 <style lang="scss" scoped>
-.user-detail-data {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 1rem;
-	font-size: 1.5rem;
-	background-color: var(--color-silver);
+	.user-detail-data {
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 1rem;
+		font-size: 1.5rem;
+		background-color: var(--color-silver);
 
-	&__label {
-		color: var(--color-brand-1);
-	}
+		&__label {
+			color: var(--color-brand-1);
+		}
 
-	&__group {
-		margin: 20px;
+		&__group {
+			margin: 20px;
+		}
 	}
-}
 </style>

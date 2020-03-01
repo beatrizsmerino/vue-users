@@ -8,33 +8,33 @@
 
 
 <script>
-import UserDetail from "../components/UserDetail.vue";
-import UserMap from "../components/UserMap.vue";
+	import UserDetail from "../components/UserDetail.vue";
+	import UserMap from "../components/UserMap.vue";
 
-export default {
-	components: {
-		UserDetail,
-		UserMap
-	},
-	props: {
-		users: Array,
-		username: String
-	},
-	data() {
-		return {};
-	},
-	computed: {
-		user() {
-			return this.users.find(user => user.username === this.username);
-		}
-	},
-	mounted() {
-		let rootUpdated = this.$route.params.username;
-		let rootFind = this.users.find(user => user.username === rootUpdated);
+	export default {
+		components: {
+			UserDetail,
+			UserMap
+		},
+		props: {
+			users: Array,
+			username: String
+		},
+		data() {
+			return {};
+		},
+		computed: {
+			user() {
+				return this.users.find(user => user.username === this.username);
+			}
+		},
+		mounted() {
+			let rootUpdated = this.$route.params.username;
+			let rootFind = this.users.find(user => user.username === rootUpdated);
 
-		if (rootFind === undefined) {
-			this.$router.push({ name: "users" });
+			if (rootFind === undefined) {
+				this.$router.push({ name: "users" });
+			}
 		}
-	}
-};
+	};
 </script>
