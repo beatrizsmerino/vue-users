@@ -12,25 +12,25 @@
 
 
 <script>
-export default {
-	components: {
-	},
-	props: {
-		users: Array
-	},
-};
+	export default {
+		components: {
+		},
+		props: {
+			users: Array
+		},
+	};
 </script>
 
 
 
 <style lang="scss" scoped>
-.logo-vue {
-	text-align: center;
-}
-.definition {
-	text-align: center;
-	color: var(--color-brand-1);
-	font-size: 1.5rem;
-	font-weight: 300;
-}
+	.logo-vue {
+		text-align: center;
+	}
+	.definition {
+		text-align: center;
+		color: var(--color-brand-1);
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
 </style>
