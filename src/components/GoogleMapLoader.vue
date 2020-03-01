@@ -8,51 +8,43 @@
 </template>
 
 <script>
-import GoogleMapsApiLoader from "google-maps-api-loader";
+	import GoogleMapsApiLoader from "google-maps-api-loader";
 
-export default {
-	props: {
-		mapConfig: Object,
-		apiKey: String
-	},
-	data() {
-		return {
-			// status: false,
-			google: null,
-			map: null
-		};
-	},
-	async mounted() {
-		const googleMapApi = await GoogleMapsApiLoader({
-			apiKey: this.apiKey
-		});
-		this.google = googleMapApi;
-		this.initializeMap();
-		// this.checkApiKey();
-	},
-	methods: {
-		initializeMap() {
-			const mapContainer = this.$refs.googleMap;
-			this.map = new this.google.maps.Map(mapContainer, this.mapConfig);
+	export default {
+		props: {
+			mapConfig: Object,
+			apiKey: String
 		},
-		// checkApiKey() {
-		// 	if (this.apiKey !== "XXXXXX") {
-		// 		this.status = true;
-		// 		this.$emit("statusApiKey");
-		// 	}
-		// }
-	}
-};
+		data() {
+			return {
+				google: null,
+				map: null
+			};
+		},
+		async mounted() {
+			const googleMapApi = await GoogleMapsApiLoader({
+				apiKey: this.apiKey
+			});
+			this.google = googleMapApi;
+			this.initializeMap();
+		},
+		methods: {
+			initializeMap() {
+				const mapContainer = this.$refs.googleMap;
+				this.map = new this.google.maps.Map(mapContainer, this.mapConfig);
+			}
+		}
+	};
 </script>
 
 <style lang="scss" scoped>
-.google-map {
-	width: 100%;
-	height: 100%;
-
-	&__map {
+	.google-map {
 		width: 100%;
 		height: 100%;
+
+		&__map {
+			width: 100%;
+			height: 100%;
+		}
 	}
-}
 </style>
