@@ -22,14 +22,16 @@
 							</p>
 						</div>
 
-						<router-link :to="`/user/${user.username}`" class="button-line">
-							<span class="button-line__icon fas fa-info"></span>
-							<span>more info</span>
+						<router-link :to="`/user/${user.username}`" class="button">
+							<span class="button__icon fas fa-info"></span>
+							<span class="button__text">more info</span>
 						</router-link>
 					</div>
 				</transition>
 
-				<span class="icon icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
+				<span class="button-close" @click="userRemoveEmit(user)">
+					<i class="button-close__icon fas fa-times-circle"></i>
+				</span>
 			</li>
 		</transition-group>
 	</div>
@@ -38,178 +40,183 @@
 
 
 <script>
-export default {
-	props: {
-		users: Array,
-		isHidden: Boolean,
-		isSmall: Boolean
-	},
-	methods: {
-		userRemoveEmit(userToRemove) {
-			this.$emit("remove", userToRemove);
-		}
-	},
-}
+	export default {
+		props: {
+			users: Array,
+			isHidden: Boolean,
+			isSmall: Boolean
+		},
+		methods: {
+			userRemoveEmit(userToRemove) {
+				this.$emit("remove", userToRemove);
+			}
+		},
+	}
 </script>
 
 
 
 <style lang="scss" scoped>
-.users-list {
-	max-width: 550px;
-	margin: 2em auto;
-	padding: 0;
+	.users-list {
+		max-width: 550px;
+		margin: 2em auto;
+		padding: 0;
 
-	&.isSmall {
-		max-width: 700px;
+		&.isSmall {
+			max-width: 700px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			transition: all 0.5s ease-out 0.8s;
+
+			.user {
+				width: 30%;
+				margin: 2%;
+				transition: all 0.5s ease-out 0.5s;
+			}
+		}
+	}
+
+	.user {
+		width: calc(100% - 2rem);
+		margin: 1rem;
+		padding: 20px;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		transition: all 0.5s ease-out 0.8s;
+		position: relative;
+		list-style: none;
+		background-color: var(--color-brand-2);
 
-		.user {
-			width: 30%;
-			margin: 2%;
-			transition: all 0.5s ease-out 0.5s;
+		&__content {
+			margin-left: 1rem;
+			display: inline-block;
+			color: #fff;
+
+			&.isHidden {
+				opacity: 0;
+				display: none;
+				transition: all 0.5s ease-out 0s;
+			}
+		}
+
+		&__name {
+			margin-bottom: 0.25rem;
+			text-transform: capitalize;
+			font-size: 1.6rem;
+			font-weight: 200;
+		}
+
+		&__description {
+		}
+
+		&__img {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			border: 3px solid #fff;
 		}
 	}
-}
 
-.user {
-	width: calc(100% - 2rem);
-	margin: 1rem;
-	padding: 20px;
-	display: flex;
-	position: relative;
-	list-style: none;
-	background-color: var(--color-brand-2);
+	.user-data {
+		display: flex;
+		align-items: center;
 
-	&__content {
-		margin-left: 1rem;
+		&__icon {
+			margin-right: 0.25rem;
+			padding: 0.1rem 0.2rem;
+			font-size: 1rem;
+			opacity: 0.75;
+		}
+		&__text {
+			font-size: 1.2rem;
+		}
+	}
+
+	.button {
+		margin-top: 10px;
+		padding: 10px 20px;
 		display: inline-block;
-		color: #fff;
+		text-align: center;
+		color: var(--color-brand-1);
+		border: 2px solid var(--color-brand-1);
+		cursor: pointer;
 
-		&.isHidden {
-			opacity: 0;
-			display: none;
-			transition: all 0.5s ease-out 0s;
+		&__text {
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
+		&__icon {
+			margin-right: 0.8rem;
+			font-size: 1.5rem;
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: var(--color-brand-1);
 		}
 	}
 
-	&__name {
-		margin-bottom: 0.25rem;
-		text-transform: capitalize;
-		font-size: 1.6rem;
-		font-weight: 200;
+	.button-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+
+		&__icon {
+			display: inline-block;
+			font-size: 1.8rem;
+			color: var(--color-brand-1);
+		}
+
+		&:hover {
+			.button-close {
+				&__icon {
+					color: #fff;
+				}
+			}
+		}
 	}
 
-	&__description {
+	// VUE TRANSITIONS
+	// -----------------------------------------
+
+	/* animation title (WITH NAME FADE) */
+	.fade-enter {
+		opacity: 1;
 	}
 
-	&__img {
-		width: 80px;
-		height: 80px;
-		border-radius: 50%;
-		border: 3px solid #fff;
-	}
-}
-
-.user-data {
-	display: flex;
-	align-items: center;
-
-	&__icon {
-		margin-right: 0.25rem;
-		padding: 0.1rem 0.2rem;
-		font-size: 1rem;
-		opacity: 0.75;
-	}
-	&__text {
-		font-size: 1.2rem;
-	}
-}
-
-.button-line {
-	margin-top: 10px;
-	padding: 10px 20px;
-	display: inline-block;
-	text-align: center;
-	font-size: 1.2rem;
-	color: var(--color-brand-1);
-	font-weight: 700;
-	border: 2px solid var(--color-brand-1);
-	cursor: pointer;
-
-	&__icon {
-		margin-right: 1rem;
+	.fade-enter-active {
+		transition: all 1s ease-in-out 0s;
 	}
 
-	&:hover {
-		color: #fff;
-		border-color: #fff;
+	.fade-leave-to {
+		opacity: 0;
 	}
-}
 
-.icon {
-	display: inline-block;
-	font-size: 1.8rem;
-	color: var(--color-brand-1);
-
-	&:hover {
-		color: #fff;
+	.fade-leave-active {
+		transition: all 0.5s ease-out 0s;
 	}
-}
 
-.icon-close {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	cursor: pointer;
-}
+	/* animation list (WITH THE NAME SLIDE) */
+	.slide-enter {
+		opacity: 1;
+		transform: translateX(500px);
+	}
 
-/* 
-VUE TRANSITIONS
------------------------------------------
-*/
+	.slide-enter-active {
+		transition: all 1s ease-in-out 0s !important;
+	}
 
-/* animation title (WITH NAME FADE) */
-.fade-enter {
-	opacity: 1;
-}
+	.slide-leave-to {
+		opacity: 0;
+		transform: translateX(-500px);
+	}
 
-.fade-enter-active {
-	transition: all 1s ease-in-out 0s;
-}
+	.slide-leave-active {
+		transition: all 1s ease-in-out 0s !important;
+	}
 
-.fade-leave-to {
-	opacity: 0;
-}
-
-.fade-leave-active {
-	transition: all 0.5s ease-out 0s;
-}
-
-/* animation list (WITH THE NAME SLIDE) */
-.slide-enter {
-	opacity: 1;
-	transform: translateX(500px);
-}
-
-.slide-enter-active {
-	transition: all 1s ease-in-out 0s !important;
-}
-
-.slide-leave-to {
-	opacity: 0;
-	transform: translateX(-500px);
-}
-
-.slide-leave-active {
-	transition: all 1s ease-in-out 0s !important;
-}
-
-/* animation button random (WITH THE NAME SLIDE)*/
-.slide-move {
-	transition: all 0.5s ease-out 0s !important;
-}
+	/* animation button random (WITH THE NAME SLIDE)*/
+	.slide-move {
+		transition: all 0.5s ease-out 0s !important;
+	}
 </style>
