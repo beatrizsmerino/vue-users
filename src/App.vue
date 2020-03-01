@@ -2,9 +2,11 @@
 	<div id="app" v-cloak>
 		<page-header></page-header>
 
-		<page-title></page-title>
+		<main class="page-main">
+			<page-title></page-title>
 
-		<router-view :users="users"/>
+			<router-view :users="users" />
+		</main>
 	</div>
 </template>
 
@@ -23,9 +25,6 @@
 			return {
 				users: []
 			}
-		},
-		methods: {
-
 		},
 		created() {
 			fetch('https://randomuser.me/api/?results=10')
@@ -82,7 +81,7 @@
 	}
 
 	body {
-		padding-top: 6rem;
+		padding: 4.5rem 0 0;
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
 		font-size: 62.5%;
@@ -94,15 +93,20 @@
 		text-decoration: none;
 	}
 
-	button{
+	button {
 		appearance: none;
 		outline: none;
 	}
 
+	.page-main {
+		padding: 4rem 0 0;
+	}
+
 	/* 
-	VUE TRANSITIONS
-	-----------------------------------------
-	*/
+		-----------------------------------------
+		VUE TRANSITIONS
+		-----------------------------------------
+		*/
 
 	/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
 	.v-enter {
