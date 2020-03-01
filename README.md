@@ -39,7 +39,7 @@ Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework
   - UsersList
   - UsersButtons
   - UserDetail
-  - UserMap
+  - UserMapGoogleMaps
   - GoogleMapLoader
   - GoogleMapMarker
 
