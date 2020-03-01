@@ -1,220 +1,222 @@
 <template>
-    <div>
-        <transition-group tag="ul" name="slide" class="users-list" :class="{ isSmall: isSmall }">
-            <li v-for="user in users" :key="user.username" class="user">
-                <img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img">
-                
-                <transition name="fade">
-                    <div class="user__content" :class="{ isHidden: isHidden }">
-                        <p>
-                            <span class="user__name">
-                                <slot name="title" :use="user">
-                                    {{user.name.first}} {{user.name.last}}
-                                </slot>
-                            </span>
-                        </p>
-                        <slot name="user__subtitle" :user="user">
-                            <p class="description">
-                                <span class="fa fa-user description__icon description__item"></span>
-                                <span class="description__text description__item">{{user.username}}</span>
-                            </p>
-                        </slot>
-                        <p class="description">
-                            <span class="fa fa-map-marker loc description__icon description__item"></span>
-                            <span class="description__text description__item">{{user.state}}</span>
-                        </p>
+	<div class="users-list">
+		<transition-group tag="ul" name="slide" class="users-list" :class="{ isSmall: isSmall }">
+			<li v-for="user in users" :key="user.username" class="user">
+				<img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img" />
 
-                        <router-link :to="`/user/${user.username}`" class="button-line">
-                            <span class="button-line__icon fas fa-info"></span>
-                            <span>more info</span>
-                        </router-link>
-                    </div>
-                </transition>
-                
-                <span class="icon icon-close fas fa-times-circle" @click="userRemoveEmit(user)"></span>
-            </li>
-        </transition-group>
-    </div>
+				<transition name="fade">
+					<div class="user__content" :class="{ isHidden: isHidden }">
+						<h3 class="user__name">{{user.name.first}} {{user.name.last}}</h3>
+						<div class="user__description">
+							<p class="user-data">
+								<span class="user-data__icon user-data__item">
+									<i class="fa fa-user"></i>
+								</span>
+								<span class="user-data__text user-data__item">{{user.username}}</span>
+							</p>
+							<p class="user-data">
+								<span class="user-data__icon user-data__item">
+									<i class="fa fa-map-marker"></i>
+								</span>
+								<span class="user-data__text user-data__item">{{user.state}}</span>
+							</p>
+						</div>
+
+						<router-link :to="`/user/${user.username}`" class="button">
+							<span class="button__icon fas fa-info"></span>
+							<span class="button__text">more info</span>
+						</router-link>
+					</div>
+				</transition>
+
+				<span class="button-close" @click="userRemoveEmit(user)">
+					<i class="button-close__icon fas fa-times-circle"></i>
+				</span>
+			</li>
+		</transition-group>
+	</div>
 </template>
 
 
 
 <script>
-export default {
-    props: ['users', 'isHidden', 'isSmall'],
-    methods: {
-        userRemoveEmit(userToRemove) {
-            this.$emit("remove", userToRemove);
-        }
-    },
-}
+	export default {
+		props: {
+			users: Array,
+			isHidden: Boolean,
+			isSmall: Boolean
+		},
+		methods: {
+			userRemoveEmit(userToRemove) {
+				this.$emit("remove", userToRemove);
+			}
+		},
+	}
 </script>
 
 
 
 <style lang="scss" scoped>
+	.users-list {
+		max-width: 550px;
+		margin: 2em auto;
+		padding: 0;
 
-.users-list {
-    max-width: 550px;
-    margin: 2em auto;
-    padding: 0;
+		&.isSmall {
+			max-width: 700px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			transition: all 0.5s ease-out 0.8s;
 
-    &.isSmall {
-        max-width: 700px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        transition: all 0.5s ease-out 0.8s;
+			.user {
+				width: 30%;
+				margin: 2%;
+				transition: all 0.5s ease-out 0.5s;
+			}
+		}
+	}
 
-        .user {
-            width: 30%;
-            margin: 2%;
-            transition: all 0.5s ease-out 0.5s;
-        }
-    }
-}
+	.user {
+		width: calc(100% - 2rem);
+		margin: 1rem;
+		padding: 20px;
+		display: flex;
+		position: relative;
+		list-style: none;
+		background-color: var(--color-brand-2);
 
-.user {
-    width: calc(100% - 2rem);
-    margin: 1rem;
-    padding: 20px;
-    display: flex;
-    position: relative;
-    list-style: none;
-    background-color: var(--color-brand-2);
+		&__content {
+			margin-left: 1rem;
+			display: inline-block;
+			color: #fff;
 
+			&.isHidden {
+				opacity: 0;
+				display: none;
+				transition: all 0.5s ease-out 0s;
+			}
+		}
 
-    &__content {
-        margin-left: 1rem;
-        display: inline-block;
-        color: #fff;
+		&__name {
+			margin-bottom: 0.25rem;
+			text-transform: capitalize;
+			font-size: 1.6rem;
+			font-weight: 200;
+		}
 
-        &.isHidden{
-            opacity: 0;
-            display: none;
-            transition: all 0.5s ease-out 0s;
-        }
-    }
+		&__description {
+		}
 
-    &__name{
-        margin-bottom: .25rem;
-        text-transform: capitalize;
-        font-size: 1.6rem;
-        font-weight: 200;
-    }
+		&__img {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			border: 3px solid #fff;
+		}
+	}
 
-    &__img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        border: 3px solid #fff;
-    }
-}
+	.user-data {
+		display: flex;
+		align-items: center;
 
+		&__icon {
+			margin-right: 0.25rem;
+			padding: 0.1rem 0.2rem;
+			font-size: 1rem;
+			opacity: 0.75;
+		}
+		&__text {
+			font-size: 1.2rem;
+		}
+	}
 
-.description {
-    display: flex;
-    align-items: center;
+	.button {
+		margin-top: 10px;
+		padding: 10px 20px;
+		display: inline-block;
+		text-align: center;
+		color: var(--color-brand-1);
+		border: 2px solid var(--color-brand-1);
+		cursor: pointer;
 
-    &__icon {
-        margin-right: .25rem;
-        padding: 0.1rem 0.2rem;
-        font-size: 1rem;
-        opacity: .75;
-    }
-    &__text {
-        font-size: 1.2rem;
-    }
-}
+		&__text {
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
+		&__icon {
+			margin-right: 0.8rem;
+			font-size: 1.5rem;
+		}
 
-.button-line {
-    margin-top: 10px;
-    padding: 10px 20px;
-    display: inline-block;
-    text-align: center;
-    font-size: 1.2rem;
-    color: var(--color-brand-1);
-    font-weight: 700;
-    border: 2px solid var(--color-brand-1);
-    cursor: pointer;
+		&:hover {
+			color: #fff;
+			background-color: var(--color-brand-1);
+		}
+	}
 
-    &__icon {
-        margin-right: 1rem;
-    }
+	.button-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
 
-    &:hover{
-        color: #fff;
-        border-color: #fff;
-    }
-}
+		&__icon {
+			display: inline-block;
+			font-size: 1.8rem;
+			color: var(--color-brand-1);
+		}
 
+		&:hover {
+			.button-close {
+				&__icon {
+					color: #fff;
+				}
+			}
+		}
+	}
 
-.icon {
-    display: inline-block;
-    font-size: 1.8rem;
-    color: var(--color-brand-1);
+	// VUE TRANSITIONS
+	// -----------------------------------------
 
-    &:hover {
-        color: #fff;
-    }
-}
+	/* animation title (WITH NAME FADE) */
+	.fade-enter {
+		opacity: 1;
+	}
 
+	.fade-enter-active {
+		transition: all 1s ease-in-out 0s;
+	}
 
-.icon-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
+	.fade-leave-to {
+		opacity: 0;
+	}
 
+	.fade-leave-active {
+		transition: all 0.5s ease-out 0s;
+	}
 
+	/* animation list (WITH THE NAME SLIDE) */
+	.slide-enter {
+		opacity: 1;
+		transform: translateX(500px);
+	}
 
-/* 
-VUE TRANSITIONS
------------------------------------------
-*/
+	.slide-enter-active {
+		transition: all 1s ease-in-out 0s !important;
+	}
 
+	.slide-leave-to {
+		opacity: 0;
+		transform: translateX(-500px);
+	}
 
-/* animation title (WITH NAME FADE) */
-.fade-enter {
-    opacity: 1;
-}
+	.slide-leave-active {
+		transition: all 1s ease-in-out 0s !important;
+	}
 
-.fade-enter-active {
-    transition: all 1s ease-in-out 0s;
-}
-
-.fade-leave-to {
-    opacity: 0;
-}
-
-.fade-leave-active {
-    transition: all 0.5s ease-out 0s;
-}
-
-
-/* animation list (WITH THE NAME SLIDE) */
-.slide-enter {
-    opacity: 1;
-    transform: translateX(500px);
-}
-
-.slide-enter-active {
-    transition: all 1s ease-in-out 0s !important;
-}
-
-.slide-leave-to {
-    opacity: 0;
-    transform: translateX(-500px);
-}
-
-.slide-leave-active {
-    transition: all 1s ease-in-out 0s !important;
-}
-
-
-/* animation button random (WITH THE NAME SLIDE)*/
-.slide-move {
-    transition: all 0.5s ease-out 0s !important;
-}
+	/* animation button random (WITH THE NAME SLIDE)*/
+	.slide-move {
+		transition: all 0.5s ease-out 0s !important;
+	}
 </style>
