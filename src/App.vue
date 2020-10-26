@@ -1,5 +1,9 @@
 <template>
-	<div id="app" v-cloak>
+	<main
+		id="app"
+		class="page-app"
+		v-cloak
+	>
 		<page-header></page-header>
 
 		<main class="page-main">
@@ -7,7 +11,7 @@
 
 			<router-view :users="users" />
 		</main>
-	</div>
+	</main>
 </template>
 
 
@@ -50,6 +54,21 @@
 						imageLarge: user.picture.large,
 					}))
 				})
+		},
+		watch: {
+			$route: {
+				handler(to, from) {
+					const html = document.getElementsByTagName('html')[0];
+					const body = document.getElementsByTagName('body')[0];
+
+					if (from !== undefined) {
+						html.classList.remove('page', 'page-' + from.name.toLowerCase());
+					}
+					html.classList.add('page', 'page-' + to.name.toLowerCase());
+					body.classList.add('page-body');
+				},
+				immediate: true,
+			}
 		},
 	};
 </script>
@@ -103,10 +122,10 @@
 	}
 
 	/* 
-		-----------------------------------------
-		VUE TRANSITIONS
-		-----------------------------------------
-		*/
+	-----------------------------------------
+	VUE TRANSITIONS
+	-----------------------------------------
+	*/
 
 	/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
 	.v-enter {
@@ -123,5 +142,33 @@
 
 	.v-leave-active {
 		transition: opacity 0.5s linear 0.5s;
+	}
+
+
+	/* 
+	-----------------------------------------
+	PAGE HOME
+	-----------------------------------------
+	*/
+	.page-home{
+		height: 100%;
+
+		.page-body{
+			height: 100%;
+		}
+
+		.page-app {
+			display: flex;
+			height: 100%;
+		}
+
+		.page-main{
+			padding-top: 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			flex: 1;
+		}
 	}
 </style>
