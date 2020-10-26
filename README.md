@@ -27,21 +27,24 @@ Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework
 
 -   assets
 -   constants
-    -   colorPalette
-    -   mapSettings
+    -   [colorPalette](https://github.com/beatrizsmerino/vue-users/blob/master/src/constants/colorPalette.js)
+    -   [mapSettings](https://github.com/beatrizsmerino/vue-users/blob/master/src/constants/mapSettings.js)
 -   views
-    -   Home
-    -   Users
-    -   User
+    -   [Home](https://github.com/beatrizsmerino/vue-users/blob/master/src/views/Home.vue)
+    -   [Users](https://github.com/beatrizsmerino/vue-users/blob/master/src/views/Users.vue)
+    -   [User](https://github.com/beatrizsmerino/vue-users/blob/master/src/views/User.vue)
 -   components
-    -   PageHeader
-    -   PageTitle
-    -   UsersList
-    -   UsersButtons
-    -   UserDetail
-    -   UserMapGoogleMaps
-    -   GoogleMapLoader
-    -   GoogleMapMarker
+    -   [PageHeader](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/PageHeader.vue)
+    -   [PageTitle](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/PageTitle.vue)
+    -   [UsersList](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UsersList.vue)
+    -   [UsersButtons](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UsersButtons.vue)
+    -   [UserDetail](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserDetail.vue)
+	-	[UserMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserMap.vue)
+	-	[GoogleMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/GoogleMap.vue)
+    -   [GoogleMapLoader](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/GoogleMapLoader.vue)
+    -   [GoogleMapMarker](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/GoogleMapMarker.vue)
+    -   [LeafletMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/LeafletMap.vue)
+    -   [LeafletMapLoader](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/LeafletMapLoader.vue)
 
 ## Project setup
 
