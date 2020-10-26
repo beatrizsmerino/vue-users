@@ -73,13 +73,12 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ### Publish in Github Pages
 
 ```
-chmod +x deploy.sh
-./deploy.sh
+npm run deploy
 ```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
