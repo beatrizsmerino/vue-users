@@ -14,11 +14,10 @@
 
 ![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/master/doc/images/vue-users-4.png)
 
-![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/master/doc/images/vue-users-5.png)
 
 ## Development interface
 
-![Vue logo](https://github.com/beatrizsmerino/vue-users/blob/master/doc/images/vue-logo.png)
+![Vue logo](https://github.com/beatrizsmerino/vue-users/blob/master/doc/images/vue-js-2.jpg)
 
 Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework. This project use [Vue Cli](https://cli.vuejs.org/) and has dependencies as vue router and google maps.
 
