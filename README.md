@@ -4,7 +4,10 @@
 
 # Vue Users
 
-### Vue Users is an application that obtains a list of users from an API and manipulates the information. It has 3 views: the home, the user list and the user detail. There are several buttons with different actions to delete, hide and select random users. By clicking on a user you can see the complete information of the selected user, this page has a map f google maps.
+### Vue Users is an application that obtains a list of random users from an API and print the information.
+
+It has 3 views: the home, the user list and the user detail. There are several buttons with different actions to delete, hide and select random users. By clicking on a user you can see the complete information of the selected user, this page has a map made with Google Maps or Leaflet.
+
 
 ![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/master/doc/images/vue-users-1.png)
 
