@@ -11,7 +11,7 @@
 	"dependencies": {
 		"core-js": "^2.6.11",
 		"google-maps-api-loader": "^1.1.1",
-		"leaflet": "^1.6.0",
+		"leaflet": "^1.7.1",
 		"vue": "^2.6.11",
 		"vue-router": "^3.1.6",
 		"vue2-leaflet": "^2.5.2"
