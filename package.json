@@ -13,7 +13,7 @@
 		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.6.0",
 		"vue": "^2.6.11",
-		"vue-router": "^3.1.6",
+		"vue-router": "^3.5.1",
 		"vue2-leaflet": "^2.5.2"
 	},
 	"devDependencies": {
