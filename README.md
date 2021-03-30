@@ -92,20 +92,20 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### NPM PACKAGES
 
-| NPM PACKAGE              | STABLE VERSION | LAST VERSION                                                                                                                                                                                 |
-| ------------------------ | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `core-js`                | ^3.9.1         | [![https://nodei.co/npm/core-js/](https://nodei.co/npm/core-js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/core-js/)                                              |
-| `google-maps-api-loader` | ^1.1.1         | [![https://nodei.co/npm/google-maps-api-loader/](https://nodei.co/npm/google-maps-api-loader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/google-maps-api-loader/) |
-| `leaflet`                | ^1.7.1         | [![https://nodei.co/npm/leaflet/](https://nodei.co/npm/leaflet.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/leaflet/)                                              |
-| `vue`                    | ^2.6.12        | [![https://nodei.co/npm/vue/](https://nodei.co/npm/vue.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue/)                                                          |
-| `vue-router`             | ^3.5.1         | [![https://nodei.co/npm/vue-router/](https://nodei.co/npm/vue-router.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-router/)                                     |
-| `vue2-leaflet`           | ^2.7.0         | [![https://nodei.co/npm/vue2-leaflet/](https://nodei.co/npm/vue2-leaflet.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue2-leaflet/)                               |
-| `@vue/cli-plugin-babel`  | ^4.5.12        | [![https://nodei.co/npm/@vue/cli-plugin-babel/](https://nodei.co/npm/@vue/cli-plugin-babel.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@vue/cli-plugin-babel/)    |
-| `@vue/cli-plugin-eslint` | ^4.5.12        | [![https://nodei.co/npm/@vue/cli-plugin-eslint/](https://nodei.co/npm/@vue/cli-plugin-eslint.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@vue/cli-plugin-eslint/) |
-| `@vue/cli-service`       | ^4.5.12        | [![https://nodei.co/npm/@vue/cli-service/](https://nodei.co/npm/@vue/cli-service.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@vue/cli-service/)                   |
-| `babel-eslint`           | ^10.1.0        | [![https://nodei.co/npm/babel-eslint/](https://nodei.co/npm/babel-eslint.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-eslint/)                               |
-| `eslint`                 | ^5.16.0        | [![https://nodei.co/npm/eslint/](https://nodei.co/npm/eslint.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/eslint/)                                                 |
-| `eslint-plugin-vue`      | ^6.2.2         | [![https://nodei.co/npm/eslint-plugin-vue/](https://nodei.co/npm/eslint-plugin-vue.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/eslint-plugin-vue/)                |
-| `node-sass`              | ^5.0.0         | [![https://nodei.co/npm/node-sass/](https://nodei.co/npm/node-sass.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-sass/)                                        |
-| `sass-loader`            | ^7.3.1         | [![https://nodei.co/npm/sass-loader/](https://nodei.co/npm/sass-loader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/sass-loader/)                                  |
-| `vue-template-compiler`  | ^2.6.12        | [![https://nodei.co/npm/vue-template-compiler/](https://nodei.co/npm/vue-template-compiler.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-template-compiler/)    |
+| NPM PACKAGE              | STABLE VERSION | LAST VERSION                                                                                                         |
+| ------------------------ | -------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `core-js`                | ^3.9.1         | [![NPM](https://nodeico.herokuapp.com/core-js.svg)](https://npmjs.com/package/core-js)                               |
+| `google-maps-api-loader` | ^1.1.1         | [![NPM](https://nodeico.herokuapp.com/google-maps-api-loader.svg)](https://npmjs.com/package/google-maps-api-loader) |
+| `leaflet`                | ^1.7.1         | [![NPM](https://nodeico.herokuapp.com/leaflet.svg)](https://npmjs.com/package/leaflet)                               |
+| `vue`                    | ^2.6.12        | [![NPM](https://nodeico.herokuapp.com/vue.svg)](https://npmjs.com/package/vue)                                       |
+| `vue-router`             | ^3.5.1         | [![NPM](https://nodeico.herokuapp.com/vue-router.svg)](https://npmjs.com/package/vue-router)                         |
+| `vue2-leaflet`           | ^2.7.0         | [![NPM](https://nodeico.herokuapp.com/vue2-leaflet.svg)](https://npmjs.com/package/vue2-leaflet)                     |
+| `@vue/cli-plugin-babel`  | ^4.5.12        | [![NPM](https://nodeico.herokuapp.com/@vue/cli-plugin-babel.svg)](https://npmjs.com/package/@vue/cli-plugin-babel)   |
+| `@vue/cli-plugin-eslint` | ^4.5.12        | [![NPM](https://nodeico.herokuapp.com/@vue/cli-plugin-eslint.svg)](https://npmjs.com/package/@vue/cli-plugin-eslint) |
+| `@vue/cli-service`       | ^4.5.12        | [![NPM](https://nodeico.herokuapp.com/@vue/cli-service.svg)](https://npmjs.com/package/@vue/cli-service)             |
+| `babel-eslint`           | ^10.1.0        | [![NPM](https://nodeico.herokuapp.com/babel-eslint.svg)](https://npmjs.com/package/babel-eslint)                     |
+| `eslint`                 | ^5.16.0        | [![NPM](https://nodeico.herokuapp.com/eslint.svg)](https://npmjs.com/package/eslint)                                 |
+| `eslint-plugin-vue`      | ^6.2.2         | [![NPM](https://nodeico.herokuapp.com/eslint-plugin-vue.svg)](https://npmjs.com/package/eslint-plugin-vue)           |
+| `node-sass`              | ^5.0.0         | [![NPM](https://nodeico.herokuapp.com/node-sass.svg)](https://npmjs.com/package/node-sass)                 |
+| `sass-loader`            | ^7.3.1         | [![NPM](https://nodeico.herokuapp.com/sass-loader.svg)](https://npmjs.com/package/sass-loader)             |
+| `vue-template-compiler`  | ^2.6.12        | [![NPM](https://nodeico.herokuapp.com/vue-template-compiler.svg)](https://npmjs.com/package/vue-template-compiler)   |
