@@ -76,6 +76,7 @@
 
 
 <style lang="scss">
+	@import url("./assets/fonts/DauphinPlain/font.css");
 	@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
 	@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
