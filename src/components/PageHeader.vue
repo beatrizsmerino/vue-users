@@ -35,8 +35,8 @@
 <style lang="scss" scoped>
 	.page-header {
 		width: 100%;
-		height: 4.5rem;
-		padding: 0 3rem;
+		height: 7.2rem;
+		padding: 0 4.8rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -55,7 +55,7 @@
 	.logo {
 		display: inline-block;
 		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
-		font-size: 3rem;
+		font-size: 5rem;
 		font-weight: bold;
 		line-height: 100%;
 		color: var(--color-brand-2);
@@ -64,7 +64,7 @@
 	.nav {
 		display: flex;
 		justify-content: center;
-		font-size: 1.5rem;
+		font-size: 2.4rem;
 		font-weight: 600;
 
 		&__item {

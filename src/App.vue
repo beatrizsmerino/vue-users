@@ -100,11 +100,16 @@
 		box-sizing: border-box;
 	}
 
+	html{
+		font-size: 62.5%;
+		
+	}
+
 	body {
-		padding: 4.5rem 0 0;
+		padding: 7.2rem 0 0;
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
-		font-size: 62.5%;
+		font-size: 1.6rem;
 		color: var(--color-gray-1);
 		background-color: var(--color-light);
 	}
@@ -119,7 +124,7 @@
 	}
 
 	.page-main {
-		padding: 4rem 0 0;
+		padding: 6.4rem 0 0;
 	}
 
 	/* 

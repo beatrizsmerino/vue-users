@@ -41,7 +41,7 @@
 <style lang="scss" scoped>
 	.user-map {
 		width: 100%;
-		height: 500px;
+		height: 50rem;
 		margin-top: 5rem;
 	}
 </style>

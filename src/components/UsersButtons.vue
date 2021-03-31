@@ -34,7 +34,7 @@
 <style lang="scss" scoped>
 	.users-buttons {
 		width: 100%;
-		padding: 1rem;
+		padding: 1.6rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -46,16 +46,16 @@
 		box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.3);
 
 		&__item {
-			padding: 1rem;
+			padding: 1.6rem;
 			font-weight: 600;
-			font-size: 0.8rem;
+			font-size: 1.28rem;
 			color: var(--color-brand-2);
 			border: none;
 			background-color: var(--color-silver);
 			cursor: pointer;
 
 			&:not(:last-child) {
-				margin-right: 1rem;
+				margin-right: 1.6rem;
 			}
 
 			&:hover {
