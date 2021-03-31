@@ -1,5 +1,5 @@
 <template>
-	<main
+	<div
 		id="app"
 		class="page-app"
 		v-cloak
@@ -11,7 +11,7 @@
 
 			<router-view :users="users" />
 		</main>
-	</main>
+	</div>
 </template>
 
 

@@ -1,14 +1,16 @@
 <template>
-	<section class="user-detail">
-		<user-detail
-			v-if="user"
-			:user="user"
-		/>
-		<user-map
-			v-if="user"
-			:user="user"
-		/>
-	</section>
+	<div class="page-main__inner">
+		<section class="user-detail">
+			<user-detail
+				v-if="user"
+				:user="user"
+			/>
+			<user-map
+				v-if="user"
+				:user="user"
+			/>
+		</section>
+	</div>
 </template>
 
 

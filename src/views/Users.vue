@@ -1,16 +1,18 @@
 <template>
-	<section class="users">
-		<users-list
-			:users="users"
-			:isHidden="isHidden"
-			:isSmall="isSmall"
-			@remove="userRemove"
-		/>
-		<users-buttons
-			@random="setRandom"
-			@show="setShow"
-		/>
-	</section>
+	<div class="page-main__inner">
+		<section class="users">
+			<users-list
+				:users="users"
+				:isHidden="isHidden"
+				:isSmall="isSmall"
+				@remove="userRemove"
+			/>
+			<users-buttons
+				@random="setRandom"
+				@show="setShow"
+			/>
+		</section>
+	</div>
 </template>
 
 
