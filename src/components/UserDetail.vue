@@ -120,10 +120,10 @@
 
 <style lang="scss" scoped>
 	.user-detail-data {
-		max-width: 600px;
+		max-width: 60rem;
 		margin: 0 auto;
-		padding: 1rem;
-		font-size: 1.5rem;
+		padding: 4rem;
+		font-size: 2.4rem;
 		background-color: var(--color-silver);
 
 		&__label {
@@ -131,7 +131,7 @@
 		}
 
 		&__group {
-			margin: 20px;
+			margin: 2rem;
 		}
 	}
 </style>

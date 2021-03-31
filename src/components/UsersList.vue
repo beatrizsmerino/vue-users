@@ -89,32 +89,32 @@
 
 <style lang="scss" scoped>
 	.users-list {
-		max-width: 850px;
+		max-width: 85rem;
 		margin: 0 auto;
 		padding: 0;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
 
-		@media (max-width: 800px) {
-			max-width: 500px;
+		@media (max-width: 80rem) {
+			max-width: 50rem;
 		}
 
 		&__wrapper {
-			margin: 0 -1rem;
+			margin: 0 -1rem 4rem;
 		}
 
 		&.isSmall {
-			max-width: 700px;
+			max-width: 70rem;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			transition: all 0.5s ease-out 0.8s;
 
 			.user {
-				width: 100px;
-				height: 100px;
-				padding: 5px;
+				width: 10rem;
+				height: 10rem;
+				padding: 0.5rem;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -124,8 +124,8 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					top: 5px;
-					right: 5px;
+					top: 0.5rem;
+					right: 0.5rem;
 					border-radius: 50%;
 					background-color: var(--color-light);
 
@@ -146,18 +146,18 @@
 	.user {
 		width: calc(50% - 2rem);
 		margin: 1rem;
-		padding: 20px;
+		padding: 2rem;
 		display: flex;
 		position: relative;
 		list-style: none;
 		background-color: var(--color-brand-2);
 
-		@media (max-width: 800px) {
+		@media (max-width: 80rem) {
 			width: calc(100% - 2rem);
 		}
 
 		&__content {
-			margin-left: 1rem;
+			margin-left: 1.6rem;
 			display: inline-block;
 			color: #fff;
 
@@ -171,7 +171,7 @@
 		&__name {
 			margin-bottom: 0.25rem;
 			text-transform: capitalize;
-			font-size: 1.6rem;
+			font-size: 2.5rem;
 			font-weight: 200;
 		}
 
@@ -179,10 +179,10 @@
 		}
 
 		&__img {
-			width: 80px;
-			height: 80px;
+			width: 8rem;
+			height: 8rem;
 			border-radius: 50%;
-			border: 3px solid #fff;
+			border: 0.3rem solid #fff;
 		}
 	}
 
@@ -191,32 +191,31 @@
 		align-items: center;
 
 		&__icon {
-			margin-right: 0.25rem;
-			padding: 0.1rem 0.2rem;
-			font-size: 1rem;
+			margin-right: 1rem;
+			font-size: 1.6rem;
 			opacity: 0.75;
 		}
 		&__text {
-			font-size: 1.2rem;
+			font-size: 2rem;
 		}
 	}
 
 	.button {
-		margin-top: 10px;
-		padding: 10px 20px;
+		margin-top: 1rem;
+		padding: 1rem 2rem;
 		display: inline-block;
 		text-align: center;
 		color: var(--color-brand-1);
-		border: 2px solid var(--color-brand-1);
+		border: 0.2rem solid var(--color-brand-1);
 		cursor: pointer;
 
 		&__text {
-			font-size: 1.2rem;
+			font-size: 2rem;
 			font-weight: 700;
 		}
 		&__icon {
-			margin-right: 0.8rem;
-			font-size: 1.5rem;
+			margin-right: 1rem;
+			font-size: 2.4rem;
 		}
 
 		&:hover {
@@ -227,13 +226,13 @@
 
 	.button-close {
 		position: absolute;
-		top: 20px;
-		right: 20px;
+		top: 2rem;
+		right: 2rem;
 		cursor: pointer;
 
 		&__icon {
 			display: inline-block;
-			font-size: 1.8rem;
+			font-size: 2.8rem;
 			color: var(--color-brand-1);
 			pointer-events: none;
 		}
@@ -270,7 +269,7 @@
 	/* animation list (WITH THE NAME SLIDE) */
 	.slide-enter {
 		opacity: 1;
-		transform: translateX(500px);
+		transform: translateX(50rem);
 	}
 
 	.slide-enter-active {
@@ -279,7 +278,7 @@
 
 	.slide-leave-to {
 		opacity: 0;
-		transform: translateX(-500px);
+		transform: translateX(-50rem);
 	}
 
 	.slide-leave-active {
