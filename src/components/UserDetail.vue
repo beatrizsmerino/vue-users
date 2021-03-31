@@ -143,7 +143,7 @@
 			justify-content: center;
 			align-items: center;
 			border-radius: 50%;
-			border: 0.3rem solid #fff;
+			border: 0.3rem solid var(--color-white);
 			overflow: hidden;
 
 			img{

@@ -167,14 +167,14 @@
 			width: 8rem;
 			height: 8rem;
 			border-radius: 50%;
-			border: 0.3rem solid #fff;
+			border: 0.3rem solid var(--color-white);
 		}
 
 		&__content {
 			width: calc(100% - 8rem - 1.6rem);
 			margin-left: 1.6rem;
 			display: inline-block;
-			color: #fff;
+			color: var(--color-white);
 
 			&.isHidden {
 				opacity: 0;
@@ -226,7 +226,7 @@
 		&:hover {
 			.button-close {
 				&__icon {
-					color: #fff;
+					color: var(--color-white);
 				}
 			}
 		}

@@ -83,9 +83,10 @@
 	:root {
 		--color-brand-1: #42b883;
 		--color-brand-2: #35495e;
-		--color-gray: #3f3f3f;
+		--color-white: #fff;
 		--color-light: #fafafa;
-		--color-silver: #ececec;
+		--color-gray-dark: #3f3f3f;
+		--color-black: #000;
 	}
 
 	[v-cloak] {
@@ -110,7 +111,7 @@
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
 		font-size: 1.6rem;
-		color: var(--color-gray-1);
+		color: var(--color-gray-dark);
 		background-color: var(--color-light);
 	}
 
