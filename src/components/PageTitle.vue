@@ -1,5 +1,7 @@
 <template>
-	<h1 class="page-title">{{ $route.meta.title }}</h1>
+	<h1 class="page-title">
+		{{ $route.meta.title }}
+	</h1>
 </template>
 
 
@@ -16,8 +18,9 @@
 	.page-title {
 		margin-bottom: 2rem;
 		text-align: center;
-		font-size: 3rem;
-		line-height: 1.5;
+		font-family: 'Dauphin', "Oxygen", Helvetica, sans-serif;
+		font-size: 6rem;
+		line-height: 100%;
 		color: var(--color-brand-1);
 	}
 </style>
