@@ -1,35 +1,65 @@
 <template>
 	<div class="users-list">
-		<transition-group tag="ul" name="slide" class="users-list" :class="{ isSmall: isSmall }">
-			<li v-for="user in users" :key="user.username" class="user">
-				<img :src="user.imageMedium" :alt="user.name.first + ' ' + user.name.last" class="user__img" />
+		<transition-group
+			tag="ul"
+			name="slide"
+			class="users-list"
+			:class="{ isSmall: isSmall }"
+		>
+			<li
+				v-for="user in users"
+				:key="user.username"
+				class="user"
+			>
+				<img
+					:src="user.imageMedium"
+					:alt="user.name.first + ' ' + user.name.last"
+					class="user__img"
+				/>
 
 				<transition name="fade">
-					<div class="user__content" :class="{ isHidden: isHidden }">
-						<h3 class="user__name">{{user.name.first}} {{user.name.last}}</h3>
+					<div
+						class="user__content"
+						:class="{ isHidden: isHidden }"
+					>
+						<h3 class="user__name">
+							{{user.name.first}} {{user.name.last}}
+						</h3>
 						<div class="user__description">
 							<p class="user-data">
 								<span class="user-data__icon user-data__item">
 									<i class="fa fa-user"></i>
 								</span>
-								<span class="user-data__text user-data__item">{{user.username}}</span>
+								<span class="user-data__text user-data__item">
+									{{user.username}}
+								</span>
 							</p>
 							<p class="user-data">
 								<span class="user-data__icon user-data__item">
 									<i class="fa fa-map-marker"></i>
 								</span>
-								<span class="user-data__text user-data__item">{{user.state}}</span>
+								<span class="user-data__text user-data__item">
+									{{user.state}}
+								</span>
 							</p>
 						</div>
 
-						<router-link :to="`/user/${user.username}`" class="button">
+						<router-link
+							:to="`/user/${user.username}`"
+							class="button"
+						>
 							<span class="button__icon fas fa-info"></span>
-							<span class="button__text">more info</span>
+							<span class="button__text">
+								more info
+							</span>
 						</router-link>
 					</div>
 				</transition>
 
-				<span class="button-close" @click="userRemoveEmit(user)">
+				<span
+					class="button-close"
+					@click="userRemoveEmit(user)"
+				>
 					<i class="button-close__icon fas fa-times-circle"></i>
 				</span>
 			</li>

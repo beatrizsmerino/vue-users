@@ -1,7 +1,15 @@
 <template>
 	<section class="users">
-		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove"></users-list>
-		<users-buttons @random="setRandom" @show="setShow"></users-buttons>
+		<users-list
+			:users="users"
+			:isHidden="isHidden"
+			:isSmall="isSmall"
+			@remove="userRemove"
+		></users-list>
+		<users-buttons
+			@random="setRandom"
+			@show="setShow"
+		></users-buttons>
 	</section>
 </template>
 

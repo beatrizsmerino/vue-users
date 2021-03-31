@@ -1,10 +1,15 @@
 <template>
 	<section class="home">
 		<div class="logo-vue">
-			<img src="../assets/logo.png" alt="Vue logo" />
+			<img
+				src="../assets/logo.png"
+				alt="Vue logo"
+			/>
 		</div>
 		<div class="definition">
-			<p>List of users with vue.js</p>
+			<p>
+				List of users with vue.js
+			</p>
 		</div>
 	</section>
 </template>

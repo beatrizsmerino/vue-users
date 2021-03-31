@@ -1,7 +1,17 @@
 <template>
 	<div class="users-buttons">
-		<button @click="setShowEmit" class="users-buttons__item">HIDE USER INFO</button>
-		<button @click="setRandomEmit" class="users-buttons__item">RANDOM USERS</button>
+		<button
+			@click="setShowEmit"
+			class="users-buttons__item"
+		>
+			HIDE USER INFO
+		</button>
+		<button
+			@click="setRandomEmit"
+			class="users-buttons__item"
+		>
+			RANDOM USERS
+		</button>
 	</div>
 </template>
 
