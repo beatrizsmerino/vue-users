@@ -21,6 +21,7 @@
 		},
 		data() {
 			return {
+				usersList: this.users,
 				isHidden: false,
 				isSmall: false
 			};
@@ -31,10 +32,10 @@
 				this.isSmall = !this.isSmall;
 			},
 			setRandom() {
-				this.users.sort(() => Math.random() - 0.5);
+				this.usersList.sort(() => Math.random() - 0.5);
 			},
 			userRemove(userToRemove) {
-				this.users.splice(this.users.indexOf(userToRemove), 1);
+				this.usersList.splice(this.users.indexOf(userToRemove), 1);
 			}
 		}
 	};
