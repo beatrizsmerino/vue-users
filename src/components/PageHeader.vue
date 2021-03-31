@@ -4,12 +4,14 @@
 			<router-link
 				to="/"
 				class="nav__item"
+				exact
 			>
 				Home
 			</router-link>
 			<router-link
 				to="/users"
 				class="nav__item"
+				:class="{'router-link-active': $route.path.includes('user')}"
 			>
 				Users
 			</router-link>
@@ -58,6 +60,7 @@
 				margin-right: 2rem;
 			}
 
+			&.router-link-active,
 			&.router-link-exact-active {
 				position: relative;
 				color: var(--color-brand-2);
