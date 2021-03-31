@@ -68,7 +68,11 @@
 		font-weight: 600;
 
 		&__item {
-			color: var(--color-light);
+			padding: 0 0.2rem;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			color: var(--color-brand-2);
 
 			&:not(:last-child) {
 				margin-right: 2rem;
@@ -77,7 +81,7 @@
 			&.router-link-active,
 			&.router-link-exact-active {
 				position: relative;
-				color: var(--color-brand-2);
+				color: var(--color-light);
 
 				&:after {
 					content: "";
@@ -88,7 +92,7 @@
 					bottom: -0.2rem;
 					left: 50%;
 					transform: translate3d(-50%, 0, 0);
-					background-color: var(--color-brand-2);
+					background-color: var(--color-light);
 				}
 			}
 		}
