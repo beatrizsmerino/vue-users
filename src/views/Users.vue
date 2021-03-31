@@ -2,10 +2,9 @@
 	<div class="page-main__inner">
 		<section class="users">
 			<users-list
-				:users="users"
+				:users="usersList"
 				:isHidden="isHidden"
 				:isSmall="isSmall"
-				@remove="userRemove"
 			/>
 			<users-buttons
 				@random="setRandom"
@@ -44,9 +43,6 @@
 			setRandom() {
 				this.usersList.sort(() => Math.random() - 0.5);
 			},
-			userRemove(userToRemove) {
-				this.usersList.splice(this.users.indexOf(userToRemove), 1);
-			}
 		}
 	};
 </script>

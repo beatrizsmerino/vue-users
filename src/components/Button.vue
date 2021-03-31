@@ -90,6 +90,12 @@
 			font-size: 2.4rem;
 		}
 
+		&--icon {
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+
 		&--width-auto {
 			width: fit-content;
 		}

@@ -4,66 +4,20 @@
 			tag="ul"
 			name="slide"
 			class="users-list"
-			:class="{ isSmall: isSmall }"
+			:class="{ 'is-small': isSmall }"
 		>
 			<li
-				v-for="user in users"
+				v-for="user in usersList"
 				:key="user.username"
-				class="user"
+				class="users-list__item"
+				
 			>
-				<img
-					:src="user.imageMedium"
-					:alt="user.name.first + ' ' + user.name.last"
-					class="user__img"
+				<UserPreview
+					:dataUser="user"
+					:isHidden="isHidden"
+					:class="{ 'is-small': isSmall }"
+					@remove="userRemove"
 				/>
-
-				<transition name="fade">
-					<div
-						class="user__content"
-						:class="{ isHidden: isHidden }"
-					>
-						<h3 class="user__name">
-							{{user.name.first}} {{user.name.last}}
-						</h3>
-						<div class="user__description">
-							<p class="user-data">
-								<span class="user-data__icon">
-									<i class="fa fa-user"></i>
-								</span>
-								<span class="user-data__text">
-									{{user.username}}
-								</span>
-							</p>
-							<p class="user-data">
-								<span class="user-data__icon">
-									<i class="fa fa-map-marker"></i>
-								</span>
-								<span class="user-data__text">
-									{{user.state}}
-								</span>
-							</p>
-						</div>
-
-						<Button
-							:to="`/user/${user.username}`"
-							class="button--bg-brand-1 button--width-auto"
-						>
-							<span class="button__icon">
-								<i class="fas fa-info"></i>
-							</span>
-							<span class="button__text">
-								more info
-							</span>
-						</Button>
-					</div>
-				</transition>
-
-				<span
-					class="button-close"
-					@click="userRemoveEmit(user)"
-				>
-					<i class="button-close__icon fas fa-times-circle"></i>
-				</span>
 			</li>
 		</transition-group>
 	</div>
@@ -72,21 +26,26 @@
 
 
 <script>
-	import Button from "./Button";
+	import UserPreview from "./UserPreview";
 
 	export default {
 		name: 'UsersList',
 		components: {
-			Button
+			UserPreview
 		},
 		props: {
 			users: Array,
 			isHidden: Boolean,
 			isSmall: Boolean
 		},
+		data() {
+			return {
+				usersList: this.users
+			};
+		},
 		methods: {
-			userRemoveEmit(userToRemove) {
-				this.$emit("remove", userToRemove);
+			userRemove(userToRemove) {
+				this.usersList.splice(this.users.indexOf(userToRemove), 1);
 			}
 		},
 	}
@@ -111,122 +70,27 @@
 			margin: 0 -1rem 4rem;
 		}
 
-		&.isSmall {
+		&__item {
+			width: calc(50% - 2rem);
+			margin: 1rem;
+			list-style: none;
+
+			@media (max-width: 80rem) {
+				width: calc(100% - 2rem);
+			}
+		}
+
+		&.is-small {
 			max-width: 70rem;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			transition: all 0.5s ease-out 0.8s;
 
-			.user {
-				width: 10rem;
-				height: 10rem;
-				padding: 0.5rem;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				border-radius: 50%;
-
-				.button-close {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					top: 0.5rem;
-					right: 0.5rem;
-					border-radius: 50%;
-					background-color: var(--color-light);
-
-					&:hover {
-						background-color: var(--color-brand-1);
-
-						.button-close {
-							&__icon {
-								color: var(--color-light);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.user {
-		width: calc(50% - 2rem);
-		margin: 1rem;
-		padding: 2rem;
-		display: flex;
-		position: relative;
-		list-style: none;
-		background-color: var(--color-brand-2);
-
-		@media (max-width: 80rem) {
-			width: calc(100% - 2rem);
-		}
-
-		&__img {
-			width: 8rem;
-			height: 8rem;
-			border-radius: 50%;
-			border: 0.3rem solid var(--color-white);
-		}
-
-		&__content {
-			width: calc(100% - 8rem - 1.6rem);
-			margin-left: 1.6rem;
-			display: inline-block;
-			color: var(--color-white);
-
-			&.isHidden {
-				opacity: 0;
-				display: none;
-				transition: all 0.5s ease-out 0s;
-			}
-		}
-
-		&__name {
-			margin-bottom: 0.25rem;
-			text-transform: capitalize;
-			font-size: 2.5rem;
-			font-weight: 200;
-		}
-
-		&__description {
-			margin-bottom: 2rem;
-		}
-	}
-
-	.user-data {
-		display: flex;
-		align-items: center;
-
-		&__icon {
-			margin-right: 1rem;
-			font-size: 1.6rem;
-			opacity: 0.75;
-		}
-
-		&__text {
-			font-size: 2rem;
-		}
-	}
-
-	.button-close {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-		cursor: pointer;
-
-		&__icon {
-			display: inline-block;
-			font-size: 2.8rem;
-			color: var(--color-brand-1);
-			pointer-events: none;
-		}
-
-		&:hover {
-			.button-close {
-				&__icon {
-					color: var(--color-white);
+			.users-list {
+				&__item {
+					width: 10rem;
+					height: 10rem;
 				}
 			}
 		}
@@ -234,23 +98,6 @@
 
 	// VUE TRANSITIONS
 	// -----------------------------------------
-
-	/* animation title (WITH NAME FADE) */
-	.fade-enter {
-		opacity: 1;
-	}
-
-	.fade-enter-active {
-		transition: all 1s ease-in-out 0s;
-	}
-
-	.fade-leave-to {
-		opacity: 0;
-	}
-
-	.fade-leave-active {
-		transition: all 0.5s ease-out 0s;
-	}
 
 	/* animation list (WITH THE NAME SLIDE) */
 	.slide-enter {
