@@ -4,7 +4,7 @@
 			@button-click="setShowEmit"
 			class="users-buttons__item button--bg-brand-2"
 		>
-			HIDE USER INFO
+			{{ textButtonHideUser }}
 		</Button>
 		<Button
 			@button-click="setRandomEmit"
@@ -24,8 +24,23 @@
 		components: {
 			Button
 		},
+		data() {
+			return {
+				showUserInfo: false,
+				textButtonHideUser: 'HIDE USER INFO'
+			}
+		},
 		methods: {
+			changeTextButtonHideUser(){
+				if (this.showUserInfo) {
+					this.textButtonHideUser = 'SHOW USER INFO'
+				} else {
+					this.textButtonHideUser = 'HIDE USER INFO';
+				}
+			},
 			setShowEmit() {
+				this.showUserInfo = !this.showUserInfo;
+				this.changeTextButtonHideUser();
 				this.$emit("show");
 			},
 			setRandomEmit() {
