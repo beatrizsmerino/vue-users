@@ -4,10 +4,10 @@
 		class="page-app"
 		v-cloak
 	>
-		<page-header></page-header>
+		<page-header/>
 
 		<main class="page-main">
-			<page-title></page-title>
+			<page-title/>
 
 			<router-view :users="users" />
 		</main>

@@ -1,6 +1,6 @@
 <template>
 	<div class="map">
-		<leaflet-map-loader :marker="marker"></leaflet-map-loader>
+		<leaflet-map-loader :marker="marker"/>
 	</div>
 </template>
 
