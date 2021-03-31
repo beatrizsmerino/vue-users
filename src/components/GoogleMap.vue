@@ -16,7 +16,6 @@
 <script>
 	import GoogleMapLoader from "./GoogleMapLoader";
 	import GoogleMapMarker from "./GoogleMapMarker";
-
 	import { mapSettings } from "@/constants/mapSettings";
 
 	export default {
