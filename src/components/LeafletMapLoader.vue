@@ -41,6 +41,7 @@
 	});
 
 	export default {
+		name: 'LeafletMapLoader',
 		props: {
 			marker: Object
 		},

@@ -17,6 +17,7 @@
 	import LeafletMap from "../components/LeafletMap.vue";
 
 	export default {
+		name: 'UserMap',
 		components: {
 			GoogleMap,
 			LeafletMap
