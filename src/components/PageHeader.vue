@@ -1,5 +1,8 @@
 <template>
 	<header class="page-header">
+		<span class="logo">
+			VueUsers
+		</span>
 		<nav class="nav">
 			<router-link
 				to="/"
@@ -33,9 +36,9 @@
 	.page-header {
 		width: 100%;
 		height: 4.5rem;
-		padding: 1.5rem 3rem;
+		padding: 0 3rem;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 		align-items: center;
 		position: fixed;
 		top: 0;
@@ -49,7 +52,18 @@
 		}
 	}
 
+	.logo {
+		display: inline-block;
+		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
+		font-size: 3rem;
+		font-weight: bold;
+		line-height: 100%;
+		color: var(--color-brand-2);
+	}
+
 	.nav {
+		display: flex;
+		justify-content: center;
 		font-size: 1.5rem;
 		font-weight: 600;
 
