@@ -145,16 +145,15 @@
 		transition: opacity 0.5s linear 0.5s;
 	}
 
-
 	/* 
 	-----------------------------------------
 	PAGE HOME
 	-----------------------------------------
 	*/
-	.page-home{
+	.page-home {
 		height: 100%;
 
-		.page-body{
+		.page-body {
 			height: 100%;
 		}
 
@@ -163,7 +162,7 @@
 			height: 100%;
 		}
 
-		.page-main{
+		.page-main {
 			padding-top: 0;
 			display: flex;
 			align-items: center;

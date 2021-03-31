@@ -1,7 +1,14 @@
 <template>
 	<div class="user-map">
-		<google-map v-if="isGoogleMaps" :user="user" :apiKey="googleApiKey"></google-map>
-		<leaflet-map v-else :user="user"></leaflet-map>
+		<google-map
+			v-if="isGoogleMaps"
+			:user="user"
+			:apiKey="googleApiKey"
+		></google-map>
+		<leaflet-map
+			v-else
+			:user="user"
+		></leaflet-map>
 	</div>
 </template>
 

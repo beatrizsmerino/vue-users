@@ -1,7 +1,13 @@
 <template>
 	<section class="user-detail">
-		<user-detail v-if="user" :user="user"></user-detail>
-		<user-map v-if="user" :user="user"></user-map>
+		<user-detail
+			v-if="user"
+			:user="user"
+		></user-detail>
+		<user-map
+			v-if="user"
+			:user="user"
+		></user-map>
 	</section>
 </template>
 

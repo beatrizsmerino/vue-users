@@ -1,7 +1,14 @@
 <template>
-	<google-map-loader :mapConfig="mapConfig" :apiKey="apiKey">
+	<google-map-loader
+		:mapConfig="mapConfig"
+		:apiKey="apiKey"
+	>
 		<template #default="{ google, map }">
-			<google-map-marker :marker="marker" :google="google" :map="map" />
+			<google-map-marker
+				:marker="marker"
+				:google="google"
+				:map="map"
+			/>
 		</template>
 	</google-map-loader>
 </template>

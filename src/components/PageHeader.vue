@@ -1,8 +1,18 @@
 <template>
 	<header class="page-header">
 		<nav class="nav">
-			<router-link to="/" class="nav__item">Home</router-link>
-			<router-link to="/users" class="nav__item">Users</router-link>
+			<router-link
+				to="/"
+				class="nav__item"
+			>
+				Home
+			</router-link>
+			<router-link
+				to="/users"
+				class="nav__item"
+			>
+				Users
+			</router-link>
 		</nav>
 	</header>
 </template>

@@ -1,68 +1,95 @@
 <template>
 	<div class="user-detail-data">
 		<div class="user-detail-data__group user-detail-data__image">
-			<img :src="user.imageLarge" alt />
+			<img
+				:src="user.imageLarge"
+				alt
+			/>
 		</div>
 
 		<div class="user-detail-data__group user-detail-data__name">
 			<p>
-				<strong class="user-detail-data__label">Name:</strong>
+				<strong class="user-detail-data__label">
+					Name:
+				</strong>
 				{{user.name.title}} {{user.name.first}} {{user.name.last}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">Username:</strong>
+				<strong class="user-detail-data__label">
+					Username:
+				</strong>
 				{{user.username}}
 			</p>
 		</div>
 
 		<div class="user-detail-data__group">
 			<p>
-				<strong class="user-detail-data__label">Gender:</strong>
+				<strong class="user-detail-data__label">
+					Gender:
+				</strong>
 				{{user.gender}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">Nationality:</strong>
+				<strong class="user-detail-data__label">
+					Nationality:
+				</strong>
 				{{user.nationality}}
 			</p>
 		</div>
 
 		<div class="user-detail-data__group user-detail-data__location">
 			<p>
-				<strong class="user-detail-data__label">State:</strong>
+				<strong class="user-detail-data__label">
+					State:
+				</strong>
 				{{user.state}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">City:</strong>
+				<strong class="user-detail-data__label">
+					City:
+				</strong>
 				{{user.city}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">Street:</strong>
+				<strong class="user-detail-data__label">
+					Street:
+				</strong>
 				{{user.streetName}}, {{user.streetNumber}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">Postcode:</strong>
+				<strong class="user-detail-data__label">
+					Postcode:
+				</strong>
 				{{user.postcode}}
 			</p>
 		</div>
 
 		<div class="user-detail-data__group user-detail-data__contact">
 			<p>
-				<strong class="user-detail-data__label">Email:</strong>
+				<strong class="user-detail-data__label">
+					Email:
+				</strong>
 				{{user.email}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">Phone:</strong>
+				<strong class="user-detail-data__label">
+					Phone:
+				</strong>
 				{{user.phone}}
 			</p>
 			<p>
-				<strong class="user-detail-data__label">Cell:</strong>
+				<strong class="user-detail-data__label">
+					Cell:
+				</strong>
 				{{user.cell}}
 			</p>
 		</div>
 
 		<div class="user-detail-data__group">
 			<p>
-				<strong class="user-detail-data__label">Registered:</strong>
+				<strong class="user-detail-data__label">
+					Registered:
+				</strong>
 				{{user.registered}}
 			</p>
 		</div>
