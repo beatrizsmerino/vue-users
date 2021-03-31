@@ -1,5 +1,5 @@
 <template>
-	<div class="users-list">
+	<div class="users-list__wrapper">
 		<transition-group
 			tag="ul"
 			name="slide"
@@ -89,9 +89,20 @@
 
 <style lang="scss" scoped>
 	.users-list {
-		max-width: 550px;
-		margin: 2em auto;
+		max-width: 850px;
+		margin: 0 auto;
 		padding: 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		@media (max-width: 800px) {
+			max-width: 500px;
+		}
+
+		&__wrapper {
+			margin: 0 -1rem;
+		}
 
 		&.isSmall {
 			max-width: 700px;
@@ -101,21 +112,49 @@
 			transition: all 0.5s ease-out 0.8s;
 
 			.user {
-				width: 30%;
-				margin: 2%;
-				transition: all 0.5s ease-out 0.5s;
+				width: 100px;
+				height: 100px;
+				padding: 5px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+
+				.button-close {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					top: 5px;
+					right: 5px;
+					border-radius: 50%;
+					background-color: var(--color-light);
+
+					&:hover {
+						background-color: var(--color-brand-1);
+
+						.button-close {
+							&__icon {
+								color: var(--color-light);
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 
 	.user {
-		width: calc(100% - 2rem);
+		width: calc(50% - 2rem);
 		margin: 1rem;
 		padding: 20px;
 		display: flex;
 		position: relative;
 		list-style: none;
 		background-color: var(--color-brand-2);
+
+		@media (max-width: 800px) {
+			width: calc(100% - 2rem);
+		}
 
 		&__content {
 			margin-left: 1rem;
@@ -196,6 +235,7 @@
 			display: inline-block;
 			font-size: 1.8rem;
 			color: var(--color-brand-1);
+			pointer-events: none;
 		}
 
 		&:hover {

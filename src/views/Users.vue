@@ -56,6 +56,6 @@
 
 <style lang="scss" scoped>
 	.users {
-		padding-bottom: 6rem;
+		padding: 0 2rem 6rem;
 	}
 </style>
