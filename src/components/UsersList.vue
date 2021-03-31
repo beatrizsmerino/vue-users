@@ -27,32 +27,34 @@
 						</h3>
 						<div class="user__description">
 							<p class="user-data">
-								<span class="user-data__icon user-data__item">
+								<span class="user-data__icon">
 									<i class="fa fa-user"></i>
 								</span>
-								<span class="user-data__text user-data__item">
+								<span class="user-data__text">
 									{{user.username}}
 								</span>
 							</p>
 							<p class="user-data">
-								<span class="user-data__icon user-data__item">
+								<span class="user-data__icon">
 									<i class="fa fa-map-marker"></i>
 								</span>
-								<span class="user-data__text user-data__item">
+								<span class="user-data__text">
 									{{user.state}}
 								</span>
 							</p>
 						</div>
 
-						<router-link
+						<Button
 							:to="`/user/${user.username}`"
-							class="button"
+							class="button--bg-brand-1 button--width-auto"
 						>
-							<span class="button__icon fas fa-info"></span>
+							<span class="button__icon">
+								<i class="fas fa-info"></i>
+							</span>
 							<span class="button__text">
 								more info
 							</span>
-						</router-link>
+						</Button>
 					</div>
 				</transition>
 
@@ -70,8 +72,13 @@
 
 
 <script>
+	import Button from "./Button";
+
 	export default {
 		name: 'UsersList',
+		components: {
+			Button
+		},
 		props: {
 			users: Array,
 			isHidden: Boolean,
@@ -156,7 +163,15 @@
 			width: calc(100% - 2rem);
 		}
 
+		&__img {
+			width: 8rem;
+			height: 8rem;
+			border-radius: 50%;
+			border: 0.3rem solid #fff;
+		}
+
 		&__content {
+			width: calc(100% - 8rem - 1.6rem);
 			margin-left: 1.6rem;
 			display: inline-block;
 			color: #fff;
@@ -176,13 +191,7 @@
 		}
 
 		&__description {
-		}
-
-		&__img {
-			width: 8rem;
-			height: 8rem;
-			border-radius: 50%;
-			border: 0.3rem solid #fff;
+			margin-bottom: 2rem;
 		}
 	}
 
@@ -195,32 +204,9 @@
 			font-size: 1.6rem;
 			opacity: 0.75;
 		}
-		&__text {
-			font-size: 2rem;
-		}
-	}
-
-	.button {
-		margin-top: 1rem;
-		padding: 1rem 2rem;
-		display: inline-block;
-		text-align: center;
-		color: var(--color-brand-1);
-		border: 0.2rem solid var(--color-brand-1);
-		cursor: pointer;
 
 		&__text {
 			font-size: 2rem;
-			font-weight: 700;
-		}
-		&__icon {
-			margin-right: 1rem;
-			font-size: 2.4rem;
-		}
-
-		&:hover {
-			color: #fff;
-			background-color: var(--color-brand-1);
 		}
 	}
 
