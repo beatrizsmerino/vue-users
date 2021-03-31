@@ -6,7 +6,9 @@
 
 <script>
 	import LeafletMapLoader from "./LeafletMapLoader";
+	
 	export default {
+		name: 'LeafletMap',
 		components: {
 			LeafletMapLoader
 		},

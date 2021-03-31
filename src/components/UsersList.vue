@@ -71,6 +71,7 @@
 
 <script>
 	export default {
+		name: 'UsersList',
 		props: {
 			users: Array,
 			isHidden: Boolean,

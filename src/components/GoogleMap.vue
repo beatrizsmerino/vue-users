@@ -20,6 +20,7 @@
 	import { mapSettings } from "@/constants/mapSettings";
 
 	export default {
+		name: 'GoogleMap',
 		components: {
 			GoogleMapLoader,
 			GoogleMapMarker
