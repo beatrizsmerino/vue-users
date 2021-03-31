@@ -93,9 +93,9 @@
 		&--width-auto {
 			width: fit-content;
 		}
-		
+
 		&--bg-brand-1 {
-			color: #fff;
+			color: var(--color-white);
 			background-color: var(--color-brand-1);
 
 			&:hover {
@@ -106,12 +106,12 @@
 		}
 
 		&--bg-brand-2 {
-			color: var(--color-silver);
+			color: var(--color-light);
 			background-color: var(--color-brand-2);
 
 			&:hover {
 				color: var(--color-brand-2);
-				background-color: var(--color-silver);
+				background-color: var(--color-light);
 			}
 		}
 	}
