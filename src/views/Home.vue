@@ -29,7 +29,7 @@
 		components: {
 		},
 		props: {
-			users: Array
+			usersFetch: Array
 		},
 	};
 </script>

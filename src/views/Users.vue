@@ -7,10 +7,10 @@
 				:isSmall="isSmall"
 			/>
 			<users-buttons
-				@orderUsers="orderUsers"
-				@hideInfoUser="hideInfoUser"
-				@getUsers="getUsers"
-				@removeAllUsers="removeAllUsers"
+				@order="orderUsers"
+				@hide="hideInfoUser"
+				@getAll="getUsers"
+				@removeAll="removeAllUsers"
 			/>
 		</section>
 	</div>
@@ -28,11 +28,11 @@
 			UsersButtons
 		},
 		props: {
-			users: Array
+			usersFetch: Array
 		},
 		data() {
 			return {
-				usersList: this.users,
+				usersList: this.usersFetch,
 				isHidden: false,
 				isSmall: false
 			};
@@ -47,7 +47,7 @@
 			},
 			async getUsers() {
 				await this.$parent.getUsers();
-				this.usersList = this.users;
+				this.usersList = this.usersFetch;
 			},
 			removeAllUsers(){
 				this.usersList = [];
