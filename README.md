@@ -32,8 +32,10 @@ Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework
 -   components
     -   [PageHeader](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/PageHeader.vue)
     -   [PageTitle](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/PageTitle.vue)
+    -   [Button](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/Button.vue)
     -   [UsersList](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UsersList.vue)
     -   [UsersButtons](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UsersButtons.vue)
+    -   [UserPreview](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserPreview.vue)
     -   [UserDetail](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserDetail.vue)
     -   [UserMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserMap.vue)
     -   [GoogleMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/GoogleMap.vue)
@@ -88,7 +90,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 | NPM PACKAGE              | STABLE VERSION | LAST VERSION                                                                                                         |
 | ------------------------ | -------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `core-js`                | ^3.9.1         | [![NPM](https://nodeico.herokuapp.com/core-js.svg)](https://npmjs.com/package/core-js)                               |
+| `core-js`                | ^3.10.0         | [![NPM](https://nodeico.herokuapp.com/core-js.svg)](https://npmjs.com/package/core-js)                               |
 | `google-maps-api-loader` | ^1.1.1         | [![NPM](https://nodeico.herokuapp.com/google-maps-api-loader.svg)](https://npmjs.com/package/google-maps-api-loader) |
 | `leaflet`                | ^1.7.1         | [![NPM](https://nodeico.herokuapp.com/leaflet.svg)](https://npmjs.com/package/leaflet)                               |
 | `vue`                    | ^2.6.12        | [![NPM](https://nodeico.herokuapp.com/vue.svg)](https://npmjs.com/package/vue)                                       |
