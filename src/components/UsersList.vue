@@ -66,7 +66,7 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
-		@media (max-width: 80rem) {
+		@media (max-width: 50rem) {
 			max-width: 50rem;
 		}
 
@@ -79,7 +79,7 @@
 			margin: 1rem;
 			list-style: none;
 
-			@media (max-width: 80rem) {
+			@media (max-width: 50rem) {
 				width: calc(100% - 2rem);
 			}
 		}
