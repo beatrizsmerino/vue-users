@@ -40,8 +40,8 @@
 	.subtitle {
 		text-align: center;
 		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
-		font-size: 6.4rem;
-		color: var(--color-brand-1);
+		font-size: 6rem;
+		color: var(--color-brand-2);
 	}
 
 	.description {
