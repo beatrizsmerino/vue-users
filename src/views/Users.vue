@@ -9,6 +9,7 @@
 			<users-buttons
 				@orderUsers="orderUsers"
 				@hideInfoUser="hideInfoUser"
+				@getUsers="getUsers"
 			/>
 		</section>
 	</div>
@@ -42,8 +43,12 @@
 			},
 			orderUsers() {
 				this.usersList.sort(() => Math.random() - 0.5);
+			},
+			async getUsers() {
+				await this.$parent.getUsers();
+				this.usersList = this.users;
 			}
-		}
+		},
 	};
 </script>
 
