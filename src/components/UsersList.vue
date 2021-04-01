@@ -45,9 +45,14 @@
 		},
 		methods: {
 			userRemove(userToRemove) {
-				this.usersList.splice(this.users.indexOf(userToRemove), 1);
+				this.usersList.splice(this.usersList.indexOf(userToRemove), 1);
 			}
 		},
+		watch: {
+			users(newValue){
+				this.usersList = newValue;
+			}
+		}
 	}
 </script>
 

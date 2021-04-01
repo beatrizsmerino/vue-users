@@ -12,6 +12,12 @@
 		>
 			ORDER USERS
 		</Button>
+		<Button
+			@button-click="getUsersEmit"
+			class="users-buttons__item button--bg-brand-2"
+		>
+			GET USERS
+		</Button>
 	</div>
 </template>
 
@@ -45,6 +51,9 @@
 			},
 			orderUsersEmit() {
 				this.$emit("orderUsers");
+			},
+			getUsersEmit() {
+				this.$emit("getUsers");
 			}
 		}
 	};
