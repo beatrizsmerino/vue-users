@@ -34,30 +34,30 @@
 			this.getUsers();
 		},
 		methods: {
-			getUsers() {
-				fetch('https://randomuser.me/api/?results=10')
-					.then(res => res.json())
-					.then(data => {
-						this.users = data.results.map(user => ({
-							name: user.name,
-							username: user.login.username,
-							gender: user.gender,
-							nationality: user.nat,
-							streetNumber: user.location.street.number,
-							streetName: user.location.street.name,
-							city: user.location.city,
-							state: user.location.state,
-							postcode: user.location.postcode,
-							latitude: user.location.coordinates.latitude,
-							longitude: user.location.coordinates.longitude,
-							registered: user.registered.date,
-							phone: user.phone,
-							cell: user.cell,
-							email: user.email,
-							imageMedium: user.picture.medium,
-							imageLarge: user.picture.large,
-						}))
-					});
+			async getUsers() {
+				const response = await fetch('https://randomuser.me/api/?results=10');
+				const data = await response.json();
+				this.users = data.results.map(user => (
+					{
+						name: user.name,
+						username: user.login.username,
+						gender: user.gender,
+						nationality: user.nat,
+						streetNumber: user.location.street.number,
+						streetName: user.location.street.name,
+						city: user.location.city,
+						state: user.location.state,
+						postcode: user.location.postcode,
+						latitude: user.location.coordinates.latitude,
+						longitude: user.location.coordinates.longitude,
+						registered: user.registered.date,
+						phone: user.phone,
+						cell: user.cell,
+						email: user.email,
+						imageMedium: user.picture.medium,
+						imageLarge: user.picture.large,
+					}
+				));
 			}
 		},
 		watch: {
@@ -133,10 +133,10 @@
 	}
 
 	/* 
-	-----------------------------------------
-	VUE TRANSITIONS
-	-----------------------------------------
-	*/
+			-----------------------------------------
+			VUE TRANSITIONS
+			-----------------------------------------
+			*/
 
 	/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
 	.v-enter {
@@ -156,10 +156,10 @@
 	}
 
 	/* 
-	-----------------------------------------
-	PAGE HOME
-	-----------------------------------------
-	*/
+			-----------------------------------------
+			PAGE HOME
+			-----------------------------------------
+			*/
 	.page-home {
 		height: 100%;
 
