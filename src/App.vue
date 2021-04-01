@@ -4,10 +4,10 @@
 		class="page-app"
 		v-cloak
 	>
-		<page-header/>
+		<page-header />
 
 		<main class="page-main">
-			<page-title/>
+			<page-title />
 
 			<router-view :users="users" />
 		</main>
@@ -31,29 +31,34 @@
 			}
 		},
 		created() {
-			fetch('https://randomuser.me/api/?results=10')
-				.then(res => res.json())
-				.then(data => {
-					this.users = data.results.map(user => ({
-						name: user.name,
-						username: user.login.username,
-						gender: user.gender,
-						nationality: user.nat,
-						streetNumber: user.location.street.number,
-						streetName: user.location.street.name,
-						city: user.location.city,
-						state: user.location.state,
-						postcode: user.location.postcode,
-						latitude: user.location.coordinates.latitude,
-						longitude: user.location.coordinates.longitude,
-						registered: user.registered.date,
-						phone: user.phone,
-						cell: user.cell,
-						email: user.email,
-						imageMedium: user.picture.medium,
-						imageLarge: user.picture.large,
-					}))
-				})
+			this.getUsers();
+		},
+		methods: {
+			getUsers() {
+				fetch('https://randomuser.me/api/?results=10')
+					.then(res => res.json())
+					.then(data => {
+						this.users = data.results.map(user => ({
+							name: user.name,
+							username: user.login.username,
+							gender: user.gender,
+							nationality: user.nat,
+							streetNumber: user.location.street.number,
+							streetName: user.location.street.name,
+							city: user.location.city,
+							state: user.location.state,
+							postcode: user.location.postcode,
+							latitude: user.location.coordinates.latitude,
+							longitude: user.location.coordinates.longitude,
+							registered: user.registered.date,
+							phone: user.phone,
+							cell: user.cell,
+							email: user.email,
+							imageMedium: user.picture.medium,
+							imageLarge: user.picture.large,
+						}))
+					});
+			}
 		},
 		watch: {
 			$route: {
@@ -101,9 +106,8 @@
 		box-sizing: border-box;
 	}
 
-	html{
+	html {
 		font-size: 62.5%;
-		
 	}
 
 	body {

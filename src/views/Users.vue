@@ -7,8 +7,8 @@
 				:isSmall="isSmall"
 			/>
 			<users-buttons
-				@random="setRandom"
-				@show="setShow"
+				@orderUsers="orderUsers"
+				@hideInfoUser="hideInfoUser"
 			/>
 		</section>
 	</div>
@@ -36,13 +36,13 @@
 			};
 		},
 		methods: {
-			setShow() {
+			hideInfoUser() {
 				this.isHidden = !this.isHidden;
 				this.isSmall = !this.isSmall;
 			},
-			setRandom() {
+			orderUsers() {
 				this.usersList.sort(() => Math.random() - 0.5);
-			},
+			}
 		}
 	};
 </script>

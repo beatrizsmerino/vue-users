@@ -1,16 +1,16 @@
 <template>
 	<div class="users-buttons">
 		<Button
-			@button-click="setShowEmit"
+			@button-click="hideInfoUserEmit"
 			class="users-buttons__item button--bg-brand-2"
 		>
 			{{ textButtonHideUser }}
 		</Button>
 		<Button
-			@button-click="setRandomEmit"
+			@button-click="orderUsersEmit"
 			class="users-buttons__item button--bg-brand-2"
 		>
-			RANDOM USERS
+			ORDER USERS
 		</Button>
 	</div>
 </template>
@@ -38,13 +38,13 @@
 					this.textButtonHideUser = 'HIDE USER INFO';
 				}
 			},
-			setShowEmit() {
+			hideInfoUserEmit() {
 				this.showUserInfo = !this.showUserInfo;
 				this.changeTextButtonHideUser();
-				this.$emit("show");
+				this.$emit("hideInfoUser");
 			},
-			setRandomEmit() {
-				this.$emit("random");
+			orderUsersEmit() {
+				this.$emit("orderUsers");
 			}
 		}
 	};
