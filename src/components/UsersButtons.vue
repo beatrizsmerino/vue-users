@@ -53,16 +53,16 @@
 			hideInfoUserEmit() {
 				this.showUserInfo = !this.showUserInfo;
 				this.changeTextButtonHideUser();
-				this.$emit("hideInfoUser");
+				this.$emit("hide");
 			},
 			orderUsersEmit() {
-				this.$emit("orderUsers");
+				this.$emit("order");
 			},
 			getUsersEmit() {
-				this.$emit("getUsers");
+				this.$emit("getAll");
 			},
 			removeAllUsersEmit() {
-				this.$emit("removeAllUsers");
+				this.$emit("removeAll");
 			}
 		}
 	};
