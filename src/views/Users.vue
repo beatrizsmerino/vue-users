@@ -58,6 +58,10 @@
 
 <style lang="scss" scoped>
 	.users {
-		padding: 0 2rem 7.9rem;
+		padding: 0 2rem 7rem;
+
+		@media (max-width: 41rem){
+			padding-bottom: 12rem;
+		}
 	}
 </style>
