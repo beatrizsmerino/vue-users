@@ -72,8 +72,9 @@
 <style lang="scss" scoped>
 	.users-buttons {
 		width: 100%;
-		padding: 1.6rem;
+		padding: 1rem 1.6rem;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		position: fixed;
@@ -84,11 +85,8 @@
 		box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.3);
 
 		&__item {
+			margin: 0.5rem;
 			font-size: 1.3rem;
-
-			&:not(:last-child) {
-				margin-right: 1.6rem;
-			}
 		}
 	}
 </style>

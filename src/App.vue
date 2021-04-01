@@ -132,11 +132,9 @@
 		padding: 6.4rem 0 0;
 	}
 
-	/* 
-			-----------------------------------------
-			VUE TRANSITIONS
-			-----------------------------------------
-			*/
+
+	// VUE TRANSITIONS
+	// -----------------------------------------
 
 	/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
 	.v-enter {
@@ -155,11 +153,8 @@
 		transition: opacity 0.5s linear 0.5s;
 	}
 
-	/* 
-			-----------------------------------------
-			PAGE HOME
-			-----------------------------------------
-			*/
+	// PAGE HOME
+	// -----------------------------------------
 	.page-home {
 		height: 100%;
 
