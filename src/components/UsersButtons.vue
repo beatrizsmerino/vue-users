@@ -18,6 +18,12 @@
 		>
 			GET USERS
 		</Button>
+		<Button
+			@button-click="removeAllUsersEmit"
+			class="users-buttons__item button--bg-brand-2"
+		>
+			REMOVE ALL USERS
+		</Button>
 	</div>
 </template>
 
@@ -54,6 +60,9 @@
 			},
 			getUsersEmit() {
 				this.$emit("getUsers");
+			},
+			removeAllUsersEmit() {
+				this.$emit("removeAllUsers");
 			}
 		}
 	};

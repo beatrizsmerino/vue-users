@@ -10,6 +10,7 @@
 				@orderUsers="orderUsers"
 				@hideInfoUser="hideInfoUser"
 				@getUsers="getUsers"
+				@removeAllUsers="removeAllUsers"
 			/>
 		</section>
 	</div>
@@ -47,6 +48,9 @@
 			async getUsers() {
 				await this.$parent.getUsers();
 				this.usersList = this.users;
+			},
+			removeAllUsers(){
+				this.usersList = [];
 			}
 		},
 	};
