@@ -158,7 +158,7 @@
 			}
 		}
 
-		&.is-small {
+		&.is-hidden-info {
 			padding: 0.5rem;
 			display: flex;
 			align-items: center;
