@@ -1,8 +1,18 @@
 <template>
-	<section class="users">
-		<users-list :users="users" :isHidden="isHidden" :isSmall="isSmall" @remove="userRemove"></users-list>
-		<users-buttons @random="setRandom" @show="setShow"></users-buttons>
-	</section>
+	<div class="page-main__inner">
+		<section class="users">
+			<users-list
+				:users="usersList"
+				:stateHidden="infoUserHidden"
+			/>
+			<users-buttons
+				@order="orderUsers"
+				@hide="hideInfoUser"
+				@getAll="getUsers"
+				@removeAll="removeAllUsers"
+			/>
+		</section>
+	</div>
 </template>
 
 
@@ -17,26 +27,29 @@
 			UsersButtons
 		},
 		props: {
-			users: Array
+			usersFetch: Array
 		},
 		data() {
 			return {
-				isHidden: false,
-				isSmall: false
+				usersList: this.usersFetch,
+				infoUserHidden: false,
 			};
 		},
 		methods: {
-			setShow() {
-				this.isHidden = !this.isHidden;
-				this.isSmall = !this.isSmall;
+			hideInfoUser() {
+				this.infoUserHidden = !this.infoUserHidden;
 			},
-			setRandom() {
-				this.users.sort(() => Math.random() - 0.5);
+			orderUsers() {
+				this.usersList.sort(() => Math.random() - 0.5);
 			},
-			userRemove(userToRemove) {
-				this.users.splice(this.users.indexOf(userToRemove), 1);
+			async getUsers() {
+				await this.$parent.getUsers();
+				this.usersList = this.usersFetch;
+			},
+			removeAllUsers(){
+				this.usersList = [];
 			}
-		}
+		},
 	};
 </script>
 
@@ -45,6 +58,10 @@
 
 <style lang="scss" scoped>
 	.users {
-		padding-bottom: 6rem;
+		padding: 0 2rem 7rem;
+
+		@media (max-width: 41rem){
+			padding-bottom: 12rem;
+		}
 	}
 </style>

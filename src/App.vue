@@ -1,17 +1,17 @@
 <template>
-	<main
+	<div
 		id="app"
 		class="page-app"
 		v-cloak
 	>
-		<page-header></page-header>
+		<page-header />
 
 		<main class="page-main">
-			<page-title></page-title>
+			<page-title />
 
-			<router-view :users="users" />
+			<router-view :usersFetch="users" />
 		</main>
-	</main>
+	</div>
 </template>
 
 
@@ -31,10 +31,14 @@
 			}
 		},
 		created() {
-			fetch('https://randomuser.me/api/?results=10')
-				.then(res => res.json())
-				.then(data => {
-					this.users = data.results.map(user => ({
+			this.getUsers();
+		},
+		methods: {
+			async getUsers() {
+				const response = await fetch('https://randomuser.me/api/?results=10');
+				const data = await response.json();
+				this.users = data.results.map(user => (
+					{
 						name: user.name,
 						username: user.login.username,
 						gender: user.gender,
@@ -52,8 +56,9 @@
 						email: user.email,
 						imageMedium: user.picture.medium,
 						imageLarge: user.picture.large,
-					}))
-				})
+					}
+				));
+			}
 		},
 		watch: {
 			$route: {
@@ -76,15 +81,17 @@
 
 
 <style lang="scss">
+	@import url("./assets/fonts/DauphinPlain/font.css");
 	@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
 	@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
 	:root {
 		--color-brand-1: #42b883;
 		--color-brand-2: #35495e;
-		--color-gray: #3f3f3f;
+		--color-white: #fff;
 		--color-light: #fafafa;
-		--color-silver: #ececec;
+		--color-gray-dark: #3f3f3f;
+		--color-black: #000;
 	}
 
 	[v-cloak] {
@@ -99,12 +106,16 @@
 		box-sizing: border-box;
 	}
 
+	html {
+		font-size: 62.5%;
+	}
+
 	body {
-		padding: 4.5rem 0 0;
+		padding: 7.2rem 0 0;
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
-		font-size: 62.5%;
-		color: var(--color-gray-1);
+		font-size: 1.6rem;
+		color: var(--color-gray-dark);
 		background-color: var(--color-light);
 	}
 
@@ -118,14 +129,12 @@
 	}
 
 	.page-main {
-		padding: 4rem 0 0;
+		padding: 6.4rem 0 0;
 	}
 
-	/* 
-	-----------------------------------------
-	VUE TRANSITIONS
-	-----------------------------------------
-	*/
+
+	// VUE TRANSITIONS
+	// -----------------------------------------
 
 	/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
 	.v-enter {
@@ -144,16 +153,12 @@
 		transition: opacity 0.5s linear 0.5s;
 	}
 
-
-	/* 
-	-----------------------------------------
-	PAGE HOME
-	-----------------------------------------
-	*/
-	.page-home{
+	// PAGE HOME
+	// -----------------------------------------
+	.page-home {
 		height: 100%;
 
-		.page-body{
+		.page-body {
 			height: 100%;
 		}
 
@@ -162,7 +167,7 @@
 			height: 100%;
 		}
 
-		.page-main{
+		.page-main {
 			padding-top: 0;
 			display: flex;
 			align-items: center;

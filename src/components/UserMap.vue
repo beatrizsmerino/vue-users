@@ -1,7 +1,14 @@
 <template>
 	<div class="user-map">
-		<google-map v-if="isGoogleMaps" :user="user" :apiKey="googleApiKey"></google-map>
-		<leaflet-map v-else :user="user"></leaflet-map>
+		<google-map
+			v-if="isGoogleMaps"
+			:user="user"
+			:apiKey="googleApiKey"
+		/>
+		<leaflet-map
+			v-else
+			:user="user"
+		/>
 	</div>
 </template>
 
@@ -10,6 +17,7 @@
 	import LeafletMap from "../components/LeafletMap.vue";
 
 	export default {
+		name: 'UserMap',
 		components: {
 			GoogleMap,
 			LeafletMap
@@ -33,7 +41,7 @@
 <style lang="scss" scoped>
 	.user-map {
 		width: 100%;
-		height: 500px;
+		height: 50rem;
 		margin-top: 5rem;
 	}
 </style>

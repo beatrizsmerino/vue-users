@@ -1,19 +1,68 @@
 <template>
 	<div class="users-buttons">
-		<button @click="setShowEmit" class="users-buttons__item">HIDE USER INFO</button>
-		<button @click="setRandomEmit" class="users-buttons__item">RANDOM USERS</button>
+		<Button
+			@button-click="hideInfoUserEmit"
+			class="users-buttons__item button--bg-brand-2"
+		>
+			{{ textButtonHideUser }}
+		</Button>
+		<Button
+			@button-click="orderUsersEmit"
+			class="users-buttons__item button--bg-brand-2"
+		>
+			ORDER USERS
+		</Button>
+		<Button
+			@button-click="getUsersEmit"
+			class="users-buttons__item button--bg-brand-2"
+		>
+			GET USERS
+		</Button>
+		<Button
+			@button-click="removeAllUsersEmit"
+			class="users-buttons__item button--bg-brand-2"
+		>
+			REMOVE ALL USERS
+		</Button>
 	</div>
 </template>
 
 
 <script>
+	import Button from "./Button";
+
 	export default {
+		name: 'UsersButtons',
+		components: {
+			Button
+		},
+		data() {
+			return {
+				showUserInfo: false,
+				textButtonHideUser: 'HIDE USER INFO'
+			}
+		},
 		methods: {
-			setShowEmit() {
-				this.$emit("show");
+			changeTextButtonHideUser(){
+				if (this.showUserInfo) {
+					this.textButtonHideUser = 'SHOW USER INFO'
+				} else {
+					this.textButtonHideUser = 'HIDE USER INFO';
+				}
 			},
-			setRandomEmit() {
-				this.$emit("random");
+			hideInfoUserEmit() {
+				this.showUserInfo = !this.showUserInfo;
+				this.changeTextButtonHideUser();
+				this.$emit("hide");
+			},
+			orderUsersEmit() {
+				this.$emit("order");
+			},
+			getUsersEmit() {
+				this.$emit("getAll");
+			},
+			removeAllUsersEmit() {
+				this.$emit("removeAll");
 			}
 		}
 	};
@@ -23,8 +72,9 @@
 <style lang="scss" scoped>
 	.users-buttons {
 		width: 100%;
-		padding: 1rem;
+		padding: 1rem 1.6rem;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		position: fixed;
@@ -35,22 +85,8 @@
 		box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.3);
 
 		&__item {
-			padding: 1rem;
-			font-weight: 600;
-			font-size: 0.8rem;
-			color: var(--color-brand-2);
-			border: none;
-			background-color: var(--color-silver);
-			cursor: pointer;
-
-			&:not(:last-child) {
-				margin-right: 1rem;
-			}
-
-			&:hover {
-				color: var(--color-silver);
-				background-color: var(--color-brand-2);
-			}
+			margin: 0.5rem;
+			font-size: 1.3rem;
 		}
 	}
 </style>
