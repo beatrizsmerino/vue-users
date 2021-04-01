@@ -1,8 +1,11 @@
 <template>
 	<header class="page-header">
-		<span class="logo">
+		<router-link
+			to="/"
+			class="logo"
+		>
 			VueUsers
-		</span>
+		</router-link>
 		<nav class="nav">
 			<router-link
 				to="/"
