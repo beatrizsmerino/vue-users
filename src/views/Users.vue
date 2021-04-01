@@ -4,7 +4,6 @@
 			<users-list
 				:users="usersList"
 				:isHidden="isHidden"
-				:isSmall="isSmall"
 			/>
 			<users-buttons
 				@order="orderUsers"
@@ -34,13 +33,11 @@
 			return {
 				usersList: this.usersFetch,
 				isHidden: false,
-				isSmall: false
 			};
 		},
 		methods: {
 			hideInfoUser() {
 				this.isHidden = !this.isHidden;
-				this.isSmall = !this.isSmall;
 			},
 			orderUsers() {
 				this.usersList.sort(() => Math.random() - 0.5);
