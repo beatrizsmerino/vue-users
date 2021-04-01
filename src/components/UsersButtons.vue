@@ -43,7 +43,7 @@
 			}
 		},
 		methods: {
-			changeTextButtonHideUser(){
+			changeTextButtonHideUser() {
 				if (this.showUserInfo) {
 					this.textButtonHideUser = 'SHOW USER INFO'
 				} else {
@@ -86,7 +86,12 @@
 
 		&__item {
 			margin: 0.5rem;
-			font-size: 1.3rem;
+		}
+
+		/deep/ {
+			.button {
+				font-size: 1.3rem;
+			}
 		}
 	}
 </style>
