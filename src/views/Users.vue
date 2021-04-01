@@ -3,7 +3,7 @@
 		<section class="users">
 			<users-list
 				:users="usersList"
-				:isHidden="isHidden"
+				:stateHidden="infoUserHidden"
 			/>
 			<users-buttons
 				@order="orderUsers"
@@ -32,12 +32,12 @@
 		data() {
 			return {
 				usersList: this.usersFetch,
-				isHidden: false,
+				infoUserHidden: false,
 			};
 		},
 		methods: {
 			hideInfoUser() {
-				this.isHidden = !this.isHidden;
+				this.infoUserHidden = !this.infoUserHidden;
 			},
 			orderUsers() {
 				this.usersList.sort(() => Math.random() - 0.5);

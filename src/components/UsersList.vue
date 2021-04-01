@@ -4,7 +4,7 @@
 			tag="ul"
 			name="slide"
 			class="users-list"
-			:class="{ 'is-hidden-info': isHidden }"
+			:class="{ 'is-hidden-info': stateHidden }"
 		>
 			<li
 				v-for="user in usersList"
@@ -14,8 +14,8 @@
 			>
 				<UserPreview
 					:dataUser="user"
-					:isHidden="isHidden"
-					:class="{ 'is-hidden-info': isHidden }"
+					:isHidden="stateHidden"
+					:class="{ 'is-hidden-info': stateHidden }"
 					@remove="userRemove"
 				/>
 			</li>
@@ -35,7 +35,7 @@
 		},
 		props: {
 			users: Array,
-			isHidden: Boolean
+			stateHidden: Boolean
 		},
 		data() {
 			return {
