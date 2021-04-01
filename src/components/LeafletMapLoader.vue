@@ -9,7 +9,10 @@
 			@update:center="centerUpdate"
 			@update:zoom="zoomUpdate"
 		>
-			<l-tile-layer :url="url" :attribution="attribution" />
+			<l-tile-layer
+				:url="url"
+				:attribution="attribution"
+			/>
 			<l-marker :lat-lng="withPopup">
 				<l-popup>
 					Current location:
@@ -38,6 +41,7 @@
 	});
 
 	export default {
+		name: 'LeafletMapLoader',
 		props: {
 			marker: Object
 		},

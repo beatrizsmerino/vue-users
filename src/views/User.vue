@@ -1,8 +1,16 @@
 <template>
-	<section class="user-detail">
-		<user-detail v-if="user" :user="user"></user-detail>
-		<user-map v-if="user" :user="user"></user-map>
-	</section>
+	<div class="page-main__inner">
+		<section class="user-detail">
+			<user-detail
+				v-if="user"
+				:user="user"
+			/>
+			<user-map
+				v-if="user"
+				:user="user"
+			/>
+		</section>
+	</div>
 </template>
 
 
@@ -17,20 +25,22 @@
 			UserMap
 		},
 		props: {
-			users: Array,
+			usersFetch: Array,
 			username: String
 		},
 		data() {
-			return {};
+			return {
+				usersList: this.usersFetch
+			};
 		},
 		computed: {
 			user() {
-				return this.users.find(user => user.username === this.username);
+				return this.usersList.find(user => user.username === this.username);
 			}
 		},
 		mounted() {
 			let rootUpdated = this.$route.params.username;
-			let rootFind = this.users.find(user => user.username === rootUpdated);
+			let rootFind = this.usersList.find(user => user.username === rootUpdated);
 
 			if (rootFind === undefined) {
 				this.$router.push({ name: "users" });

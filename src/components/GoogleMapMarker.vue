@@ -8,6 +8,7 @@
 	import { POINT_MARKER_ICON_CONFIG } from "@/constants/mapSettings";
 
 	export default {
+		name: 'GoogleMapMarker',
 		props: {
 			google: {
 				type: Object,
