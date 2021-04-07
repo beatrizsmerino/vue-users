@@ -1,5 +1,5 @@
 <template>
-	<div class="users-list__wrapper">
+	<div class="users-list__wrapper inner">
 		<transition-group
 			tag="ul"
 			name="slide"
@@ -72,6 +72,10 @@
 
 		&__wrapper {
 			margin: 0 -1rem 4rem;
+
+			@include media('md') {
+				margin: 0 0 4rem;
+			}
 		}
 
 		&__item {
@@ -80,7 +84,8 @@
 			list-style: none;
 
 			@include media('md') {
-				width: calc(100% - 2rem);
+				width: 100%;
+				margin: 1rem 0;
 			}
 		}
 

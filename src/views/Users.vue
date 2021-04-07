@@ -1,6 +1,6 @@
 <template>
 	<div class="page-main__inner">
-		<section class="users">
+		<section class="page-section">
 			<users-list
 				:users="usersList"
 				:stateHidden="infoUserHidden"
@@ -57,8 +57,8 @@
 
 
 <style lang="scss" scoped>
-	.users {
-		padding: 0 2rem 7rem;
+	.page-section {
+		padding-bottom: 7rem;
 
 		@include media('md') {
 			padding-bottom: 12rem;

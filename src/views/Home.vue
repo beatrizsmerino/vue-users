@@ -1,18 +1,22 @@
 <template>
 	<div class="page-main__inner">
-		<section class="home">
-			<h2 class="subtitle">
+		<section class="page-section">
+			<h2 class="subtitle inner">
 				List of users with vue.js
 			</h2>
-			<div class="description">
+			<div class="description inner">
 				<p>
 					Content developed with the API<br>
-					<a href="http://randomuser.me" target="_blank" rel="noopener noreferrer">
+					<a
+						href="http://randomuser.me"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						https://randomuser.me
 					</a>
 				</p>
 			</div>
-			<div class="logo-vue">
+			<div class="logo-vue inner">
 				<img
 					src="../assets/logo.png"
 					alt="Vue logo"
@@ -42,12 +46,28 @@
 		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
 		font-size: 6rem;
 		color: $color-brand-2;
+
+		@include media("md") {
+			font-size: 5rem;
+		}
+
+		@include media("sm") {
+			font-size: 4rem;
+		}
 	}
 
 	.description {
 		text-align: center;
 		font-size: 3rem;
 		color: $color-brand-2;
+
+		@include media("md") {
+			font-size: 2.6rem;
+		}
+
+		@include media("sm") {
+			font-size: 2.2rem;
+		}
 
 		a {
 			font-weight: bold;
@@ -60,6 +80,17 @@
 	}
 
 	.logo-vue {
-		text-align: center;
+		margin: 1rem auto 0;
+		display: flex;
+		justify-content: center;
+
+		img {
+			width: 100%;
+			max-width: 20rem;
+
+			@include media("sm") {
+				max-width: 15rem;
+			}
+		}
 	}
 </style>
