@@ -66,7 +66,7 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
-		@media (max-width: 50rem) {
+		@include media('md') {
 			max-width: 50rem;
 		}
 
@@ -79,7 +79,7 @@
 			margin: 1rem;
 			list-style: none;
 
-			@media (max-width: 50rem) {
+			@include media('md') {
 				width: calc(100% - 2rem);
 			}
 		}

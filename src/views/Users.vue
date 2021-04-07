@@ -60,7 +60,7 @@
 	.users {
 		padding: 0 2rem 7rem;
 
-		@media (max-width: 41rem){
+		@include media('md') {
 			padding-bottom: 12rem;
 		}
 	}

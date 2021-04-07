@@ -88,20 +88,20 @@
 		padding: 2rem;
 		display: flex;
 		position: relative;
-		background-color: var(--color-brand-2);
+		background-color: $color-brand-2;
 
 		&__img {
 			width: 8rem;
 			height: 8rem;
 			border-radius: 50%;
-			border: 0.3rem solid var(--color-white);
+			border: 0.3rem solid $color-white;
 		}
 
 		&__content {
 			width: calc(100% - 8rem - 1.6rem);
 			margin-left: 1.6rem;
 			display: inline-block;
-			color: var(--color-white);
+			color: $color-white;
 
 			&.is-hidden {
 				opacity: 0;
@@ -145,14 +145,14 @@
 			&__icon {
 				display: inline-block;
 				font-size: 2.8rem;
-				color: var(--color-brand-1);
+				color: $color-brand-1;
 				pointer-events: none;
 			}
 
 			&:hover {
 				.button-close {
 					&__icon {
-						color: var(--color-white);
+						color: $color-white;
 					}
 				}
 			}
@@ -172,14 +172,14 @@
 				top: 0.5rem;
 				right: 0.5rem;
 				border-radius: 50%;
-				background-color: var(--color-light);
+				background-color: $color-light;
 
 				&:hover {
-					background-color: var(--color-brand-1);
+					background-color: $color-brand-1;
 
 					.button-close {
 						&__icon {
-							color: var(--color-light);
+							color: $color-light;
 						}
 					}
 				}

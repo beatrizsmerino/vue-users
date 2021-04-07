@@ -126,8 +126,8 @@
 		margin: 0 auto;
 		padding: 4rem;
 		font-size: 2.4rem;
-		color: var(--color-light);
-		background-color: var(--color-brand-2);
+		color: $color-light;
+		background-color: $color-brand-2;
 
 		&__group {
 			&:not(:last-child){
@@ -143,7 +143,7 @@
 			justify-content: center;
 			align-items: center;
 			border-radius: 50%;
-			border: 0.3rem solid var(--color-white);
+			border: 0.3rem solid $color-white;
 			overflow: hidden;
 
 			img{
@@ -153,7 +153,7 @@
 		}
 
 		&__label {
-			color: var(--color-brand-1);
+			color: $color-brand-1;
 		}
 	}
 </style>

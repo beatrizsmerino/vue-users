@@ -101,23 +101,23 @@
 		}
 
 		&--bg-brand-1 {
-			color: var(--color-white);
-			background-color: var(--color-brand-1);
+			color: $color-white;
+			background-color: $color-brand-1;
 
 			&:hover {
-				color: var(--color-brand-1);
-				border: 0.2rem solid var(--color-brand-1);
+				color: $color-brand-1;
+				border: 0.2rem solid $color-brand-1;
 				background-color: transparent;
 			}
 		}
 
 		&--bg-brand-2 {
-			color: var(--color-light);
-			background-color: var(--color-brand-2);
+			color: $color-light;
+			background-color: $color-brand-2;
 
 			&:hover {
-				color: var(--color-brand-2);
-				background-color: var(--color-light);
+				color: $color-brand-2;
+				background-color: $color-light;
 			}
 		}
 	}

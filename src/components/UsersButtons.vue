@@ -81,8 +81,8 @@
 		bottom: 0;
 		left: 0;
 		z-index: 999;
-		background-color: var(--color-brand-1);
-		box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.3);
+		background-color: $color-brand-1;
+		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
 		&__item {
 			margin: 0.5rem;
