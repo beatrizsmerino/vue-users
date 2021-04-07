@@ -41,20 +41,20 @@
 		text-align: center;
 		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
 		font-size: 6rem;
-		color: var(--color-brand-2);
+		color: $color-brand-2;
 	}
 
 	.description {
 		text-align: center;
 		font-size: 3rem;
-		color: var(--color-brand-2);
+		color: $color-brand-2;
 
 		a {
 			font-weight: bold;
-			color: var(--color-brand-2);
+			color: $color-brand-2;
 
 			&:hover {
-				color: var(--color-brand-1);
+				color: $color-brand-1;
 			}
 		}
 	}
