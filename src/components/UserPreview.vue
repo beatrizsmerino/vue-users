@@ -85,7 +85,7 @@
 	.user-preview {
 		width: 100%;
 		height: 100%;
-		padding: 2rem;
+		padding: 2rem 6rem 2rem 2rem;
 		display: flex;
 		position: relative;
 		background-color: $color-brand-2;
@@ -111,10 +111,15 @@
 		}
 
 		&__name {
-			margin-bottom: 0.25rem;
+			margin-bottom: 1rem;
 			text-transform: capitalize;
 			font-size: 2.5rem;
-			font-weight: 200;
+			line-height: 100%;
+			font-weight: bold;
+
+			@include media("sm") {
+				font-size: 2rem;
+			}
 		}
 
 		&__description {
@@ -125,14 +130,26 @@
 			display: flex;
 			align-items: center;
 
+			&:not(:last-child){
+				margin-bottom: 0.4rem;
+			}
+
 			&__icon {
 				margin-right: 1rem;
-				font-size: 1.6rem;
+				font-size: 2rem;
 				opacity: 0.75;
+
+				@include media("sm") {
+					font-size: 1.8rem;
+				}
 			}
 
 			&__text {
 				font-size: 2rem;
+
+				@include media("sm") {
+					font-size: 1.8rem;
+				}
 			}
 		}
 

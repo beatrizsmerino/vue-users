@@ -50,6 +50,11 @@
 		background-color: $color-brand-1;
 		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
+		@include media("md") {
+			height: 6rem;
+			padding: 0 2rem;
+		}
+
 		&__item {
 			display: flex;
 		}
@@ -62,6 +67,10 @@
 		font-weight: bold;
 		line-height: 100%;
 		color: $color-brand-2;
+
+		@include media("md") {
+			font-size: 4rem;
+		}
 	}
 
 	.nav {
@@ -98,6 +107,10 @@
 					background-color: $color-light;
 				}
 			}
+		}
+
+		@include media("md") {
+			display: none;
 		}
 	}
 </style>

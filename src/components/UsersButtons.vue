@@ -72,7 +72,7 @@
 <style lang="scss" scoped>
 	.users-buttons {
 		width: 100%;
-		padding: 1rem 1.6rem;
+		padding: 1rem;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -86,6 +86,10 @@
 
 		&__item {
 			margin: 0.5rem;
+
+			@include media("md") {
+				width: calc(50% - 1rem);
+			}
 		}
 
 		/deep/ {

@@ -121,6 +121,14 @@
 
 	.page-main {
 		padding: 6.4rem 0 0;
+
+		@include media("md") {
+			padding: 4rem 0 0;
+		}
+	}
+
+	.inner {
+		padding: 0 3rem;
 	}
 
 
@@ -143,6 +151,7 @@
 	.v-leave-active {
 		transition: opacity 0.5s linear 0.5s;
 	}
+
 
 	// PAGE HOME
 	// -----------------------------------------

@@ -22,5 +22,13 @@
 		font-size: 9.6rem;
 		line-height: 100%;
 		color: $color-brand-1;
+
+		@include media('md') {
+			font-size: 8rem;
+		}
+
+		@include media('sm') {
+			font-size: 7rem;
+		}
 	}
 </style>

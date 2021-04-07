@@ -129,9 +129,18 @@
 		color: $color-light;
 		background-color: $color-brand-2;
 
+		@include media("sm") {
+			padding: 3rem;
+			font-size: 2rem;
+		}
+
 		&__group {
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 2rem;
+
+				@include media("sm") {
+					margin-bottom: 1rem;
+				}
 			}
 		}
 
@@ -146,7 +155,13 @@
 			border: 0.3rem solid $color-white;
 			overflow: hidden;
 
-			img{
+			@include media("sm") {
+				width: 10rem;
+				height: 10rem;
+				margin-bottom: 2rem;
+			}
+
+			img {
 				width: 100%;
 				height: 100%;
 			}
