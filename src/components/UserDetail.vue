@@ -126,12 +126,21 @@
 		margin: 0 auto;
 		padding: 4rem;
 		font-size: 2.4rem;
-		color: var(--color-light);
-		background-color: var(--color-brand-2);
+		color: $color-light;
+		background-color: $color-brand-2;
+
+		@include media("sm") {
+			padding: 3rem;
+			font-size: 2rem;
+		}
 
 		&__group {
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 2rem;
+
+				@include media("sm") {
+					margin-bottom: 1rem;
+				}
 			}
 		}
 
@@ -143,17 +152,23 @@
 			justify-content: center;
 			align-items: center;
 			border-radius: 50%;
-			border: 0.3rem solid var(--color-white);
+			border: 0.3rem solid $color-white;
 			overflow: hidden;
 
-			img{
+			@include media("sm") {
+				width: 10rem;
+				height: 10rem;
+				margin-bottom: 2rem;
+			}
+
+			img {
 				width: 100%;
 				height: 100%;
 			}
 		}
 
 		&__label {
-			color: var(--color-brand-1);
+			color: $color-brand-1;
 		}
 	}
 </style>
