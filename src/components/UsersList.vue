@@ -100,6 +100,7 @@
 				&__item {
 					width: 10rem;
 					height: 10rem;
+					margin: 1rem;
 				}
 			}
 		}
