@@ -85,15 +85,6 @@
 	@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
 	@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
-	:root {
-		--color-brand-1: #42b883;
-		--color-brand-2: #35495e;
-		--color-white: #fff;
-		--color-light: #fafafa;
-		--color-gray-dark: #3f3f3f;
-		--color-black: #000;
-	}
-
 	[v-cloak] {
 		display: none;
 	}
@@ -115,8 +106,8 @@
 		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
 		font-size: 1.6rem;
-		color: var(--color-gray-dark);
-		background-color: var(--color-light);
+		color: $color-gray;
+		background-color: $color-light;
 	}
 
 	a {
@@ -130,6 +121,14 @@
 
 	.page-main {
 		padding: 6.4rem 0 0;
+
+		@include media("md") {
+			padding: 4rem 0 0;
+		}
+	}
+
+	.inner {
+		padding: 0 3rem;
 	}
 
 
@@ -152,6 +151,7 @@
 	.v-leave-active {
 		transition: opacity 0.5s linear 0.5s;
 	}
+
 
 	// PAGE HOME
 	// -----------------------------------------

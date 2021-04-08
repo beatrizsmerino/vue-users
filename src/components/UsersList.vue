@@ -1,5 +1,5 @@
 <template>
-	<div class="users-list__wrapper">
+	<div class="users-list__wrapper inner">
 		<transition-group
 			tag="ul"
 			name="slide"
@@ -66,12 +66,16 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
-		@media (max-width: 50rem) {
+		@include media('md') {
 			max-width: 50rem;
 		}
 
 		&__wrapper {
 			margin: 0 -1rem 4rem;
+
+			@include media('md') {
+				margin: 0 0 4rem;
+			}
 		}
 
 		&__item {
@@ -79,8 +83,9 @@
 			margin: 1rem;
 			list-style: none;
 
-			@media (max-width: 50rem) {
-				width: calc(100% - 2rem);
+			@include media('md') {
+				width: 100%;
+				margin: 1rem 0;
 			}
 		}
 
@@ -95,6 +100,7 @@
 				&__item {
 					width: 10rem;
 					height: 10rem;
+					margin: 1rem;
 				}
 			}
 		}

@@ -1,10 +1,12 @@
 <template>
 	<div class="page-main__inner">
-		<section class="user-detail">
-			<user-detail
-				v-if="user"
-				:user="user"
-			/>
+		<section class="page-section">
+			<div class="inner">
+				<user-detail
+					v-if="user"
+					:user="user"
+				/>
+			</div>
 			<user-map
 				v-if="user"
 				:user="user"
@@ -48,3 +50,9 @@
 		}
 	};
 </script>
+
+
+
+
+<style lang="scss" scoped>
+</style>

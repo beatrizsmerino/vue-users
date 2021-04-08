@@ -85,23 +85,23 @@
 	.user-preview {
 		width: 100%;
 		height: 100%;
-		padding: 2rem;
+		padding: 2rem 6rem 2rem 2rem;
 		display: flex;
 		position: relative;
-		background-color: var(--color-brand-2);
+		background-color: $color-brand-2;
 
 		&__img {
 			width: 8rem;
 			height: 8rem;
 			border-radius: 50%;
-			border: 0.3rem solid var(--color-white);
+			border: 0.3rem solid $color-white;
 		}
 
 		&__content {
 			width: calc(100% - 8rem - 1.6rem);
 			margin-left: 1.6rem;
 			display: inline-block;
-			color: var(--color-white);
+			color: $color-white;
 
 			&.is-hidden {
 				opacity: 0;
@@ -111,10 +111,15 @@
 		}
 
 		&__name {
-			margin-bottom: 0.25rem;
+			margin-bottom: 1rem;
 			text-transform: capitalize;
 			font-size: 2.5rem;
-			font-weight: 200;
+			line-height: 100%;
+			font-weight: bold;
+
+			@include media("sm") {
+				font-size: 2rem;
+			}
 		}
 
 		&__description {
@@ -125,14 +130,26 @@
 			display: flex;
 			align-items: center;
 
+			&:not(:last-child){
+				margin-bottom: 0.4rem;
+			}
+
 			&__icon {
 				margin-right: 1rem;
-				font-size: 1.6rem;
+				font-size: 2rem;
 				opacity: 0.75;
+
+				@include media("sm") {
+					font-size: 1.8rem;
+				}
 			}
 
 			&__text {
 				font-size: 2rem;
+
+				@include media("sm") {
+					font-size: 1.8rem;
+				}
 			}
 		}
 
@@ -145,14 +162,14 @@
 			&__icon {
 				display: inline-block;
 				font-size: 2.8rem;
-				color: var(--color-brand-1);
+				color: $color-brand-1;
 				pointer-events: none;
 			}
 
 			&:hover {
 				.button-close {
 					&__icon {
-						color: var(--color-white);
+						color: $color-white;
 					}
 				}
 			}
@@ -172,14 +189,14 @@
 				top: 0.5rem;
 				right: 0.5rem;
 				border-radius: 50%;
-				background-color: var(--color-light);
+				background-color: $color-light;
 
 				&:hover {
-					background-color: var(--color-brand-1);
+					background-color: $color-brand-1;
 
 					.button-close {
 						&__icon {
-							color: var(--color-light);
+							color: $color-light;
 						}
 					}
 				}
