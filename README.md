@@ -92,7 +92,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 | NPM PACKAGE              | STABLE VERSION | LAST VERSION                                                                                                         |
 | ------------------------ | -------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `core-js`                | ^3.10.0         | [![NPM](https://nodeico.herokuapp.com/core-js.svg)](https://npmjs.com/package/core-js)                               |
+| `core-js`                | ^3.10.1        | [![NPM](https://nodeico.herokuapp.com/core-js.svg)](https://npmjs.com/package/core-js)                               |
 | `google-maps-api-loader` | ^1.1.1         | [![NPM](https://nodeico.herokuapp.com/google-maps-api-loader.svg)](https://npmjs.com/package/google-maps-api-loader) |
 | `leaflet`                | ^1.7.1         | [![NPM](https://nodeico.herokuapp.com/leaflet.svg)](https://npmjs.com/package/leaflet)                               |
 | `vue`                    | ^2.6.12        | [![NPM](https://nodeico.herokuapp.com/vue.svg)](https://npmjs.com/package/vue)                                       |
