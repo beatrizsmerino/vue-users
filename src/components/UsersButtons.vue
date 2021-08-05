@@ -92,7 +92,7 @@
 			}
 		}
 
-		/deep/ {
+		::v-deep {
 			.button {
 				font-size: 1.3rem;
 			}
