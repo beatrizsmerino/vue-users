@@ -68,7 +68,7 @@
 		cursor: pointer;
 		appearance: none;
 
-		/deep/ {
+		::v-deep {
 			> * {
 				pointer-events: none;
 
