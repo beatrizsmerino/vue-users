@@ -60,6 +60,7 @@
 <style lang="scss" scoped>
 	.users-list {
 		max-width: 85rem;
+		width:100%;
 		margin: 0 auto;
 		padding: 0;
 		display: flex;
