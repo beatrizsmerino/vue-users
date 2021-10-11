@@ -71,8 +71,6 @@
 		}
 
 		&__wrapper {
-			margin: 0 -1rem 4rem;
-
 			@include media('md') {
 				margin: 0 0 4rem;
 			}
