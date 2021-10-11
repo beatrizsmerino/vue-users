@@ -2,12 +2,12 @@
 	<div class="page-main__inner">
 		<section class="page-section">
 			<div class="inner">
-				<user-detail
+				<UserDetail
 					v-if="user"
 					:user="user"
 				/>
 			</div>
-			<user-map
+			<UserMap
 				v-if="user"
 				:user="user"
 			/>
@@ -15,11 +15,9 @@
 	</div>
 </template>
 
-
-
 <script>
-	import UserDetail from "../components/UserDetail.vue";
-	import UserMap from "../components/UserMap.vue";
+	import UserDetail from '../components/UserDetail.vue';
+	import UserMap from '../components/UserMap.vue';
 
 	export default {
 		components: {
@@ -41,18 +39,14 @@
 			}
 		},
 		mounted() {
-			let rootUpdated = this.$route.params.username;
-			let rootFind = this.usersList.find(user => user.username === rootUpdated);
+			const rootUpdated = this.$route.params.username;
+			const rootFind = this.usersList.find(user => user.username === rootUpdated);
 
-			if (rootFind === undefined) {
-				this.$router.push({ name: "users" });
+			if (typeof rootFind === 'undefined') {
+				this.$router.push({name: 'users'});
 			}
 		}
 	};
 </script>
 
-
-
-
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

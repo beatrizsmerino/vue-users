@@ -4,7 +4,7 @@
 			<img
 				:src="user.imageLarge"
 				:alt="user.username"
-			/>
+			>
 		</div>
 
 		<div class="user-detail__content">
@@ -13,13 +13,13 @@
 					<strong class="user-detail__label">
 						Name:
 					</strong>
-					{{user.name.title}} {{user.name.first}} {{user.name.last}}
+					{{ user.name.title }} {{ user.name.first }} {{ user.name.last }}
 				</p>
 				<p>
 					<strong class="user-detail__label">
 						Username:
 					</strong>
-					{{user.username}}
+					{{ user.username }}
 				</p>
 			</div>
 
@@ -28,13 +28,13 @@
 					<strong class="user-detail__label">
 						Gender:
 					</strong>
-					{{user.gender}}
+					{{ user.gender }}
 				</p>
 				<p>
 					<strong class="user-detail__label">
 						Nationality:
 					</strong>
-					{{user.nationality}}
+					{{ user.nationality }}
 				</p>
 			</div>
 
@@ -43,25 +43,25 @@
 					<strong class="user-detail__label">
 						State:
 					</strong>
-					{{user.state}}
+					{{ user.state }}
 				</p>
 				<p>
 					<strong class="user-detail__label">
 						City:
 					</strong>
-					{{user.city}}
+					{{ user.city }}
 				</p>
 				<p>
 					<strong class="user-detail__label">
 						Street:
 					</strong>
-					{{user.streetName}}, {{user.streetNumber}}
+					{{ user.streetName }}, {{ user.streetNumber }}
 				</p>
 				<p>
 					<strong class="user-detail__label">
 						Postcode:
 					</strong>
-					{{user.postcode}}
+					{{ user.postcode }}
 				</p>
 			</div>
 
@@ -70,19 +70,19 @@
 					<strong class="user-detail__label">
 						Email:
 					</strong>
-					{{user.email}}
+					{{ user.email }}
 				</p>
 				<p>
 					<strong class="user-detail__label">
 						Phone:
 					</strong>
-					{{user.phone}}
+					{{ user.phone }}
 				</p>
 				<p>
 					<strong class="user-detail__label">
 						Cell:
 					</strong>
-					{{user.cell}}
+					{{ user.cell }}
 				</p>
 			</div>
 
@@ -91,14 +91,12 @@
 					<strong class="user-detail__label">
 						Registered:
 					</strong>
-					{{user.registered}}
+					{{ user.registered }}
 				</p>
 			</div>
 		</div>
 	</div>
 </template>
-
-
 
 <script>
 	export default {
@@ -118,8 +116,6 @@
 	};
 </script>
 
-
-
 <style lang="scss" scoped>
 	.user-detail {
 		max-width: 60rem;
@@ -129,7 +125,7 @@
 		color: $color-light;
 		background-color: $color-brand-2;
 
-		@include media("sm") {
+		@include media('sm') {
 			padding: 3rem;
 			font-size: 2rem;
 		}
@@ -138,7 +134,7 @@
 			&:not(:last-child) {
 				margin-bottom: 2rem;
 
-				@include media("sm") {
+				@include media('sm') {
 					margin-bottom: 1rem;
 				}
 			}
@@ -155,7 +151,7 @@
 			border: 0.3rem solid $color-white;
 			overflow: hidden;
 
-			@include media("sm") {
+			@include media('sm') {
 				width: 10rem;
 				height: 10rem;
 				margin-bottom: 2rem;

@@ -1,59 +1,58 @@
 <template>
 	<div class="leaflet-map">
-		<l-map
-			style="height: 100%"
+		<LMap
 			v-if="showMap"
+			style="height: 100%"
 			:zoom="zoom"
 			:center="center"
 			:options="mapOptions"
 			@update:center="centerUpdate"
 			@update:zoom="zoomUpdate"
 		>
-			<l-tile-layer
+			<LTileLayer
 				:url="url"
 				:attribution="attribution"
 			/>
-			<l-marker :lat-lng="withPopup">
-				<l-popup>
+			<LMarker :lat-lng="withPopup">
+				<LPopup>
 					Current location:
 					<p>
-						Latitude: {{this.marker.position.lat}}
-						<br />
-						Longitude: {{this.marker.position.lng}}
+						Latitude: {{ marker.position.lat }}
+						<br >
+						Longitude: {{ marker.position.lng }}
 					</p>
-				</l-popup>
-			</l-marker>
-		</l-map>
+				</LPopup>
+			</LMarker>
+		</LMap>
 	</div>
 </template>
 
 <script>
-	import "leaflet/dist/leaflet.css";
-	import { latLng, Icon } from "leaflet";
-	import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
-
+	import 'leaflet/dist/leaflet.css';
+	import {latLng, Icon} from 'leaflet';
+	import {LMap, LTileLayer, LMarker, LPopup} from 'vue2-leaflet';
 
 	delete Icon.Default.prototype._getIconUrl;
 	Icon.Default.mergeOptions({
 		iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
 		iconUrl: require('leaflet/dist/images/marker-icon.png'),
-		shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+		shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 	});
 
 	export default {
 		name: 'LeafletMapLoader',
-		props: {
-			marker: Object
-		},
 		components: {
 			LMap,
 			LTileLayer,
 			LMarker,
 			LPopup
 		},
+		props: {
+			marker: Object
+		},
 		data() {
 			return {
-				url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+				url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 				center: latLng(this.marker.position.lat, this.marker.position.lng),
 				currentCenter: latLng(this.marker.position.lat, this.marker.position.lng),

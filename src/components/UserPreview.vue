@@ -4,7 +4,7 @@
 			:src="dataUser.imageMedium"
 			:alt="dataUser.name.first + ' ' + dataUser.name.last"
 			class="user-preview__img"
-		/>
+		>
 
 		<transition name="fade">
 			<div
@@ -12,25 +12,25 @@
 				:class="{ 'is-hidden': isHidden }"
 			>
 				<h3 class="user-preview__name">
-					{{dataUser.name.first}} {{dataUser.name.last}}
+					{{ dataUser.name.first }} {{ dataUser.name.last }}
 				</h3>
 
 				<div class="user-preview__description">
 					<p class="user-preview-data">
 						<span class="user-preview-data__icon">
-							<i class="fa fa-user"></i>
+							<i class="fa fa-user" />
 						</span>
 						<span class="user-preview-data__text">
-							{{dataUser.username}}
+							{{ dataUser.username }}
 						</span>
 					</p>
 
 					<p class="user-preview-data">
 						<span class="user-preview-data__icon">
-							<i class="fa fa-map-marker"></i>
+							<i class="fa fa-map-marker" />
 						</span>
 						<span class="user-preview-data__text">
-							{{dataUser.state}}
+							{{ dataUser.state }}
 						</span>
 					</p>
 				</div>
@@ -40,7 +40,7 @@
 					class="button--bg-brand-1 button--width-auto"
 				>
 					<span class="button__icon">
-						<i class="fas fa-info"></i>
+						<i class="fas fa-info" />
 					</span>
 					<span class="button__text">
 						more info
@@ -50,16 +50,16 @@
 		</transition>
 
 		<Button
-			class="button-close button--icon "
+			class="button-close button--icon"
 			@button-click="userRemoveEmit(dataUser)"
 		>
-			<i class="button-close__icon fas fa-times-circle"></i>
+			<i class="button-close__icon fas fa-times-circle" />
 		</Button>
 	</div>
 </template>
 
 <script>
-	import Button from "./Button";
+	import Button from './Button';
 
 	export default {
 		name: 'UserPreview',
@@ -71,14 +71,14 @@
 				type: Object,
 				required: true
 			},
-			isHidden: Boolean,
+			isHidden: Boolean
 		},
 		methods: {
 			userRemoveEmit(userToRemove) {
-				this.$emit("remove", userToRemove);
+				this.$emit('remove', userToRemove);
 			}
-		},
-	}
+		}
+	};
 </script>
 
 <style lang="scss" scoped>
@@ -117,7 +117,7 @@
 			line-height: 100%;
 			font-weight: bold;
 
-			@include media("sm") {
+			@include media('sm') {
 				font-size: 2rem;
 			}
 		}
@@ -130,7 +130,7 @@
 			display: flex;
 			align-items: center;
 
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 0.4rem;
 			}
 
@@ -139,7 +139,7 @@
 				font-size: 2rem;
 				opacity: 0.75;
 
-				@include media("sm") {
+				@include media('sm') {
 					font-size: 1.8rem;
 				}
 			}
@@ -147,7 +147,7 @@
 			&__text {
 				font-size: 2rem;
 
-				@include media("sm") {
+				@include media('sm') {
 					font-size: 1.8rem;
 				}
 			}

@@ -8,7 +8,7 @@
 		</router-link>
 		<nav
 			class="nav"
-			:class="{'is-open': isOpen, 'is-animated': isAnimated}"
+			:class="{ 'is-open': isOpen, 'is-animated': isAnimated }"
 		>
 			<ul class="nav__list">
 				<li class="nav__item">
@@ -21,11 +21,10 @@
 					</router-link>
 				</li>
 				<li class="nav__item">
-
 					<router-link
 						to="/users"
 						class="nav__item"
-						:class="{'router-link-active': $route.path.includes('user')}"
+						:class="{ 'router-link-active': $route.path.includes('user') }"
 					>
 						Users
 					</router-link>
@@ -35,16 +34,14 @@
 				class="nav__button button button--icon"
 				@button-click="openCloseNav"
 			>
-				<i class="fa fa-bars"></i>
+				<i class="fa fa-bars" />
 			</Button>
 		</nav>
 	</header>
 </template>
 
-
-
 <script>
-	import Button from "./Button";
+	import Button from './Button';
 
 	export default {
 		name: 'PageHeader',
@@ -55,7 +52,23 @@
 			return {
 				isAnimated: false,
 				isOpen: false
+			};
+		},
+		watch: {
+			$route(to, from) {
+				if (to !== from) {
+					this.closeNav();
+				}
+			},
+			isOpen() {
+				document.body.style.overflow = this.isOpen ? 'hidden' : '';
 			}
+		},
+		created() {
+			window.addEventListener('resize', this.handleResize);
+		},
+		destroyed() {
+			window.removeEventListener('resize', this.handleResize);
 		},
 		methods: {
 			openCloseNav() {
@@ -72,27 +85,9 @@
 					this.closeNav();
 				}
 			}
-		},
-		watch: {
-			$route(to, from) {
-				if (to !== from) {
-					this.closeNav();
-				}
-			},
-			isOpen: function () {
-				document.body.style.overflow = this.isOpen ? 'hidden' : ''
-			}
-		},
-		created() {
-			window.addEventListener('resize', this.handleResize);
-		},
-		destroyed() {
-			window.removeEventListener('resize', this.handleResize);
 		}
 	};
 </script>
-
-
 
 <style lang="scss" scoped>
 	.page-header {
@@ -109,7 +104,7 @@
 		background-color: $color-brand-1;
 		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
-		@include media("sm") {
+		@include media('sm') {
 			height: 6rem;
 			padding: 0 2rem;
 		}
@@ -121,7 +116,7 @@
 
 	.logo {
 		display: inline-block;
-		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
+		font-family: 'Dauphin', 'Oxygen', Helvetica, sans-serif;
 		font-size: 5rem;
 		font-weight: bold;
 		line-height: 100%;
@@ -131,7 +126,7 @@
 			color: $color-white;
 		}
 
-		@include media("sm") {
+		@include media('sm') {
 			font-size: 4rem;
 		}
 	}
@@ -148,7 +143,7 @@
 			font-size: 2.4rem;
 			font-weight: 600;
 
-			@include media("sm") {
+			@include media('sm') {
 				height: calc(100% - 6rem);
 				padding: 10rem 2rem;
 				flex-direction: column;
@@ -172,7 +167,7 @@
 			&:not(:last-child) {
 				margin-right: 2rem;
 
-				@include media("sm") {
+				@include media('sm') {
 					margin-right: 0;
 					margin-bottom: 2rem;
 				}
@@ -184,7 +179,7 @@
 				color: $color-light;
 
 				&:after {
-					content: "";
+					content: '';
 					display: inline-block;
 					width: 100%;
 					height: 0.2rem;
@@ -206,13 +201,13 @@
 				color: $color-white;
 			}
 
-			@include media("sm") {
+			@include media('sm') {
 				display: flex;
 			}
 		}
 
 		&.is-animated {
-			.nav{
+			.nav {
 				&__list {
 					transition: all 0.5s ease-in-out 0s;
 				}

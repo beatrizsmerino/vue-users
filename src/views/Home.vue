@@ -6,7 +6,8 @@
 			</h2>
 			<div class="description inner">
 				<p>
-					Content developed with the API<br>
+					Content developed with the API
+					<br >
 					<a
 						href="http://randomuser.me"
 						target="_blank"
@@ -20,38 +21,33 @@
 				<img
 					src="../assets/logo.png"
 					alt="Vue logo"
-				/>
+				>
 			</div>
 		</section>
 	</div>
 </template>
 
-
-
 <script>
 	export default {
-		components: {
-		},
+		components: {},
 		props: {
 			usersFetch: Array
-		},
+		}
 	};
 </script>
-
-
 
 <style lang="scss" scoped>
 	.subtitle {
 		text-align: center;
-		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
+		font-family: 'Dauphin', 'Oxygen', Helvetica, sans-serif;
 		font-size: 6rem;
 		color: $color-brand-2;
 
-		@include media("md") {
+		@include media('md') {
 			font-size: 5rem;
 		}
 
-		@include media("sm") {
+		@include media('sm') {
 			font-size: 4rem;
 		}
 	}
@@ -61,11 +57,11 @@
 		font-size: 3rem;
 		color: $color-brand-2;
 
-		@include media("md") {
+		@include media('md') {
 			font-size: 2.6rem;
 		}
 
-		@include media("sm") {
+		@include media('sm') {
 			font-size: 2.2rem;
 		}
 
@@ -88,7 +84,7 @@
 			width: 100%;
 			max-width: 20rem;
 
-			@include media("sm") {
+			@include media('sm') {
 				max-width: 15rem;
 			}
 		}

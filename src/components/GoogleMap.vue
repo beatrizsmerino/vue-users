@@ -1,22 +1,22 @@
 <template>
-	<google-map-loader
-		:mapConfig="mapConfig"
-		:apiKey="apiKey"
+	<GoogleMapLoader
+		:map-config="mapConfig"
+		:api-key="apiKey"
 	>
 		<template #default="{ google, map }">
-			<google-map-marker
+			<GoogleMapMarker
 				:marker="marker"
 				:google="google"
 				:map="map"
 			/>
 		</template>
-	</google-map-loader>
+	</GoogleMapLoader>
 </template>
 
 <script>
-	import GoogleMapLoader from "./GoogleMapLoader";
-	import GoogleMapMarker from "./GoogleMapMarker";
-	import { mapSettings } from "@/constants/mapSettings";
+	import GoogleMapLoader from './GoogleMapLoader';
+	import GoogleMapMarker from './GoogleMapMarker';
+	import {mapSettings} from '@/constants/mapSettings';
 
 	export default {
 		name: 'GoogleMap',
@@ -29,9 +29,7 @@
 			apiKey: String
 		},
 		data() {
-			return {
-
-			}
+			return {};
 		},
 		computed: {
 			marker() {
@@ -52,8 +50,6 @@
 				};
 			}
 		},
-		methods: {
-
-		}
+		methods: {}
 	};
 </script>

@@ -36,9 +36,9 @@
 					return 'router-link';
 				} else if (this.value) {
 					return 'input';
-				} else {
-					return 'button';
 				}
+
+				return 'button';
 			}
 		},
 		methods: {
@@ -46,7 +46,7 @@
 				this.$emit('button-click');
 			}
 		}
-	}
+	};
 </script>
 
 <style lang="scss" scoped>
@@ -62,8 +62,7 @@
 		border: 0.2rem solid transparent;
 		outline: none;
 		background-color: transparent;
-		transition: color 0.15s ease-in-out 0s,
-			background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s;
+		transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s;
 		user-select: none;
 		cursor: pointer;
 		appearance: none;

@@ -1,6 +1,6 @@
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '/vue-users/' : '/',
-    lintOnSave: true,
+	lintOnSave: true,
 	css: {
 		loaderOptions: {
 			sass: {
@@ -8,4 +8,4 @@ module.exports = {
 			}
 		}
 	}
-}
+};

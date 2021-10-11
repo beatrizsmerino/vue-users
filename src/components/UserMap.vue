@@ -1,11 +1,11 @@
 <template>
 	<div class="user-map">
-		<google-map
+		<GoogleMap
 			v-if="isGoogleMaps"
 			:user="user"
-			:apiKey="googleApiKey"
+			:api-key="googleApiKey"
 		/>
-		<leaflet-map
+		<LeafletMap
 			v-else
 			:user="user"
 		/>
@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import GoogleMap from "../components/GoogleMap.vue";
-	import LeafletMap from "../components/LeafletMap.vue";
+	import GoogleMap from '../components/GoogleMap.vue';
+	import LeafletMap from '../components/LeafletMap.vue';
 
 	export default {
 		name: 'UserMap',
@@ -23,16 +23,16 @@
 			LeafletMap
 		},
 		props: {
-			user: Object,
+			user: Object
 		},
 		data() {
 			return {
-				googleApiKey: "XXXXXX"
+				googleApiKey: 'XXXXXX'
 			};
 		},
 		computed: {
 			isGoogleMaps() {
-				return this.googleApiKey !== "XXXXXX"
+				return this.googleApiKey !== 'XXXXXX';
 			}
 		}
 	};
@@ -44,7 +44,7 @@
 		height: 50rem;
 		margin-top: 5rem;
 
-		@include media("sm") {
+		@include media('sm') {
 			height: 30rem;
 			margin-top: 3rem;
 		}

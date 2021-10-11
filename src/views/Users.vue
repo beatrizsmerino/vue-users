@@ -1,11 +1,11 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<users-list
+			<UsersList
 				:users="usersList"
-				:stateHidden="infoUserHidden"
+				:state-hidden="infoUserHidden"
 			/>
-			<users-buttons
+			<UsersButtons
 				@order="orderUsers"
 				@hide="hideInfoUser"
 				@getAll="getUsers"
@@ -15,11 +15,9 @@
 	</div>
 </template>
 
-
-
 <script>
-	import UsersList from "../components/UsersList.vue";
-	import UsersButtons from "../components/UsersButtons.vue";
+	import UsersList from '../components/UsersList.vue';
+	import UsersButtons from '../components/UsersButtons.vue';
 
 	export default {
 		components: {
@@ -32,7 +30,7 @@
 		data() {
 			return {
 				usersList: this.usersFetch,
-				infoUserHidden: false,
+				infoUserHidden: false
 			};
 		},
 		methods: {
@@ -46,15 +44,12 @@
 				await this.$parent.getUsers();
 				this.usersList = this.usersFetch;
 			},
-			removeAllUsers(){
+			removeAllUsers() {
 				this.usersList = [];
 			}
-		},
+		}
 	};
 </script>
-
-
-
 
 <style lang="scss" scoped>
 	.page-section {

@@ -1,35 +1,34 @@
 <template>
 	<div class="users-buttons">
 		<Button
-			@button-click="hideInfoUserEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="hideInfoUserEmit"
 		>
 			{{ textButtonHideUser }}
 		</Button>
 		<Button
-			@button-click="orderUsersEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="orderUsersEmit"
 		>
 			ORDER USERS
 		</Button>
 		<Button
-			@button-click="getUsersEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="getUsersEmit"
 		>
 			GET USERS
 		</Button>
 		<Button
-			@button-click="removeAllUsersEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="removeAllUsersEmit"
 		>
 			REMOVE ALL USERS
 		</Button>
 	</div>
 </template>
 
-
 <script>
-	import Button from "./Button";
+	import Button from './Button';
 
 	export default {
 		name: 'UsersButtons',
@@ -40,12 +39,12 @@
 			return {
 				showUserInfo: false,
 				textButtonHideUser: 'HIDE USER INFO'
-			}
+			};
 		},
 		methods: {
 			changeTextButtonHideUser() {
 				if (this.showUserInfo) {
-					this.textButtonHideUser = 'SHOW USER INFO'
+					this.textButtonHideUser = 'SHOW USER INFO';
 				} else {
 					this.textButtonHideUser = 'HIDE USER INFO';
 				}
@@ -53,21 +52,20 @@
 			hideInfoUserEmit() {
 				this.showUserInfo = !this.showUserInfo;
 				this.changeTextButtonHideUser();
-				this.$emit("hide");
+				this.$emit('hide');
 			},
 			orderUsersEmit() {
-				this.$emit("order");
+				this.$emit('order');
 			},
 			getUsersEmit() {
-				this.$emit("getAll");
+				this.$emit('getAll');
 			},
 			removeAllUsersEmit() {
-				this.$emit("removeAll");
+				this.$emit('removeAll');
 			}
 		}
 	};
 </script>
-
 
 <style lang="scss" scoped>
 	.users-buttons {
@@ -87,7 +85,7 @@
 		&__item {
 			margin: 0.5rem;
 
-			@include media("md") {
+			@include media('md') {
 				width: calc(50% - 1rem);
 			}
 		}
@@ -99,4 +97,3 @@
 		}
 	}
 </style>
-

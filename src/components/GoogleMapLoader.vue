@@ -1,10 +1,10 @@
 <template>
 	<div class="google-map">
 		<div
-			class="google-map__map"
 			ref="googleMap"
-		></div>
-		<template v-if="Boolean(this.google) && Boolean(this.map)">
+			class="google-map__map"
+		/>
+		<template v-if="Boolean(google) && Boolean(map)">
 			<slot
 				:google="google"
 				:map="map"
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import GoogleMapsApiLoader from "google-maps-api-loader";
+	import googleMapsApiLoader from 'google-maps-api-loader';
 
 	export default {
 		name: 'GoogleMapLoader',
@@ -29,7 +29,7 @@
 			};
 		},
 		async mounted() {
-			const googleMapApi = await GoogleMapsApiLoader({
+			const googleMapApi = await googleMapsApiLoader({
 				apiKey: this.apiKey
 			});
 			this.google = googleMapApi;

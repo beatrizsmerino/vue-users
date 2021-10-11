@@ -10,11 +10,10 @@
 				v-for="user in usersList"
 				:key="user.username"
 				class="users-list__item"
-				
 			>
 				<UserPreview
-					:dataUser="user"
-					:isHidden="stateHidden"
+					:data-user="user"
+					:is-hidden="stateHidden"
 					:class="{ 'is-hidden-info': stateHidden }"
 					@remove="userRemove"
 				/>
@@ -23,10 +22,8 @@
 	</div>
 </template>
 
-
-
 <script>
-	import UserPreview from "./UserPreview";
+	import UserPreview from './UserPreview';
 
 	export default {
 		name: 'UsersList',
@@ -42,20 +39,18 @@
 				usersList: this.users
 			};
 		},
+		watch: {
+			users(newValue) {
+				this.usersList = newValue;
+			}
+		},
 		methods: {
 			userRemove(userToRemove) {
 				this.usersList.splice(this.usersList.indexOf(userToRemove), 1);
 			}
-		},
-		watch: {
-			users(newValue){
-				this.usersList = newValue;
-			}
 		}
-	}
+	};
 </script>
-
-
 
 <style lang="scss" scoped>
 	.users-list {
