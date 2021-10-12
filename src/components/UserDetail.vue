@@ -118,43 +118,43 @@
 
 <style lang="scss" scoped>
 	.user-detail {
-		max-width: 60rem;
+		max-width: 60vh;
 		margin: 0 auto;
-		padding: 4rem;
-		font-size: 2.4rem;
+		padding: 4vh;
+		font-size: 2vh;
 		color: $color-light;
 		background-color: $color-brand-2;
 
 		@include media('sm') {
-			padding: 3rem;
-			font-size: 2rem;
+			padding: 3vh;
+			font-size: 2vh;
 		}
 
 		&__group {
 			&:not(:last-child) {
-				margin-bottom: 2rem;
+				margin-bottom: 2vh;
 
 				@include media('sm') {
-					margin-bottom: 1rem;
+					margin-bottom: 1vh;
 				}
 			}
 		}
 
 		&__image {
-			width: 15rem;
-			height: 15rem;
-			margin-bottom: 4rem;
+			width: 15vh;
+			height: 15vh;
+			margin-bottom: 4vh;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			border-radius: 50%;
-			border: 0.3rem solid $color-white;
+			border: 0.3vh solid $color-white;
 			overflow: hidden;
 
 			@include media('sm') {
-				width: 10rem;
-				height: 10rem;
-				margin-bottom: 2rem;
+				width: 10vh;
+				height: 10vh;
+				margin-bottom: 2vh;
 			}
 
 			img {

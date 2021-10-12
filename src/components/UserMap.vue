@@ -43,8 +43,8 @@
 		width: 100%;
 
 		@include media('sm') {
-			height: 30rem;
-			margin-top: 3rem;
+			height: 30vh;
+			margin-top: 3vh;
 		}
 	}
 </style>
