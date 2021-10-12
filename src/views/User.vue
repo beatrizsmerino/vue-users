@@ -6,11 +6,11 @@
 					v-if="user"
 					:user="user"
 				/>
+				<UserMap
+					v-if="user"
+					:user="user"
+				/>
 			</div>
-			<UserMap
-				v-if="user"
-				:user="user"
-			/>
 		</section>
 	</div>
 </template>
@@ -49,4 +49,17 @@
 	};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.inner::v-deep {
+	display: flex;
+
+	@include media('lg') {
+		flex-wrap: wrap;
+
+		.user-map {
+			margin-top: 3rem;
+			height: 50rem;
+		}
+	}
+}
+</style>
