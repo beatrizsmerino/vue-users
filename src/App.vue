@@ -146,28 +146,4 @@
 	.v-leave-active {
 		transition: opacity 0.5s linear 0.5s;
 	}
-
-	// PAGE HOME
-	// -----------------------------------------
-	.page-home {
-		height: 100%;
-
-		.page-body {
-			height: 100%;
-		}
-
-		.page-app {
-			display: flex;
-			height: 100%;
-		}
-
-		.page-main {
-			padding-top: 0;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			justify-content: center;
-			flex: 1;
-		}
-	}
 </style>
