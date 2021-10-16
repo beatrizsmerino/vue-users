@@ -125,6 +125,11 @@
 		color: $color-light;
 		background-color: $color-brand-2;
 
+		@include media("lg") {
+			max-width: 100%;
+			margin: 0;
+		}
+
 		@include media("sm") {
 			padding: 3rem;
 			font-size: 2rem;
