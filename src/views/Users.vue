@@ -15,8 +15,6 @@
 	</div>
 </template>
 
-
-
 <script>
 	import UsersList from "../components/UsersList.vue";
 	import UsersButtons from "../components/UsersButtons.vue";
@@ -46,21 +44,18 @@
 				await this.$parent.getUsers();
 				this.usersList = this.usersFetch;
 			},
-			removeAllUsers(){
+			removeAllUsers() {
 				this.usersList = [];
 			}
 		},
 	};
 </script>
 
-
-
-
 <style lang="scss" scoped>
 	.page-section {
 		padding-bottom: 7rem;
 
-		@include media('md') {
+		@include media("md") {
 			padding-bottom: 12rem;
 		}
 	}

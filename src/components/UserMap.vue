@@ -41,12 +41,9 @@
 <style lang="scss" scoped>
 	.user-map {
 		width: 100%;
-		height: 50rem;
-		margin-top: 5rem;
 
-		@include media("sm") {
-			height: 30rem;
-			margin-top: 3rem;
+		@include media("xl") {
+			height: 50rem;
 		}
 	}
 </style>

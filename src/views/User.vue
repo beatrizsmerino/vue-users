@@ -1,21 +1,19 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<div class="inner">
+			<div class="page-user__content inner">
 				<user-detail
 					v-if="user"
 					:user="user"
 				/>
+				<user-map
+					v-if="user"
+					:user="user"
+				/>
 			</div>
-			<user-map
-				v-if="user"
-				:user="user"
-			/>
 		</section>
 	</div>
 </template>
-
-
 
 <script>
 	import UserDetail from "../components/UserDetail.vue";
@@ -51,8 +49,31 @@
 	};
 </script>
 
-
-
-
 <style lang="scss" scoped>
+	.page-user {
+		&__content {
+			width: 100%;
+			max-width: 80%;
+			margin: 0 auto;
+			display: flex;
+			align-items: stretch;
+			justify-content: center;
+
+			@include media("xxxl") {
+				max-width: 100%;
+			}
+
+			@include media("xl") {
+				flex-direction: column;
+			}
+		}
+	}
+</style>
+
+<style lang="scss">
+	.page-user {
+		.page-main {
+			margin-bottom: 6.4rem;
+		}
+	}
 </style>
