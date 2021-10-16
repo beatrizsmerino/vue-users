@@ -27,7 +27,6 @@
 	</div>
 </template>
 
-
 <script>
 	import Button from "./Button";
 
@@ -67,7 +66,6 @@
 		}
 	};
 </script>
-
 
 <style lang="scss" scoped>
 	.users-buttons {
