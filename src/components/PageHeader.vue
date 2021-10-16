@@ -9,17 +9,16 @@
 				<li class="nav__item">
 					<router-link
 						to="/"
-						class="nav__item"
+						class="nav__link"
 						exact
 					>
 						Home
 					</router-link>
 				</li>
 				<li class="nav__item">
-
 					<router-link
 						to="/users"
-						class="nav__item"
+						class="nav__link"
 						:class="{'router-link-active': $route.path.includes('user')}"
 					>
 						Users
@@ -121,8 +120,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			font-size: 2.4rem;
-			font-weight: 600;
+			list-style: none;
 
 			@include media("sm") {
 				height: calc(100% - 6rem);
@@ -139,11 +137,8 @@
 		}
 
 		&__item {
-			padding: 0 0.2rem;
 			display: flex;
 			justify-content: center;
-			text-align: center;
-			color: $color-brand-2;
 
 			&:not(:last-child) {
 				margin-right: 2rem;
@@ -153,6 +148,14 @@
 					margin-bottom: 2rem;
 				}
 			}
+		}
+
+		&__link {
+			padding: 0 0.2rem;
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: $color-brand-2;
 
 			&.router-link-active,
 			&.router-link-exact-active {
