@@ -1,19 +1,26 @@
 <template>
 	<header class="page-header">
-		<Logo />
-		<PageNav />
+		<div class="page-header__item">
+			<Logo />
+		</div>
+		<div class="page-header__item">
+			<PageNav />
+			<SwitchTheme />
+		</div>
 	</header>
 </template>
 
 <script>
 	import Logo from "./Logo";
 	import PageNav from "./PageNav";
+	import SwitchTheme from "./SwitchTheme";
 
 	export default {
 		name: 'PageHeader',
 		components: {
 			Logo,
-			PageNav
+			PageNav,
+			SwitchTheme
 		},
 	};
 </script>
@@ -40,6 +47,28 @@
 
 		&__item {
 			display: flex;
+			align-items: center;
+
+			> * {
+				&:not(:last-child) {
+					margin-right: 3rem;
+				}
+			}
+
+			&:last-child {
+				@include media("sm") {
+					flex-direction: row-reverse;
+				}
+
+				> * {
+					&:not(:last-child) {
+						@include media("sm") {
+							margin-right: 0;
+							margin-left: 3rem;
+						}
+					}
+				}
+			}
 		}
 	}
 </style>
