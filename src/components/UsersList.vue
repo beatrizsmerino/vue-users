@@ -66,21 +66,37 @@
 		}
 
 		&__wrapper {
-			margin: 0 -1rem 4rem;
-
-			@include media("md") {
-				margin: 0 0 4rem;
-			}
+			margin-bottom: 4rem;
 		}
 
 		&__item {
 			width: calc(50% - 2rem);
-			margin: 1rem;
+			margin-bottom: 2rem;
 			list-style: none;
+			flex: 1;
+
+			&:nth-child(odd) {
+				margin-right: 2rem;
+			}
+
+			&:nth-last-child(-n + 2) {
+				margin-bottom: 0;
+			}
 
 			@include media("md") {
 				width: 100%;
-				margin: 1rem 0;
+
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+
+				&:nth-last-child(-n + 2) {
+					margin-bottom: 2rem;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -96,6 +112,7 @@
 					width: 10rem;
 					height: 10rem;
 					margin: 1rem;
+					flex: none;
 				}
 			}
 		}
