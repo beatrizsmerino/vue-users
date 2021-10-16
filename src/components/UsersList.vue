@@ -10,7 +10,6 @@
 				v-for="user in usersList"
 				:key="user.username"
 				class="users-list__item"
-				
 			>
 				<UserPreview
 					:dataUser="user"
@@ -22,8 +21,6 @@
 		</transition-group>
 	</div>
 </template>
-
-
 
 <script>
 	import UserPreview from "./UserPreview";
@@ -48,14 +45,12 @@
 			}
 		},
 		watch: {
-			users(newValue){
+			users(newValue) {
 				this.usersList = newValue;
 			}
 		}
 	}
 </script>
-
-
 
 <style lang="scss" scoped>
 	.users-list {
@@ -66,26 +61,42 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
-		@include media('md') {
+		@include media("md") {
 			max-width: 50rem;
 		}
 
 		&__wrapper {
-			margin: 0 -1rem 4rem;
-
-			@include media('md') {
-				margin: 0 0 4rem;
-			}
+			margin-bottom: 4rem;
 		}
 
 		&__item {
 			width: calc(50% - 2rem);
-			margin: 1rem;
+			margin-bottom: 2rem;
 			list-style: none;
+			flex: 1;
 
-			@include media('md') {
+			&:nth-child(odd) {
+				margin-right: 2rem;
+			}
+
+			&:nth-last-child(-n + 2) {
+				margin-bottom: 0;
+			}
+
+			@include media("md") {
 				width: 100%;
-				margin: 1rem 0;
+
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+
+				&:nth-last-child(-n + 2) {
+					margin-bottom: 2rem;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -101,6 +112,7 @@
 					width: 10rem;
 					height: 10rem;
 					margin: 1rem;
+					flex: none;
 				}
 			}
 		}

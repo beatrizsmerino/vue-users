@@ -41,8 +41,6 @@
 	</header>
 </template>
 
-
-
 <script>
 	import Button from "./Button";
 
@@ -91,8 +89,6 @@
 		}
 	};
 </script>
-
-
 
 <style lang="scss" scoped>
 	.page-header {
@@ -212,7 +208,7 @@
 		}
 
 		&.is-animated {
-			.nav{
+			.nav {
 				&__list {
 					transition: all 0.5s ease-in-out 0s;
 				}
