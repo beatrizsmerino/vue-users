@@ -130,7 +130,7 @@
 			display: flex;
 			align-items: center;
 
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 0.4rem;
 			}
 

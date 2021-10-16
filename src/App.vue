@@ -14,8 +14,6 @@
 	</div>
 </template>
 
-
-
 <script>
 	import PageHeader from './components/PageHeader.vue'
 	import PageTitle from './components/PageTitle.vue'
@@ -78,8 +76,6 @@
 	};
 </script>
 
-
-
 <style lang="scss">
 	@import url("./assets/fonts/DauphinPlain/font.css");
 	@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
@@ -131,7 +127,6 @@
 		padding: 0 3rem;
 	}
 
-
 	// VUE TRANSITIONS
 	// -----------------------------------------
 
@@ -150,30 +145,5 @@
 
 	.v-leave-active {
 		transition: opacity 0.5s linear 0.5s;
-	}
-
-
-	// PAGE HOME
-	// -----------------------------------------
-	.page-home {
-		height: 100%;
-
-		.page-body {
-			height: 100%;
-		}
-
-		.page-app {
-			display: flex;
-			height: 100%;
-		}
-
-		.page-main {
-			padding-top: 0;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			justify-content: center;
-			flex: 1;
-		}
 	}
 </style>

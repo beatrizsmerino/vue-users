@@ -26,8 +26,6 @@
 	</div>
 </template>
 
-
-
 <script>
 	export default {
 		components: {
@@ -37,8 +35,6 @@
 		},
 	};
 </script>
-
-
 
 <style lang="scss" scoped>
 	.subtitle {
@@ -91,6 +87,30 @@
 			@include media("sm") {
 				max-width: 15rem;
 			}
+		}
+	}
+</style>
+
+<style lang="scss">
+	.page-home {
+		height: 100%;
+
+		.page-body {
+			height: 100%;
+		}
+
+		.page-app {
+			display: flex;
+			height: 100%;
+		}
+
+		.page-main {
+			padding-top: 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			flex: 1;
 		}
 	}
 </style>
