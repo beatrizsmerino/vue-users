@@ -15,8 +15,6 @@
 	</div>
 </template>
 
-
-
 <script>
 	import UserDetail from "../components/UserDetail.vue";
 	import UserMap from "../components/UserMap.vue";
@@ -51,8 +49,4 @@
 	};
 </script>
 
-
-
-
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

@@ -4,15 +4,11 @@
 	</h1>
 </template>
 
-
-
 <script>
 	export default {
 		name: 'PageTitle',
 	};
 </script>
-
-
 
 <style lang="scss" scoped>
 	.page-title {
@@ -23,11 +19,11 @@
 		line-height: 100%;
 		color: $color-brand-1;
 
-		@include media('md') {
+		@include media("md") {
 			font-size: 8rem;
 		}
 
-		@include media('sm') {
+		@include media("sm") {
 			font-size: 7rem;
 		}
 	}
