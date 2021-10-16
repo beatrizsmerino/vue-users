@@ -2,7 +2,7 @@
 	<label
 		for="switchTheme"
 		class="switch-theme"
-		@change="switchTheme"
+		@change="changeTheme"
 	>
 		<input
 			id="switchTheme"
@@ -17,18 +17,50 @@
 	export default {
 		name: 'SwitchTheme',
 		methods: {
-			switchTheme: function (event) {
+			changeTheme(event) {
 				const field = event.target;
-				const page = document.querySelector("html");
-				if (page && field.checked) {
-					page.classList.remove("is-theme-light");
-					page.classList.add("is-theme-dark");
+
+				if (field.checked) {
+					this.setLocalStorage("theme", "dark");
 				} else {
-					page.classList.remove("is-theme-dark");
-					page.classList.add("is-theme-light");
+					this.setLocalStorage("theme", "light");
+				}
+
+				this.cssTheme();
+			},
+			cssTheme() {
+				const page = document.querySelector("html");
+				const themeName = this.getLocalStorage("theme");
+
+				page.classList.remove("is-theme-light");
+				page.classList.remove("is-theme-dark");
+				page.classList.add(`is-theme-${themeName}`);
+			},
+			checkTheme() {
+				const switchTheme = document.querySelector("#switchTheme");
+
+				if (this.getLocalStorage("theme")) {
+					this.cssTheme();
+
+					if (this.getLocalStorage("theme") == "dark") {
+						switchTheme.checked = true;
+					} else {
+						switchTheme.checked = false;
+					}
+				} else {
+					this.setLocalStorage("theme", "light");
 				}
 			},
+			setLocalStorage(name, data) {
+				localStorage.setItem(name, data);
+			},
+			getLocalStorage(name) {
+				return localStorage.getItem(name);
+			}
 		},
+		mounted() {
+			this.checkTheme();
+		}
 	}
 </script>
 
