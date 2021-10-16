@@ -42,8 +42,8 @@
 	.user-map {
 		width: 100%;
 
-		@include media("sm") {
-			height: 30rem;
+		@include media("xl") {
+			height: 50rem;
 		}
 	}
 </style>
