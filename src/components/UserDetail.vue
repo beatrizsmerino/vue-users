@@ -1,33 +1,43 @@
 <template>
 	<div class="user-detail">
-		<div class="user-detail__image">
-			<img
-				:src="user.imageLarge"
-				:alt="user.username"
-			/>
+		<div class="user-detail__header">
+			<div class="user-detail__image">
+				<img
+					:src="user.imageLarge"
+					:alt="user.username"
+				/>
+			</div>
+
+			<div class="user-detail__group user-detail__group--inline">
+				<p class="user-detail__item">
+					<strong class="user-detail__label">
+						Name:
+					</strong>
+					<span class="user-detail__data">
+						{{user.name.title}} {{user.name.first}} {{user.name.last}}
+					</span>
+				</p>
+				<p class="user-detail__item">
+					<strong class="user-detail__label">
+						Username:
+					</strong>
+					<span class="user-detail__data">
+						{{user.username}}
+					</span>
+				</p>
+				<p class="user-detail__item">
+					<strong class="user-detail__label">
+						Registered:
+					</strong>
+					<span class="user-detail__data">
+						{{user.registered}}
+					</span>
+				</p>
+			</div>
 		</div>
 
 		<div class="user-detail__content">
 			<div class="user-detail__column">
-				<div class="user-detail__group">
-					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Name:
-						</strong>
-						<span class="user-detail__data">
-							{{user.name.title}} {{user.name.first}} {{user.name.last}}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Username:
-						</strong>
-						<span class="user-detail__data">
-							{{user.username}}
-						</span>
-					</p>
-				</div>
-
 				<div class="user-detail__group">
 					<p class="user-detail__item">
 						<strong class="user-detail__label">
@@ -110,17 +120,6 @@
 						</span>
 					</p>
 				</div>
-
-				<div class="user-detail__group">
-					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Registered:
-						</strong>
-						<span class="user-detail__data">
-							{{user.registered}}
-						</span>
-					</p>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -160,6 +159,42 @@
 		@include media("sm") {
 			padding: 3rem;
 			font-size: 2rem;
+		}
+
+		> * {
+			&:not(:last-child) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&__header {
+			display: flex;
+			align-items: center;
+
+			> *:not(:last-child) {
+				margin-right: 2rem;
+			}
+		}
+
+		&__image {
+			width: 12vh;
+			height: 12vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			border: 0.3rem solid $color-white;
+			overflow: hidden;
+
+			@include media("sm") {
+				width: 10rem;
+				height: 10rem;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
 		}
 
 		&__content {
@@ -220,6 +255,19 @@
 			> *:not(:last-child) {
 				margin-bottom: 1rem;
 			}
+
+			&--inline {
+				.user-detail {
+					&__item {
+						align-items: center;
+						flex-direction: row;
+
+						&:not(:last-child) {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
 		}
 
 		&__item {
@@ -227,30 +275,8 @@
 			flex-direction: column;
 		}
 
-		&__image {
-			width: 15vh;
-			height: 15vh;
-			margin-bottom: 2rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 50%;
-			border: 0.3rem solid $color-white;
-			overflow: hidden;
-
-			@include media("sm") {
-				width: 10rem;
-				height: 10rem;
-				margin-bottom: 2rem;
-			}
-
-			img {
-				width: 100%;
-				height: 100%;
-			}
-		}
-
 		&__label {
+			margin-right: 0.5rem;
 			font-size: 1.6rem;
 			color: $color-brand-1;
 		}
