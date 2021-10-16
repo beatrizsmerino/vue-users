@@ -122,26 +122,33 @@
 		}
 
 		&__link {
-			padding: 0 0.2rem;
+			padding: 0 0.5rem;
+			position: relative;
 			text-align: center;
 			font-size: 2.4rem;
 			font-weight: 600;
 			color: $color-brand-2;
+			transition: all 0.5s ease-in-out 0s;
 
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 0;
+				height: 0.2rem;
+				position: absolute;
+				bottom: -0.2rem;
+				left: 50%;
+				transform: translate3d(-50%, 0, 0);
+				transition: all 0.5s ease-in-out 0s;
+			}
+
+			&:hover,
 			&.router-link-active,
 			&.router-link-exact-active {
-				position: relative;
 				color: $color-light;
 
 				&:after {
-					content: "";
-					display: inline-block;
 					width: 100%;
-					height: 0.2rem;
-					position: absolute;
-					bottom: -0.2rem;
-					left: 50%;
-					transform: translate3d(-50%, 0, 0);
 					background-color: $color-light;
 				}
 			}
