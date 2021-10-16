@@ -1,11 +1,6 @@
 <template>
 	<header class="page-header">
-		<router-link
-			to="/"
-			class="logo"
-		>
-			VueUsers
-		</router-link>
+		<Logo />
 		<nav
 			class="nav"
 			:class="{'is-open': isOpen, 'is-animated': isAnimated}"
@@ -42,11 +37,13 @@
 </template>
 
 <script>
+	import Logo from "./Logo";
 	import Button from "./Button";
 
 	export default {
 		name: 'PageHeader',
 		components: {
+			Logo,
 			Button
 		},
 		data() {
@@ -112,23 +109,6 @@
 
 		&__item {
 			display: flex;
-		}
-	}
-
-	.logo {
-		display: inline-block;
-		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
-		font-size: 5rem;
-		font-weight: bold;
-		line-height: 100%;
-		color: $color-brand-2;
-
-		&:hover {
-			color: $color-white;
-		}
-
-		@include media("sm") {
-			font-size: 4rem;
 		}
 	}
 
