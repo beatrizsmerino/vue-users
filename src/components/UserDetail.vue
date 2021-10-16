@@ -8,91 +8,119 @@
 		</div>
 
 		<div class="user-detail__content">
-			<div class="user-detail__group">
-				<p>
-					<strong class="user-detail__label">
-						Name:
-					</strong>
-					{{user.name.title}} {{user.name.first}} {{user.name.last}}
-				</p>
-				<p>
-					<strong class="user-detail__label">
-						Username:
-					</strong>
-					{{user.username}}
-				</p>
+			<div class="user-detail__column">
+				<div class="user-detail__group">
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Name:
+						</strong>
+						<span class="user-detail__data">
+							{{user.name.title}} {{user.name.first}} {{user.name.last}}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Username:
+						</strong>
+						<span class="user-detail__data">
+							{{user.username}}
+						</span>
+					</p>
+				</div>
+
+				<div class="user-detail__group">
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Gender:
+						</strong>
+						<span class="user-detail__data">
+							{{user.gender}}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Nationality:
+						</strong>
+						<span class="user-detail__data">
+							{{user.nationality}}
+						</span>
+					</p>
+				</div>
+
+				<div class="user-detail__group">
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							State:
+						</strong>
+						<span class="user-detail__data">
+							{{user.state}}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							City:
+						</strong>
+						<span class="user-detail__data">
+							{{user.city}}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Street:
+						</strong>
+						<span class="user-detail__data">
+							{{user.streetName}}, {{user.streetNumber}}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Postcode:
+						</strong>
+						<span class="user-detail__data">
+							{{user.postcode}}
+						</span>
+					</p>
+				</div>
 			</div>
 
-			<div class="user-detail__group">
-				<p>
-					<strong class="user-detail__label">
-						Gender:
-					</strong>
-					{{user.gender}}
-				</p>
-				<p>
-					<strong class="user-detail__label">
-						Nationality:
-					</strong>
-					{{user.nationality}}
-				</p>
-			</div>
+			<div class="user-detail__column">
+				<div class="user-detail__group">
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Email:
+						</strong>
+						<span class="user-detail__data user-detail__data--email">
+							{{user.email}}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Phone:
+						</strong>
+						<span class="user-detail__data">
+							{{user.phone}}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Cell:
+						</strong>
+						<span class="user-detail__data">
+							{{user.cell}}
+						</span>
+					</p>
+				</div>
 
-			<div class="user-detail__group">
-				<p>
-					<strong class="user-detail__label">
-						State:
-					</strong>
-					{{user.state}}
-				</p>
-				<p>
-					<strong class="user-detail__label">
-						City:
-					</strong>
-					{{user.city}}
-				</p>
-				<p>
-					<strong class="user-detail__label">
-						Street:
-					</strong>
-					{{user.streetName}}, {{user.streetNumber}}
-				</p>
-				<p>
-					<strong class="user-detail__label">
-						Postcode:
-					</strong>
-					{{user.postcode}}
-				</p>
-			</div>
-
-			<div class="user-detail__group">
-				<p>
-					<strong class="user-detail__label">
-						Email:
-					</strong>
-					{{user.email}}
-				</p>
-				<p>
-					<strong class="user-detail__label">
-						Phone:
-					</strong>
-					{{user.phone}}
-				</p>
-				<p>
-					<strong class="user-detail__label">
-						Cell:
-					</strong>
-					{{user.cell}}
-				</p>
-			</div>
-
-			<div class="user-detail__group">
-				<p>
-					<strong class="user-detail__label">
-						Registered:
-					</strong>
-					{{user.registered}}
-				</p>
+				<div class="user-detail__group">
+					<p class="user-detail__item">
+						<strong class="user-detail__label">
+							Registered:
+						</strong>
+						<span class="user-detail__data">
+							{{user.registered}}
+						</span>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -118,15 +146,14 @@
 
 <style lang="scss" scoped>
 	.user-detail {
-		max-width: 60rem;
+		width: 70rem;
 		margin: 0 auto;
-		padding: 4rem;
+		padding: 3rem;
 		font-size: 2.4rem;
-		color: $color-light;
 		background-color: $color-brand-2;
 
-		@include media("lg") {
-			max-width: 100%;
+		@include media("xl") {
+			width: inherit;
 			margin: 0;
 		}
 
@@ -135,20 +162,75 @@
 			font-size: 2rem;
 		}
 
-		&__group {
-			&:not(:last-child) {
-				margin-bottom: 2rem;
+		&__content {
+			display: flex;
 
-				@include media("sm") {
-					margin-bottom: 1rem;
+			@include media("xs") {
+				flex-direction: column;
+			}
+
+			> *:not(:last-child) {
+				@include media("xl") {
+					margin-right: 2rem;
+				}
+
+				@include media("xs") {
+					margin-bottom: 2rem;
 				}
 			}
 		}
 
+		&__column {
+			width: 50%;
+
+			@include media("xl") {
+				width: auto;
+				display: flex;
+				flex: 1;
+			}
+
+			@include media("md") {
+				flex-direction: column;
+			}
+
+			> *:not(:last-child) {
+				margin-bottom: 2rem;
+
+				@include media("xl") {
+					margin-bottom: 0;
+					margin-right: 2rem;
+				}
+
+				@include media("md") {
+					margin-right: 0;
+					margin-bottom: 2rem;
+				}
+			}
+		}
+
+		&__group {
+			@include media("xl") {
+				flex: 1;
+			}
+
+			@include media("md") {
+				flex: none;
+			}
+
+			> *:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+		}
+
 		&__image {
-			width: 15rem;
-			height: 15rem;
-			margin-bottom: 4rem;
+			width: 15vh;
+			height: 15vh;
+			margin-bottom: 2rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -169,7 +251,17 @@
 		}
 
 		&__label {
+			font-size: 1.6rem;
 			color: $color-brand-1;
+		}
+
+		&__data {
+			font-size: 1.4rem;
+			color: $color-light;
+
+			&--email {
+				word-break: break-all;
+			}
 		}
 	}
 </style>

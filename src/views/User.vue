@@ -59,7 +59,11 @@
 			align-items: stretch;
 			justify-content: center;
 
-			@include media("lg") {
+			@include media("xxxl") {
+				max-width: 100%;
+			}
+
+			@include media("xl") {
 				flex-direction: column;
 			}
 		}
