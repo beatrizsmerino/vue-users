@@ -40,7 +40,7 @@
 <style lang="scss" scoped>
 	.subtitle {
 		text-align: center;
-		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
+		font-family: $font-brand-1;
 		font-size: 6rem;
 		color: $color-brand-2;
 
