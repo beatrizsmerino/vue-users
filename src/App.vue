@@ -78,7 +78,7 @@
 
 <style lang="scss">
 	@import url("./assets/fonts/DauphinPlain/font.css");
-	@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
+	@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 	@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
 	[v-cloak] {
