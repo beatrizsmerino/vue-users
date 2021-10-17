@@ -14,7 +14,7 @@
 	.page-title {
 		margin-bottom: 2rem;
 		text-align: center;
-		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
+		font-family: $font-brand-1;
 		font-size: 9.6rem;
 		line-height: 100%;
 		color: $color-brand-1;
