@@ -8,6 +8,7 @@
 				<p>
 					Content developed with the API<br>
 					<a
+						class="link"
 						href="http://randomuser.me"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -64,14 +65,16 @@
 		@include media("sm") {
 			font-size: 2.2rem;
 		}
+	}
 
-		a {
-			font-weight: bold;
-			color: $color-brand-2;
+	.link {
+		font-weight: 300;
+		color: $color-brand-2;
+		text-decoration: underline;
 
-			&:hover {
-				color: $color-brand-1;
-			}
+		&:hover {
+			color: $color-brand-1;
+			text-decoration: none;
 		}
 	}
 

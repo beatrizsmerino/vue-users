@@ -138,3 +138,42 @@
 		}
 	}
 </style>
+
+<style lang="scss">
+	.page {
+		&.is-theme-dark {
+			.page-body {
+				background-color: $color-brand-2--dark;
+			}
+
+			&.page-home {
+				.subtitle,
+				.description {
+					color: $color-white;
+				}
+
+				.link {
+					color: $color-white;
+
+					&:hover {
+						color: $color-brand-1;
+					}
+				}
+			}
+
+			&.page-users {
+				.user-preview {
+					background-color: $color-brand-2;
+					box-shadow: 0 0 1rem rgba($color-black, 0.5);
+				}
+			}
+
+			&.page-user {
+				.user-detail {
+					background-color: $color-brand-2;
+					box-shadow: 0 0 1rem rgba($color-black, 0.5);
+				}
+			}
+		}
+	}
+</style>
