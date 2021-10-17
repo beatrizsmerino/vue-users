@@ -100,7 +100,7 @@
 	body {
 		padding: 7.2rem 0 0;
 		-webkit-font-smoothing: antialiased;
-		font-family: "Oxygen", Helvetica, sans-serif;
+		font-family: $font-brand-2;
 		font-size: 1.6rem;
 		color: $color-gray;
 		background-color: $color-light;

@@ -16,7 +16,7 @@
 <style lang="scss" scoped>
 	.logo {
 		display: inline-block;
-		font-family: "Dauphin", "Oxygen", Helvetica, sans-serif;
+		font-family: $font-brand-1;
 		font-size: 5rem;
 		font-weight: bold;
 		line-height: 100%;
