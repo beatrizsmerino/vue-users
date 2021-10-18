@@ -18,10 +18,7 @@
 				</p>
 			</div>
 			<div class="logo-vue inner">
-				<img
-					src="../assets/logo.png"
-					alt="Vue logo"
-				/>
+				<Icon name="logoVue" />
 			</div>
 		</section>
 	</div>
@@ -83,12 +80,15 @@
 		display: flex;
 		justify-content: center;
 
-		img {
-			width: 100%;
-			max-width: 20rem;
+		::v-deep {
+			.icon {
+				width: 20rem;
+				height: 20rem;
 
-			@include media("sm") {
-				max-width: 15rem;
+				@include media("sm") {
+					width: 15rem;
+					height: 15rem;
+				}
 			}
 		}
 	}
