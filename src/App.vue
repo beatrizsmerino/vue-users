@@ -9,7 +9,7 @@
 		<main class="page-main">
 			<page-title />
 
-			<router-view :usersFetch="users" />
+			<router-view :usersFetch="getUsers" />
 		</main>
 	</div>
 </template>
@@ -25,14 +25,19 @@
 		},
 		data() {
 			return {
-				users: []
+				usersList: []
 			}
 		},
 		created() {
 			this.setUsers();
 		},
+		computed: {
+			getUsers() {
+				return this.usersList;
+			}
+		},
 		methods: {
-			async getUsers() {
+			async fetchUsers() {
 				const response = await fetch('https://randomuser.me/api/?results=10');
 				const data = await response.json();
 
@@ -64,9 +69,9 @@
 				return users;
 			},
 			async setUsers() {
-				const data = await this.getUsers();
+				const data = await this.fetchUsers();
 				const usersFormatted = await this.createUsers(data);
-				this.users = usersFormatted;
+				this.usersList = usersFormatted;
 			}
 		},
 		watch: {
