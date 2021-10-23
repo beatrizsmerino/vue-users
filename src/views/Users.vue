@@ -33,6 +33,13 @@
 				infoUserHidden: false,
 			};
 		},
+		watch: {
+			usersFetch(newVal, oldVal) {
+				if (newVal !== oldVal) {
+					this.usersList = newVal;
+				}
+			}
+		},
 		methods: {
 			hideInfoUser() {
 				this.infoUserHidden = !this.infoUserHidden;
@@ -41,13 +48,13 @@
 				this.usersList.sort(() => Math.random() - 0.5);
 			},
 			async getUsers() {
+				this.removeAllUsers();
 				await this.$parent.setUsers();
-				this.usersList = this.usersFetch;
 			},
 			removeAllUsers() {
 				this.usersList = [];
 			}
-		},
+		}
 	};
 </script>
 
