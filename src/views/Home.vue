@@ -27,10 +27,7 @@
 <script>
 	export default {
 		components: {
-		},
-		props: {
-			usersFetch: Array
-		},
+		}
 	};
 </script>
 
