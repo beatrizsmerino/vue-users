@@ -72,7 +72,18 @@
 				const data = await this.fetchUsers();
 				const usersFormatted = await this.createUsers(data);
 				this.usersList = usersFormatted;
-			}
+				this.setLocalStorage('users', this.usersList);
+			},
+			getLocalStorage(key) {
+				return JSON.parse(localStorage.getItem(key));
+			},
+			setLocalStorage(key, value) {
+				localStorage.setItem(key, JSON.stringify(value));
+			},
+			removeLocalStorage(key) {
+				localStorage.removeItem(key);
+			},
+
 		},
 		watch: {
 			$route: {
@@ -86,6 +97,13 @@
 					html.classList.add('page', 'page-' + to.name.toLowerCase());
 					body.classList.add('page-body');
 				},
+				immediate: true,
+			},
+			usersList: {
+				handler(newValue) {
+					this.setLocalStorage('users', newValue);
+				},
+				deep: true,
 				immediate: true,
 			}
 		},
