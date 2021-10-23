@@ -41,7 +41,7 @@
 				this.usersList.sort(() => Math.random() - 0.5);
 			},
 			async getUsers() {
-				await this.$parent.getUsers();
+				await this.$parent.setUsers();
 				this.usersList = this.usersFetch;
 			},
 			removeAllUsers() {

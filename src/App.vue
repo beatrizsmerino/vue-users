@@ -29,13 +29,17 @@
 			}
 		},
 		created() {
-			this.getUsers();
+			this.setUsers();
 		},
 		methods: {
 			async getUsers() {
 				const response = await fetch('https://randomuser.me/api/?results=10');
 				const data = await response.json();
-				this.users = data.results.map(user => (
+
+				return data;
+			},
+			async createUsers(data) {
+				const users = data.results.map(user => (
 					{
 						name: user.name,
 						username: user.login.username,
@@ -56,6 +60,13 @@
 						imageLarge: user.picture.large,
 					}
 				));
+
+				return users;
+			},
+			async setUsers() {
+				const data = await this.getUsers();
+				const usersFormatted = await this.createUsers(data);
+				this.users = usersFormatted;
 			}
 		},
 		watch: {
