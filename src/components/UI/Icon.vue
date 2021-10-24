@@ -44,8 +44,5 @@
 			height: 100%;
 			display: inline-block;
 		}
-
-		&__use {
-		}
 	}
 </style>
