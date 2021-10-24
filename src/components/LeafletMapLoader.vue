@@ -1,6 +1,6 @@
 <template>
 	<div class="leaflet-map">
-		<l-map
+		<LMap
 			style="height: 100%"
 			v-if="showMap"
 			:zoom="zoom"
@@ -9,21 +9,21 @@
 			@update:center="centerUpdate"
 			@update:zoom="zoomUpdate"
 		>
-			<l-tile-layer
+			<LTileLayer
 				:url="url"
 				:attribution="attribution"
 			/>
-			<l-marker :lat-lng="withPopup">
-				<l-popup>
+			<LMarker :lat-lng="withPopup">
+				<LPopup>
 					Current location:
 					<p>
 						Latitude: {{this.marker.position.lat}}
 						<br />
 						Longitude: {{this.marker.position.lng}}
 					</p>
-				</l-popup>
-			</l-marker>
-		</l-map>
+				</LPopup>
+			</LMarker>
+		</LMap>
 	</div>
 </template>
 

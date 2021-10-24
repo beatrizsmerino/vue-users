@@ -2,11 +2,11 @@
 	<div class="page-main__inner">
 		<section class="page-section">
 			<div class="page-user__content inner">
-				<user-detail
+				<UserDetail
 					v-if="user"
 					:user="user"
 				/>
-				<user-map
+				<UserMap
 					v-if="user"
 					:user="user"
 				/>

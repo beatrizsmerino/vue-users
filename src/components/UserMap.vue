@@ -1,11 +1,11 @@
 <template>
 	<div class="user-map">
-		<google-map
+		<GoogleMap
 			v-if="isGoogleMaps"
 			:user="user"
 			:apiKey="googleApiKey"
 		/>
-		<leaflet-map
+		<LeafletMap
 			v-else
 			:user="user"
 		/>

@@ -1,12 +1,12 @@
 <template>
 	<div class="map">
-		<leaflet-map-loader :marker="marker" />
+		<LeafletMapLoader :marker="marker" />
 	</div>
 </template>
 
 <script>
 	import LeafletMapLoader from "./LeafletMapLoader";
-	
+
 	export default {
 		name: 'LeafletMap',
 		components: {
