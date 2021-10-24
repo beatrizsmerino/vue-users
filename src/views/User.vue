@@ -39,7 +39,7 @@
 			}
 		},
 		mounted() {
-			if (this.user === undefined) {
+			if (typeof this.user === 'undefined') {
 				this.$router.push({ name: "users" });
 			}
 		}

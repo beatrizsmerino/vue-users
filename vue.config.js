@@ -23,7 +23,7 @@ module.exports = {
 		svgRule.uses.clear();
 
 		svgRule
-			.test(/\/src\/assets\/images\/.*\.svg$/)
+			.test(/\/src\/assets\/images\/.*\.svg$/u)
 			.use('svg-symbol-sprite-loader')
 			.loader('svg-symbol-sprite-loader')
 			.options({
@@ -32,7 +32,7 @@ module.exports = {
 
 		config.module
 			.rule('svg-file')
-			.test(/\/src\/assets\/fonts\/.*\.svg$/)
+			.test(/\/src\/assets\/fonts\/.*\.svg$/u)
 			.use('file-loader')
 			.loader('file-loader')
 			.end()
