@@ -38,6 +38,12 @@
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
 				}
+			},
+			usersList(newVal, oldVal) {
+				if (newVal !== oldVal) {
+					this.usersList = newVal;
+					this.$parent.setLocalStorage("users", this.usersList);
+				}
 			}
 		},
 		methods: {
