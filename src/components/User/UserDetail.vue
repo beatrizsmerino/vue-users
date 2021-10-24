@@ -8,7 +8,7 @@
 				>
 			</div>
 
-			<div class="user-detail__group user-detail__group--inline">
+			<div class="user-detail__group">
 				<p class="user-detail__item">
 					<span class="user-detail__label">
 						<span class="user-detail__icon">
@@ -322,6 +322,7 @@
 					&__item {
 						flex-direction: row;
 						align-items: center;
+						flex-wrap: wrap;
 
 						&:not(:last-child) {
 							margin-bottom: 0;
