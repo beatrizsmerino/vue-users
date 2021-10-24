@@ -9,7 +9,7 @@
 			class="switch-theme__field"
 			type="checkbox"
 		>
-		<span class="switch-theme__bullet switch-theme__bullet--rounded"/>
+		<span class="switch-theme__bullet switch-theme__bullet--rounded" />
 	</label>
 </template>
 
