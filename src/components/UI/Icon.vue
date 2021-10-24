@@ -13,7 +13,7 @@
 </template>
 
 <script>
-	import { iconMap } from '@/assets/images/icons/icons-list.js';
+	import {iconMap} from '@/assets/images/icons/icons-list.js';
 
 	export default {
 		props: {
@@ -33,19 +33,16 @@
 
 <style lang="scss" scoped>
 	.icon {
-		width: 1.8rem;
-		height: 1.8rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		width: 1.8rem;
+		height: 1.8rem;
 
 		&__svg {
+			display: inline-block;
 			width: 100%;
 			height: 100%;
-			display: inline-block;
-		}
-
-		&__use {
 		}
 	}
 </style>

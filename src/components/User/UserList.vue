@@ -23,7 +23,7 @@
 </template>
 
 <script>
-	import UserPreview from "@/components/User/UserPreview";
+	import UserPreview from '@/components/User/UserPreview';
 
 	export default {
 		name: 'UsersList',
@@ -39,29 +39,29 @@
 				usersList: this.users
 			};
 		},
-		methods: {
-			userRemove(userToRemove) {
-				this.usersList.splice(this.usersList.indexOf(userToRemove), 1);
-			}
-		},
 		watch: {
 			users(newValue) {
 				this.usersList = newValue;
 			}
+		},
+		methods: {
+			userRemove(userToRemove) {
+				this.usersList.splice(this.usersList.indexOf(userToRemove), 1);
+			}
 		}
-	}
+	};
 </script>
 
 <style lang="scss" scoped>
 	.users-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		max-width: 85rem;
 		margin: 0 auto;
 		padding: 0;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
 
-		@include media("md") {
+		@include media('md') {
 			max-width: 50rem;
 		}
 
@@ -70,20 +70,12 @@
 		}
 
 		&__item {
+			flex: 1;
 			width: calc(50% - 2rem);
 			margin-bottom: 2rem;
 			list-style: none;
-			flex: 1;
 
-			&:nth-child(odd) {
-				margin-right: 2rem;
-			}
-
-			&:nth-last-child(-n + 2) {
-				margin-bottom: 0;
-			}
-
-			@include media("md") {
+			@include media('md') {
 				width: 100%;
 
 				&:nth-child(odd) {
@@ -98,21 +90,29 @@
 					margin-bottom: 0;
 				}
 			}
+
+			&:nth-child(odd) {
+				margin-right: 2rem;
+			}
+
+			&:nth-last-child(-n + 2) {
+				margin-bottom: 0;
+			}
 		}
 
 		&.is-hidden-info {
-			max-width: 70rem;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
+			max-width: 70rem;
 			transition: all 0.5s ease-out 0.8s;
 
 			.users-list {
 				&__item {
+					flex: none;
 					width: 10rem;
 					height: 10rem;
 					margin: 1rem;
-					flex: none;
 				}
 			}
 		}
@@ -123,8 +123,8 @@
 
 	/* animation list (WITH THE NAME SLIDE) */
 	.slide-enter {
-		opacity: 1;
 		transform: translateX(50rem);
+		opacity: 1;
 	}
 
 	.slide-enter-active {
@@ -132,15 +132,15 @@
 	}
 
 	.slide-leave-to {
-		opacity: 0;
 		transform: translateX(-50rem);
+		opacity: 0;
 	}
 
 	.slide-leave-active {
 		transition: all 1s ease-in-out 0s !important;
 	}
 
-	/* animation button random (WITH THE NAME SLIDE)*/
+	/* animation button random (WITH THE NAME SLIDE) */
 	.slide-move {
 		transition: all 0.5s ease-out 0s !important;
 	}

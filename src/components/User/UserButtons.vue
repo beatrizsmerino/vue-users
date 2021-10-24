@@ -1,26 +1,26 @@
 <template>
 	<div class="users-buttons">
 		<Button
-			@button-click="hideInfoUserEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="hideInfoUserEmit"
 		>
 			{{ textButtonHideUser }}
 		</Button>
 		<Button
-			@button-click="orderUsersEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="orderUsersEmit"
 		>
 			ORDER USERS
 		</Button>
 		<Button
-			@button-click="getUsersEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="getUsersEmit"
 		>
 			GET USERS
 		</Button>
 		<Button
-			@button-click="removeAllUsersEmit"
 			class="users-buttons__item button--bg-brand-2"
+			@button-click="removeAllUsersEmit"
 		>
 			REMOVE ALL USERS
 		</Button>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-	import Button from "@/components/UI/Button";
+	import Button from '@/components/UI/Button';
 
 	export default {
 		name: 'UsersButtons',
@@ -39,12 +39,12 @@
 			return {
 				showUserInfo: false,
 				textButtonHideUser: 'HIDE USER INFO'
-			}
+			};
 		},
 		methods: {
 			changeTextButtonHideUser() {
 				if (this.showUserInfo) {
-					this.textButtonHideUser = 'SHOW USER INFO'
+					this.textButtonHideUser = 'SHOW USER INFO';
 				} else {
 					this.textButtonHideUser = 'HIDE USER INFO';
 				}
@@ -52,16 +52,16 @@
 			hideInfoUserEmit() {
 				this.showUserInfo = !this.showUserInfo;
 				this.changeTextButtonHideUser();
-				this.$emit("hide");
+				this.$emit('hide');
 			},
 			orderUsersEmit() {
-				this.$emit("order");
+				this.$emit('order');
 			},
 			getUsersEmit() {
-				this.$emit("getAll");
+				this.$emit('getAll');
 			},
 			removeAllUsersEmit() {
-				this.$emit("removeAll");
+				this.$emit('removeAll');
 			}
 		}
 	};
@@ -69,23 +69,23 @@
 
 <style lang="scss" scoped>
 	.users-buttons {
-		width: 100%;
-		padding: 1rem;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
 		position: fixed;
+		z-index: 999;
 		bottom: 0;
 		left: 0;
-		z-index: 999;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 1rem;
 		background-color: $color-brand-1;
 		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
 		&__item {
 			margin: 0.5rem;
 
-			@include media("md") {
+			@include media('md') {
 				width: calc(50% - 1rem);
 			}
 		}
@@ -97,4 +97,3 @@
 		}
 	}
 </style>
-
