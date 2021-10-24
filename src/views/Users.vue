@@ -21,9 +21,9 @@
 </template>
 
 <script>
-	import UsersList from "@/components/UsersList";
-	import UsersButtons from "@/components/UsersButtons";
-	import Error from "@/components/Error";
+	import UsersList from "@/components/User/UserList";
+	import UsersButtons from "@/components/User/UserButtons";
+	import Error from "@/components/UI/Error";
 
 	export default {
 		components: {

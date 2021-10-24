@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import './assets/images/icons/icons-import.js';
 
-import Icon from './components/Icon';
+import Icon from './components/UI/Icon';
 Vue.component('Icon', Icon);
 
 Vue.config.productionTip = false

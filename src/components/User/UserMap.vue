@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import GoogleMap from "@/components/GoogleMap";
-	import LeafletMap from "@/components/LeafletMap";
+	import GoogleMap from "@/components/GoogleMap/GoogleMap";
+	import LeafletMap from "@/components/LeafletMap/LeafletMap";
 
 	export default {
 		name: 'UserMap',
