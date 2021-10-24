@@ -1,7 +1,7 @@
 <template>
 	<div class="error">
 		<span class="error__icon">
-			<i class="fas fa-exclamation-triangle"/>
+			<i class="fas fa-exclamation-triangle" />
 		</span>
 		<div class="error__message">
 			<p>
