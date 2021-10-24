@@ -15,8 +15,8 @@
 </template>
 
 <script>
-	import PageHeader from './components/PageHeader.vue'
-	import PageTitle from './components/PageTitle.vue'
+	import PageHeader from '@/components/PageHeader'
+	import PageTitle from '@/components/PageTitle'
 
 	export default {
 		components: {

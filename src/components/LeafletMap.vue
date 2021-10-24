@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import LeafletMapLoader from "./LeafletMapLoader";
+	import LeafletMapLoader from "@/components/LeafletMapLoader";
 
 	export default {
 		name: 'LeafletMap',

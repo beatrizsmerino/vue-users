@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import GoogleMap from "../components/GoogleMap.vue";
-	import LeafletMap from "../components/LeafletMap.vue";
+	import GoogleMap from "@/components/GoogleMap";
+	import LeafletMap from "@/components/LeafletMap";
 
 	export default {
 		name: 'UserMap',

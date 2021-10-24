@@ -16,8 +16,8 @@
 </template>
 
 <script>
-	import UserDetail from "../components/UserDetail.vue";
-	import UserMap from "../components/UserMap.vue";
+	import UserDetail from "@/components/UserDetail";
+	import UserMap from "@/components/UserMap";
 
 	export default {
 		components: {
