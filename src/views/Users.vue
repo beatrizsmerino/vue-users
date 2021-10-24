@@ -21,9 +21,9 @@
 </template>
 
 <script>
-	import UsersList from "@/components/User/UserList";
-	import UsersButtons from "@/components/User/UserButtons";
-	import Error from "@/components/UI/Error";
+	import UsersList from '@/components/User/UserList';
+	import UsersButtons from '@/components/User/UserButtons';
+	import Error from '@/components/UI/Error';
 
 	export default {
 		components: {
@@ -39,7 +39,7 @@
 				usersList: this.usersFetch,
 				infoUserHidden: false,
 				errorUsers: {
-					message: "Users not found",
+					message: 'Users not found',
 					solution: "Click on the button 'GET USERS'"
 				}
 			};
@@ -53,7 +53,7 @@
 			usersList(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
-					this.$parent.setLocalStorage("users", this.usersList);
+					this.$parent.setLocalStorage('users', this.usersList);
 				}
 			}
 		},
@@ -80,7 +80,7 @@
 	.page-section {
 		padding-bottom: 7rem;
 
-		@include media("md") {
+		@include media('md') {
 			padding-bottom: 12rem;
 		}
 	}

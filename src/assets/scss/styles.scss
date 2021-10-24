@@ -1,17 +1,12 @@
 // PARTIALS SCSS
 // ------------------
 
-
-
-
-
 // SETTINGS
 // =================================================
-@import "settings/settings-breakpoints";
-@import "settings/settings-colors";
-@import "settings/settings-fonts";
-
+@import 'settings/settings-breakpoints';
+@import 'settings/settings-colors';
+@import 'settings/settings-fonts';
 
 // TOOLS
 // =================================================
-@import "tools/tools-media";
+@import 'tools/tools-media';

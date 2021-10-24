@@ -402,7 +402,7 @@ module.exports = {
 			}
 		],
 		'vue/no-side-effects-in-computed-properties': 0,
-		'vue/require-default-prop': 0,
+		'vue/require-default-prop': 0
 	},
 	overrides: [
 		{
