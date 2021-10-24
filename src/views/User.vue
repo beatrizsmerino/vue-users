@@ -39,10 +39,7 @@
 			}
 		},
 		mounted() {
-			let rootUpdated = this.$route.params.username;
-			let rootFind = this.usersList.find(user => user.username === rootUpdated);
-
-			if (rootFind === undefined) {
+			if (this.user === undefined) {
 				this.$router.push({ name: "users" });
 			}
 		}
