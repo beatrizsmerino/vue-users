@@ -62,8 +62,7 @@
 						cell: user.cell,
 						email: user.email,
 						imageMedium: user.picture.medium,
-						imageLarge: user.picture.large,
-						selected: false
+						imageLarge: user.picture.large
 					}
 				));
 
