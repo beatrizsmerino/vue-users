@@ -43,7 +43,7 @@
 
 				return data;
 			},
-			async createUsers(data) {
+			createUsers(data) {
 				const users = data.results.map(user => (
 					{
 						name: user.name,
@@ -100,7 +100,7 @@
 					const html = document.getElementsByTagName('html')[0];
 					const body = document.getElementsByTagName('body')[0];
 
-					if (from !== undefined) {
+					if (typeof from !== 'undefined') {
 						html.classList.remove('page', 'page-' + from.name.toLowerCase());
 					}
 					html.classList.add('page', 'page-' + to.name.toLowerCase());

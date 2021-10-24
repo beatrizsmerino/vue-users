@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import GoogleMapsApiLoader from "google-maps-api-loader";
+	import googleMapsApiLoader from "google-maps-api-loader";
 
 	export default {
 		name: 'GoogleMapLoader',
@@ -29,7 +29,7 @@
 			};
 		},
 		async mounted() {
-			const googleMapApi = await GoogleMapsApiLoader({
+			const googleMapApi = await googleMapsApiLoader({
 				apiKey: this.apiKey
 			});
 			this.google = googleMapApi;
