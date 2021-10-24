@@ -9,7 +9,7 @@
 		<main class="page-main">
 			<page-title />
 
-			<router-view :usersFetch="users" />
+			<router-view :usersFetch="getUsers" />
 		</main>
 	</div>
 </template>
@@ -25,17 +25,26 @@
 		},
 		data() {
 			return {
-				users: []
+				usersList: []
 			}
 		},
 		created() {
-			this.getUsers();
+			this.checkUsers();
+		},
+		computed: {
+			getUsers() {
+				return this.usersList;
+			}
 		},
 		methods: {
-			async getUsers() {
+			async fetchUsers() {
 				const response = await fetch('https://randomuser.me/api/?results=10');
 				const data = await response.json();
-				this.users = data.results.map(user => (
+
+				return data;
+			},
+			async createUsers(data) {
+				const users = data.results.map(user => (
 					{
 						name: user.name,
 						username: user.login.username,
@@ -53,9 +62,36 @@
 						cell: user.cell,
 						email: user.email,
 						imageMedium: user.picture.medium,
-						imageLarge: user.picture.large,
+						imageLarge: user.picture.large
 					}
 				));
+
+				return users;
+			},
+			async setUsers() {
+				const data = await this.fetchUsers();
+				const usersFormatted = await this.createUsers(data);
+				this.usersList = usersFormatted;
+				this.setLocalStorage('users', this.usersList);
+			},
+			checkUsers() {
+				if (this.getLocalStorage("users")) {
+					this.updatedUsers();
+				} else {
+					this.setUsers();
+				}
+			},
+			updatedUsers() {
+				this.usersList = this.getLocalStorage("users");
+			},
+			getLocalStorage(key) {
+				return JSON.parse(localStorage.getItem(key));
+			},
+			setLocalStorage(key, value) {
+				localStorage.setItem(key, JSON.stringify(value));
+			},
+			removeLocalStorage(key) {
+				localStorage.removeItem(key);
 			}
 		},
 		watch: {
