@@ -52,6 +52,7 @@
 			},
 			orderUsers() {
 				this.usersList.sort(() => Math.random() - 0.5);
+				this.$parent.setLocalStorage('users', this.usersList);
 			},
 			async getUsers() {
 				this.removeAllUsers();

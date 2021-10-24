@@ -29,7 +29,7 @@
 			}
 		},
 		created() {
-			this.setUsers();
+			this.checkUsers();
 		},
 		computed: {
 			getUsers() {
@@ -75,6 +75,16 @@
 				this.usersList = usersFormatted;
 				this.setLocalStorage('users', this.usersList);
 			},
+			checkUsers() {
+				if (this.getLocalStorage("users")) {
+					this.updatedUsers();
+				} else {
+					this.setUsers();
+				}
+			},
+			updatedUsers() {
+				this.usersList = this.getLocalStorage("users");
+			},
 			getLocalStorage(key) {
 				return JSON.parse(localStorage.getItem(key));
 			},
@@ -97,13 +107,6 @@
 					html.classList.add('page', 'page-' + to.name.toLowerCase());
 					body.classList.add('page-body');
 				},
-				immediate: true,
-			},
-			usersList: {
-				handler(newValue) {
-					this.setLocalStorage('users', newValue);
-				},
-				deep: true,
 				immediate: true,
 			}
 		},
