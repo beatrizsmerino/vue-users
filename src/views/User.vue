@@ -16,8 +16,8 @@
 </template>
 
 <script>
-	import UserDetail from "@/components/UserDetail";
-	import UserMap from "@/components/UserMap";
+	import UserDetail from "@/components/User/UserDetail";
+	import UserMap from "@/components/User/UserMap";
 
 	export default {
 		components: {

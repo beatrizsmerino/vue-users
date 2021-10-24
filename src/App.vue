@@ -15,8 +15,8 @@
 </template>
 
 <script>
-	import PageHeader from '@/components/PageHeader'
-	import PageTitle from '@/components/PageTitle'
+	import PageHeader from '@/components/Page/PageHeader'
+	import PageTitle from '@/components/Page/PageTitle'
 
 	export default {
 		components: {

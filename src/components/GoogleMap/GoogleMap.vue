@@ -14,8 +14,8 @@
 </template>
 
 <script>
-	import GoogleMapLoader from "@/components/GoogleMapLoader";
-	import GoogleMapMarker from "@/components/GoogleMapMarker";
+	import GoogleMapLoader from "@/components/GoogleMap/GoogleMapLoader";
+	import GoogleMapMarker from "@/components/GoogleMap/GoogleMapMarker";
 	import { mapSettings } from "@/constants/mapSettings";
 
 	export default {
