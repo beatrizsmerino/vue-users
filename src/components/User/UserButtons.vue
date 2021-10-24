@@ -58,10 +58,10 @@
 				this.$emit('order');
 			},
 			getUsersEmit() {
-				this.$emit('getAll');
+				this.$emit('get-all');
 			},
 			removeAllUsersEmit() {
-				this.$emit('removeAll');
+				this.$emit('remove-all');
 			}
 		}
 	};
