@@ -241,15 +241,15 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 12vh;
-			height: 12vh;
+			width: 18vh;
+			height: 18vh;
 			overflow: hidden;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
 
 			@include media('sm') {
-				width: 10rem;
-				height: 10rem;
+				width: 15rem;
+				height: 15rem;
 			}
 
 			img {
