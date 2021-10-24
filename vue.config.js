@@ -22,11 +22,18 @@ module.exports = {
 		svgRule.uses.clear();
 
 		svgRule
-			.test(/\.svg$/)
+			.test(/\/src\/assets\/images\/.*\.svg$/)
 			.use('svg-symbol-sprite-loader')
 			.loader('svg-symbol-sprite-loader')
 			.options({
 				symbolId: filePath => `icon-${path.basename(filePath, '.svg')}`
 			});
+
+		config.module
+			.rule('svg-file')
+			.test(/\/src\/assets\/fonts\/.*\.svg$/)
+			.use('file-loader')
+			.loader('file-loader')
+			.end()
 	},
 }
