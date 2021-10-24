@@ -339,7 +339,7 @@
 		&__label {
 			margin-right: 0.5rem;
 			color: $color-brand-1;
-			font-size: 1.6rem;
+			font-size: 1.8rem;
 		}
 
 		&__icon {
@@ -348,7 +348,7 @@
 
 		&__data {
 			color: $color-light;
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 
 			&--email {
 				word-break: break-all;
