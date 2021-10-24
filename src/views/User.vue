@@ -43,7 +43,7 @@
 				this.user.selected = true;
 			},
 			unselectUser() {
-				this.user.selected = false;
+				this.usersList.map(user => user.selected = false);
 			}
 		},
 		mounted() {
