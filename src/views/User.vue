@@ -38,11 +38,24 @@
 				return this.usersList.find(user => user.username === this.username);
 			}
 		},
+		methods: {
+			selectUser() {
+				this.user.selected = true;
+			},
+			unselectUser() {
+				this.user.selected = false;
+			}
+		},
 		mounted() {
 			if (this.user === undefined) {
 				this.$router.push({ name: "users" });
+			} else {
+				this.selectUser();
 			}
-		}
+		},
+		destroyed() {
+			this.unselectUser();
+		},
 	};
 </script>
 
