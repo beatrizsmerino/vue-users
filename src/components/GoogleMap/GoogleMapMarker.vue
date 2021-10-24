@@ -1,9 +1,9 @@
 <template>
-	<div></div>
+	<div/>
 </template>
 
 <script>
-	import { POINT_MARKER_ICON_CONFIG } from "@/constants/mapSettings";
+	import {POINT_MARKER_ICON_CONFIG} from '@/constants/mapSettings';
 
 	export default {
 		name: 'GoogleMapMarker',
@@ -22,7 +22,7 @@
 			}
 		},
 		mounted() {
-			const { Marker } = this.google.maps;
+			const {Marker} = this.google.maps;
 
 			new Marker({
 				position: this.marker.position,
@@ -30,6 +30,6 @@
 				map: this.map,
 				icon: POINT_MARKER_ICON_CONFIG
 			});
-		},
+		}
 	};
 </script>

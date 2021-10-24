@@ -36,9 +36,9 @@
 					return 'router-link';
 				} else if (this.value) {
 					return 'input';
-				} else {
-					return 'button';
 				}
+
+				return 'button';
 			}
 		},
 		methods: {
@@ -46,26 +46,28 @@
 				this.$emit('button-click');
 			}
 		}
-	}
+	};
 </script>
 
 <style lang="scss" scoped>
 	.button {
-		padding: 1.2rem 2rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-transform: capitalize;
-		font-size: 1.6rem;
-		font-weight: 900;
-		line-height: 110%;
+		padding: 1.2rem 2rem;
+		transition:
+			color 0.15s ease-in-out 0s,
+			background-color 0.15s ease-in-out 0s,
+			border-color 0.15s ease-in-out 0s;
 		border: 0.2rem solid transparent;
 		outline: none;
 		background-color: transparent;
-		transition: color 0.15s ease-in-out 0s,
-			background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s;
-		user-select: none;
+		font-size: 1.6rem;
+		font-weight: 900;
+		line-height: 110%;
+		text-transform: capitalize;
 		cursor: pointer;
+		user-select: none;
 		appearance: none;
 
 		::v-deep {
@@ -86,13 +88,14 @@
 			font-size: 2rem;
 			font-weight: 700;
 		}
+
 		&__icon {
 			font-size: 2.4rem;
 		}
 
 		&--icon {
-			padding: 0;
 			margin: 0;
+			padding: 0;
 			border: 0;
 		}
 
@@ -101,23 +104,23 @@
 		}
 
 		&--bg-brand-1 {
-			color: $color-white;
 			background-color: $color-brand-1;
+			color: $color-white;
 
 			&:hover {
-				color: $color-brand-1;
 				border: 0.2rem solid $color-brand-1;
 				background-color: transparent;
+				color: $color-brand-1;
 			}
 		}
 
 		&--bg-brand-2 {
-			color: $color-light;
 			background-color: $color-brand-2;
+			color: $color-light;
 
 			&:hover {
-				color: $color-brand-2;
 				background-color: $color-light;
+				color: $color-brand-2;
 			}
 		}
 	}

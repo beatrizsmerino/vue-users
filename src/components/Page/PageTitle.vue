@@ -6,24 +6,24 @@
 
 <script>
 	export default {
-		name: 'PageTitle',
+		name: 'PageTitle'
 	};
 </script>
 
 <style lang="scss" scoped>
 	.page-title {
 		margin-bottom: 2rem;
-		text-align: center;
+		color: $color-brand-1;
 		font-family: $font-brand-1;
 		font-size: 9.6rem;
 		line-height: 100%;
-		color: $color-brand-1;
+		text-align: center;
 
-		@include media("md") {
+		@include media('md') {
 			font-size: 8rem;
 		}
 
-		@include media("sm") {
+		@include media('sm') {
 			font-size: 7rem;
 		}
 	}

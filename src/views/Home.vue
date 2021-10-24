@@ -6,7 +6,8 @@
 			</h2>
 			<div class="description inner">
 				<p>
-					Content developed with the API<br>
+					Content developed with the API
+					<br >
 					<a
 						class="link"
 						href="http://randomuser.me"
@@ -26,44 +27,43 @@
 
 <script>
 	export default {
-		components: {
-		}
+		components: {}
 	};
 </script>
 
 <style lang="scss" scoped>
 	.subtitle {
-		text-align: center;
+		color: $color-brand-2;
 		font-family: $font-brand-1;
 		font-size: 6rem;
-		color: $color-brand-2;
+		text-align: center;
 
-		@include media("md") {
+		@include media('md') {
 			font-size: 5rem;
 		}
 
-		@include media("sm") {
+		@include media('sm') {
 			font-size: 4rem;
 		}
 	}
 
 	.description {
-		text-align: center;
-		font-size: 3rem;
 		color: $color-brand-2;
+		font-size: 3rem;
+		text-align: center;
 
-		@include media("md") {
+		@include media('md') {
 			font-size: 2.6rem;
 		}
 
-		@include media("sm") {
+		@include media('sm') {
 			font-size: 2.2rem;
 		}
 	}
 
 	.link {
-		font-weight: 300;
 		color: $color-brand-2;
+		font-weight: 300;
 		text-decoration: underline;
 
 		&:hover {
@@ -73,16 +73,16 @@
 	}
 
 	.logo-vue {
-		margin: 1rem auto 0;
 		display: flex;
 		justify-content: center;
+		margin: 1rem auto 0;
 
 		::v-deep {
 			.icon {
 				width: 20rem;
 				height: 20rem;
 
-				@include media("sm") {
+				@include media('sm') {
 					width: 15rem;
 					height: 15rem;
 				}
@@ -105,12 +105,12 @@
 		}
 
 		.page-main {
-			padding-top: 0;
 			display: flex;
-			align-items: center;
-			flex-direction: column;
-			justify-content: center;
 			flex: 1;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding-top: 0;
 		}
 	}
 </style>

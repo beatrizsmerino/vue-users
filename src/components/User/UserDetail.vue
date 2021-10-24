@@ -5,7 +5,7 @@
 				<img
 					:src="user.imageLarge"
 					:alt="user.username"
-				/>
+				>
 			</div>
 
 			<div class="user-detail__group user-detail__group--inline">
@@ -14,7 +14,8 @@
 						Name:
 					</strong>
 					<span class="user-detail__data">
-						{{user.name.title}} {{user.name.first}} {{user.name.last}}
+						{{ user.name.title }} {{ user.name.first }}
+						{{ user.name.last }}
 					</span>
 				</p>
 				<p class="user-detail__item">
@@ -22,7 +23,7 @@
 						Username:
 					</strong>
 					<span class="user-detail__data">
-						{{user.username}}
+						{{ user.username }}
 					</span>
 				</p>
 				<p class="user-detail__item">
@@ -30,7 +31,7 @@
 						Registered:
 					</strong>
 					<span class="user-detail__data">
-						{{user.registered}}
+						{{ user.registered }}
 					</span>
 				</p>
 			</div>
@@ -44,7 +45,7 @@
 							Gender:
 						</strong>
 						<span class="user-detail__data">
-							{{user.gender}}
+							{{ user.gender }}
 						</span>
 					</p>
 					<p class="user-detail__item">
@@ -52,7 +53,7 @@
 							Nationality:
 						</strong>
 						<span class="user-detail__data">
-							{{user.nationality}}
+							{{ user.nationality }}
 						</span>
 					</p>
 				</div>
@@ -63,7 +64,7 @@
 							State:
 						</strong>
 						<span class="user-detail__data">
-							{{user.state}}
+							{{ user.state }}
 						</span>
 					</p>
 					<p class="user-detail__item">
@@ -71,7 +72,7 @@
 							City:
 						</strong>
 						<span class="user-detail__data">
-							{{user.city}}
+							{{ user.city }}
 						</span>
 					</p>
 					<p class="user-detail__item">
@@ -79,7 +80,7 @@
 							Street:
 						</strong>
 						<span class="user-detail__data">
-							{{user.streetName}}, {{user.streetNumber}}
+							{{ user.streetName }}, {{ user.streetNumber }}
 						</span>
 					</p>
 					<p class="user-detail__item">
@@ -87,7 +88,7 @@
 							Postcode:
 						</strong>
 						<span class="user-detail__data">
-							{{user.postcode}}
+							{{ user.postcode }}
 						</span>
 					</p>
 				</div>
@@ -99,8 +100,10 @@
 						<strong class="user-detail__label">
 							Email:
 						</strong>
-						<span class="user-detail__data user-detail__data--email">
-							{{user.email}}
+						<span
+							class="user-detail__data user-detail__data--email"
+						>
+							{{ user.email }}
 						</span>
 					</p>
 					<p class="user-detail__item">
@@ -108,7 +111,7 @@
 							Phone:
 						</strong>
 						<span class="user-detail__data">
-							{{user.phone}}
+							{{ user.phone }}
 						</span>
 					</p>
 					<p class="user-detail__item">
@@ -116,7 +119,7 @@
 							Cell:
 						</strong>
 						<span class="user-detail__data">
-							{{user.cell}}
+							{{ user.cell }}
 						</span>
 					</p>
 				</div>
@@ -148,15 +151,15 @@
 		width: 70rem;
 		margin: 0 auto;
 		padding: 3rem;
-		font-size: 2.4rem;
 		background-color: $color-brand-2;
+		font-size: 2.4rem;
 
-		@include media("xl") {
+		@include media('xl') {
 			width: inherit;
 			margin: 0;
 		}
 
-		@include media("sm") {
+		@include media('sm') {
 			padding: 3rem;
 			font-size: 2rem;
 		}
@@ -177,16 +180,16 @@
 		}
 
 		&__image {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 12vh;
 			height: 12vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 50%;
-			border: 0.3rem solid $color-white;
 			overflow: hidden;
+			border: 0.3rem solid $color-white;
+			border-radius: 50%;
 
-			@include media("sm") {
+			@include media('sm') {
 				width: 10rem;
 				height: 10rem;
 			}
@@ -200,16 +203,16 @@
 		&__content {
 			display: flex;
 
-			@include media("xs") {
+			@include media('xs') {
 				flex-direction: column;
 			}
 
 			> *:not(:last-child) {
-				@include media("xl") {
+				@include media('xl') {
 					margin-right: 2rem;
 				}
 
-				@include media("xs") {
+				@include media('xs') {
 					margin-bottom: 2rem;
 				}
 			}
@@ -218,25 +221,25 @@
 		&__column {
 			width: 50%;
 
-			@include media("xl") {
-				width: auto;
+			@include media('xl') {
 				display: flex;
 				flex: 1;
+				width: auto;
 			}
 
-			@include media("md") {
+			@include media('md') {
 				flex-direction: column;
 			}
 
 			> *:not(:last-child) {
 				margin-bottom: 2rem;
 
-				@include media("xl") {
-					margin-bottom: 0;
+				@include media('xl') {
 					margin-right: 2rem;
+					margin-bottom: 0;
 				}
 
-				@include media("md") {
+				@include media('md') {
 					margin-right: 0;
 					margin-bottom: 2rem;
 				}
@@ -244,11 +247,11 @@
 		}
 
 		&__group {
-			@include media("xl") {
+			@include media('xl') {
 				flex: 1;
 			}
 
-			@include media("md") {
+			@include media('md') {
 				flex: none;
 			}
 
@@ -259,8 +262,8 @@
 			&--inline {
 				.user-detail {
 					&__item {
-						align-items: center;
 						flex-direction: row;
+						align-items: center;
 
 						&:not(:last-child) {
 							margin-bottom: 0;
@@ -277,13 +280,13 @@
 
 		&__label {
 			margin-right: 0.5rem;
-			font-size: 1.6rem;
 			color: $color-brand-1;
+			font-size: 1.6rem;
 		}
 
 		&__data {
-			font-size: 1.4rem;
 			color: $color-light;
+			font-size: 1.4rem;
 
 			&--email {
 				word-break: break-all;
