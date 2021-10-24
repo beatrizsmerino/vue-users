@@ -23,7 +23,7 @@
 </template>
 
 <script>
-	import UserPreview from "./UserPreview";
+	import UserPreview from "@/components/UserPreview";
 
 	export default {
 		name: 'UsersList',

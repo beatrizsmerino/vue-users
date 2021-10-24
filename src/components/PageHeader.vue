@@ -11,9 +11,9 @@
 </template>
 
 <script>
-	import Logo from "./Logo";
-	import PageNav from "./PageNav";
-	import SwitchTheme from "./SwitchTheme";
+	import Logo from "@/components/Logo";
+	import PageNav from "@/components/PageNav";
+	import SwitchTheme from "@/components/SwitchTheme";
 
 	export default {
 		name: 'PageHeader',

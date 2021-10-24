@@ -21,9 +21,9 @@
 </template>
 
 <script>
-	import UsersList from "../components/UsersList.vue";
-	import UsersButtons from "../components/UsersButtons.vue";
-	import Error from "../components/Error.vue";
+	import UsersList from "@/components/UsersList";
+	import UsersButtons from "@/components/UsersButtons";
+	import Error from "@/components/Error";
 
 	export default {
 		components: {
