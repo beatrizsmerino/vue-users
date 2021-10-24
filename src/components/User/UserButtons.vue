@@ -4,25 +4,54 @@
 			class="users-buttons__item button--bg-brand-2"
 			@button-click="hideInfoUserEmit"
 		>
-			{{ textButtonHideUser }}
+			<span
+				v-if="showUserInfo"
+				class="button__icon"
+			>
+				<i class="fa fa-eye-slash" />
+			</span>
+			<span
+				v-else
+				class="button__icon"
+			>
+				<i class="fa fa-eye" />
+			</span>
+			<span class="button__text">
+				{{ textButtonHideUser }}
+			</span>
 		</Button>
 		<Button
 			class="users-buttons__item button--bg-brand-2"
 			@button-click="orderUsersEmit"
 		>
-			ORDER USERS
+			<span class="button__icon">
+				<i class="fa fa-sort" />
+			</span>
+			<span class="button__text">
+				ORDER USERS
+			</span>
 		</Button>
 		<Button
 			class="users-buttons__item button--bg-brand-2"
 			@button-click="getUsersEmit"
 		>
-			GET USERS
+			<span class="button__icon">
+				<i class="fa fa-user-plus" />
+			</span>
+			<span class="button__text">
+				GET USERS
+			</span>
 		</Button>
 		<Button
 			class="users-buttons__item button--bg-brand-2"
 			@button-click="removeAllUsersEmit"
 		>
-			REMOVE ALL USERS
+			<span class="button__icon">
+				<i class="fa fa-user-minus" />
+			</span>
+			<span class="button__text">
+				REMOVE ALL USERS
+			</span>
 		</Button>
 	</div>
 </template>
@@ -92,7 +121,13 @@
 
 		::v-deep {
 			.button {
-				font-size: 1.3rem;
+				&__icon {
+					font-size: 2rem;
+				}
+
+				&__text {
+					font-size: 1.2rem;
+				}
 			}
 		}
 	}
