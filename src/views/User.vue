@@ -41,9 +41,11 @@
 		methods: {
 			selectUser() {
 				this.user.selected = true;
+				this.$parent.setLocalStorage('users', this.usersList);
 			},
 			unselectUser() {
 				this.usersList.map(user => user.selected = false);
+				this.$parent.setLocalStorage('users', this.usersList);
 			}
 		},
 		mounted() {
