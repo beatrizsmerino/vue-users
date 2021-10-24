@@ -3,6 +3,7 @@ const SVGSymbolSprite = require('svg-symbol-sprite-loader');
 
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '/vue-users/' : '/',
+	lintOnSave: false,
 	css: {
 		loaderOptions: {
 			sass: {
