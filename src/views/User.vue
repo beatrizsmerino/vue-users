@@ -16,8 +16,8 @@
 </template>
 
 <script>
-	import UserDetail from "@/components/User/UserDetail";
-	import UserMap from "@/components/User/UserMap";
+	import UserDetail from '@/components/User/UserDetail';
+	import UserMap from '@/components/User/UserMap';
 
 	export default {
 		components: {
@@ -39,8 +39,8 @@
 			}
 		},
 		mounted() {
-			if (this.user === undefined) {
-				this.$router.push({ name: "users" });
+			if (typeof this.user === 'undefined') {
+				this.$router.push({name: 'users'});
 			}
 		}
 	};
@@ -49,18 +49,18 @@
 <style lang="scss" scoped>
 	.page-user {
 		&__content {
-			width: 100%;
-			max-width: 80%;
-			margin: 0 auto;
 			display: flex;
 			align-items: stretch;
 			justify-content: center;
+			width: 100%;
+			max-width: 80%;
+			margin: 0 auto;
 
-			@include media("xxxl") {
+			@include media('xxxl') {
 				max-width: 100%;
 			}
 
-			@include media("xl") {
+			@include media('xl') {
 				flex-direction: column;
 			}
 		}

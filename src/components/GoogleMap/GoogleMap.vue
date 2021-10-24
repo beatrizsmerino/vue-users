@@ -14,9 +14,9 @@
 </template>
 
 <script>
-	import GoogleMapLoader from "@/components/GoogleMap/GoogleMapLoader";
-	import GoogleMapMarker from "@/components/GoogleMap/GoogleMapMarker";
-	import { mapSettings } from "@/constants/mapSettings";
+	import GoogleMapLoader from '@/components/GoogleMap/GoogleMapLoader';
+	import GoogleMapMarker from '@/components/GoogleMap/GoogleMapMarker';
+	import {mapSettings} from '@/constants/mapSettings';
 
 	export default {
 		name: 'GoogleMap',
@@ -29,9 +29,7 @@
 			apiKey: String
 		},
 		data() {
-			return {
-
-			}
+			return {};
 		},
 		computed: {
 			marker() {
@@ -52,10 +50,6 @@
 				};
 			}
 		},
-		methods: {
-
-		}
+		methods: {}
 	};
 </script>
-
-<style lang="scss" scoped></style>

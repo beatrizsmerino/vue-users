@@ -1,7 +1,7 @@
 <template>
 	<div class="error">
 		<span class="error__icon">
-			<i class="fas fa-exclamation-triangle"></i>
+			<i class="fas fa-exclamation-triangle"/>
 		</span>
 		<div class="error__message">
 			<p>
@@ -24,19 +24,19 @@
 				type: Object,
 				required: true
 			}
-		},
-	}
+		}
+	};
 </script>
 
 <style lang="scss" scoped>
 	.error {
-		min-height: 40vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
+		min-height: 40vh;
 		color: $color-error;
+		text-align: center;
 
 		&__icon {
 			font-size: 7rem;
