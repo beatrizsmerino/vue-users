@@ -28,7 +28,7 @@
 </template>
 
 <script>
-	import Button from "./Button";
+	import Button from "@/components/UI/Button";
 
 	export default {
 		name: 'UsersButtons',

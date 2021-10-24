@@ -4,19 +4,19 @@
 		class="page-app"
 		v-cloak
 	>
-		<page-header />
+		<PageHeader />
 
 		<main class="page-main">
-			<page-title />
+			<PageTitle />
 
-			<router-view :usersFetch="getUsers" />
+			<router-view :users-fetch="getUsers" />
 		</main>
 	</div>
 </template>
 
 <script>
-	import PageHeader from './components/PageHeader.vue'
-	import PageTitle from './components/PageTitle.vue'
+	import PageHeader from '@/components/Page/PageHeader'
+	import PageTitle from '@/components/Page/PageTitle'
 
 	export default {
 		components: {
