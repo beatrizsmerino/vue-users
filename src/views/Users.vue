@@ -66,7 +66,6 @@
 				this.$parent.setLocalStorage('users', this.usersList);
 			},
 			async getUsers() {
-				this.removeAllUsers();
 				await this.$parent.setUsers();
 			},
 			removeAllUsers() {
