@@ -9,7 +9,7 @@
 		<main class="page-main">
 			<PageTitle />
 
-			<router-view :usersFetch="getUsers" />
+			<router-view :users-fetch="getUsers" />
 		</main>
 	</div>
 </template>
