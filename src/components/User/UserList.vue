@@ -77,25 +77,25 @@
 
 			@include media('md') {
 				width: 100%;
-
-				&:nth-child(odd) {
-					margin-right: 0;
-				}
-
-				&:nth-last-child(-n + 2) {
-					margin-bottom: 2rem;
-				}
-
-				&:last-child {
-					margin-bottom: 0;
-				}
 			}
 
 			&:nth-child(odd) {
 				margin-right: 2rem;
+
+				@include media('md') {
+					margin-right: 0;
+				}
 			}
 
 			&:nth-last-child(-n + 2) {
+				margin-bottom: 0;
+
+				@include media('md') {
+					margin-bottom: 2rem;
+				}
+			}
+
+			&:last-child {
 				margin-bottom: 0;
 			}
 		}
