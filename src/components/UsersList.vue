@@ -12,8 +12,8 @@
 				class="users-list__item"
 			>
 				<UserPreview
-					:dataUser="user"
-					:isHidden="stateHidden"
+					:data-user="user"
+					:is-hidden="stateHidden"
 					:class="{ 'is-hidden-info': stateHidden }"
 					@remove="userRemove"
 				/>

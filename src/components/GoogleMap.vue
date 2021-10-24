@@ -1,7 +1,7 @@
 <template>
 	<GoogleMapLoader
-		:mapConfig="mapConfig"
-		:apiKey="apiKey"
+		:map-config="mapConfig"
+		:api-key="apiKey"
 	>
 		<template #default="{ google, map }">
 			<GoogleMapMarker

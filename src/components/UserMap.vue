@@ -3,7 +3,7 @@
 		<GoogleMap
 			v-if="isGoogleMaps"
 			:user="user"
-			:apiKey="googleApiKey"
+			:api-key="googleApiKey"
 		/>
 		<LeafletMap
 			v-else

@@ -8,13 +8,13 @@
 			<UsersList
 				v-else
 				:users="usersList"
-				:stateHidden="infoUserHidden"
+				:state-hidden="infoUserHidden"
 			/>
 			<UsersButtons
 				@order="orderUsers"
 				@hide="hideInfoUser"
-				@getAll="getUsers"
-				@removeAll="removeAllUsers"
+				@get-all="getUsers"
+				@remove-all="removeAllUsers"
 			/>
 		</section>
 	</div>
