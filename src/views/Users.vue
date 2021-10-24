@@ -1,7 +1,12 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
+			<error
+				v-if="usersList.length === 0"
+				:error="errorUsers"
+			/>
 			<users-list
+				v-else
 				:users="usersList"
 				:stateHidden="infoUserHidden"
 			/>
@@ -18,11 +23,13 @@
 <script>
 	import UsersList from "../components/UsersList.vue";
 	import UsersButtons from "../components/UsersButtons.vue";
+	import Error from "../components/Error.vue";
 
 	export default {
 		components: {
 			UsersList,
-			UsersButtons
+			UsersButtons,
+			Error
 		},
 		props: {
 			usersFetch: Array
@@ -31,6 +38,10 @@
 			return {
 				usersList: this.usersFetch,
 				infoUserHidden: false,
+				errorUsers: {
+					message: "Users not found",
+					solution: "Click on the button 'GET USERS'"
+				}
 			};
 		},
 		watch: {
