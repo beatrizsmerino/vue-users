@@ -4,10 +4,10 @@
 		class="page-app"
 		v-cloak
 	>
-		<page-header />
+		<PageHeader />
 
 		<main class="page-main">
-			<page-title />
+			<PageTitle />
 
 			<router-view :usersFetch="getUsers" />
 		</main>

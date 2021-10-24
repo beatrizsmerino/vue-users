@@ -1,16 +1,16 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<error
+			<Error
 				v-if="usersList.length === 0"
 				:error="errorUsers"
 			/>
-			<users-list
+			<UsersList
 				v-else
 				:users="usersList"
 				:stateHidden="infoUserHidden"
 			/>
-			<users-buttons
+			<UsersButtons
 				@order="orderUsers"
 				@hide="hideInfoUser"
 				@getAll="getUsers"
