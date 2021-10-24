@@ -2,11 +2,11 @@
 	<div class="page-main__inner">
 		<section class="page-section">
 			<div class="page-user__content inner">
-				<user-detail
+				<UserDetail
 					v-if="user"
 					:user="user"
 				/>
-				<user-map
+				<UserMap
 					v-if="user"
 					:user="user"
 				/>
@@ -16,8 +16,8 @@
 </template>
 
 <script>
-	import UserDetail from "../components/UserDetail.vue";
-	import UserMap from "../components/UserMap.vue";
+	import UserDetail from "@/components/User/UserDetail";
+	import UserMap from "@/components/User/UserMap";
 
 	export default {
 		components: {

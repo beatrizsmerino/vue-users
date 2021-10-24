@@ -12,8 +12,8 @@
 				class="users-list__item"
 			>
 				<UserPreview
-					:dataUser="user"
-					:isHidden="stateHidden"
+					:data-user="user"
+					:is-hidden="stateHidden"
 					:class="{ 'is-hidden-info': stateHidden }"
 					@remove="userRemove"
 				/>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-	import UserPreview from "./UserPreview";
+	import UserPreview from "@/components/User/UserPreview";
 
 	export default {
 		name: 'UsersList',
