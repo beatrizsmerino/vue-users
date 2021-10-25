@@ -24,16 +24,16 @@
 				const field = event.target;
 
 				if (field.checked) {
-					this.setLocalStorage('theme', 'dark');
+					this.$tools.setLocalStorage('theme', 'dark');
 				} else {
-					this.setLocalStorage('theme', 'light');
+					this.$tools.setLocalStorage('theme', 'light');
 				}
 
 				this.cssTheme();
 			},
 			cssTheme() {
 				const page = document.querySelector('html');
-				const themeName = this.getLocalStorage('theme');
+				const themeName = this.$tools.getLocalStorage('theme');
 
 				page.classList.remove('is-theme-light');
 				page.classList.remove('is-theme-dark');
@@ -42,23 +42,17 @@
 			checkTheme() {
 				const switchTheme = document.querySelector('#switchTheme');
 
-				if (this.getLocalStorage('theme')) {
+				if (this.$tools.getLocalStorage('theme')) {
 					this.cssTheme();
 
-					if (this.getLocalStorage('theme') == 'dark') {
+					if (this.$tools.getLocalStorage('theme') == 'dark') {
 						switchTheme.checked = true;
 					} else {
 						switchTheme.checked = false;
 					}
 				} else {
-					this.setLocalStorage('theme', 'light');
+					this.$tools.setLocalStorage('theme', 'light');
 				}
-			},
-			setLocalStorage(name, data) {
-				localStorage.setItem(name, data);
-			},
-			getLocalStorage(name) {
-				return localStorage.getItem(name);
 			}
 		}
 	};
