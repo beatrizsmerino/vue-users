@@ -88,26 +88,17 @@
 				const data = await this.fetchUsers();
 				const usersFormatted = await this.createUsers(data);
 				this.usersList = usersFormatted;
-				this.setLocalStorage('users', this.usersList);
+				this.$tools.setLocalStorage('users', this.usersList);
 			},
 			checkUsers() {
-				if (this.getLocalStorage('users')) {
+				if (this.$tools.getLocalStorage('users')) {
 					this.updatedUsers();
 				} else {
 					this.setUsers();
 				}
 			},
 			updatedUsers() {
-				this.usersList = this.getLocalStorage('users');
-			},
-			getLocalStorage(key) {
-				return JSON.parse(localStorage.getItem(key));
-			},
-			setLocalStorage(key, value) {
-				localStorage.setItem(key, JSON.stringify(value));
-			},
-			removeLocalStorage(key) {
-				localStorage.removeItem(key);
+				this.usersList = this.$tools.getLocalStorage('users');
 			}
 		}
 	};
