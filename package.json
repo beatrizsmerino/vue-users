@@ -5,7 +5,10 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint",
+		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\"",
+		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
+		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,vue}\" --fix --ignore-path .eslintignore",
+		"lint": "npm run prettier:fix && npm run stylelint:fix && npm run eslint:fix",
 		"deploy": "node gh-pages-deploy.js"
 	},
 	"dependencies": {
@@ -17,39 +20,29 @@
 		"vue2-leaflet": "^2.7.1"
 	},
 	"devDependencies": {
+		"@babel/eslint-parser": "^7.15.8",
 		"@vue/cli-plugin-babel": "^4.5.14",
 		"@vue/cli-plugin-eslint": "^4.5.14",
 		"@vue/cli-service": "^4.5.14",
+		"@vue/eslint-config-prettier": "^6.0.0",
 		"babel-eslint": "^10.1.0",
 		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-loader": "^4.0.2",
+		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-vue": "^7.20.0",
 		"file-loader": "^6.2.0",
+		"prettier": "^2.4.1",
 		"sass": "^1.43.3",
 		"sass-loader": "^7.3.1",
+		"stylelint": "^13.13.1",
+		"stylelint-config-prettier": "^8.0.2",
+		"stylelint-config-property-sort-order-smacss": "^7.1.0",
+		"stylelint-config-sass-guidelines": "^8.0.0",
+		"stylelint-config-standard": "^22.0.0",
+		"stylelint-scss": "^3.21.0",
 		"svg-symbol-sprite-loader": "^4.0.0",
 		"vue-template-compiler": "^2.6.14"
-	},
-	"eslintConfig": {
-		"root": true,
-		"env": {
-			"node": true
-		},
-		"extends": [
-			"plugin:vue/essential",
-			"eslint:recommended"
-		],
-		"rules": {},
-		"parserOptions": {
-			"parser": "babel-eslint"
-		}
-	},
-	"postcss": {
-		"plugins": {
-			"autoprefixer": {}
-		}
-	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	]
+	}
 }

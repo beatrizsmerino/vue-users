@@ -1,29 +1,29 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<error
+			<Error
 				v-if="usersList.length === 0"
 				:error="errorUsers"
 			/>
-			<users-list
+			<UsersList
 				v-else
 				:users="usersList"
-				:stateHidden="infoUserHidden"
+				:state-hidden="infoUserHidden"
 			/>
-			<users-buttons
+			<UsersButtons
 				@order="orderUsers"
 				@hide="hideInfoUser"
-				@getAll="getUsers"
-				@removeAll="removeAllUsers"
+				@get-all="getUsers"
+				@remove-all="removeAllUsers"
 			/>
 		</section>
 	</div>
 </template>
 
 <script>
-	import UsersList from "../components/UsersList.vue";
-	import UsersButtons from "../components/UsersButtons.vue";
-	import Error from "../components/Error.vue";
+	import UsersList from '@/components/User/UserList';
+	import UsersButtons from '@/components/User/UserButtons';
+	import Error from '@/components/UI/Error';
 
 	export default {
 		components: {
@@ -39,7 +39,7 @@
 				usersList: this.usersFetch,
 				infoUserHidden: false,
 				errorUsers: {
-					message: "Users not found",
+					message: 'Users not found',
 					solution: "Click on the button 'GET USERS'"
 				}
 			};
@@ -53,7 +53,7 @@
 			usersList(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
-					this.$parent.setLocalStorage("users", this.usersList);
+					this.$parent.setLocalStorage('users', this.usersList);
 				}
 			}
 		},
@@ -66,7 +66,6 @@
 				this.$parent.setLocalStorage('users', this.usersList);
 			},
 			async getUsers() {
-				this.removeAllUsers();
 				await this.$parent.setUsers();
 			},
 			removeAllUsers() {
@@ -80,7 +79,7 @@
 	.page-section {
 		padding-bottom: 7rem;
 
-		@include media("md") {
+		@include media('md') {
 			padding-bottom: 12rem;
 		}
 	}

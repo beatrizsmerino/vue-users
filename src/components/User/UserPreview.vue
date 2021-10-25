@@ -4,7 +4,7 @@
 			:src="dataUser.imageMedium"
 			:alt="dataUser.name.first + ' ' + dataUser.name.last"
 			class="user-preview__img"
-		/>
+		>
 
 		<transition name="fade">
 			<div
@@ -12,25 +12,25 @@
 				:class="{ 'is-hidden': isHidden }"
 			>
 				<h3 class="user-preview__name">
-					{{dataUser.name.first}} {{dataUser.name.last}}
+					{{ dataUser.name.first }} {{ dataUser.name.last }}
 				</h3>
 
 				<div class="user-preview__description">
 					<p class="user-preview-data">
 						<span class="user-preview-data__icon">
-							<i class="fa fa-user"></i>
+							<i class="fa fa-user" />
 						</span>
 						<span class="user-preview-data__text">
-							{{dataUser.username}}
+							{{ dataUser.username }}
 						</span>
 					</p>
 
 					<p class="user-preview-data">
 						<span class="user-preview-data__icon">
-							<i class="fa fa-map-marker"></i>
+							<i class="fa fa-map-marker" />
 						</span>
 						<span class="user-preview-data__text">
-							{{dataUser.state}}
+							{{ dataUser.state }}
 						</span>
 					</p>
 				</div>
@@ -40,7 +40,7 @@
 					class="button--bg-brand-1 button--width-auto"
 				>
 					<span class="button__icon">
-						<i class="fas fa-info"></i>
+						<i class="fas fa-info" />
 					</span>
 					<span class="button__text">
 						more info
@@ -50,16 +50,16 @@
 		</transition>
 
 		<Button
-			class="button-close button--icon "
+			class="button-close button--icon"
 			@button-click="userRemoveEmit(dataUser)"
 		>
-			<i class="button-close__icon fas fa-times-circle"></i>
+			<i class="button-close__icon fas fa-times-circle" />
 		</Button>
 	</div>
 </template>
 
 <script>
-	import Button from "./Button";
+	import Button from '@/components/UI/Button';
 
 	export default {
 		name: 'UserPreview',
@@ -71,53 +71,53 @@
 				type: Object,
 				required: true
 			},
-			isHidden: Boolean,
+			isHidden: Boolean
 		},
 		methods: {
 			userRemoveEmit(userToRemove) {
-				this.$emit("remove", userToRemove);
+				this.$emit('remove', userToRemove);
 			}
-		},
-	}
+		}
+	};
 </script>
 
 <style lang="scss" scoped>
 	.user-preview {
+		display: flex;
+		position: relative;
 		width: 100%;
 		height: 100%;
 		padding: 2rem 6rem 2rem 2rem;
-		display: flex;
-		position: relative;
 		background-color: $color-brand-2;
 
 		&__img {
 			width: 8rem;
 			height: 8rem;
-			border-radius: 50%;
 			border: 0.3rem solid $color-white;
+			border-radius: 50%;
 		}
 
 		&__content {
+			display: inline-block;
 			width: calc(100% - 8rem - 1.6rem);
 			margin-left: 1.6rem;
-			display: inline-block;
 			color: $color-white;
 
 			&.is-hidden {
-				opacity: 0;
 				display: none;
 				transition: all 0.5s ease-out 0s;
+				opacity: 0;
 			}
 		}
 
 		&__name {
 			margin-bottom: 1rem;
-			text-transform: capitalize;
 			font-size: 2.5rem;
-			line-height: 100%;
 			font-weight: bold;
+			line-height: 100%;
+			text-transform: capitalize;
 
-			@include media("sm") {
+			@include media('sm') {
 				font-size: 2rem;
 			}
 		}
@@ -136,10 +136,10 @@
 
 			&__icon {
 				margin-right: 1rem;
-				font-size: 2rem;
 				opacity: 0.75;
+				font-size: 2rem;
 
-				@include media("sm") {
+				@include media('sm') {
 					font-size: 1.8rem;
 				}
 			}
@@ -147,7 +147,7 @@
 			&__text {
 				font-size: 2rem;
 
-				@include media("sm") {
+				@include media('sm') {
 					font-size: 1.8rem;
 				}
 			}
@@ -161,8 +161,8 @@
 
 			&__icon {
 				display: inline-block;
-				font-size: 2.8rem;
 				color: $color-brand-1;
+				font-size: 2.8rem;
 				pointer-events: none;
 			}
 
@@ -176,18 +176,18 @@
 		}
 
 		&.is-hidden-info {
-			padding: 0.5rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			padding: 0.5rem;
 			border-radius: 50%;
 
 			.button-close {
 				display: flex;
-				align-items: center;
-				justify-content: center;
 				top: 0.5rem;
 				right: 0.5rem;
+				align-items: center;
+				justify-content: center;
 				border-radius: 50%;
 				background-color: $color-light;
 
