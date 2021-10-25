@@ -8,28 +8,43 @@
 				>
 			</div>
 
-			<div class="user-detail__group user-detail__group--inline">
+			<div class="user-detail__group">
 				<p class="user-detail__item">
-					<strong class="user-detail__label">
-						Name:
-					</strong>
+					<span class="user-detail__label">
+						<span class="user-detail__icon">
+							<i class="fa fa-user" />
+						</span>
+						<strong>
+							Name:
+						</strong>
+					</span>
 					<span class="user-detail__data">
 						{{ user.name.title }} {{ user.name.first }}
 						{{ user.name.last }}
 					</span>
 				</p>
 				<p class="user-detail__item">
-					<strong class="user-detail__label">
-						Username:
-					</strong>
+					<span class="user-detail__label">
+						<span class="user-detail__icon">
+							<i class="fa fa-user-lock" />
+						</span>
+						<strong>
+							Username:
+						</strong>
+					</span>
 					<span class="user-detail__data">
 						{{ user.username }}
 					</span>
 				</p>
 				<p class="user-detail__item">
-					<strong class="user-detail__label">
-						Registered:
-					</strong>
+					<span class="user-detail__label">
+						<span class="user-detail__icon">
+							<i class="fa fa-clock" />
+						</span>
+						<strong>
+							Registered:
+						</strong>
+					</span>
 					<span class="user-detail__data">
 						{{ user.registered }}
 					</span>
@@ -41,52 +56,66 @@
 			<div class="user-detail__column">
 				<div class="user-detail__group">
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Gender:
-						</strong>
-						<span class="user-detail__data">
-							{{ user.gender }}
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-globe" />
+							</span>
+							<strong>
+								Nationality:
+							</strong>
 						</span>
-					</p>
-					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Nationality:
-						</strong>
 						<span class="user-detail__data">
 							{{ user.nationality }}
 						</span>
 					</p>
-				</div>
-
-				<div class="user-detail__group">
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							State:
-						</strong>
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-flag" />
+							</span>
+							<strong>
+								State:
+							</strong>
+						</span>
 						<span class="user-detail__data">
 							{{ user.state }}
 						</span>
 					</p>
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							City:
-						</strong>
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-city" />
+							</span>
+							<strong>
+								City:
+							</strong>
+						</span>
 						<span class="user-detail__data">
 							{{ user.city }}
 						</span>
 					</p>
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Street:
-						</strong>
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-street-view" />
+							</span>
+							<strong>
+								Street:
+							</strong>
+						</span>
 						<span class="user-detail__data">
 							{{ user.streetName }}, {{ user.streetNumber }}
 						</span>
 					</p>
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Postcode:
-						</strong>
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-mail-bulk" />
+							</span>
+							<strong>
+								Postcode:
+							</strong>
+						</span>
 						<span class="user-detail__data">
 							{{ user.postcode }}
 						</span>
@@ -97,27 +126,53 @@
 			<div class="user-detail__column">
 				<div class="user-detail__group">
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Email:
-						</strong>
-						<span
-							class="user-detail__data user-detail__data--email"
-						>
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-venus-mars" />
+							</span>
+							<strong>
+								Gender:
+							</strong>
+						</span>
+						<span class="user-detail__data">
+							{{ user.gender }}
+						</span>
+					</p>
+					<p class="user-detail__item">
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-envelope" />
+							</span>
+							<strong>
+								Email:
+							</strong>
+						</span>
+						<span class="user-detail__data user-detail__data--email">
 							{{ user.email }}
 						</span>
 					</p>
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Phone:
-						</strong>
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-phone" />
+							</span>
+							<strong>
+								Phone:
+							</strong>
+						</span>
 						<span class="user-detail__data">
 							{{ user.phone }}
 						</span>
 					</p>
 					<p class="user-detail__item">
-						<strong class="user-detail__label">
-							Cell:
-						</strong>
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-phone" />
+							</span>
+							<strong>
+								Cell:
+							</strong>
+						</span>
 						<span class="user-detail__data">
 							{{ user.cell }}
 						</span>
@@ -183,15 +238,15 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 12vh;
-			height: 12vh;
+			width: 18vh;
+			height: 18vh;
 			overflow: hidden;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
 
 			@include media('sm') {
-				width: 10rem;
-				height: 10rem;
+				width: 15rem;
+				height: 15rem;
 			}
 
 			img {
@@ -208,9 +263,7 @@
 			}
 
 			> *:not(:last-child) {
-				@include media('xl') {
-					margin-right: 2rem;
-				}
+				margin-right: 2rem;
 
 				@include media('xs') {
 					margin-bottom: 2rem;
@@ -264,6 +317,7 @@
 					&__item {
 						flex-direction: row;
 						align-items: center;
+						flex-wrap: wrap;
 
 						&:not(:last-child) {
 							margin-bottom: 0;
@@ -281,12 +335,16 @@
 		&__label {
 			margin-right: 0.5rem;
 			color: $color-brand-1;
-			font-size: 1.6rem;
+			font-size: 1.8rem;
+		}
+
+		&__icon {
+			color: $color-brand-1;
 		}
 
 		&__data {
 			color: $color-light;
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 
 			&--email {
 				word-break: break-all;
