@@ -53,7 +53,7 @@
 			usersList(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
-					this.$parent.setLocalStorage('users', this.usersList);
+					this.$tools.setLocalStorage('users', this.usersList);
 				}
 			}
 		},
@@ -63,7 +63,7 @@
 			},
 			orderUsers() {
 				this.usersList.sort(() => Math.random() - 0.5);
-				this.$parent.setLocalStorage('users', this.usersList);
+				this.$tools.setLocalStorage('users', this.usersList);
 			},
 			async getUsers() {
 				await this.$parent.setUsers();

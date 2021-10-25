@@ -40,7 +40,7 @@
 		},
 		mounted() {
 			if (typeof this.user === 'undefined') {
-				this.$router.push({name: 'users'});
+				this.$router.push({ name: 'users' });
 			}
 		}
 	};
