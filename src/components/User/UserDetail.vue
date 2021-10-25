@@ -58,19 +58,6 @@
 					<p class="user-detail__item">
 						<span class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-venus-mars" />
-							</span>
-							<strong>
-								Gender:
-							</strong>
-						</span>
-						<span class="user-detail__data">
-							{{ user.gender }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
-							<span class="user-detail__icon">
 								<i class="fa fa-globe" />
 							</span>
 							<strong>
@@ -81,9 +68,6 @@
 							{{ user.nationality }}
 						</span>
 					</p>
-				</div>
-
-				<div class="user-detail__group">
 					<p class="user-detail__item">
 						<span class="user-detail__label">
 							<span class="user-detail__icon">
@@ -141,6 +125,19 @@
 
 			<div class="user-detail__column">
 				<div class="user-detail__group">
+					<p class="user-detail__item">
+						<span class="user-detail__label">
+							<span class="user-detail__icon">
+								<i class="fa fa-venus-mars" />
+							</span>
+							<strong>
+								Gender:
+							</strong>
+						</span>
+						<span class="user-detail__data">
+							{{ user.gender }}
+						</span>
+					</p>
 					<p class="user-detail__item">
 						<span class="user-detail__label">
 							<span class="user-detail__icon">
