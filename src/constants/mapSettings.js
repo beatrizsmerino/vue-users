@@ -43,85 +43,85 @@ const mapSettings = {
 		{
 			featureType: 'landscape',
 			stylers: [
-				{hue: COLORS.LANDSCAPE},
-				{saturation: 50.2},
-				{lightness: -34.8},
-				{gamma: 1}
+				{ hue: COLORS.LANDSCAPE },
+				{ saturation: 50.2 },
+				{ lightness: -34.8 },
+				{ gamma: 1 }
 			]
 		},
 		{
 			featureType: 'poi',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'road.highway',
 			stylers: [
-				{hue: COLORS.LANDSCAPE},
-				{saturation: -19.8},
-				{lightness: -1.8},
-				{gamma: 1}
+				{ hue: COLORS.LANDSCAPE },
+				{ saturation: -19.8 },
+				{ lightness: -1.8 },
+				{ gamma: 1 }
 			]
 		},
 		{
 			featureType: 'road.arterial',
 			stylers: [
-				{hue: COLORS.LANDSCAPE},
-				{saturation: 72.4},
-				{lightness: -32.6},
-				{gamma: 1}
+				{ hue: COLORS.LANDSCAPE },
+				{ saturation: 72.4 },
+				{ lightness: -32.6 },
+				{ gamma: 1 }
 			]
 		},
 		{
 			featureType: 'road.local',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'transit',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'administrative.province',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'administrative.locality',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'administrative.province',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'administrative.land_parcel',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'administrative.neighborhood',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'administrative.country',
 			elementType: 'geometry.stroke',
 			stylers: [
-				{visibility: 'on'},
-				{color: COLORS.BORDERS}
+				{ visibility: 'on' },
+				{ color: COLORS.BORDERS }
 			]
 		},
 		{
 			featureType: 'administrative',
 			elementType: 'labels',
-			stylers: [{visibility: 'off'}]
+			stylers: [{ visibility: 'off' }]
 		},
 		{
 			featureType: 'water',
 			stylers: [
-				{hue: COLORS.WATER},
-				{saturation: -63.2},
-				{lightness: 38},
-				{gamma: 1}
+				{ hue: COLORS.WATER },
+				{ saturation: -63.2 },
+				{ lightness: 38 },
+				{ gamma: 1 }
 			]
 		}
 	]
 };
 
-export {mapSettings, POINT_MARKER_ICON_CONFIG};
+export { mapSettings, POINT_MARKER_ICON_CONFIG };
