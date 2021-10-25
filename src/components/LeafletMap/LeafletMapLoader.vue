@@ -29,8 +29,8 @@
 
 <script>
 	import 'leaflet/dist/leaflet.css';
-	import {latLng, Icon} from 'leaflet';
-	import {LMap, LTileLayer, LMarker, LPopup} from 'vue2-leaflet';
+	import { latLng, Icon } from 'leaflet';
+	import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet';
 
 	delete Icon.Default.prototype._getIconUrl;
 	Icon.Default.mergeOptions({
