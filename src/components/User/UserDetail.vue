@@ -14,9 +14,7 @@
 						<span class="user-detail__icon">
 							<i class="fa fa-user" />
 						</span>
-						<strong>
-							Name:
-						</strong>
+						<strong>Name:</strong>
 					</span>
 					<span class="user-detail__data">
 						{{ user.name.title }} {{ user.name.first }}
@@ -28,9 +26,7 @@
 						<span class="user-detail__icon">
 							<i class="fa fa-user-lock" />
 						</span>
-						<strong>
-							Username:
-						</strong>
+						<strong>Username:</strong>
 					</span>
 					<span class="user-detail__data">
 						{{ user.username }}
@@ -41,9 +37,7 @@
 						<span class="user-detail__icon">
 							<i class="fa fa-clock" />
 						</span>
-						<strong>
-							Registered:
-						</strong>
+						<strong>Registered:</strong>
 					</span>
 					<span class="user-detail__data">
 						{{ user.registered }}
@@ -60,9 +54,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-globe" />
 							</span>
-							<strong>
-								Nationality:
-							</strong>
+							<strong>Nationality:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.nationality }}
@@ -73,9 +65,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-flag" />
 							</span>
-							<strong>
-								State:
-							</strong>
+							<strong>State:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.state }}
@@ -86,9 +76,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-city" />
 							</span>
-							<strong>
-								City:
-							</strong>
+							<strong>City:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.city }}
@@ -99,9 +87,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-street-view" />
 							</span>
-							<strong>
-								Street:
-							</strong>
+							<strong>Street:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.streetName }}, {{ user.streetNumber }}
@@ -112,9 +98,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-mail-bulk" />
 							</span>
-							<strong>
-								Postcode:
-							</strong>
+							<strong>Postcode:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.postcode }}
@@ -130,9 +114,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-venus-mars" />
 							</span>
-							<strong>
-								Gender:
-							</strong>
+							<strong>Gender:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.gender }}
@@ -143,11 +125,11 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-envelope" />
 							</span>
-							<strong>
-								Email:
-							</strong>
+							<strong>Email:</strong>
 						</span>
-						<span class="user-detail__data user-detail__data--email">
+						<span
+							class="user-detail__data user-detail__data--email"
+						>
 							{{ user.email }}
 						</span>
 					</p>
@@ -156,9 +138,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-phone" />
 							</span>
-							<strong>
-								Phone:
-							</strong>
+							<strong>Phone:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.phone }}
@@ -169,9 +149,7 @@
 							<span class="user-detail__icon">
 								<i class="fa fa-phone" />
 							</span>
-							<strong>
-								Cell:
-							</strong>
+							<strong>Cell:</strong>
 						</span>
 						<span class="user-detail__data">
 							{{ user.cell }}
@@ -316,8 +294,8 @@
 				.user-detail {
 					&__item {
 						flex-direction: row;
-						align-items: center;
 						flex-wrap: wrap;
+						align-items: center;
 
 						&:not(:last-child) {
 							margin-bottom: 0;
