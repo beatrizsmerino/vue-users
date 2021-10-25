@@ -57,7 +57,6 @@
 	.users-list {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
 		max-width: 85rem;
 		margin: 0 auto;
 		padding: 0;
@@ -71,33 +70,14 @@
 		}
 
 		&__item {
-			flex: 1;
 			width: calc(50% - 2rem);
-			margin-bottom: 2rem;
+			margin: 1rem;
 			list-style: none;
 
 			@include media('md') {
 				width: 100%;
-			}
-
-			&:nth-child(odd) {
-				margin-right: 2rem;
-
-				@include media('md') {
-					margin-right: 0;
-				}
-			}
-
-			&:nth-last-child(-n + 2) {
-				margin-bottom: 0;
-
-				@include media('md') {
-					margin-bottom: 2rem;
-				}
-			}
-
-			&:last-child {
-				margin-bottom: 0;
+				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 
