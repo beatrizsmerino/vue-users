@@ -1,7 +1,7 @@
 <template>
-	<div class="users-buttons">
+	<div class="user-buttons">
 		<Button
-			class="users-buttons__item button--bg-brand-2"
+			class="user-buttons__item button--bg-brand-2"
 			@button-click="hideInfoUserEmit"
 		>
 			<span
@@ -21,7 +21,7 @@
 			</span>
 		</Button>
 		<Button
-			class="users-buttons__item button--bg-brand-2"
+			class="user-buttons__item button--bg-brand-2"
 			@button-click="orderUsersEmit"
 		>
 			<span class="button__icon">
@@ -32,7 +32,7 @@
 			</span>
 		</Button>
 		<Button
-			class="users-buttons__item button--bg-brand-2"
+			class="user-buttons__item button--bg-brand-2"
 			@button-click="getUsersEmit"
 		>
 			<span class="button__icon">
@@ -43,7 +43,7 @@
 			</span>
 		</Button>
 		<Button
-			class="users-buttons__item button--bg-brand-2"
+			class="user-buttons__item button--bg-brand-2"
 			@button-click="removeAllUsersEmit"
 		>
 			<span class="button__icon">
@@ -97,7 +97,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.users-buttons {
+	.user-buttons {
 		display: flex;
 		position: fixed;
 		z-index: 999;

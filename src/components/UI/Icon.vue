@@ -13,7 +13,7 @@
 </template>
 
 <script>
-	import {iconMap} from '@/assets/images/icons/icons-list.js';
+	import { iconMap } from '@/assets/images/icons/icons-list.js';
 
 	export default {
 		props: {
