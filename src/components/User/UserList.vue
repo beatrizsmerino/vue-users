@@ -47,6 +47,7 @@
 		methods: {
 			userRemove(userToRemove) {
 				this.usersList.splice(this.usersList.indexOf(userToRemove), 1);
+				this.$tools.setLocalStorage('users', this.usersList);
 			}
 		}
 	};
