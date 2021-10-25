@@ -1,15 +1,15 @@
 <template>
-	<div class="users-list__wrapper inner">
+	<div class="user-list__wrapper inner">
 		<transition-group
 			tag="ul"
 			name="slide"
-			class="users-list"
+			class="user-list"
 			:class="{ 'is-hidden-info': stateHidden }"
 		>
 			<li
 				v-for="user in usersList"
 				:key="user.username"
-				class="users-list__item"
+				class="user-list__item"
 			>
 				<UserPreview
 					:data-user="user"
@@ -54,7 +54,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.users-list {
+	.user-list {
 		display: flex;
 		flex-wrap: wrap;
 		max-width: 85rem;
@@ -88,7 +88,7 @@
 			max-width: 70rem;
 			transition: all 0.5s ease-out 0.8s;
 
-			.users-list {
+			.user-list {
 				&__item {
 					flex: none;
 					width: 10rem;
