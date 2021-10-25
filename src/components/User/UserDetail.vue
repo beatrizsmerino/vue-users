@@ -263,9 +263,7 @@
 			}
 
 			> *:not(:last-child) {
-				@include media('xl') {
-					margin-right: 2rem;
-				}
+				margin-right: 2rem;
 
 				@include media('xs') {
 					margin-bottom: 2rem;
