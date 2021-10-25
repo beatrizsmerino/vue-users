@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import {tools} from './plugins/global-methods.js';
+import { tools } from './plugins/global-methods.js';
 import './assets/images/icons/icons-import.js';
 
 Vue.prototype.$tools = tools;
