@@ -1,7 +1,7 @@
 <template>
 	<nav
 		class="page-nav"
-		:class="{'is-open': isOpen, 'is-animated': isAnimated}"
+		:class="{ 'is-open': isOpen, 'is-animated': isAnimated }"
 	>
 		<ul class="page-nav__list">
 			<li class="page-nav__item">
@@ -17,7 +17,9 @@
 				<router-link
 					to="/users"
 					class="page-nav__link"
-					:class="{'router-link-active': $route.path.includes('user')}"
+					:class="{
+						'router-link-active': $route.path.includes('user')
+					}"
 				>
 					Users
 				</router-link>
@@ -27,13 +29,13 @@
 			class="page-nav__button button button--icon"
 			@button-click="openCloseNav"
 		>
-			<i class="fa fa-bars"></i>
+			<i class="fa fa-bars" />
 		</Button>
 	</nav>
 </template>
 
 <script>
-	import Button from "./Button";
+	import Button from '@/components/UI/Button';
 
 	export default {
 		name: 'PageNav',
@@ -44,7 +46,23 @@
 			return {
 				isAnimated: false,
 				isOpen: false
+			};
+		},
+		watch: {
+			$route(to, from) {
+				if (to !== from) {
+					this.closeNav();
+				}
+			},
+			isOpen() {
+				document.body.style.overflow = this.isOpen ? 'hidden' : '';
 			}
+		},
+		created() {
+			window.addEventListener('resize', this.handleResize);
+		},
+		destroyed() {
+			window.removeEventListener('resize', this.handleResize);
 		},
 		methods: {
 			openCloseNav() {
@@ -61,24 +79,8 @@
 					this.closeNav();
 				}
 			}
-		},
-		watch: {
-			$route(to, from) {
-				if (to !== from) {
-					this.closeNav();
-				}
-			},
-			isOpen: function () {
-				document.body.style.overflow = this.isOpen ? 'hidden' : ''
-			}
-		},
-		created() {
-			window.addEventListener('resize', this.handleResize);
-		},
-		destroyed() {
-			window.removeEventListener('resize', this.handleResize);
 		}
-	}
+	};
 </script>
 
 <style lang="scss" scoped>
@@ -87,21 +89,21 @@
 		justify-content: center;
 
 		&__list {
-			width: 100%;
 			display: flex;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
+			width: 100%;
 			list-style: none;
 
-			@include media("sm") {
-				height: calc(100% - 6rem);
-				padding: 10rem 2rem;
-				flex-direction: column;
-				justify-content: flex-start;
+			@include media('sm') {
 				position: fixed;
+				z-index: 99;
 				top: 6rem;
 				left: 0;
-				z-index: 99;
+				flex-direction: column;
+				justify-content: flex-start;
+				height: calc(100% - 6rem);
+				padding: 10rem 2rem;
 				transform: translate3d(100%, 0, 0);
 				background: $color-gradient;
 			}
@@ -114,7 +116,7 @@
 			&:not(:last-child) {
 				margin-right: 2rem;
 
-				@include media("sm") {
+				@include media('sm') {
 					margin-right: 0;
 					margin-bottom: 2rem;
 				}
@@ -122,22 +124,22 @@
 		}
 
 		&__link {
-			padding: 0 0.5rem;
 			position: relative;
-			text-align: center;
+			padding: 0 0.5rem;
+			transition: all 0.5s ease-in-out 0s;
+			color: $color-brand-2;
 			font-size: 2.4rem;
 			font-weight: 600;
-			color: $color-brand-2;
-			transition: all 0.5s ease-in-out 0s;
+			text-align: center;
 
 			&:after {
-				content: "";
+				content: '';
 				display: inline-block;
-				width: 0;
-				height: 0.2rem;
 				position: absolute;
 				bottom: -0.2rem;
 				left: 50%;
+				width: 0;
+				height: 0.2rem;
 				transform: translate3d(-50%, 0, 0);
 				transition: all 0.5s ease-in-out 0s;
 			}
@@ -156,15 +158,15 @@
 
 		&__button {
 			display: none;
-			font-size: 2.5rem;
 			color: $color-brand-2;
+			font-size: 2.5rem;
+
+			@include media('sm') {
+				display: flex;
+			}
 
 			&:hover {
 				color: $color-white;
-			}
-
-			@include media("sm") {
-				display: flex;
 			}
 		}
 
