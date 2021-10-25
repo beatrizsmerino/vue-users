@@ -76,8 +76,8 @@
 
 			@include media('md') {
 				width: 100%;
-				margin-left: 0;
 				margin-right: 0;
+				margin-left: 0;
 			}
 		}
 
