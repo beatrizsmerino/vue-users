@@ -377,12 +377,10 @@ module.exports = {
 			2,
 			{
 				singleline: 1,
-				multiline: {
-					max: 1,
-					allowFirstLine: false
-				}
+				multiline: 1
 			}
 		],
+		'vue/multi-word-component-names': 0,
 		'vue/component-name-in-template-casing': [
 			2,
 			'PascalCase'
