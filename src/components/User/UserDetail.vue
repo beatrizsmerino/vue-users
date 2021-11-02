@@ -311,12 +311,13 @@
 		}
 
 		&__label {
-			margin-right: 0.5rem;
+			margin-bottom: 0.5rem;
 			color: $color-brand-1;
 			font-size: 1.8rem;
 		}
 
 		&__icon {
+			margin-right: 0.5rem;
 			color: $color-brand-1;
 		}
 
