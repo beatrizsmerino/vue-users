@@ -9,152 +9,150 @@
 			</div>
 
 			<div class="user-detail__group">
-				<p class="user-detail__item">
-					<span class="user-detail__label">
+				<div class="user-detail__item">
+					<h4 class="user-detail__label">
 						<span class="user-detail__icon">
 							<i class="fa fa-user" />
 						</span>
 						<strong>Name:</strong>
-					</span>
-					<span class="user-detail__data">
+					</h4>
+					<p class="user-detail__data">
 						{{ user.name.title }} {{ user.name.first }}
 						{{ user.name.last }}
-					</span>
-				</p>
-				<p class="user-detail__item">
-					<span class="user-detail__label">
+					</p>
+				</div>
+				<div class="user-detail__item">
+					<h4 class="user-detail__label">
 						<span class="user-detail__icon">
 							<i class="fa fa-user-lock" />
 						</span>
 						<strong>Username:</strong>
-					</span>
-					<span class="user-detail__data">
+					</h4>
+					<p class="user-detail__data">
 						{{ user.username }}
-					</span>
-				</p>
-				<p class="user-detail__item">
-					<span class="user-detail__label">
+					</p>
+				</div>
+				<div class="user-detail__item">
+					<h4 class="user-detail__label">
 						<span class="user-detail__icon">
 							<i class="fa fa-clock" />
 						</span>
 						<strong>Registered:</strong>
-					</span>
-					<span class="user-detail__data">
+					</h4>
+					<p class="user-detail__data">
 						{{ user.registered }}
-					</span>
-				</p>
+					</p>
+				</div>
 			</div>
 		</div>
 
 		<div class="user-detail__content">
 			<div class="user-detail__column">
 				<div class="user-detail__group">
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-globe" />
 							</span>
 							<strong>Nationality:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.nationality }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+						</p>
+					</div>
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-flag" />
 							</span>
 							<strong>State:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.state }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+						</p>
+					</div>
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-city" />
 							</span>
 							<strong>City:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.city }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+						</p>
+					</div>
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-street-view" />
 							</span>
 							<strong>Street:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.streetName }}, {{ user.streetNumber }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+						</p>
+					</div>
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-mail-bulk" />
 							</span>
 							<strong>Postcode:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.postcode }}
-						</span>
-					</p>
+						</p>
+					</div>
 				</div>
 			</div>
 
 			<div class="user-detail__column">
 				<div class="user-detail__group">
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-venus-mars" />
 							</span>
 							<strong>Gender:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.gender }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+						</p>
+					</div>
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-envelope" />
 							</span>
 							<strong>Email:</strong>
-						</span>
-						<span
-							class="user-detail__data user-detail__data--email"
-						>
+						</h4>
+						<p class="user-detail__data user-detail__data--email">
 							{{ user.email }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+						</p>
+					</div>
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-phone" />
 							</span>
 							<strong>Phone:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.phone }}
-						</span>
-					</p>
-					<p class="user-detail__item">
-						<span class="user-detail__label">
+						</p>
+					</div>
+					<div class="user-detail__item">
+						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
 								<i class="fa fa-phone" />
 							</span>
 							<strong>Cell:</strong>
-						</span>
-						<span class="user-detail__data">
+						</h4>
+						<p class="user-detail__data">
 							{{ user.cell }}
-						</span>
-					</p>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
