@@ -20,6 +20,7 @@
 	import UserMap from '@/components/User/UserMap';
 
 	export default {
+		name: 'User',
 		components: {
 			UserDetail,
 			UserMap

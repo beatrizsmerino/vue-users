@@ -26,6 +26,7 @@
 	import Error from '@/components/UI/Error';
 
 	export default {
+		name: 'Users',
 		components: {
 			UsersList,
 			UsersButtons,
