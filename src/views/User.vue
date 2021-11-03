@@ -47,7 +47,7 @@
 	};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.page-user {
 		&__content {
 			display: flex;
@@ -64,14 +64,6 @@
 			@include media('xl') {
 				flex-direction: column;
 			}
-		}
-	}
-</style>
-
-<style lang="scss">
-	.page-user {
-		.page-main {
-			margin-bottom: 6.4rem;
 		}
 	}
 </style>
