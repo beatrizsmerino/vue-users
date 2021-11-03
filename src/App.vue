@@ -149,9 +149,14 @@
 		@include media('md') {
 			padding: 4rem 0 0;
 		}
+
+		&__inner {
+			width: 100%;
+		}
 	}
 
 	.page-inner {
+		width: 100%;
 		padding: 0 3rem;
 	}
 

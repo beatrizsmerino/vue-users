@@ -12,6 +12,7 @@
 
 <style lang="scss" scoped>
 	.page-title {
+		width: 100%;
 		margin-bottom: 2rem;
 		color: $color-brand-1;
 		font-family: $font-brand-1;
