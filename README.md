@@ -10,12 +10,11 @@
 
 It has 3 views: the home, the user list and the user detail. There are several buttons with different actions to delete, hide and select random users. By clicking on a user you can see the complete information of the selected user, this page has a map made with Google Maps or Leaflet.
 
-
-![Image of App Vue Users](https://github.com/beatrizsmerino/vue-users/blob/master/README/images/vue-users.gif)
+![Image of App Vue Users](./README/images/vue-users.gif)
 
 ## Development interface
 
-![Vue logo](https://github.com/beatrizsmerino/vue-users/blob/master/README/images/vue-js-2.jpg)
+![Vue logo](./README/images/vue-js-2.jpg)
 
 Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework. This project use [Vue Cli](https://cli.vuejs.org/) and has dependencies as vue router and google maps.
 
@@ -25,26 +24,26 @@ Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework
 
 -   assets
 -   constants
-    -   [colorPalette](https://github.com/beatrizsmerino/vue-users/blob/master/src/constants/colorPalette.js)
-    -   [mapSettings](https://github.com/beatrizsmerino/vue-users/blob/master/src/constants/mapSettings.js)
+    -   [colorPalette](./src/constants/colorPalette.js)
+    -   [mapSettings](./src/constants/mapSettings.js)
 -   views
-    -   [Home](https://github.com/beatrizsmerino/vue-users/blob/master/src/views/Home.vue)
-    -   [Users](https://github.com/beatrizsmerino/vue-users/blob/master/src/views/Users.vue)
-    -   [User](https://github.com/beatrizsmerino/vue-users/blob/master/src/views/User.vue)
+    -   [Home](./src/views/Home.vue)
+    -   [Users](./src/views/Users.vue)
+    -   [User](./src/views/User.vue)
 -   components
-    -   [PageHeader](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/PageHeader.vue)
-    -   [PageTitle](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/PageTitle.vue)
-    -   [Button](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/Button.vue)
-    -   [UsersList](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UsersList.vue)
-    -   [UsersButtons](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UsersButtons.vue)
-    -   [UserPreview](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserPreview.vue)
-    -   [UserDetail](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserDetail.vue)
-    -   [UserMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/UserMap.vue)
-    -   [GoogleMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/GoogleMap.vue)
-    -   [GoogleMapLoader](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/GoogleMapLoader.vue)
-    -   [GoogleMapMarker](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/GoogleMapMarker.vue)
-    -   [LeafletMap](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/LeafletMap.vue)
-    -   [LeafletMapLoader](https://github.com/beatrizsmerino/vue-users/blob/master/src/components/LeafletMapLoader.vue)
+    -   [PageHeader](./src/components/PageHeader.vue)
+    -   [PageTitle](./src/components/PageTitle.vue)
+    -   [Button](./src/components/Button.vue)
+    -   [UsersList](./src/components/UsersList.vue)
+    -   [UsersButtons](./src/components/UsersButtons.vue)
+    -   [UserPreview](./src/components/UserPreview.vue)
+    -   [UserDetail](./src/components/UserDetail.vue)
+    -   [UserMap](./src/components/UserMap.vue)
+    -   [GoogleMap](./src/components/GoogleMap.vue)
+    -   [GoogleMapLoader](./src/components/GoogleMapLoader.vue)
+    -   [GoogleMapMarker](./src/components/GoogleMapMarker.vue)
+    -   [LeafletMap](./src/components/LeafletMap.vue)
+    -   [LeafletMapLoader](./src/components/LeafletMapLoader.vue)
 
 ## Project setup
 
