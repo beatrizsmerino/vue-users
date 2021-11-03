@@ -151,7 +151,7 @@
 		}
 	}
 
-	.inner {
+	.page-inner {
 		padding: 0 3rem;
 	}
 
