@@ -109,6 +109,9 @@
 	@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 	@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
 
+	// RESET
+	// -----------------------------------------
+
 	[v-cloak] {
 		display: none;
 	}
@@ -121,19 +124,6 @@
 		padding: 0;
 	}
 
-	html {
-		font-size: 62.5%;
-	}
-
-	body {
-		padding: 7.2rem 0 0;
-		background-color: $color-light;
-		color: $color-gray;
-		font-family: $font-brand-2;
-		font-size: 1.6rem;
-		-webkit-font-smoothing: antialiased;
-	}
-
 	a {
 		text-decoration: none;
 	}
@@ -143,15 +133,36 @@
 		outline: none;
 	}
 
+	// PAGE
+	// -----------------------------------------
+
+	.page {
+		font-size: 62.5%;
+	}
+
+	.page-body {
+		padding: 7.2rem 0 0;
+		background-color: $color-light;
+		color: $color-gray;
+		font-family: $font-brand-2;
+		font-size: 1.6rem;
+		-webkit-font-smoothing: antialiased;
+	}
+
 	.page-main {
-		padding: 6.4rem 0 0;
+		padding: 6.4rem 0;
 
 		@include media('md') {
-			padding: 4rem 0 0;
+			padding: 4rem 0;
+		}
+
+		&__inner {
+			width: 100%;
 		}
 	}
 
-	.inner {
+	.page-inner {
+		width: 100%;
 		padding: 0 3rem;
 	}
 

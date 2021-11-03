@@ -1,7 +1,7 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<div class="page-user__content inner">
+			<div class="page-user__content page-inner">
 				<UserDetail
 					v-if="user"
 					:user="user"
@@ -20,6 +20,7 @@
 	import UserMap from '@/components/User/UserMap';
 
 	export default {
+		name: 'User',
 		components: {
 			UserDetail,
 			UserMap
@@ -46,7 +47,7 @@
 	};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.page-user {
 		&__content {
 			display: flex;
@@ -63,14 +64,6 @@
 			@include media('xl') {
 				flex-direction: column;
 			}
-		}
-	}
-</style>
-
-<style lang="scss">
-	.page-user {
-		.page-main {
-			margin-bottom: 6.4rem;
 		}
 	}
 </style>
