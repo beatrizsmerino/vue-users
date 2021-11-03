@@ -31,19 +31,29 @@ Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework
     -   [Users](./src/views/Users.vue)
     -   [User](./src/views/User.vue)
 -   components
-    -   [PageHeader](./src/components/PageHeader.vue)
-    -   [PageTitle](./src/components/PageTitle.vue)
-    -   [Button](./src/components/Button.vue)
-    -   [UsersList](./src/components/UsersList.vue)
-    -   [UsersButtons](./src/components/UsersButtons.vue)
-    -   [UserPreview](./src/components/UserPreview.vue)
-    -   [UserDetail](./src/components/UserDetail.vue)
-    -   [UserMap](./src/components/UserMap.vue)
-    -   [GoogleMap](./src/components/GoogleMap.vue)
-    -   [GoogleMapLoader](./src/components/GoogleMapLoader.vue)
-    -   [GoogleMapMarker](./src/components/GoogleMapMarker.vue)
-    -   [LeafletMap](./src/components/LeafletMap.vue)
-    -   [LeafletMapLoader](./src/components/LeafletMapLoader.vue)
+    -   Page
+        -   [PageHeader](./src/components/Page/PageHeader.vue)
+        -   [PageNav](./src/components/Page/PageNav.vue)
+        -   [PageTitle](./src/components/Page/PageTitle.vue)
+    -   UI
+        -   [Logo](./src/components/UI/Logo.vue)
+        -   [Icon](./src/components/UI/Icon.vue)
+        -   [Button](./src/components/UI/Button.vue)
+        -   [SwitchTheme](./src/components/UI/SwitchTheme.vue)
+        -   [Error](./src/components/UI/Error.vue)
+    -   User
+        -   [UserList](./src/components/User/UserList.vue)
+        -   [UserPreview](./src/components/User/UserPreview.vue)
+        -   [UserButtons](./src/components/User/UserButtons.vue)
+        -   [UserDetail](./src/components/User/UserDetail.vue)
+        -   [UserMap](./src/components/User/UserMap.vue)
+    -   GoogleMap
+        -   [GoogleMap](./src/components/GoogleMap/GoogleMap.vue)
+        -   [GoogleMapLoader](./src/components/GoogleMap/GoogleMapLoader.vue)
+        -   [GoogleMapMarker](./src/components/GoogleMap/GoogleMapMarker.vue)
+    -   LeafletMap
+        -   [LeafletMap](./src/components/LeafletMap/LeafletMap.vue)
+        -   [LeafletMapLoader](./src/components/LeafletMap/LeafletMapLoader.vue)
 
 ## Project setup
 
