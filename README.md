@@ -57,37 +57,49 @@ Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework
 
 ## Project setup
 
-```
+```bash
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 
-```
+```bash
 npm run serve
 ```
 
 ### Compiles and minifies for production
 
-```
+```bash
 npm run build
-```
-
-### Run your tests
-
-```
-npm run test
 ```
 
 ### Lints and fixes files
 
-```
+```bash
 npm run lint
+```
+
+#### Format js, json and vue files with [Prettier](https://prettier.io/)
+
+```bash
+npm run prettier:fix
+```
+
+#### Catches bugs, enforces conventions and sorts properties of css, scss, sass and vue files with [Stylelint](https://stylelint.io/)
+
+```bash
+npm run stylelint:fix
+```
+
+#### Find and fix bugs of js, json and vue files with [EsLint](https://eslint.org/)
+
+```bash
+npm run eslint:fix
 ```
 
 ### Publish in Github Pages
 
-```
+```bash
 npm run deploy
 ```
 
