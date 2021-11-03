@@ -36,25 +36,6 @@
 
 <style lang="scss">
 	.page-home {
-		height: 100%;
-
-		.page-body {
-			height: 100%;
-		}
-
-		.page-app {
-			display: flex;
-			height: 100%;
-		}
-
-		.page-main {
-			display: flex;
-			flex: 1;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-
 		.subtitle {
 			color: $color-brand-2;
 			font-family: $font-brand-1;
