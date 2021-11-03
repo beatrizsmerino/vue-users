@@ -26,6 +26,7 @@
 	import Error from '@/components/UI/Error';
 
 	export default {
+		name: 'Users',
 		components: {
 			UsersList,
 			UsersButtons,
@@ -75,12 +76,14 @@
 	};
 </script>
 
-<style lang="scss" scoped>
-	.page-section {
-		padding-bottom: 7rem;
+<style lang="scss">
+	.page-users {
+		.page-body {
+			padding-bottom: 7.8rem;
 
-		@include media('md') {
-			padding-bottom: 12rem;
+			@include media('md') {
+				padding-bottom: 13.6rem;
+			}
 		}
 	}
 </style>
