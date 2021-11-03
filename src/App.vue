@@ -150,10 +150,10 @@
 	}
 
 	.page-main {
-		padding: 6.4rem 0 0;
+		padding: 6.4rem 0;
 
 		@include media('md') {
-			padding: 4rem 0 0;
+			padding: 4rem 0;
 		}
 
 		&__inner {

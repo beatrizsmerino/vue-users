@@ -65,10 +65,6 @@
 			max-width: 50rem;
 		}
 
-		&__wrapper {
-			margin-bottom: 4rem;
-		}
-
 		&__item {
 			width: calc(50% - 2rem);
 			margin: 1rem;
