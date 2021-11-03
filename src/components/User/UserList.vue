@@ -1,5 +1,5 @@
 <template>
-	<div class="user-list__wrapper inner">
+	<div class="user-list__wrapper page-inner">
 		<transition-group
 			tag="ul"
 			name="slide"
@@ -63,10 +63,6 @@
 
 		@include media('md') {
 			max-width: 50rem;
-		}
-
-		&__wrapper {
-			margin-bottom: 4rem;
 		}
 
 		&__item {

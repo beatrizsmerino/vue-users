@@ -1,5 +1,5 @@
 <template>
-	<h1 class="page-title">
+	<h1 class="page-title page-inner">
 		{{ $route.meta.title }}
 	</h1>
 </template>
@@ -12,6 +12,7 @@
 
 <style lang="scss" scoped>
 	.page-title {
+		width: 100%;
 		margin-bottom: 2rem;
 		color: $color-brand-1;
 		font-family: $font-brand-1;
