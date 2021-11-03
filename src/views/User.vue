@@ -1,7 +1,7 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<div class="page-user__content inner">
+			<div class="page-user__content page-inner">
 				<UserDetail
 					v-if="user"
 					:user="user"

@@ -1,10 +1,10 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<h2 class="subtitle inner">
+			<h2 class="subtitle page-inner">
 				List of users with vue.js
 			</h2>
-			<div class="description inner">
+			<div class="description page-inner">
 				<p>
 					Content developed with the API
 					<br >
@@ -18,7 +18,7 @@
 					</a>
 				</p>
 			</div>
-			<div class="logo-vue inner">
+			<div class="logo-vue page-inner">
 				<Icon name="logoVue" />
 			</div>
 		</section>

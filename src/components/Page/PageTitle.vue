@@ -1,5 +1,5 @@
 <template>
-	<h1 class="page-title">
+	<h1 class="page-title page-inner">
 		{{ $route.meta.title }}
 	</h1>
 </template>
