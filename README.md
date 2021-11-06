@@ -103,10 +103,6 @@ npm run eslint:fix
 npm run deploy
 ```
 
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ## Dependencies
 
 ### NPM PACKAGES
