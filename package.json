@@ -20,7 +20,7 @@
 		"set-value": "https://registry.npmjs.org/set-value/-/set-value-4.0.1.tgz"
 	},
 	"dependencies": {
-		"core-js": "^3.19.0",
+		"core-js": "^3.19.1",
 		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.7.1",
 		"vue": "^2.6.14",
