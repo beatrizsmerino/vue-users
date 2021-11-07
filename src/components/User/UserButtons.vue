@@ -2,6 +2,7 @@
 	<div class="user-buttons">
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			:title="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
 			@button-click="showHideInfoUserEmit"
 		>
 			<span class="button__icon">
@@ -17,6 +18,7 @@
 		</Button>
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			title="ORDER USERS"
 			@button-click="orderUsersEmit"
 		>
 			<span class="button__icon">
@@ -28,6 +30,7 @@
 		</Button>
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			title="GET USERS"
 			@button-click="getUsersEmit"
 		>
 			<span class="button__icon">
@@ -39,6 +42,7 @@
 		</Button>
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			title="REMOVE ALL USERS"
 			@button-click="removeAllUsersEmit"
 		>
 			<span class="button__icon">
@@ -102,10 +106,8 @@
 		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
 		&__item {
-			margin: 0.5rem;
-
-			@include media('md') {
-				width: calc(50% - 1rem);
+			&:not(:last-child) {
+				margin-right: 1rem;
 			}
 		}
 
@@ -117,6 +119,10 @@
 
 				&__text {
 					font-size: 1.2rem;
+
+					@include media('md') {
+						display: none;
+					}
 				}
 			}
 		}
