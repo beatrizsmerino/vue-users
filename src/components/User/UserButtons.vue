@@ -2,23 +2,18 @@
 	<div class="user-buttons">
 		<Button
 			class="user-buttons__item button--bg-brand-2"
-			@button-click="hideInfoUserEmit"
+			@button-click="showHideInfoUserEmit"
 		>
-			<span
-				v-if="showUserInfo"
-				class="button__icon"
-			>
-				<i class="fa fa-eye-slash" />
+			<span class="button__icon">
+				<i
+					class="fa"
+					:class="(showUserInfo) ? 'fa-eye-slash' : 'fa-eye'"
+				/>
 			</span>
 			<span
-				v-else
-				class="button__icon"
-			>
-				<i class="fa fa-eye" />
-			</span>
-			<span class="button__text">
-				{{ textButtonHideUser }}
-			</span>
+				class="button__text"
+				v-html="(showUserInfo) ? 'SHOW USER INFO' : 'HIDE USER INFO'"
+			/>
 		</Button>
 		<Button
 			class="user-buttons__item button--bg-brand-2"
@@ -71,16 +66,11 @@
 			};
 		},
 		methods: {
-			changeTextButtonHideUser() {
-				if (this.showUserInfo) {
-					this.textButtonHideUser = 'SHOW USER INFO';
-				} else {
-					this.textButtonHideUser = 'HIDE USER INFO';
-				}
-			},
-			hideInfoUserEmit() {
+			showHideInfoUser() {
 				this.showUserInfo = !this.showUserInfo;
-				this.changeTextButtonHideUser();
+			},
+			showHideInfoUserEmit() {
+				this.showHideInfoUser();
 				this.$emit('hide');
 			},
 			orderUsersEmit() {
