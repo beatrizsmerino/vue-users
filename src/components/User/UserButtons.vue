@@ -2,6 +2,7 @@
 	<div class="user-buttons">
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			:class="{ 'button--circle': isMobile }"
 			:title="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
 			@button-click="showHideInfoUserEmit"
 		>
@@ -19,6 +20,7 @@
 		</Button>
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			:class="{ 'button--circle': isMobile }"
 			title="ORDER USERS"
 			@button-click="orderUsersEmit"
 		>
@@ -34,6 +36,7 @@
 		</Button>
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			:class="{'button--circle': isMobile }"
 			title="GET USERS"
 			@button-click="getUsersEmit"
 		>
@@ -49,6 +52,7 @@
 		</Button>
 		<Button
 			class="user-buttons__item button--bg-brand-2"
+			:class="{ 'button--circle': isMobile }"
 			title="REMOVE ALL USERS"
 			@button-click="removeAllUsersEmit"
 		>

@@ -103,6 +103,12 @@
 			width: fit-content;
 		}
 
+		&--circle {
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%;
+		}
+
 		&--bg-brand-1 {
 			background-color: $color-brand-1;
 			color: $color-white;
