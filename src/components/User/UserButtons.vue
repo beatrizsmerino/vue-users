@@ -7,12 +7,12 @@
 			<span class="button__icon">
 				<i
 					class="fa"
-					:class="(showUserInfo) ? 'fa-eye' : 'fa-eye-slash'"
+					:class="showUserInfo ? 'fa-eye' : 'fa-eye-slash'"
 				/>
 			</span>
 			<span
 				class="button__text"
-				v-html="(showUserInfo) ? 'SHOW USER INFO' : 'HIDE USER INFO'"
+				v-html="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
 			/>
 		</Button>
 		<Button
