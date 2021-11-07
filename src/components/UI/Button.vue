@@ -74,12 +74,12 @@
 			> * {
 				pointer-events: none;
 
-				&:not(:last-child) {
-					margin-right: 1rem;
+				&:not(:first-child) {
+					margin-left: 1rem;
 				}
 
 				&:only-child {
-					margin-right: 0;
+					margin-left: 0;
 				}
 			}
 		}
