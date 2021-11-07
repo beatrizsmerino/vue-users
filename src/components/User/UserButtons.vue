@@ -66,12 +66,40 @@
 		data() {
 			return {
 				showUserInfo: false,
-				textButtonHideUser: 'HIDE USER INFO'
+				textButtonHideUser: 'HIDE USER INFO',
+				isMobile: false
 			};
+		},
+		watch: {
+			isMobile(newVal, oldVal) {
+				if (newVal !== oldVal) {
+					this.isMobile = newVal;
+				}
+			}
+		},
+		created() {
+			window.addEventListener('resize', this.handleResize);
+		},
+		destroyed() {
+			window.removeEventListener('resize', this.handleResize);
+		},
+		mounted() {
+			this.checkMobile();
 		},
 		methods: {
 			showHideInfoUser() {
 				this.showUserInfo = !this.showUserInfo;
+			},
+			checkMobile() {
+				const maxWidthBreakpointMD = 768;
+				if (window.outerWidth >= maxWidthBreakpointMD) {
+					this.isMobile = false;
+				} else {
+					this.isMobile = true;
+				}
+			},
+			handleResize() {
+				this.checkMobile();
 			},
 			showHideInfoUserEmit() {
 				this.showHideInfoUser();
