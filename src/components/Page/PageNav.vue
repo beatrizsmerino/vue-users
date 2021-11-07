@@ -73,8 +73,8 @@
 				this.isOpen = false;
 			},
 			handleResize(event) {
-				const maxWidthBreakpointMD = 768;
-				if (event.target.outerWidth >= maxWidthBreakpointMD) {
+				const maxWidthBreakpointSM = 576;
+				if (event.target.outerWidth >= maxWidthBreakpointSM) {
 					this.isAnimated = false;
 					this.closeNav();
 				}
