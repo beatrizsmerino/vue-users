@@ -12,6 +12,7 @@
 				/>
 			</span>
 			<span
+				v-if="!isMobile"
 				class="button__text"
 				v-html="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
 			/>
@@ -24,7 +25,10 @@
 			<span class="button__icon">
 				<i class="fa fa-sort" />
 			</span>
-			<span class="button__text">
+			<span
+				v-if="!isMobile"
+				class="button__text"
+			>
 				ORDER USERS
 			</span>
 		</Button>
@@ -36,7 +40,10 @@
 			<span class="button__icon">
 				<i class="fa fa-user-plus" />
 			</span>
-			<span class="button__text">
+			<span
+				v-if="!isMobile"
+				class="button__text"
+			>
 				GET USERS
 			</span>
 		</Button>
@@ -48,7 +55,10 @@
 			<span class="button__icon">
 				<i class="fa fa-user-minus" />
 			</span>
-			<span class="button__text">
+			<span
+				v-if="!isMobile"
+				class="button__text"
+			>
 				REMOVE ALL USERS
 			</span>
 		</Button>
@@ -147,10 +157,6 @@
 
 				&__text {
 					font-size: 1.2rem;
-
-					@include media('md') {
-						display: none;
-					}
 				}
 			}
 		}
