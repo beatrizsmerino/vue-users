@@ -7,7 +7,7 @@
 			<span class="button__icon">
 				<i
 					class="fa"
-					:class="(showUserInfo) ? 'fa-eye-slash' : 'fa-eye'"
+					:class="(showUserInfo) ? 'fa-eye' : 'fa-eye-slash'"
 				/>
 			</span>
 			<span
