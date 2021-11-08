@@ -45,7 +45,8 @@
 		data() {
 			return {
 				isAnimated: false,
-				isOpen: false
+				isOpen: false,
+				isMobile: false
 			};
 		},
 		watch: {
@@ -56,6 +57,15 @@
 			},
 			isOpen() {
 				document.body.style.overflow = this.isOpen ? 'hidden' : '';
+			},
+			isMobile(newVal, oldVal) {
+				if (newVal !== oldVal) {
+					this.isMobile = newVal;
+				}
+
+				if (!newVal) {
+					this.desktopNav();
+				}
 			}
 		},
 		created() {
@@ -63,6 +73,9 @@
 		},
 		destroyed() {
 			window.removeEventListener('resize', this.handleResize);
+		},
+		mounted() {
+			this.checkMobile();
 		},
 		methods: {
 			openCloseNav() {
@@ -72,12 +85,20 @@
 			closeNav() {
 				this.isOpen = false;
 			},
-			handleResize(event) {
-				const maxWidthBreakpointMD = 768;
-				if (event.target.outerWidth >= maxWidthBreakpointMD) {
-					this.isAnimated = false;
-					this.closeNav();
+			desktopNav() {
+				this.isAnimated = false;
+				this.closeNav();
+			},
+			checkMobile() {
+				const maxWidthBreakpointSM = 576;
+				if (window.outerWidth >= maxWidthBreakpointSM) {
+					this.isMobile = false;
+				} else {
+					this.isMobile = true;
 				}
+			},
+			handleResize() {
+				this.checkMobile();
 			}
 		}
 	};

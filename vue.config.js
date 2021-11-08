@@ -3,7 +3,7 @@ const SVGSymbolSprite = require('svg-symbol-sprite-loader');
 
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '/vue-users/' : '/',
-	lintOnSave: false,
+	lintOnSave: true,
 	css: {
 		loaderOptions: {
 			sass: {
@@ -12,6 +12,11 @@ module.exports = {
 		}
 	},
 	chainWebpack: config => {
+		config.module.rule('eslint').use('eslint-loader').
+			options({
+				fix: true
+			});
+
 		config.
 			plugin('svg-symbol-sprite-loader').
 			after('html').

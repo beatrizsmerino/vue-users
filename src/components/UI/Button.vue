@@ -56,9 +56,10 @@
 		justify-content: center;
 		padding: 1.2rem 2rem;
 		transition:
-			color 0.15s ease-in-out 0s,
-			background-color 0.15s ease-in-out 0s,
-			border-color 0.15s ease-in-out 0s;
+			color 0.5s ease-in-out 0s,
+			background-color 0.5s ease-in-out 0s,
+			border-color 0.5s ease-in-out 0s,
+			transform 0.5s ease-in-out 0s;
 		border: 0.2rem solid transparent;
 		outline: none;
 		background-color: transparent;
@@ -74,12 +75,12 @@
 			> * {
 				pointer-events: none;
 
-				&:not(:last-child) {
-					margin-right: 1rem;
+				&:not(:first-child) {
+					margin-left: 1rem;
 				}
 
 				&:only-child {
-					margin-right: 0;
+					margin-left: 0;
 				}
 			}
 		}
@@ -101,6 +102,12 @@
 
 		&--width-auto {
 			width: fit-content;
+		}
+
+		&--circle {
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%;
 		}
 
 		&--bg-brand-1 {
