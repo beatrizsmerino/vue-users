@@ -79,11 +79,7 @@
 <style lang="scss">
 	.page-users {
 		.page-body {
-			padding-bottom: 7.8rem;
-
-			@include media('md') {
-				padding-bottom: 13.6rem;
-			}
+			padding-bottom: 7rem;
 		}
 	}
 </style>
