@@ -43,6 +43,7 @@ const router = new VueRouter({
 });
 
 // This callback runs before every route change, including on page load.
+// eslint-disable-next-line consistent-return
 router.beforeEach((to, from, next) => {
 	/*
 	 * This goes through the matched routes from last to first, finding the closest route with a title.
