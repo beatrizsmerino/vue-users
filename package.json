@@ -13,7 +13,7 @@
 		"deploy": "node gh-pages-deploy.js"
 	},
 	"dependencies": {
-		"core-js": "^3.19.3",
+		"core-js": "^3.20.0",
 		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.7.1",
 		"vue": "^2.6.14",
@@ -21,8 +21,8 @@
 		"vue2-leaflet": "^2.7.1"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.16.0",
-		"@babel/eslint-parser": "^7.16.3",
+		"@babel/core": "^7.16.5",
+		"@babel/eslint-parser": "^7.16.5",
 		"@types/leaflet": "^1.7.6",
 		"@vue/cli-plugin-babel": "^4.5.15",
 		"@vue/cli-plugin-eslint": "^4.5.15",
@@ -36,7 +36,7 @@
 		"eslint-plugin-vue": "^8.2.0",
 		"file-loader": "^6.2.0",
 		"prettier": "^2.5.1",
-		"sass": "^1.45.0",
+		"sass": "^1.45.1",
 		"sass-loader": "^7.3.1",
 		"stylelint": "^13.13.1",
 		"stylelint-config-prettier": "^9.0.3",
