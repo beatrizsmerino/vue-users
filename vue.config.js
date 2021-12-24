@@ -18,12 +18,16 @@ module.exports = {
 		}
 	},
 
-	// Emit 'eslint' errors and warnings in the console
-	// https://cli.vuejs.org/config/#lintonsave
+	/*
+	 * Emit 'eslint' errors and warnings in the console
+	 * https://cli.vuejs.org/config/#lintonsave
+	 */
 	lintOnSave: true,
 
-	// A function that recives a ChainableConfig instance based on webpack chain
-	// Allows more fine-grained modifications to the internal webpack configuration
+	/*
+	 * A function that recives a ChainableConfig instance based on webpack chain
+	 * Allows more fine-grained modifications to the internal webpack configuration
+	 */
 	chainWebpack: config => {
 		// Add configuration for autofix eslint errors
 		config.module.rule('eslint').use('eslint-loader').
@@ -32,7 +36,9 @@ module.exports = {
 			});
 
 		// Create and insert sprite before the html body
-		config.plugin('svg-symbol-sprite-loader').after('html').
+		config.
+			plugin('svg-symbol-sprite-loader').
+			after('html').
 			use(SVGSymbolSprite.Plugin).
 			end();
 
