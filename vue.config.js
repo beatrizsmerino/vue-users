@@ -1,5 +1,6 @@
 const path = require('path');
 const SVGSymbolSprite = require('svg-symbol-sprite-loader');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 // Define the resolve method to obtain the absolute path of the file
 const resolve = dir => path.join(__dirname, dir);
@@ -23,6 +24,16 @@ module.exports = {
 	 * https://cli.vuejs.org/config/#lintonsave
 	 */
 	lintOnSave: true,
+
+	// Add configuration for autofix stylelint errors
+	configureWebpack: {
+		plugins: [
+			new StyleLintPlugin({
+				fix: true,
+				files: ['src/**/*.{vue,scss}']
+			})
+		]
+	},
 
 	/*
 	 * A function that recives a ChainableConfig instance based on webpack chain
