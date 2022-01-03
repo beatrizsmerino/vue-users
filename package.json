@@ -13,7 +13,7 @@
 		"deploy": "node gh-pages-deploy.js"
 	},
 	"dependencies": {
-		"core-js": "^3.20.1",
+		"core-js": "^3.20.2",
 		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.7.1",
 		"stylelint-webpack-plugin": "^3.1.0",
