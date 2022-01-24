@@ -26,7 +26,7 @@
 		"vue2-leaflet": "^2.7.1"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.16.10",
+		"@babel/core": "^7.16.12",
 		"@babel/eslint-parser": "^7.16.5",
 		"@types/leaflet": "^1.7.8",
 		"@vue/cli-plugin-babel": "^4.5.15",
