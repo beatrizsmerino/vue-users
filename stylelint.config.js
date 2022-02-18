@@ -75,6 +75,10 @@ module.exports = {
 		'declaration-block-semicolon-space-before': 'never',
 		'declaration-block-single-line-max-declarations': 1,
 		'declaration-block-trailing-semicolon': 'always',
+		'declaration-block-no-redundant-longhand-properties': [
+			true,
+			{ ignoreShorthands: ['flex-flow'] }
+		],
 		'declaration-colon-newline-after': 'always-multi-line',
 		'declaration-colon-space-after': 'always-single-line',
 		'declaration-colon-space-before': 'never',
