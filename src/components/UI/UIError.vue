@@ -18,7 +18,7 @@
 
 <script>
 	export default {
-		name: 'Error',
+		name: 'UIError',
 		props: {
 			error: {
 				type: Object,
