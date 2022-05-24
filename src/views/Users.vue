@@ -1,7 +1,7 @@
 <template>
 	<div class="page-main__inner">
 		<section class="page-section">
-			<Error
+			<UIError
 				v-if="usersList.length === 0"
 				:error="errorUsers"
 			/>
@@ -23,14 +23,14 @@
 <script>
 	import UsersList from '@/components/User/UserList';
 	import UsersButtons from '@/components/User/UserButtons';
-	import Error from '@/components/UI/Error';
+	import UIError from '@/components/UI/UIError';
 
 	export default {
 		name: 'Users',
 		components: {
 			UsersList,
 			UsersButtons,
-			Error
+			UIError
 		},
 		props: {
 			usersFetch: Array
