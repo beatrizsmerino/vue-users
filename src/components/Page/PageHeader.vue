@@ -1,26 +1,26 @@
 <template>
 	<header class="page-header">
 		<div class="page-header__item">
-			<Logo />
+			<UILogo />
 		</div>
 		<div class="page-header__item">
 			<PageNav />
-			<SwitchTheme />
+			<UISwitchTheme />
 		</div>
 	</header>
 </template>
 
 <script>
-	import Logo from '@/components/UI/Logo';
+	import UILogo from '@/components/UI/UILogo';
 	import PageNav from '@/components/Page/PageNav';
-	import SwitchTheme from '@/components/UI/SwitchTheme';
+	import UISwitchTheme from '@/components/UI/UISwitchTheme';
 
 	export default {
 		name: 'PageHeader',
 		components: {
-			Logo,
+			UILogo,
 			PageNav,
-			SwitchTheme
+			UISwitchTheme
 		}
 	};
 </script>

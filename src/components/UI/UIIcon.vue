@@ -16,6 +16,7 @@
 	import { iconMap } from '@/assets/images/icons/icons-list.js';
 
 	export default {
+		name: 'UIIcon',
 		props: {
 			name: {
 				type: String,

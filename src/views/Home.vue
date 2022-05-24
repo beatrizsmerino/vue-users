@@ -19,7 +19,7 @@
 				</p>
 			</div>
 			<div class="logo-vue page-inner">
-				<Icon name="logoVue" />
+				<UIIcon name="logoVue" />
 			</div>
 		</section>
 	</div>
