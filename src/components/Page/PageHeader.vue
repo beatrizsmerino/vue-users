@@ -5,7 +5,7 @@
 		</div>
 		<div class="page-header__item">
 			<PageNav />
-			<SwitchTheme />
+			<UISwitchTheme />
 		</div>
 	</header>
 </template>
@@ -13,14 +13,14 @@
 <script>
 	import UILogo from '@/components/UI/UILogo';
 	import PageNav from '@/components/Page/PageNav';
-	import SwitchTheme from '@/components/UI/SwitchTheme';
+	import UISwitchTheme from '@/components/UI/UISwitchTheme';
 
 	export default {
 		name: 'PageHeader',
 		components: {
 			UILogo,
 			PageNav,
-			SwitchTheme
+			UISwitchTheme
 		}
 	};
 </script>
