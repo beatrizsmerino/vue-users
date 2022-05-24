@@ -35,7 +35,7 @@
 					</p>
 				</div>
 
-				<Button
+				<UIButton
 					:to="`/user/${dataUser.username}`"
 					class="button--bg-brand-1 button--width-auto"
 				>
@@ -45,26 +45,26 @@
 					<span class="button__text">
 						more info
 					</span>
-				</Button>
+				</UIButton>
 			</div>
 		</transition>
 
-		<Button
+		<UIButton
 			class="button-close button--icon"
 			@button-click="userRemoveEmit(dataUser)"
 		>
 			<i class="button-close__icon fas fa-times-circle" />
-		</Button>
+		</UIButton>
 	</div>
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
+	import UIButton from '@/components/UI/UIButton';
 
 	export default {
 		name: 'UserPreview',
 		components: {
-			Button
+			UIButton
 		},
 		props: {
 			dataUser: {
