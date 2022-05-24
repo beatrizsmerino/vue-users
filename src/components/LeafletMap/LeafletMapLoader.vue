@@ -2,7 +2,7 @@
 	<div class="leaflet-map">
 		<LMap
 			v-if="showMap"
-			style="height: 100%;"
+			class="leaflet-map__map"
 			:zoom="zoom"
 			:center="center"
 			:options="mapOptions"
@@ -93,5 +93,10 @@
 	.leaflet-map {
 		width: 100%;
 		height: 100%;
+
+		&__map {
+			width: 100%;
+			height: 100%;
+		}
 	}
 </style>
