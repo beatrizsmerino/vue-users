@@ -15,7 +15,7 @@
 
 <script>
 	export default {
-		name: 'SwitchTheme',
+		name: 'UISwitchTheme',
 		mounted() {
 			this.checkTheme();
 		},
