@@ -1,7 +1,7 @@
 <template>
 	<header class="page-header">
 		<div class="page-header__item">
-			<Logo />
+			<UILogo />
 		</div>
 		<div class="page-header__item">
 			<PageNav />
@@ -11,14 +11,14 @@
 </template>
 
 <script>
-	import Logo from '@/components/UI/Logo';
+	import UILogo from '@/components/UI/UILogo';
 	import PageNav from '@/components/Page/PageNav';
 	import SwitchTheme from '@/components/UI/SwitchTheme';
 
 	export default {
 		name: 'PageHeader',
 		components: {
-			Logo,
+			UILogo,
 			PageNav,
 			SwitchTheme
 		}
