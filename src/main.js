@@ -6,8 +6,8 @@ import './assets/images/icons/icons-import.js';
 
 Vue.prototype.$tools = tools;
 
-import Icon from './components/UI/Icon';
-Vue.component('Icon', Icon);
+import UIIcon from './components/UI/UIIcon';
+Vue.component('UIIcon', UIIcon);
 
 Vue.config.productionTip = false;
 

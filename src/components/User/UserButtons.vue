@@ -2,7 +2,7 @@
 	<div class="user-buttons">
 		<ul class="user-buttons__list">
 			<li class="user-buttons__item">
-				<Button
+				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
 					:title="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
@@ -21,10 +21,10 @@
 							showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'
 						"
 					/>
-				</Button>
+				</UIButton>
 			</li>
 			<li class="user-buttons__item">
-				<Button
+				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
 					title="ORDER USERS"
@@ -39,10 +39,10 @@
 					>
 						ORDER USERS
 					</span>
-				</Button>
+				</UIButton>
 			</li>
 			<li class="user-buttons__item">
-				<Button
+				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
 					title="GET USERS"
@@ -57,10 +57,10 @@
 					>
 						GET USERS
 					</span>
-				</Button>
+				</UIButton>
 			</li>
 			<li class="user-buttons__item">
-				<Button
+				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
 					title="REMOVE ALL USERS"
@@ -75,7 +75,7 @@
 					>
 						REMOVE ALL USERS
 					</span>
-				</Button>
+				</UIButton>
 			</li>
 		</ul>
 
@@ -98,12 +98,12 @@
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
+	import UIButton from '@/components/UI/UIButton';
 
 	export default {
 		name: 'UsersButtons',
 		components: {
-			Button
+			UIButton
 		},
 		data() {
 			return {

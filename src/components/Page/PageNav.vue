@@ -25,22 +25,22 @@
 				</router-link>
 			</li>
 		</ul>
-		<Button
+		<UIButton
 			class="page-nav__button button button--icon"
 			@button-click="openCloseNav"
 		>
 			<i class="fa fa-bars" />
-		</Button>
+		</UIButton>
 	</nav>
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
+	import UIButton from '@/components/UI/UIButton';
 
 	export default {
 		name: 'PageNav',
 		components: {
-			Button
+			UIButton
 		},
 		data() {
 			return {
