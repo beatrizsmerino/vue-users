@@ -30,7 +30,7 @@
 		"@babel/eslint-parser": "^7.18.2",
 		"@types/leaflet": "^1.7.11",
 		"@vue/cli-plugin-babel": "^4.5.15",
-		"@vue/cli-plugin-eslint": "^4.5.15",
+		"@vue/cli-plugin-eslint": "^5.0.5",
 		"@vue/cli-plugin-router": "~4.5.15",
 		"@vue/cli-service": "^4.5.15",
 		"@vue/eslint-config-prettier": "^7.0.0",
