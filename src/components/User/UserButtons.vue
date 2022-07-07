@@ -220,11 +220,9 @@
 					}
 				}
 
-				::v-deep {
-					.button {
-						@include media('md') {
-							transform: translate3d(0, -1rem, 0) scale(1.4);
-						}
+				:deep(.button) {
+					@include media('md') {
+						transform: translate3d(0, -1rem, 0) scale(1.4);
 					}
 				}
 			}
@@ -236,7 +234,7 @@
 			height: 0;
 		}
 
-		::v-deep {
+		:deep() {
 			.button {
 				transform: scale(1);
 
