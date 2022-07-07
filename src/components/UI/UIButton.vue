@@ -71,7 +71,7 @@
 		user-select: none;
 		appearance: none;
 
-		::v-deep {
+		:deep() {
 			> * {
 				pointer-events: none;
 
