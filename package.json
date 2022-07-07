@@ -3,7 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+		"install:clean": "rm -rf node_modules package-lock.json",
+		"preinstall": "npm run install:clean && npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
 		"postinstall": "npm run lint",
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
