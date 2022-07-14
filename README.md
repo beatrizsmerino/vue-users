@@ -1,8 +1,9 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/vue-users)
+![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)  
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/vue-users)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/vue-users)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/vue-users)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/vue-users)
-![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/vue-users)
 
 # Vue Users
 
