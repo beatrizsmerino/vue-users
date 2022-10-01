@@ -28,7 +28,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.13",
-		"@babel/eslint-parser": "^7.18.9",
+		"@babel/eslint-parser": "^7.19.1",
 		"@types/leaflet": "^1.7.11",
 		"@vue/cli-plugin-babel": "^4.5.15",
 		"@vue/cli-plugin-eslint": "^4.5.15",
