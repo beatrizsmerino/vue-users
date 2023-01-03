@@ -16,7 +16,7 @@
 	},
 	"dependencies": {
 		"chalk": "^4.1.2",
-		"core-js": "^3.26.1",
+		"core-js": "^3.27.1",
 		"execa": "^5.1.1",
 		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.9.3",
