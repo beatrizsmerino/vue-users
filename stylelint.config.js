@@ -79,6 +79,7 @@ module.exports = {
 		'function-calc-no-unspaced-operator': true,
 		'function-linear-gradient-no-nonstandard-direction': true,
 		'function-name-case': 'lower',
+		'import-notation': null,
 		'keyframe-declaration-no-important': true,
 		'length-zero-no-unit': true,
 		'max-nesting-depth': null,
