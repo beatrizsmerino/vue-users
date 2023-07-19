@@ -101,6 +101,7 @@ module.exports = {
 			}
 		],
 		'scss/at-rule-no-unknown': true,
+		'scss/no-global-function-names': null,
 		'selector-class-pattern': null,
 		'selector-max-compound-selectors': null,
 		'selector-max-id': 1,
