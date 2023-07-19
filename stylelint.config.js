@@ -6,11 +6,6 @@ module.exports = {
 		'stylelint-config-property-sort-order-smacss'
 	],
 	plugins: ['stylelint-scss'],
-
-	/*
-	 * add your custom config here
-	 * https://stylelint.io/user-guide/configuration
-	 */
 	rules: {
 		'at-rule-empty-line-before': [
 			'always',
@@ -55,12 +50,14 @@ module.exports = {
 				ignore: ['consecutive-duplicates-with-different-values']
 			}
 		],
-		'declaration-block-no-shorthand-property-overrides': true,
-		'declaration-block-single-line-max-declarations': 1,
 		'declaration-block-no-redundant-longhand-properties': [
 			true,
-			{ ignoreShorthands: ['flex-flow'] }
+			{
+				ignoreShorthands: ['flex-flow']
+			}
 		],
+		'declaration-block-no-shorthand-property-overrides': true,
+		'declaration-block-single-line-max-declarations': 1,
 		'declaration-empty-line-before': [
 			'always',
 			{

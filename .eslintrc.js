@@ -1,11 +1,7 @@
 module.exports = {
-	root: true,
 	env: {
 		browser: true,
 		node: true
-	},
-	parserOptions: {
-		parser: '@babel/eslint-parser'
 	},
 	extends: [
 		'prettier',
@@ -13,10 +9,22 @@ module.exports = {
 		'plugin:vue/recommended',
 		'plugin:json/recommended'
 	],
+	overrides: [
+		{
+			files: ['*.vue'],
+			rules: {
+				indent: 'off'
+			}
+		}
+	],
+	parserOptions: {
+		parser: '@babel/eslint-parser'
+	},
 	plugins: [
 		'vue',
 		'prettier'
 	],
+	root: true,
 	rules: {
 		'accessor-pairs': 2,
 		'array-bracket-newline': 2,
@@ -36,9 +44,9 @@ module.exports = {
 		'camelcase': [
 			1,
 			{
-				properties: 'always',
 				ignoreDestructuring: true,
-				ignoreImports: true
+				ignoreImports: true,
+				properties: 'always'
 			}
 		],
 		'capitalized-comments': 0,
@@ -47,10 +55,10 @@ module.exports = {
 			2,
 			{
 				arrays: 'never',
-				objects: 'never',
-				imports: 'never',
 				exports: 'never',
-				functions: 'never'
+				functions: 'never',
+				imports: 'never',
+				objects: 'never'
 			}
 		],
 		'comma-spacing': 2,
@@ -90,11 +98,11 @@ module.exports = {
 		'id-match': 2,
 		'implicit-arrow-linebreak': 2,
 		'import/no-named-as-default': 0,
-		'init-declarations': 1,
 		'indent': [
 			2,
 			'tab'
 		],
+		'init-declarations': 1,
 		'jsx-quotes': [
 			2,
 			'prefer-double'
@@ -120,8 +128,8 @@ module.exports = {
 			1,
 			{
 				max: 500,
-				skipComments: true,
-				skipBlankLines: true
+				skipBlankLines: true,
+				skipComments: true
 			}
 		],
 		'max-lines-per-function': [
@@ -149,14 +157,10 @@ module.exports = {
 		'no-caller': 2,
 		'no-catch-shadow': 2,
 		'no-confusing-arrow': 2,
-
-		// Allow console.log during development only
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-
-		// Allow debugger during development only
-		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-constructor-return': 2,
 		'no-continue': 2,
+		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-div-regex': 2,
 		'no-dupe-else-if': 2,
 		'no-duplicate-imports': 2,
@@ -236,13 +240,13 @@ module.exports = {
 		'no-underscore-dangle': 1,
 		'no-unmodified-loop-condition': 1,
 		'no-unneeded-ternary': 1,
-		'no-unused-vars': 1,
 		'no-unused-expressions': 1,
+		'no-unused-vars': 1,
 		'no-use-before-define': [
 			2,
 			{
-				functions: false,
-				classes: true
+				classes: true,
+				functions: false
 			}
 		],
 		'no-useless-call': 1,
@@ -304,8 +308,8 @@ module.exports = {
 			2,
 			'single',
 			{
-				avoidEscape: true,
-				allowTemplateLiterals: true
+				allowTemplateLiterals: true,
+				avoidEscape: true
 			}
 		],
 		'radix': [
@@ -330,8 +334,8 @@ module.exports = {
 			2,
 			{
 				anonymous: 'never',
-				named: 'never',
-				asyncArrow: 'always'
+				asyncArrow: 'always',
+				named: 'never'
 			}
 		],
 		'space-in-parens': 2,
@@ -348,69 +352,59 @@ module.exports = {
 			'never'
 		],
 		'vars-on-top': 2,
-		'wrap-iife': 2,
-		'wrap-regex': 2,
-		'yield-star-spacing': 2,
-		'yoda': 2,
-
-		// VUE
-		'vue/html-closing-bracket-spacing': 0,
+		'vue/component-name-in-template-casing': [
+			2,
+			'PascalCase'
+		],
 		'vue/html-closing-bracket-newline': [
 			2,
 			{
-				singleline: 'never',
-				multiline: 'always'
+				multiline: 'always',
+				singleline: 'never'
 			}
 		],
+		'vue/html-closing-bracket-spacing': 0,
 		'vue/html-indent': [
 			2,
 			'tab',
 			{
+				alignAttributesVertically: true,
 				attribute: 1,
 				baseIndent: 1,
 				closeBracket: 0,
-				alignAttributesVertically: true,
 				ignores: []
 			}
 		],
 		'vue/max-attributes-per-line': [
 			2,
 			{
-				singleline: 1,
-				multiline: 1
+				multiline: 1,
+				singleline: 1
 			}
 		],
 		'vue/multi-word-component-names': 0,
-		'vue/component-name-in-template-casing': [
-			2,
-			'PascalCase'
-		],
+		'vue/no-side-effects-in-computed-properties': 0,
 		'vue/no-v-html': 0,
+		'vue/require-default-prop': 0,
 		'vue/script-indent': [
 			2,
 			'tab',
 			{
 				baseIndent: 1,
-				switchCase: 0,
-				ignores: []
+				ignores: [],
+				switchCase: 0
 			}
 		],
 		'vue/singleline-html-element-content-newline': [
 			1,
 			{
-				ignoreWhenEmpty: true,
-				ignores: ['pre']
+				ignores: ['pre'],
+				ignoreWhenEmpty: true
 			}
 		],
-		'vue/no-side-effects-in-computed-properties': 0,
-		'vue/require-default-prop': 0
-	},
-	overrides: [
-		{
-			files: ['*.vue'],
-			rules: {
-				indent: 'off'
-			}
-		}
-	]
+		'wrap-iife': 2,
+		'wrap-regex': 2,
+		'yield-star-spacing': 2,
+		'yoda': 2
+	}
 };
