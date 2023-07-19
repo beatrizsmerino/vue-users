@@ -20,11 +20,11 @@
 		line-height: 100%;
 		text-align: center;
 
-		@include media('md') {
+		@include media("md") {
 			font-size: 8rem;
 		}
 
-		@include media('sm') {
+		@include media("sm") {
 			font-size: 7rem;
 		}
 	}

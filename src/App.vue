@@ -40,10 +40,7 @@
 					const body = document.getElementsByTagName('body')[0];
 
 					if (typeof from !== 'undefined') {
-						html.classList.remove(
-							'page',
-							`page-${from.name.toLowerCase()}`
-						);
+						html.classList.remove('page', `page-${from.name.toLowerCase()}`);
 					}
 					html.classList.add('page', `page-${to.name.toLowerCase()}`);
 					body.classList.add('page-body');
@@ -105,9 +102,9 @@
 </script>
 
 <style lang="scss">
-	@import './assets/fonts/DauphinPlain/font.css';
-	@import 'https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap';
-	@import 'https://use.fontawesome.com/releases/v5.8.2/css/all.css';
+	@import "./assets/fonts/DauphinPlain/font.css";
+	@import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
+	@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 
 	// RESET
 	// -----------------------------------------
@@ -152,7 +149,7 @@
 	.page-main {
 		padding: 6.4rem 0;
 
-		@include media('md') {
+		@include media("md") {
 			padding: 4rem 0;
 		}
 

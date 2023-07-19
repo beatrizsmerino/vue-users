@@ -42,7 +42,7 @@
 	.user-map {
 		width: 100%;
 
-		@include media('xl') {
+		@include media("xl") {
 			height: 50rem;
 		}
 	}

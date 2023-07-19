@@ -66,8 +66,7 @@ router.beforeEach((to, from, next) => {
 
 	// If a route with a title was found, set the document (page) title to that value.
 	if (nearestWithTitle) {
-		document.title =
-			`${nearestWithTitle.meta.title} | Vue Users` || 'Vue Users';
+		document.title = `${nearestWithTitle.meta.title} | Vue Users` || 'Vue Users';
 	}
 
 	// Remove any stale meta tags from the document using the key attribute we set below.

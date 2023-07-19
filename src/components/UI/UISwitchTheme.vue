@@ -94,7 +94,7 @@
 			cursor: pointer;
 
 			&:before {
-				content: '';
+				content: "";
 				display: inline-block;
 				position: absolute;
 				top: 50%;

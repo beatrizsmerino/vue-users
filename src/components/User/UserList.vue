@@ -61,7 +61,7 @@
 		margin: 0 auto;
 		padding: 0;
 
-		@include media('md') {
+		@include media("md") {
 			max-width: 50rem;
 		}
 
@@ -70,7 +70,7 @@
 			margin: 1rem;
 			list-style: none;
 
-			@include media('md') {
+			@include media("md") {
 				width: 100%;
 				margin-right: 0;
 				margin-left: 0;

@@ -40,7 +40,7 @@
 		background-color: $color-brand-1;
 		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
-		@include media('sm') {
+		@include media("sm") {
 			height: 6rem;
 			padding: 0 2rem;
 		}
@@ -56,13 +56,13 @@
 			}
 
 			&:last-child {
-				@include media('sm') {
+				@include media("sm") {
 					flex-direction: row-reverse;
 				}
 
 				> * {
 					&:not(:last-child) {
-						@include media('sm') {
+						@include media("sm") {
 							margin-right: 0;
 							margin-left: 3rem;
 						}

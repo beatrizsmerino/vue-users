@@ -18,7 +18,7 @@
 					to="/users"
 					class="page-nav__link"
 					:class="{
-						'router-link-active': $route.path.includes('user')
+						'router-link-active': $route.path.includes('user'),
 					}"
 				>
 					Users
@@ -116,7 +116,7 @@
 			width: 100%;
 			list-style: none;
 
-			@include media('sm') {
+			@include media("sm") {
 				position: fixed;
 				z-index: 99;
 				top: 6rem;
@@ -137,7 +137,7 @@
 			&:not(:last-child) {
 				margin-right: 2rem;
 
-				@include media('sm') {
+				@include media("sm") {
 					margin-right: 0;
 					margin-bottom: 2rem;
 				}
@@ -154,7 +154,7 @@
 			text-align: center;
 
 			&:after {
-				content: '';
+				content: "";
 				display: inline-block;
 				position: absolute;
 				bottom: -0.2rem;
@@ -182,7 +182,7 @@
 			color: $color-brand-2;
 			font-size: 2.5rem;
 
-			@include media('sm') {
+			@include media("sm") {
 				display: flex;
 			}
 

@@ -54,20 +54,10 @@
 		data() {
 			return {
 				url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-				attribution:
-					'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-				center: latLng(
-					this.marker.position.lat,
-					this.marker.position.lng
-				),
-				currentCenter: latLng(
-					this.marker.position.lat,
-					this.marker.position.lng
-				),
-				withPopup: latLng(
-					this.marker.position.lat,
-					this.marker.position.lng
-				),
+				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+				center: latLng(this.marker.position.lat, this.marker.position.lng),
+				currentCenter: latLng(this.marker.position.lat, this.marker.position.lng),
+				withPopup: latLng(this.marker.position.lat, this.marker.position.lng),
 				zoom: 3,
 				currentZoom: 11.5,
 				mapOptions: {

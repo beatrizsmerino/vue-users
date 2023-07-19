@@ -47,17 +47,12 @@ module.exports = {
 	// Allows more fine-grained modifications to the internal webpack configuration
 	chainWebpack: config => {
 		// Create and insert sprite before the html body
-		config.
-			plugin('svg-symbol-sprite-loader').
-			after('html').
+		config.plugin('svg-symbol-sprite-loader').after('html').
 			use(SVGSymbolSprite.Plugin).
 			end();
 
 		// Configure svg default rultes to exclude svg file proccessing in icons directory
-		config.module.
-			rule('svg').
-			exclude.add(resolve('src/assets/images/icons/svg')).
-			end();
+		config.module.rule('svg').exclude.add(resolve('src/assets/images/icons/svg')).end();
 
 		// New icons rule, set svg sprite loader to process svg files in the 'src/assets/images/icons/svg' folder
 		config.module.

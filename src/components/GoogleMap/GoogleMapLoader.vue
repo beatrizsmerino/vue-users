@@ -38,10 +38,7 @@
 		methods: {
 			initializeMap() {
 				const mapContainer = this.$refs.googleMap;
-				this.map = new this.google.maps.Map(
-					mapContainer,
-					this.mapConfig
-				);
+				this.map = new this.google.maps.Map(mapContainer, this.mapConfig);
 			}
 		}
 	};

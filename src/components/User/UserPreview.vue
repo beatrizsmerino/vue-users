@@ -117,7 +117,7 @@
 			line-height: 100%;
 			text-transform: capitalize;
 
-			@include media('sm') {
+			@include media("sm") {
 				font-size: 2rem;
 			}
 		}
@@ -139,7 +139,7 @@
 				opacity: 0.75;
 				font-size: 2rem;
 
-				@include media('sm') {
+				@include media("sm") {
 					font-size: 1.8rem;
 				}
 			}
@@ -147,7 +147,7 @@
 			&__text {
 				font-size: 2rem;
 
-				@include media('sm') {
+				@include media("sm") {
 					font-size: 1.8rem;
 				}
 			}

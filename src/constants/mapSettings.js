@@ -1,12 +1,6 @@
 import colorPalette from '@/constants/colorPalette';
 
-const {
-	COLOR_LANDSCAPE,
-	COLOR_BORDERS,
-	COLOR_WATER,
-	COLOR_POINT_FILL,
-	COLOR_SELECTED_POINT
-} = colorPalette;
+const { COLOR_LANDSCAPE, COLOR_BORDERS, COLOR_WATER, COLOR_POINT_FILL, COLOR_SELECTED_POINT } = colorPalette;
 
 const COLORS = {
 	BORDERS: COLOR_BORDERS,

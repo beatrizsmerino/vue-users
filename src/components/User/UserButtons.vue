@@ -17,9 +17,7 @@
 					<span
 						v-if="!isMobile"
 						class="button__text"
-						v-html="
-							showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'
-						"
+						v-html="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
 					/>
 				</UIButton>
 			</li>
@@ -171,7 +169,7 @@
 		background-color: $color-brand-1;
 		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
-		@include media('md') {
+		@include media("md") {
 			box-shadow: 0 0 5rem 2rem rgba($color-black, 0.4);
 		}
 
@@ -190,13 +188,13 @@
 			&:not(:last-child) {
 				margin-right: 1rem;
 
-				@include media('md') {
+				@include media("md") {
 					margin-right: 3rem;
 				}
 			}
 
 			&:after {
-				content: '';
+				content: "";
 				display: inline-block;
 				position: absolute;
 				z-index: -1;
@@ -208,20 +206,20 @@
 				transition: all 0.5s ease-in-out 0s;
 				opacity: 0;
 				background-color: $color-brand-1;
-				clip-path: url('#menuCurve');
+				clip-path: url("#menuCurve");
 				will-change: transform;
 			}
 
 			&:hover {
 				&:after {
-					@include media('md') {
+					@include media("md") {
 						transform: translate3d(-50%, -3.5rem, 0);
 						opacity: 1;
 					}
 				}
 
 				:deep(.button) {
-					@include media('md') {
+					@include media("md") {
 						transform: translate3d(0, -1rem, 0) scale(1.4);
 					}
 				}

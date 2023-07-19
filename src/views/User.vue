@@ -57,11 +57,11 @@
 			max-width: 80%;
 			margin: 0 auto;
 
-			@include media('xxxl') {
+			@include media("xxxl") {
 				max-width: 100%;
 			}
 
-			@include media('xl') {
+			@include media("xl") {
 				flex-direction: column;
 			}
 		}
