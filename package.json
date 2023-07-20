@@ -9,8 +9,8 @@
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
 		"prettier:fix": "prettier --write \"./**/*.{vue,js,mjs,json}\"",
-		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
 		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,mjs,vue}\" --fix --ignore-path .eslintignore",
+		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
 		"lint": "npm run prettier:fix && npm run stylelint:fix && npm run eslint:fix",
 		"deploy": "node gh-pages-deploy.mjs"
 	},
