@@ -15,71 +15,68 @@
 </template>
 
 <script>
-	import PageHeader from '@/components/Page/PageHeader';
-	import PageTitle from '@/components/Page/PageTitle';
+	import PageHeader from "@/components/Page/PageHeader";
+	import PageTitle from "@/components/Page/PageTitle";
 
 	export default {
-		components: {
+		"components": {
 			PageHeader,
-			PageTitle
+			PageTitle,
 		},
 		data() {
 			return {
-				usersList: []
+				"usersList": [],
 			};
 		},
-		computed: {
+		"computed": {
 			getUsers() {
 				return this.usersList;
-			}
+			},
 		},
-		watch: {
-			$route: {
+		"watch": {
+			"$route": {
 				handler(to, from) {
-					const html = document.getElementsByTagName('html')[0];
-					const body = document.getElementsByTagName('body')[0];
+					const html = document.getElementsByTagName("html")[0];
+					const body = document.getElementsByTagName("body")[0];
 
-					if (typeof from !== 'undefined') {
-						html.classList.remove(
-							'page',
-							`page-${from.name.toLowerCase()}`
-						);
+					if (typeof from !== "undefined") {
+						html.classList.remove("page", `page-${from.name.toLowerCase()}`);
 					}
-					html.classList.add('page', `page-${to.name.toLowerCase()}`);
-					body.classList.add('page-body');
+					html.classList.add("page", `page-${to.name.toLowerCase()}`);
+					body.classList.add("page-body");
 				},
-				immediate: true
-			}
+				"immediate": true,
+			},
 		},
 		created() {
 			this.checkUsers();
 		},
-		methods: {
+		"methods": {
 			async fetchUsers() {
-				const response = await fetch('https://randomuser.me/api/?results=10');
+				const response = await fetch("https://randomuser.me/api/?results=10");
 				const data = await response.json();
 
 				return data;
 			},
 			createUsers(data) {
 				const users = data.results.map(user => ({
-					name: user.name,
-					username: user.login.username,
-					gender: user.gender,
-					nationality: user.nat,
-					streetNumber: user.location.street.number,
-					streetName: user.location.street.name,
-					city: user.location.city,
-					state: user.location.state,
-					postcode: user.location.postcode,
-					latitude: user.location.coordinates.latitude,
-					longitude: user.location.coordinates.longitude,
-					registered: user.registered.date,
-					phone: user.phone,
-					cell: user.cell,
-					email: user.email,
-					imageMedium: user.picture.medium,
-					imageLarge: user.picture.large
+					"name": user.name,
+					"username": user.login.username,
+					"gender": user.gender,
+					"nationality": user.nat,
+					"streetNumber": user.location.street.number,
+					"streetName": user.location.street.name,
+					"city": user.location.city,
+					"state": user.location.state,
+					"postcode": user.location.postcode,
+					"latitude": user.location.coordinates.latitude,
+					"longitude": user.location.coordinates.longitude,
+					"registered": user.registered.date,
+					"phone": user.phone,
+					"cell": user.cell,
+					"email": user.email,
+					"imageMedium": user.picture.medium,
+					"imageLarge": user.picture.large,
 				}));
 
 				return users;
@@ -88,26 +85,26 @@
 				const data = await this.fetchUsers();
 				const usersFormatted = await this.createUsers(data);
 				this.usersList = usersFormatted;
-				this.$tools.setLocalStorage('users', this.usersList);
+				this.$tools.setLocalStorage("users", this.usersList);
 			},
 			checkUsers() {
-				if (this.$tools.getLocalStorage('users')) {
+				if (this.$tools.getLocalStorage("users")) {
 					this.updatedUsers();
 				} else {
 					this.setUsers();
 				}
 			},
 			updatedUsers() {
-				this.usersList = this.$tools.getLocalStorage('users');
-			}
-		}
+				this.usersList = this.$tools.getLocalStorage("users");
+			},
+		},
 	};
 </script>
 
 <style lang="scss">
-	@import './assets/fonts/DauphinPlain/font.css';
-	@import 'https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap';
-	@import 'https://use.fontawesome.com/releases/v5.8.2/css/all.css';
+	@import "./assets/fonts/DauphinPlain/font.css";
+	@import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
+	@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 
 	// RESET
 	// -----------------------------------------
@@ -152,7 +149,7 @@
 	.page-main {
 		padding: 6.4rem 0;
 
-		@include media('md') {
+		@include media("md") {
 			padding: 4rem 0;
 		}
 

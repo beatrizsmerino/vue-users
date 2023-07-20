@@ -17,9 +17,7 @@
 					<span
 						v-if="!isMobile"
 						class="button__text"
-						v-html="
-							showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'
-						"
+						v-html="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
 					/>
 				</UIButton>
 			</li>
@@ -98,37 +96,37 @@
 </template>
 
 <script>
-	import UIButton from '@/components/UI/UIButton';
+	import UIButton from "@/components/UI/UIButton";
 
 	export default {
-		name: 'UsersButtons',
-		components: {
-			UIButton
+		"name": "UsersButtons",
+		"components": {
+			UIButton,
 		},
 		data() {
 			return {
-				showUserInfo: false,
-				textButtonHideUser: 'HIDE USER INFO',
-				isMobile: false
+				"showUserInfo": false,
+				"textButtonHideUser": "HIDE USER INFO",
+				"isMobile": false,
 			};
 		},
-		watch: {
+		"watch": {
 			isMobile(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.isMobile = newVal;
 				}
-			}
+			},
 		},
 		created() {
-			window.addEventListener('resize', this.handleResize);
+			window.addEventListener("resize", this.handleResize);
 		},
 		destroyed() {
-			window.removeEventListener('resize', this.handleResize);
+			window.removeEventListener("resize", this.handleResize);
 		},
 		mounted() {
 			this.checkMobile();
 		},
-		methods: {
+		"methods": {
 			showHideInfoUser() {
 				this.showUserInfo = !this.showUserInfo;
 			},
@@ -145,18 +143,18 @@
 			},
 			showHideInfoUserEmit() {
 				this.showHideInfoUser();
-				this.$emit('hide');
+				this.$emit("hide");
 			},
 			orderUsersEmit() {
-				this.$emit('order');
+				this.$emit("order");
 			},
 			getUsersEmit() {
-				this.$emit('get-all');
+				this.$emit("get-all");
 			},
 			removeAllUsersEmit() {
-				this.$emit('remove-all');
-			}
-		}
+				this.$emit("remove-all");
+			},
+		},
 	};
 </script>
 
@@ -171,7 +169,7 @@
 		background-color: $color-brand-1;
 		box-shadow: 0 0 1rem 0.5rem rgba($color-black, 0.3);
 
-		@include media('md') {
+		@include media("md") {
 			box-shadow: 0 0 5rem 2rem rgba($color-black, 0.4);
 		}
 
@@ -190,13 +188,13 @@
 			&:not(:last-child) {
 				margin-right: 1rem;
 
-				@include media('md') {
+				@include media("md") {
 					margin-right: 3rem;
 				}
 			}
 
 			&:after {
-				content: '';
+				content: "";
 				display: inline-block;
 				position: absolute;
 				z-index: -1;
@@ -208,20 +206,20 @@
 				transition: all 0.5s ease-in-out 0s;
 				opacity: 0;
 				background-color: $color-brand-1;
-				clip-path: url('#menuCurve');
+				clip-path: url("#menuCurve");
 				will-change: transform;
 			}
 
 			&:hover {
 				&:after {
-					@include media('md') {
+					@include media("md") {
 						transform: translate3d(-50%, -3.5rem, 0);
 						opacity: 1;
 					}
 				}
 
 				:deep(.button) {
-					@include media('md') {
+					@include media("md") {
 						transform: translate3d(0, -1rem, 0) scale(1.4);
 					}
 				}

@@ -27,10 +27,10 @@
 
 <script>
 	export default {
-		name: 'Home',
-		props: {
-			usersFetch: Array
-		}
+		"name": "Home",
+		"props": {
+			"usersFetch": Array,
+		},
 	};
 </script>
 
@@ -42,11 +42,11 @@
 			font-size: 6rem;
 			text-align: center;
 
-			@include media('md') {
+			@include media("md") {
 				font-size: 5rem;
 			}
 
-			@include media('sm') {
+			@include media("sm") {
 				font-size: 4rem;
 			}
 		}
@@ -56,11 +56,11 @@
 			font-size: 3rem;
 			text-align: center;
 
-			@include media('md') {
+			@include media("md") {
 				font-size: 2.6rem;
 			}
 
-			@include media('sm') {
+			@include media("sm") {
 				font-size: 2.2rem;
 			}
 		}
@@ -85,7 +85,7 @@
 				width: 20rem;
 				height: 20rem;
 
-				@include media('sm') {
+				@include media("sm") {
 					width: 15rem;
 					height: 15rem;
 				}

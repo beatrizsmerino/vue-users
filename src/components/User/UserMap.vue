@@ -13,28 +13,28 @@
 </template>
 
 <script>
-	import GoogleMap from '@/components/GoogleMap/GoogleMap';
-	import LeafletMap from '@/components/LeafletMap/LeafletMap';
+	import GoogleMap from "@/components/GoogleMap/GoogleMap";
+	import LeafletMap from "@/components/LeafletMap/LeafletMap";
 
 	export default {
-		name: 'UserMap',
-		components: {
+		"name": "UserMap",
+		"components": {
 			GoogleMap,
-			LeafletMap
+			LeafletMap,
 		},
-		props: {
-			user: Object
+		"props": {
+			"user": Object,
 		},
 		data() {
 			return {
-				googleApiKey: 'XXXXXX'
+				"googleApiKey": "XXXXXX",
 			};
 		},
-		computed: {
+		"computed": {
 			isGoogleMaps() {
-				return this.googleApiKey !== 'XXXXXX';
-			}
-		}
+				return this.googleApiKey !== "XXXXXX";
+			},
+		},
 	};
 </script>
 
@@ -42,7 +42,7 @@
 	.user-map {
 		width: 100%;
 
-		@include media('xl') {
+		@include media("xl") {
 			height: 50rem;
 		}
 	}

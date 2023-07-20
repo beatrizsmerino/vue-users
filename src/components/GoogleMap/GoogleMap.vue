@@ -14,30 +14,30 @@
 </template>
 
 <script>
-	import GoogleMapLoader from '@/components/GoogleMap/GoogleMapLoader';
-	import GoogleMapMarker from '@/components/GoogleMap/GoogleMapMarker';
-	import { mapSettings } from '@/constants/mapSettings';
+	import GoogleMapLoader from "@/components/GoogleMap/GoogleMapLoader";
+	import GoogleMapMarker from "@/components/GoogleMap/GoogleMapMarker";
+	import { mapSettings } from "@/constants/mapSettings";
 
 	export default {
-		name: 'GoogleMap',
-		components: {
+		"name": "GoogleMap",
+		"components": {
 			GoogleMapLoader,
-			GoogleMapMarker
+			GoogleMapMarker,
 		},
-		props: {
-			user: Object,
-			apiKey: String
+		"props": {
+			"user": Object,
+			"apiKey": String,
 		},
 		data() {
 			return {};
 		},
-		computed: {
+		"computed": {
 			marker() {
 				return {
-					position: {
-						lat: parseFloat(this.user.latitude),
-						lng: parseFloat(this.user.longitude)
-					}
+					"position": {
+						"lat": parseFloat(this.user.latitude),
+						"lng": parseFloat(this.user.longitude),
+					},
 				};
 			},
 			mapCenter() {
@@ -46,10 +46,10 @@
 			mapConfig() {
 				return {
 					...mapSettings,
-					center: this.mapCenter
+					"center": this.mapCenter,
 				};
-			}
+			},
 		},
-		methods: {}
+		"methods": {},
 	};
 </script>

@@ -16,34 +16,34 @@
 </template>
 
 <script>
-	import UserDetail from '@/components/User/UserDetail';
-	import UserMap from '@/components/User/UserMap';
+	import UserDetail from "@/components/User/UserDetail";
+	import UserMap from "@/components/User/UserMap";
 
 	export default {
-		name: 'User',
-		components: {
+		"name": "User",
+		"components": {
 			UserDetail,
-			UserMap
+			UserMap,
 		},
-		props: {
-			usersFetch: Array,
-			username: String
+		"props": {
+			"usersFetch": Array,
+			"username": String,
 		},
 		data() {
 			return {
-				usersList: this.usersFetch
+				"usersList": this.usersFetch,
 			};
 		},
-		computed: {
+		"computed": {
 			user() {
 				return this.usersList.find(user => user.username === this.username);
-			}
+			},
 		},
 		mounted() {
-			if (typeof this.user === 'undefined') {
-				this.$router.push({ name: 'users' });
+			if (typeof this.user === "undefined") {
+				this.$router.push({ "name": "users" });
 			}
-		}
+		},
 	};
 </script>
 
@@ -57,11 +57,11 @@
 			max-width: 80%;
 			margin: 0 auto;
 
-			@include media('xxxl') {
+			@include media("xxxl") {
 				max-width: 100%;
 			}
 
-			@include media('xl') {
+			@include media("xl") {
 				flex-direction: column;
 			}
 		}

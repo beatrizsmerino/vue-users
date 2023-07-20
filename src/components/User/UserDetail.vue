@@ -161,19 +161,19 @@
 
 <script>
 	export default {
-		name: 'UserDetail',
-		props: {
-			user: Object
+		"name": "UserDetail",
+		"props": {
+			"user": Object,
 		},
 		data() {
 			return {};
 		},
 		beforeCreate() {
 			window.scroll({
-				top: 0,
-				left: 0
+				"top": 0,
+				"left": 0,
 			});
-		}
+		},
 	};
 </script>
 
@@ -185,12 +185,12 @@
 		background-color: $color-brand-2;
 		font-size: 2.4rem;
 
-		@include media('xl') {
+		@include media("xl") {
 			width: inherit;
 			margin: 0;
 		}
 
-		@include media('sm') {
+		@include media("sm") {
 			padding: 3rem;
 			font-size: 2rem;
 		}
@@ -220,7 +220,7 @@
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
 
-			@include media('sm') {
+			@include media("sm") {
 				width: 15rem;
 				height: 15rem;
 			}
@@ -234,14 +234,14 @@
 		&__content {
 			display: flex;
 
-			@include media('xs') {
+			@include media("xs") {
 				flex-direction: column;
 			}
 
 			> *:not(:last-child) {
 				margin-right: 2rem;
 
-				@include media('xs') {
+				@include media("xs") {
 					margin-bottom: 2rem;
 				}
 			}
@@ -250,25 +250,25 @@
 		&__column {
 			width: 50%;
 
-			@include media('xl') {
+			@include media("xl") {
 				display: flex;
 				flex: 1;
 				width: auto;
 			}
 
-			@include media('md') {
+			@include media("md") {
 				flex-direction: column;
 			}
 
 			> *:not(:last-child) {
 				margin-bottom: 2rem;
 
-				@include media('xl') {
+				@include media("xl") {
 					margin-right: 2rem;
 					margin-bottom: 0;
 				}
 
-				@include media('md') {
+				@include media("md") {
 					margin-right: 0;
 					margin-bottom: 2rem;
 				}
@@ -276,11 +276,11 @@
 		}
 
 		&__group {
-			@include media('xl') {
+			@include media("xl") {
 				flex: 1;
 			}
 
-			@include media('md') {
+			@include media("md") {
 				flex: none;
 			}
 

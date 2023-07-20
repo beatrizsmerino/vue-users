@@ -13,39 +13,39 @@
 
 <script>
 	export default {
-		name: 'UIButton',
-		props: {
-			href: {
-				type: String,
-				default: null
+		"name": "UIButton",
+		"props": {
+			"href": {
+				"type": String,
+				"default": null,
 			},
-			to: {
-				type: String,
-				default: null
+			"to": {
+				"type": String,
+				"default": null,
 			},
-			value: {
-				type: String,
-				default: null
-			}
+			"value": {
+				"type": String,
+				"default": null,
+			},
 		},
-		computed: {
+		"computed": {
 			checkTag() {
 				if (this.href) {
-					return 'a';
+					return "a";
 				} else if (this.to) {
-					return 'router-link';
+					return "router-link";
 				} else if (this.value) {
-					return 'input';
+					return "input";
 				}
 
-				return 'button';
-			}
+				return "button";
+			},
 		},
-		methods: {
+		"methods": {
 			buttonClick() {
-				this.$emit('button-click');
-			}
-		}
+				this.$emit("button-click");
+			},
+		},
 	};
 </script>
 
@@ -55,9 +55,8 @@
 		align-items: center;
 		justify-content: center;
 		padding: 1.2rem 2rem;
-		transition: color 0.5s ease-in-out 0s,
-			background-color 0.5s ease-in-out 0s,
-			border-color 0.5s ease-in-out 0s, transform 0.5s ease-in-out 0s;
+		transition: color 0.5s ease-in-out 0s, background-color 0.5s ease-in-out 0s, border-color 0.5s ease-in-out 0s,
+			transform 0.5s ease-in-out 0s;
 		border: 0.2rem solid transparent;
 		outline: none;
 		background-color: transparent;
