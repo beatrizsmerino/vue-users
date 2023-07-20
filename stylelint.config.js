@@ -2,6 +2,7 @@ module.exports = {
 	"customSyntax": "postcss-html",
 	"extends": [
 		"stylelint-config-standard",
+		"stylelint-config-recommended-vue",
 		"stylelint-config-sass-guidelines",
 		"stylelint-config-property-sort-order-smacss",
 	],
@@ -88,6 +89,14 @@ module.exports = {
 		"function-calc-no-unspaced-operator": true,
 		"function-linear-gradient-no-nonstandard-direction": true,
 		"function-name-case": "lower",
+		"function-no-unknown": [
+			true,
+			{
+				"ignoreFunctions": [
+					"mix",
+				],
+			},
+		],
 		"import-notation": null,
 		"keyframe-declaration-no-important": true,
 		"length-zero-no-unit": true,
@@ -115,9 +124,29 @@ module.exports = {
 		],
 		"scss/at-rule-no-unknown": true,
 		"scss/no-global-function-names": null,
-		"selector-class-pattern": null,
+		"selector-class-pattern": [
+			"^([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?$",
+			{
+				"resolveNestedSelectors": true,
+			},
+		],
+		"selector-id-pattern": [
+			"error",
+			{
+				"format": "camelCase",
+			},
+		],
 		"selector-max-compound-selectors": null,
 		"selector-max-id": 1,
+		"selector-no-qualifying-type": [
+			true,
+			{
+				"ignore": [
+					"attribute",
+					"class",
+				],
+			},
+		],
 		"selector-pseudo-class-no-unknown": [
 			true,
 			{
