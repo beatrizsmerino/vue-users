@@ -15,46 +15,46 @@
 
 <script>
 	export default {
-		name: 'UISwitchTheme',
+		"name": "UISwitchTheme",
 		mounted() {
 			this.checkTheme();
 		},
-		methods: {
+		"methods": {
 			changeTheme(event) {
 				const field = event.target;
 
 				if (field.checked) {
-					this.$tools.setLocalStorage('theme', 'dark');
+					this.$tools.setLocalStorage("theme", "dark");
 				} else {
-					this.$tools.setLocalStorage('theme', 'light');
+					this.$tools.setLocalStorage("theme", "light");
 				}
 
 				this.cssTheme();
 			},
 			cssTheme() {
-				const page = document.querySelector('html');
-				const themeName = this.$tools.getLocalStorage('theme');
+				const page = document.querySelector("html");
+				const themeName = this.$tools.getLocalStorage("theme");
 
-				page.classList.remove('is-theme-light');
-				page.classList.remove('is-theme-dark');
+				page.classList.remove("is-theme-light");
+				page.classList.remove("is-theme-dark");
 				page.classList.add(`is-theme-${themeName}`);
 			},
 			checkTheme() {
-				const switchTheme = document.querySelector('#switchTheme');
+				const switchTheme = document.querySelector("#switchTheme");
 
-				if (this.$tools.getLocalStorage('theme')) {
+				if (this.$tools.getLocalStorage("theme")) {
 					this.cssTheme();
 
-					if (this.$tools.getLocalStorage('theme') == 'dark') {
+					if (this.$tools.getLocalStorage("theme") == "dark") {
 						switchTheme.checked = true;
 					} else {
 						switchTheme.checked = false;
 					}
 				} else {
-					this.$tools.setLocalStorage('theme', 'light');
+					this.$tools.setLocalStorage("theme", "light");
 				}
-			}
-		}
+			},
+		},
 	};
 </script>
 

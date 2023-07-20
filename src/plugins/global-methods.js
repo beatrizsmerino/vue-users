@@ -1,7 +1,5 @@
-/*
- * TOOLS
- * =================================================
- */
+// TOOLS
+// =================================================
 
 export const tools = {
 	getLocalStorage(key) {
@@ -12,5 +10,5 @@ export const tools = {
 	},
 	removeLocalStorage(key) {
 		localStorage.removeItem(key);
-	}
+	},
 };

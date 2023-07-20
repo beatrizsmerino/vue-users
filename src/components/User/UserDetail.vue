@@ -161,19 +161,19 @@
 
 <script>
 	export default {
-		name: 'UserDetail',
-		props: {
-			user: Object
+		"name": "UserDetail",
+		"props": {
+			"user": Object,
 		},
 		data() {
 			return {};
 		},
 		beforeCreate() {
 			window.scroll({
-				top: 0,
-				left: 0
+				"top": 0,
+				"left": 0,
 			});
-		}
+		},
 	};
 </script>
 

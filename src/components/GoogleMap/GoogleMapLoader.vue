@@ -14,33 +14,33 @@
 </template>
 
 <script>
-	import googleMapsApiLoader from 'google-maps-api-loader';
+	import googleMapsApiLoader from "google-maps-api-loader";
 
 	export default {
-		name: 'GoogleMapLoader',
-		props: {
-			mapConfig: Object,
-			apiKey: String
+		"name": "GoogleMapLoader",
+		"props": {
+			"mapConfig": Object,
+			"apiKey": String,
 		},
 		data() {
 			return {
-				google: null,
-				map: null
+				"google": null,
+				"map": null,
 			};
 		},
 		async mounted() {
 			const googleMapApi = await googleMapsApiLoader({
-				apiKey: this.apiKey
+				"apiKey": this.apiKey,
 			});
 			this.google = googleMapApi;
 			this.initializeMap();
 		},
-		methods: {
+		"methods": {
 			initializeMap() {
 				const mapContainer = this.$refs.googleMap;
 				this.map = new this.google.maps.Map(mapContainer, this.mapConfig);
-			}
-		}
+			},
+		},
 	};
 </script>
 

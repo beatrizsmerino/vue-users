@@ -21,31 +21,31 @@
 </template>
 
 <script>
-	import UsersList from '@/components/User/UserList';
-	import UsersButtons from '@/components/User/UserButtons';
-	import UIError from '@/components/UI/UIError';
+	import UsersList from "@/components/User/UserList";
+	import UsersButtons from "@/components/User/UserButtons";
+	import UIError from "@/components/UI/UIError";
 
 	export default {
-		name: 'Users',
-		components: {
+		"name": "Users",
+		"components": {
 			UsersList,
 			UsersButtons,
-			UIError
+			UIError,
 		},
-		props: {
-			usersFetch: Array
+		"props": {
+			"usersFetch": Array,
 		},
 		data() {
 			return {
-				usersList: this.usersFetch,
-				infoUserHidden: false,
-				errorUsers: {
-					message: 'Users not found',
-					solution: "Click on the button 'GET USERS'"
-				}
+				"usersList": this.usersFetch,
+				"infoUserHidden": false,
+				"errorUsers": {
+					"message": "Users not found",
+					"solution": "Click on the button 'GET USERS'",
+				},
 			};
 		},
-		watch: {
+		"watch": {
 			usersFetch(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
@@ -54,25 +54,25 @@
 			usersList(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
-					this.$tools.setLocalStorage('users', this.usersList);
+					this.$tools.setLocalStorage("users", this.usersList);
 				}
-			}
+			},
 		},
-		methods: {
+		"methods": {
 			hideInfoUser() {
 				this.infoUserHidden = !this.infoUserHidden;
 			},
 			orderUsers() {
 				this.usersList.sort(() => Math.random() - 0.5);
-				this.$tools.setLocalStorage('users', this.usersList);
+				this.$tools.setLocalStorage("users", this.usersList);
 			},
 			async getUsers() {
 				await this.$parent.setUsers();
 			},
 			removeAllUsers() {
 				this.usersList = [];
-			}
-		}
+			},
+		},
 	};
 </script>
 

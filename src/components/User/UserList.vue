@@ -23,33 +23,33 @@
 </template>
 
 <script>
-	import UserPreview from '@/components/User/UserPreview';
+	import UserPreview from "@/components/User/UserPreview";
 
 	export default {
-		name: 'UsersList',
-		components: {
-			UserPreview
+		"name": "UsersList",
+		"components": {
+			UserPreview,
 		},
-		props: {
-			users: Array,
-			stateHidden: Boolean
+		"props": {
+			"users": Array,
+			"stateHidden": Boolean,
 		},
 		data() {
 			return {
-				usersList: this.users
+				"usersList": this.users,
 			};
 		},
-		watch: {
+		"watch": {
 			users(newValue) {
 				this.usersList = newValue;
-			}
+			},
 		},
-		methods: {
+		"methods": {
 			userRemove(userToRemove) {
 				this.usersList.splice(this.usersList.indexOf(userToRemove), 1);
-				this.$tools.setLocalStorage('users', this.usersList);
-			}
-		}
+				this.$tools.setLocalStorage("users", this.usersList);
+			},
+		},
 	};
 </script>
 

@@ -96,37 +96,37 @@
 </template>
 
 <script>
-	import UIButton from '@/components/UI/UIButton';
+	import UIButton from "@/components/UI/UIButton";
 
 	export default {
-		name: 'UsersButtons',
-		components: {
-			UIButton
+		"name": "UsersButtons",
+		"components": {
+			UIButton,
 		},
 		data() {
 			return {
-				showUserInfo: false,
-				textButtonHideUser: 'HIDE USER INFO',
-				isMobile: false
+				"showUserInfo": false,
+				"textButtonHideUser": "HIDE USER INFO",
+				"isMobile": false,
 			};
 		},
-		watch: {
+		"watch": {
 			isMobile(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.isMobile = newVal;
 				}
-			}
+			},
 		},
 		created() {
-			window.addEventListener('resize', this.handleResize);
+			window.addEventListener("resize", this.handleResize);
 		},
 		destroyed() {
-			window.removeEventListener('resize', this.handleResize);
+			window.removeEventListener("resize", this.handleResize);
 		},
 		mounted() {
 			this.checkMobile();
 		},
-		methods: {
+		"methods": {
 			showHideInfoUser() {
 				this.showUserInfo = !this.showUserInfo;
 			},
@@ -143,18 +143,18 @@
 			},
 			showHideInfoUserEmit() {
 				this.showHideInfoUser();
-				this.$emit('hide');
+				this.$emit("hide");
 			},
 			orderUsersEmit() {
-				this.$emit('order');
+				this.$emit("order");
 			},
 			getUsersEmit() {
-				this.$emit('get-all');
+				this.$emit("get-all");
 			},
 			removeAllUsersEmit() {
-				this.$emit('remove-all');
-			}
-		}
+				this.$emit("remove-all");
+			},
+		},
 	};
 </script>
 

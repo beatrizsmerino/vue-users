@@ -1,54 +1,52 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from './views/Home.vue';
-import Users from './views/Users.vue';
-import User from './views/User.vue';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "./views/Home.vue";
+import Users from "./views/Users.vue";
+import User from "./views/User.vue";
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-	mode: 'history',
-	routes: [
+	"mode": "history",
+	"routes": [
 		{
-			path: '',
-			name: 'home',
-			component: Home,
-			meta: {
-				title: 'Home'
-			}
+			"path": "",
+			"name": "home",
+			"component": Home,
+			"meta": {
+				"title": "Home",
+			},
 		},
 		{
-			path: '/users',
-			name: 'users',
-			component: Users,
-			meta: {
-				title: 'My users'
-			}
+			"path": "/users",
+			"name": "users",
+			"component": Users,
+			"meta": {
+				"title": "My users",
+			},
 		},
 		{
-			path: '/user/:username',
-			name: 'user',
-			component: User,
-			props: true,
-			meta: {
-				title: 'My user'
-			}
+			"path": "/user/:username",
+			"name": "user",
+			"component": User,
+			"props": true,
+			"meta": {
+				"title": "My user",
+			},
 		},
 		{
-			path: '*',
-			redirect: '/',
-			component: Home
-		}
-	]
+			"path": "*",
+			"redirect": "/",
+			"component": Home,
+		},
+	],
 });
 
 // This callback runs before every route change, including on page load.
 // eslint-disable-next-line consistent-return
 router.beforeEach((to, from, next) => {
-	/*
-	 * This goes through the matched routes from last to first, finding the closest route with a title.
-	 * eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
-	 */
+	// This goes through the matched routes from last to first, finding the closest route with a title.
+	// eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
 	const nearestWithTitle = to.matched.
 		slice().
 		reverse().
@@ -66,11 +64,11 @@ router.beforeEach((to, from, next) => {
 
 	// If a route with a title was found, set the document (page) title to that value.
 	if (nearestWithTitle) {
-		document.title = `${nearestWithTitle.meta.title} | Vue Users` || 'Vue Users';
+		document.title = `${nearestWithTitle.meta.title} | Vue Users` || "Vue Users";
 	}
 
 	// Remove any stale meta tags from the document using the key attribute we set below.
-	Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
+	Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map(el => el.parentNode.removeChild(el));
 
 	// Skip rendering meta tags if there are none.
 	if (!nearestWithMeta) {
@@ -80,14 +78,14 @@ router.beforeEach((to, from, next) => {
 	// Turn the meta tag definitions into actual elements in the head.
 	nearestWithMeta.meta.metaTags.
 		map(tagDef => {
-			const tag = document.createElement('meta');
+			const tag = document.createElement("meta");
 
 			Object.keys(tagDef).forEach(key => {
 				tag.setAttribute(key, tagDef[key]);
 			});
 
 			// We use this to track which meta tags we create, so we don't interfere with other ones.
-			tag.setAttribute('data-vue-router-controlled', '');
+			tag.setAttribute("data-vue-router-controlled", "");
 
 			return tag;
 		}).

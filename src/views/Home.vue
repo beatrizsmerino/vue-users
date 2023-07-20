@@ -27,10 +27,10 @@
 
 <script>
 	export default {
-		name: 'Home',
-		props: {
-			usersFetch: Array
-		}
+		"name": "Home",
+		"props": {
+			"usersFetch": Array,
+		},
 	};
 </script>
 

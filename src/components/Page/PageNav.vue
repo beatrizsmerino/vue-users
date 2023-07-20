@@ -35,28 +35,28 @@
 </template>
 
 <script>
-	import UIButton from '@/components/UI/UIButton';
+	import UIButton from "@/components/UI/UIButton";
 
 	export default {
-		name: 'PageNav',
-		components: {
-			UIButton
+		"name": "PageNav",
+		"components": {
+			UIButton,
 		},
 		data() {
 			return {
-				isAnimated: false,
-				isOpen: false,
-				isMobile: false
+				"isAnimated": false,
+				"isOpen": false,
+				"isMobile": false,
 			};
 		},
-		watch: {
+		"watch": {
 			$route(to, from) {
 				if (to !== from) {
 					this.closeNav();
 				}
 			},
 			isOpen() {
-				document.body.style.overflow = this.isOpen ? 'hidden' : '';
+				document.body.style.overflow = this.isOpen ? "hidden" : "";
 			},
 			isMobile(newVal, oldVal) {
 				if (newVal !== oldVal) {
@@ -66,18 +66,18 @@
 				if (!newVal) {
 					this.desktopNav();
 				}
-			}
+			},
 		},
 		created() {
-			window.addEventListener('resize', this.handleResize);
+			window.addEventListener("resize", this.handleResize);
 		},
 		destroyed() {
-			window.removeEventListener('resize', this.handleResize);
+			window.removeEventListener("resize", this.handleResize);
 		},
 		mounted() {
 			this.checkMobile();
 		},
-		methods: {
+		"methods": {
 			openCloseNav() {
 				this.isAnimated = true;
 				this.isOpen = !this.isOpen;
@@ -99,8 +99,8 @@
 			},
 			handleResize() {
 				this.checkMobile();
-			}
-		}
+			},
+		},
 	};
 </script>
 

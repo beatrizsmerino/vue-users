@@ -11,17 +11,17 @@
 </template>
 
 <script>
-	import UILogo from '@/components/UI/UILogo';
-	import PageNav from '@/components/Page/PageNav';
-	import UISwitchTheme from '@/components/UI/UISwitchTheme';
+	import UILogo from "@/components/UI/UILogo";
+	import PageNav from "@/components/Page/PageNav";
+	import UISwitchTheme from "@/components/UI/UISwitchTheme";
 
 	export default {
-		name: 'PageHeader',
-		components: {
+		"name": "PageHeader",
+		"components": {
 			UILogo,
 			PageNav,
-			UISwitchTheme
-		}
+			UISwitchTheme,
+		},
 	};
 </script>
 

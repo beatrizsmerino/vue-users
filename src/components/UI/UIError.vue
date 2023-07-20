@@ -18,13 +18,13 @@
 
 <script>
 	export default {
-		name: 'UIError',
-		props: {
-			error: {
-				type: Object,
-				required: true
-			}
-		}
+		"name": "UIError",
+		"props": {
+			"error": {
+				"type": Object,
+				"required": true,
+			},
+		},
 	};
 </script>
 
