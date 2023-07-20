@@ -6,6 +6,7 @@ import * as fs from "fs";
 
 const iconArrows = emoji.get("fast_forward");
 const iconRocket = emoji.get("rocket");
+// eslint-disable-next-line max-statements
 (async () => {
 	try {
 		await execa("git", [
@@ -58,6 +59,7 @@ const iconRocket = emoji.get("rocket");
 		console.log(`${iconRocket} ${chalk.green("Successfully deployed")} ${iconRocket}`);
 	} catch (e) {
 		console.log(e.message);
+		// eslint-disable-next-line no-process-exit
 		process.exit(1);
 	}
 })();
