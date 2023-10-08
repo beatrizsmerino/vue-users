@@ -53,7 +53,7 @@ module.exports = {
 			use(SVGSymbolSprite.Plugin).
 			end();
 
-		// Configure svg default rultes to exclude svg file proccessing in icons directory
+		// Configure svg default rules to exclude svg file processing in icons directory
 		config.module.rule("svg").exclude.add(resolve("src/assets/images/icons/svg")).end();
 
 		// New icons rule, set svg sprite loader to process svg files in the 'src/assets/images/icons/svg' folder
