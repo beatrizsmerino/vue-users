@@ -166,7 +166,7 @@
 	// VUE TRANSITIONS
 	// -----------------------------------------
 
-	/* default animation if dont use a name in the tag transition/transition-group (WITHOUT NAME) */
+	/* default animation if don't use a name in the tag transition/transition-group (WITHOUT NAME) */
 	.v-enter {
 		opacity: 0;
 	}
