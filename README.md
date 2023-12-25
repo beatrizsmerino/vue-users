@@ -23,6 +23,8 @@ Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework
 
 ## Commands
 
+### Install dependencies
+
 ```bash
 npm install
 ```
