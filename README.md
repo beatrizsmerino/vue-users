@@ -48,7 +48,7 @@ npm run lint
 <details>
 	<summary>
 		<h4>
-			Fix bugs with prettier
+			Prettier
 		</h4>
 	</summary>
 	<div>
@@ -63,7 +63,7 @@ npm run prettier:fix
 <details>
 	<summary>
 		<h4>
-			Fix bugs with stylelint
+			Stylelint
 		</h4>
 	</summary>
 	<div>
@@ -78,7 +78,7 @@ npm run stylelint:fix
 <details>
 	<summary>
 		<h4>
-			Fix bugs with eslint
+			Eslint
 		</h4>
 	</summary>
 	<div>
