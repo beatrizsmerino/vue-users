@@ -21,7 +21,7 @@ It has 3 views: the home, the user list and the user detail. There are several b
 
 Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework. This project use [Vue Cli](https://cli.vuejs.org/) and has dependencies as vue router and google maps.
 
-## Project setup
+## Commands
 
 ```bash
 npm install
