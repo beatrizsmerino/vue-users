@@ -34,6 +34,8 @@
 	"devDependencies": {
 		"@babel/core": "^7.23.6",
 		"@babel/eslint-parser": "^7.23.3",
+		"@commitlint/cli": "^18.4.3",
+		"@commitlint/config-conventional": "^18.4.3",
 		"@types/leaflet": "^1.9.8",
 		"@vue/cli-plugin-babel": "^5.0.8",
 		"@vue/cli-plugin-eslint": "^5.0.8",
@@ -47,6 +49,7 @@
 		"eslint-plugin-vue": "^9.19.2",
 		"eslint-webpack-plugin": "^3.2.0",
 		"file-loader": "^6.2.0",
+		"husky": "^8.0.3",
 		"postcss": "^8.4.32",
 		"postcss-html": "^1.5.0",
 		"prettier": "^2.8.8",
