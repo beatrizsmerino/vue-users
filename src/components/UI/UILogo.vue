@@ -9,7 +9,7 @@
 
 <script>
 	export default {
-		name: 'UILogo'
+		"name": "UILogo",
 	};
 </script>
 
@@ -22,7 +22,7 @@
 		font-weight: bold;
 		line-height: 100%;
 
-		@include media('sm') {
+		@include media("sm") {
 			font-size: 4rem;
 		}
 
