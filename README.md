@@ -47,9 +47,9 @@ npm run lint
 
 <details>
 	<summary>
-		<h3>
+		<h4>
 			Fix bugs with prettier
-		</h3>
+		</h4>
 	</summary>
 	<div>
 		Format js, json and vue files with <a href="https://prettier.io/" target="_blank">Prettier</a>
@@ -62,9 +62,9 @@ npm run prettier:fix
 
 <details>
 	<summary>
-		<h3>
+		<h4>
 			Fix bugs with stylelint
-		</h3>
+		</h4>
 	</summary>
 	<div>
 		Catches bugs, enforces conventions and sorts properties of css, scss, sass and vue files with <a href="https://stylelint.io/">Stylelint</a>
@@ -77,9 +77,9 @@ npm run stylelint:fix
 
 <details>
 	<summary>
-		<h3>
+		<h4>
 			Fix bugs with eslint
-		</h3>
+		</h4>
 	</summary>
 	<div>
 		Find and fix bugs of js, json and vue files with <a href="https://eslint.org/" target="_blank">EsLint</a>
