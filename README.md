@@ -45,19 +45,25 @@ npm run build
 npm run lint
 ```
 
-#### Format js, json and vue files with [Prettier](https://prettier.io/)
+#### Fix bugs with prettier
+
+Format js, json and vue files with [Prettier](https://prettier.io/)
 
 ```bash
 npm run prettier:fix
 ```
 
-#### Catches bugs, enforces conventions and sorts properties of css, scss, sass and vue files with [Stylelint](https://stylelint.io/)
+#### Fix bugs with stylelint
+
+Catches bugs, enforces conventions and sorts properties of css, scss, sass and vue files with [Stylelint](https://stylelint.io/)
 
 ```bash
 npm run stylelint:fix
 ```
 
-#### Find and fix bugs of js, json and vue files with [EsLint](https://eslint.org/)
+#### Fix bugs with eslint
+
+Find and fix bugs of js, json and vue files with [EsLint](https://eslint.org/)
 
 ```bash
 npm run eslint:fix
