@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"chalk": "^5.3.0",
-		"core-js": "^3.36.0",
+		"core-js": "^3.37.0",
 		"execa": "^7.2.0",
 		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.9.4",
