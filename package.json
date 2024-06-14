@@ -54,7 +54,7 @@
 		"postcss": "^8.4.38",
 		"postcss-html": "^1.7.0",
 		"prettier": "^3.3.1",
-		"sass": "^1.77.4",
+		"sass": "^1.77.5",
 		"sass-loader": "^10.5.2",
 		"stylelint": "^16.6.1",
 		"stylelint-config-property-sort-order-smacss": "^10.0.0",
