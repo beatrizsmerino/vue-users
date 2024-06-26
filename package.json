@@ -1,5 +1,5 @@
 {
-	"version": "3.3.0",
+	"version": "3.3.1",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
@@ -8,14 +8,12 @@
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
-		"dependencies:fix": "npm install --ignore-scripts && npx npm-force-resolutions",
-		"preinstall": "npm run install:clean && npm run dependencies:fix",
 		"postinstall": "npm run lint",
 		"prepare": "husky",
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"prettier:fix": "prettier --write \"./**/*.{vue,js,mjs,json}\"",
-		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,mjs,vue}\" --fix --ignore-path .eslintignore",
+		"prettier:fix": "prettier --write \"./**/*.{css,scss,sass,json,js,cjs,mjs,vue}\"",
+		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,cjs,mjs,vue}\" --fix --ignore-path .eslintignore",
 		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
 		"lint": "npm run prettier:fix && npm run stylelint:fix && npm run eslint:fix",
 		"deploy": "node gh-pages-deploy.mjs"
@@ -28,7 +26,7 @@
 		"leaflet": "^1.9.4",
 		"node-emoji": "^2.1.3",
 		"svg-symbol-sprite-loader": "^5.1.0",
-		"vue": "^2.7.15",
+		"vue": "^2.7.16",
 		"vue-router": "^3.6.5",
 		"vue2-leaflet": "^2.7.1"
 	},
@@ -55,7 +53,7 @@
 		"postcss-html": "^1.7.0",
 		"prettier": "^3.3.2",
 		"sass": "^1.77.6",
-		"sass-loader": "^10.5.2",
+		"sass-loader": "^14",
 		"stylelint": "^16.6.1",
 		"stylelint-config-property-sort-order-smacss": "^10.0.0",
 		"stylelint-config-recommended-vue": "^1.5.0",
@@ -65,7 +63,6 @@
 		"stylelint-webpack-plugin": "^5.0.1",
 		"vue-template-compiler": "^2.7.16"
 	},
-	"resolutions": {},
 	"engines": {
 		"node": "20.11.0",
 		"npm": "10.4.0"
