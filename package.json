@@ -1,5 +1,5 @@
 {
-	"version": "3.3.1",
+	"version": "3.4.1",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
@@ -21,7 +21,7 @@
 	"dependencies": {
 		"chalk": "^5.3.0",
 		"core-js": "^3.38.0",
-		"execa": "^7.2.0",
+		"execa": "^9.3.1",
 		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.9.4",
 		"node-emoji": "^2.1.3",
