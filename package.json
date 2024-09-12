@@ -33,7 +33,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.25.2",
 		"@babel/eslint-parser": "^7.25.1",
-		"@commitlint/cli": "^19.4.1",
+		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.4.1",
 		"@types/leaflet": "^1.9.12",
 		"@vue/cli-plugin-babel": "^5.0.8",
