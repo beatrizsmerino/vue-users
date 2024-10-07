@@ -12,13 +12,13 @@
 						<i
 							class="fa"
 							:class="showUserInfo ? 'fa-eye' : 'fa-eye-slash'"
-						/>
+						></i>
 					</span>
 					<span
 						v-if="!isMobile"
 						class="button__text"
 						v-html="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
-					/>
+					></span>
 				</UIButton>
 			</li>
 			<li class="user-buttons__item">
@@ -29,7 +29,7 @@
 					@button-click="orderUsersEmit"
 				>
 					<span class="button__icon">
-						<i class="fa fa-sort" />
+						<i class="fa fa-sort"></i>
 					</span>
 					<span
 						v-if="!isMobile"
@@ -47,7 +47,7 @@
 					@button-click="getUsersEmit"
 				>
 					<span class="button__icon">
-						<i class="fa fa-user-plus" />
+						<i class="fa fa-user-plus"></i>
 					</span>
 					<span
 						v-if="!isMobile"
@@ -65,7 +65,7 @@
 					@button-click="removeAllUsersEmit"
 				>
 					<span class="button__icon">
-						<i class="fa fa-user-minus" />
+						<i class="fa fa-user-minus"></i>
 					</span>
 					<span
 						v-if="!isMobile"

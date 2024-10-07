@@ -5,14 +5,14 @@
 				<img
 					:src="user.imageLarge"
 					:alt="user.username"
-				>
+				/>
 			</div>
 
 			<div class="user-detail__group">
 				<div class="user-detail__item">
 					<h4 class="user-detail__label">
 						<span class="user-detail__icon">
-							<i class="fa fa-user" />
+							<i class="fa fa-user"></i>
 						</span>
 						<strong>Name:</strong>
 					</h4>
@@ -24,7 +24,7 @@
 				<div class="user-detail__item">
 					<h4 class="user-detail__label">
 						<span class="user-detail__icon">
-							<i class="fa fa-user-lock" />
+							<i class="fa fa-user-lock"></i>
 						</span>
 						<strong>Username:</strong>
 					</h4>
@@ -35,7 +35,7 @@
 				<div class="user-detail__item">
 					<h4 class="user-detail__label">
 						<span class="user-detail__icon">
-							<i class="fa fa-clock" />
+							<i class="fa fa-clock"></i>
 						</span>
 						<strong>Registered:</strong>
 					</h4>
@@ -52,7 +52,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-globe" />
+								<i class="fa fa-globe"></i>
 							</span>
 							<strong>Nationality:</strong>
 						</h4>
@@ -63,7 +63,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-flag" />
+								<i class="fa fa-flag"></i>
 							</span>
 							<strong>State:</strong>
 						</h4>
@@ -74,7 +74,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-city" />
+								<i class="fa fa-city"></i>
 							</span>
 							<strong>City:</strong>
 						</h4>
@@ -85,7 +85,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-street-view" />
+								<i class="fa fa-street-view"></i>
 							</span>
 							<strong>Street:</strong>
 						</h4>
@@ -96,7 +96,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-mail-bulk" />
+								<i class="fa fa-mail-bulk"></i>
 							</span>
 							<strong>Postcode:</strong>
 						</h4>
@@ -112,7 +112,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-venus-mars" />
+								<i class="fa fa-venus-mars"></i>
 							</span>
 							<strong>Gender:</strong>
 						</h4>
@@ -123,7 +123,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-envelope" />
+								<i class="fa fa-envelope"></i>
 							</span>
 							<strong>Email:</strong>
 						</h4>
@@ -134,7 +134,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-phone" />
+								<i class="fa fa-phone"></i>
 							</span>
 							<strong>Phone:</strong>
 						</h4>
@@ -145,7 +145,7 @@
 					<div class="user-detail__item">
 						<h4 class="user-detail__label">
 							<span class="user-detail__icon">
-								<i class="fa fa-phone" />
+								<i class="fa fa-phone"></i>
 							</span>
 							<strong>Cell:</strong>
 						</h4>
