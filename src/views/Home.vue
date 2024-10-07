@@ -7,7 +7,7 @@
 			<div class="description page-inner">
 				<p>
 					Content developed with the API
-					<br >
+					<br />
 					<a
 						class="link"
 						href="http://randomuser.me"

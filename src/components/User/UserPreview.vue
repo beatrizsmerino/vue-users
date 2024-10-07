@@ -4,7 +4,7 @@
 			:src="dataUser.imageMedium"
 			:alt="dataUser.name.first + ' ' + dataUser.name.last"
 			class="user-preview__img"
-		>
+		/>
 
 		<transition name="fade">
 			<div
@@ -18,7 +18,7 @@
 				<div class="user-preview__description">
 					<p class="user-preview-data">
 						<span class="user-preview-data__icon">
-							<i class="fa fa-user" />
+							<i class="fa fa-user"></i>
 						</span>
 						<span class="user-preview-data__text">
 							{{ dataUser.username }}
@@ -27,7 +27,7 @@
 
 					<p class="user-preview-data">
 						<span class="user-preview-data__icon">
-							<i class="fa fa-map-marker" />
+							<i class="fa fa-map-marker"></i>
 						</span>
 						<span class="user-preview-data__text">
 							{{ dataUser.state }}
@@ -40,7 +40,7 @@
 					class="button--bg-brand-1 button--width-auto"
 				>
 					<span class="button__icon">
-						<i class="fas fa-info" />
+						<i class="fas fa-info"></i>
 					</span>
 					<span class="button__text">
 						more info
@@ -53,7 +53,7 @@
 			class="button-close button--icon"
 			@button-click="userRemoveEmit(dataUser)"
 		>
-			<i class="button-close__icon fas fa-times-circle" />
+			<i class="button-close__icon fas fa-times-circle"></i>
 		</UIButton>
 	</div>
 </template>
