@@ -18,7 +18,7 @@
 					Current location:
 					<p>
 						Latitude: {{ marker.position.lat }}
-						<br >
+						<br />
 						Longitude: {{ marker.position.lng }}
 					</p>
 				</LPopup>

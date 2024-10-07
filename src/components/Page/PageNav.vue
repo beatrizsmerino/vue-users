@@ -29,7 +29,7 @@
 			class="page-nav__button button button--icon"
 			@button-click="openCloseNav"
 		>
-			<i class="fa fa-bars" />
+			<i class="fa fa-bars"></i>
 		</UIButton>
 	</nav>
 </template>
