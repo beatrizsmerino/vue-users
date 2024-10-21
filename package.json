@@ -1,5 +1,5 @@
 {
-	"version": "3.4.2",
+	"version": "3.5.0",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
@@ -64,7 +64,7 @@
 		"vue-template-compiler": "^2.7.16"
 	},
 	"engines": {
-		"node": "20.11.0",
-		"npm": "10.4.0"
+		"node": "20.18.0",
+		"npm": "10.8.2"
 	}
 }
