@@ -2,10 +2,11 @@
 // MIXIN
 // media queries
 // ------------------
+@use "sass:list";
 @use "sass:meta";
 
 @function contains($list, $item) {
-	@return index($list, $item) != null;
+	@return list.index($list, $item) != null;
 }
 
 @mixin media($breakpoint, $rule: "max", $dimension: "width") {
