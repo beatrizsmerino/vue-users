@@ -3,10 +3,10 @@
 
 // SETTINGS
 // =================================================
-@import "settings/settings-breakpoints";
-@import "settings/settings-colors";
-@import "settings/settings-fonts";
+@forward "settings/settings-breakpoints";
+@forward "settings/settings-colors";
+@forward "settings/settings-fonts";
 
 // TOOLS
 // =================================================
-@import "tools/tools-media";
+@forward "tools/tools-media";
