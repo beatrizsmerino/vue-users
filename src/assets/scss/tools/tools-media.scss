@@ -4,6 +4,7 @@
 // ------------------
 @use "sass:list";
 @use "sass:meta";
+@use "../settings/settings-breakpoints" as *;
 
 @function contains($list, $item) {
 	@return list.index($list, $item) != null;
