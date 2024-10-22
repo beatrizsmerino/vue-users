@@ -2,9 +2,14 @@
 // MIXIN
 // media queries
 // ------------------
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "../settings/settings-breakpoints" as *;
 
 @function contains($list, $item) {
-	@return index($list, $item) != null;
+	@return list.index($list, $item) != null;
 }
 
 @mixin media($breakpoint, $rule: "max", $dimension: "width") {
@@ -17,34 +22,34 @@
 	}
 
 	@if not contains($dimensions, $dimension) {
-		$rule: "width";
+		$dimension: "width";
 	}
 
-	@if type-of($breakpoint) ==number {
-		@if unitless($breakpoint) {
-			@media (#{$rule}-#{$dimension}: #{$breakpoint + 'px'}) {
+	@if meta.type-of($breakpoint) == number {
+		@if math.is-unitless($breakpoint) {
+			@media (#{$rule}-#{$dimension}: #{$breakpoint + "px"}) {
 				@content;
 			}
-		} @else if contains($units, unit($breakpoint)) {
+		} @else if contains($units, math.unit($breakpoint)) {
 			@media (#{$rule}-#{$dimension}: #{$breakpoint}) {
 				@content;
 			}
 		} @else {
-			@error 'Invalid units provided';
+			@error "Invalid units provided";
 		}
-	} @else if variable_exists(breakpoints) {
-		@if map-has-key($breakpoints, $breakpoint) {
-			@media (#{$rule}-#{$dimension}: #{inspect(map-get($breakpoints, $breakpoint))}) {
+	} @else if meta.variable-exists(breakpoints) {
+		@if map.has-key($breakpoints, $breakpoint) {
+			@media (#{$rule}-#{$dimension}: #{meta.inspect(map.get($breakpoints, $breakpoint))}) {
 				@content;
 			}
 		} @else {
-			@error 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '+'Available breakpoints are: #{map-keys($breakpoints)}.';
+			@error "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map.keys($breakpoints)}.";
 		}
-	} @else if variable_exists(breakpoint) {
+	} @else if meta.variable-exists(breakpoint) {
 		@media (#{$rule}-#{$dimension}: #{$breakpoint}) {
 			@content;
 		}
 	} @else {
-		@error 'Neither $breakpoints map nor variable provided are defined';
+		@error "Neither $breakpoints map nor variable provided are defined";
 	}
 }

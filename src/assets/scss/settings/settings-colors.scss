@@ -1,6 +1,7 @@
 // SETTINGS
 // COLORS
 // ------------------
+@use "sass:color";
 
 // GRAY SCALE
 // =================================================
@@ -19,5 +20,5 @@ $color-success: #008080;
 // =================================================
 $color-brand-1: #42b883;
 $color-brand-2: #35495e;
-$color-brand-2--dark: mix($color-black, $color-brand-2, 20%);
+$color-brand-2--dark: color.mix($color-black, $color-brand-2, 20%);
 $color-gradient: linear-gradient($color-brand-1, $color-brand-2);
