@@ -1,11 +1,11 @@
-// TOOLS - MIXINS
+// ABSTRACTS - MIXINS
 // MEDIA
 // =================================================
 @use "sass:map";
 @use "sass:math";
 @use "sass:meta";
-@use "../tools/tools-contains" as *;
-@use "../settings/settings-breakpoints" as *;
+@use "../functions/abstracts-functions-contains" as *;
+@use "../variables/abstracts-variables-breakpoints" as *;
 
 @mixin media($breakpoint, $rule: "max", $dimension: "width") {
 	$rules: "max", "min";
