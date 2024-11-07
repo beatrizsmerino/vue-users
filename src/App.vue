@@ -111,6 +111,7 @@
 
 	// BASE
 	// ----------------------------------------------------------------------
+	@use "@/assets/scss/base/base-reset";
 	@use "@/assets/scss/base/base-global";
 
 	// COMPONENTS
