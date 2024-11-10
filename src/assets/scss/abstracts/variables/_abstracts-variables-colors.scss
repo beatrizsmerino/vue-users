@@ -11,14 +11,14 @@ $color-silver: #d5d5d5;
 $color-light: #fafafa;
 $color-white: #ffffff;
 
-// STATUS
-// ----------------------------------------------------------------------
-$color-error: #ff6347;
-$color-success: #008080;
-
 // BRAND
 // ----------------------------------------------------------------------
 $color-brand-1: #42b883;
 $color-brand-2: #35495e;
 $color-brand-2--dark: color.mix($color-black, $color-brand-2, 20%);
 $color-gradient: linear-gradient($color-brand-1, $color-brand-2);
+
+// STATUS
+// ----------------------------------------------------------------------
+$color-error: #ff6347;
+$color-success: #008080;
