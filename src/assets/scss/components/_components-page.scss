@@ -1,0 +1,36 @@
+// COMPONENTS
+// PAGE
+// =================================================
+@use "../abstracts/mixins/abstracts-mixins-media" as *;
+@use "../abstracts/variables/abstracts-variables-colors" as *;
+@use "../abstracts/variables/abstracts-variables-fonts" as *;
+
+.page {
+	font-size: 62.5%;
+}
+
+.page-body {
+	padding: 7.2rem 0 0;
+	background-color: $color-light;
+	color: $color-gray;
+	font-family: $font-brand-2;
+	font-size: 1.6rem;
+	-webkit-font-smoothing: antialiased;
+}
+
+.page-main {
+	padding: 6.4rem 0;
+
+	@include media("md") {
+		padding: 4rem 0;
+	}
+
+	&__inner {
+		width: 100%;
+	}
+}
+
+.page-inner {
+	width: 100%;
+	padding: 0 3rem;
+}

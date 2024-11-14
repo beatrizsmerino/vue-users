@@ -106,80 +106,18 @@
 	@import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
 	@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 
-	// RESET
-	// -----------------------------------------
+	// PARTIALS SCSS
+	// ===============================================================================
 
-	[v-cloak] {
-		display: none;
-	}
+	// BASE
+	// ----------------------------------------------------------------------
+	@use "@/assets/scss/base/base-global";
 
-	*,
-	*:after,
-	*:before {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
+	// COMPONENTS
+	// ----------------------------------------------------------------------
+	@use "@/assets/scss/components/components-page";
 
-	a {
-		text-decoration: none;
-	}
-
-	button {
-		appearance: none;
-		outline: none;
-	}
-
-	// PAGE
-	// -----------------------------------------
-
-	.page {
-		font-size: 62.5%;
-	}
-
-	.page-body {
-		padding: 7.2rem 0 0;
-		background-color: $color-light;
-		color: $color-gray;
-		font-family: $font-brand-2;
-		font-size: 1.6rem;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	.page-main {
-		padding: 6.4rem 0;
-
-		@include media("md") {
-			padding: 4rem 0;
-		}
-
-		&__inner {
-			width: 100%;
-		}
-	}
-
-	.page-inner {
-		width: 100%;
-		padding: 0 3rem;
-	}
-
-	// VUE TRANSITIONS
-	// -----------------------------------------
-
-	/* default animation if don't use a name in the tag transition/transition-group (WITHOUT NAME) */
-	.v-enter {
-		opacity: 0;
-	}
-
-	.v-enter-active {
-		transition: opacity 1s;
-	}
-
-	.v-leave-to {
-		opacity: 0;
-	}
-
-	.v-leave-active {
-		transition: opacity 0.5s linear 0.5s;
-	}
+	// ANIMATIONS
+	// ----------------------------------------------------------------------
+	@use "@/assets/scss/animations/animations-vue-transitions";
 </style>
