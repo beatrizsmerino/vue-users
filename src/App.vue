@@ -102,10 +102,6 @@
 </script>
 
 <style lang="scss">
-	@import "./assets/fonts/DauphinPlain/font.css";
-	@import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
-	@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
-
 	// PARTIALS SCSS
 	// ===============================================================================
 
@@ -121,4 +117,10 @@
 	// ANIMATIONS
 	// ----------------------------------------------------------------------
 	@use "@/assets/scss/animations/animations-vue-transitions";
+</style>
+
+<style lang="scss">
+	@import "./assets/fonts/DauphinPlain/font.css";
+	@import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
+	@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 </style>
