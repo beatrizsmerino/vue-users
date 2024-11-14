@@ -109,6 +109,7 @@
 	// ----------------------------------------------------------------------
 	@use "@/assets/scss/base/base-reset";
 	@use "@/assets/scss/base/base-global";
+	@use "@/assets/scss/base/base-fonts";
 
 	// COMPONENTS
 	// ----------------------------------------------------------------------
@@ -117,10 +118,4 @@
 	// ANIMATIONS
 	// ----------------------------------------------------------------------
 	@use "@/assets/scss/animations/animations-vue-transitions";
-</style>
-
-<style lang="scss">
-	@import "./assets/fonts/DauphinPlain/font.css";
-	@import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
-	@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 </style>
