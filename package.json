@@ -1,5 +1,5 @@
 {
-	"version": "3.5.3",
+	"version": "3.5.4",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
