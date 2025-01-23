@@ -84,6 +84,19 @@ module.exports = {
 				],
 			},
 		],
+		"declaration-property-value-no-unknown": [
+			true,
+			{
+				"ignoreProperties": {
+					"box-shadow": [
+						"/^((inset\\s+)?[0-9.]+(px|rem|em|%)?\\s*){1,4}rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
+					],
+					"border": [
+						"/^[0-9.]+(px|rem|em|%)\\s+(solid|dashed|dotted)\\s+(\\$[a-zA-Z0-9-_]+|rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\))$/",
+					],
+				},
+			},
+		],
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
 		"function-calc-no-unspaced-operator": true,
