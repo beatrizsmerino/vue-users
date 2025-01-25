@@ -54,7 +54,7 @@
 		"prettier": "^3.4.2",
 		"sass": "^1.83.4",
 		"sass-loader": "^16",
-		"stylelint": "^16.13.2",
+		"stylelint": "^16.14.0",
 		"stylelint-config-property-sort-order-smacss": "^10.0.0",
 		"stylelint-config-recommended-vue": "^1.6.0",
 		"stylelint-config-sass-guidelines": "^12.1.0",
