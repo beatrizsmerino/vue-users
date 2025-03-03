@@ -11,20 +11,25 @@
 
 			<router-view :users-fetch="getUsers" />
 		</main>
+
+		<UILoader v-if="isLoading" />
 	</div>
 </template>
 
 <script>
 	import PageHeader from "@/components/Page/PageHeader";
 	import PageTitle from "@/components/Page/PageTitle";
+	import UILoader from "@/components/UI/UILoader";
 
 	export default {
 		"components": {
 			PageHeader,
 			PageTitle,
+			UILoader,
 		},
 		data() {
 			return {
+				"isLoading": false,
 				"usersList": [],
 			};
 		},
@@ -82,10 +87,12 @@
 				return users;
 			},
 			async setUsers() {
+				this.isLoading = true;
 				const data = await this.fetchUsers();
 				const usersFormatted = await this.createUsers(data);
 				this.usersList = usersFormatted;
 				this.$tools.setLocalStorage("users", this.usersList);
+				this.isLoading = false;
 			},
 			checkUsers() {
 				if (this.$tools.getLocalStorage("users")) {
