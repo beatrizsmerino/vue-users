@@ -88,6 +88,9 @@ module.exports = {
 			true,
 			{
 				"ignoreProperties": {
+					"background-color": [
+						"/^rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
+					],
 					"box-shadow": [
 						"/^((inset\\s+)?[0-9.]+(px|rem|em|%)?\\s*){1,4}rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
 					],
