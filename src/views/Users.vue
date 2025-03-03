@@ -2,7 +2,7 @@
 	<div class="page-main__inner">
 		<section class="page-section">
 			<UIError
-				v-if="usersList.length === 0"
+				v-if="usersError"
 				:error="usersError"
 			/>
 			<UsersList

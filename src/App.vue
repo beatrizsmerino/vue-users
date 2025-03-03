@@ -35,10 +35,7 @@
 			return {
 				"isLoading": false,
 				"usersList": [],
-				"usersError": {
-					"message": "Users not found",
-					"solution": "Click on the button 'GET USERS'",
-				},
+				"usersError": null,
 			};
 		},
 		"computed": {
@@ -100,6 +97,7 @@
 				const usersFormatted = await this.createUsers(data);
 				this.usersList = usersFormatted;
 				this.$tools.setLocalStorage("users", this.usersList);
+				this.handleUsersError();
 				this.isLoading = false;
 			},
 			checkUsers() {
@@ -109,11 +107,23 @@
 					this.setUsers();
 				}
 			},
+			handleUsersError() {
+				if (this.usersList.length === 0) {
+					this.usersError = {
+						"message": "Users not found",
+						"solution": "Click on the button 'GET USERS'",
+					};
+				} else {
+					this.usersError = null;
+				}
+			},
 			recoverUsers() {
 				this.usersList = this.$tools.getLocalStorage("users");
+				this.handleUsersError();
 			},
 			updateUsers(newUsers) {
 				this.usersList = newUsers;
+				this.handleUsersError();
 			},
 		},
 	};
