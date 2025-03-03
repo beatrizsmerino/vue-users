@@ -118,4 +118,5 @@
 	// ANIMATIONS
 	// ----------------------------------------------------------------------
 	@use "@/assets/scss/animations/animations-vue-transitions";
+	@use "@/assets/scss/animations/animations-loader-dots";
 </style>
