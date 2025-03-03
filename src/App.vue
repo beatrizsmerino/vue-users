@@ -103,12 +103,12 @@
 			},
 			checkUsers() {
 				if (this.$tools.getLocalStorage("users")) {
-					this.updatedUsers();
+					this.recoverUsers();
 				} else {
 					this.setUsers();
 				}
 			},
-			updatedUsers() {
+			recoverUsers() {
 				this.usersList = this.$tools.getLocalStorage("users");
 			},
 		},
