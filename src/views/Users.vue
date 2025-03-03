@@ -52,6 +52,7 @@
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
 					this.$tools.setLocalStorage("users", this.usersList);
+					this.$emit("update-users", this.usersList);
 				}
 			},
 		},

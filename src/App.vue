@@ -12,6 +12,7 @@
 			<router-view
 				:users-fetch="getUsers"
 				:users-error="usersError"
+				@update-users="updateUsers"
 			/>
 		</main>
 
@@ -110,6 +111,9 @@
 			},
 			recoverUsers() {
 				this.usersList = this.$tools.getLocalStorage("users");
+			},
+			updateUsers(newUsers) {
+				this.usersList = newUsers;
 			},
 		},
 	};
