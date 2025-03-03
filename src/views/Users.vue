@@ -3,7 +3,7 @@
 		<section class="page-section">
 			<UIError
 				v-if="usersList.length === 0"
-				:error="errorUsers"
+				:error="usersError"
 			/>
 			<UsersList
 				v-else
@@ -34,15 +34,12 @@
 		},
 		"props": {
 			"usersFetch": Array,
+			"usersError": Object,
 		},
 		data() {
 			return {
 				"usersList": this.usersFetch,
 				"infoUserHidden": false,
-				"errorUsers": {
-					"message": "Users not found",
-					"solution": "Click on the button 'GET USERS'",
-				},
 			};
 		},
 		"watch": {

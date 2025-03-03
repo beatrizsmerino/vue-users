@@ -30,6 +30,7 @@
 		"name": "Home",
 		"props": {
 			"usersFetch": Array,
+			"usersError": Object,
 		},
 	};
 </script>

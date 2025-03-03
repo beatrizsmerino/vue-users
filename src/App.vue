@@ -9,7 +9,10 @@
 		<main class="page-main">
 			<PageTitle />
 
-			<router-view :users-fetch="getUsers" />
+			<router-view
+				:users-fetch="getUsers"
+				:users-error="usersError"
+			/>
 		</main>
 
 		<UILoader v-if="isLoading" />
@@ -31,6 +34,10 @@
 			return {
 				"isLoading": false,
 				"usersList": [],
+				"usersError": {
+					"message": "Users not found",
+					"solution": "Click on the button 'GET USERS'",
+				},
 			};
 		},
 		"computed": {
