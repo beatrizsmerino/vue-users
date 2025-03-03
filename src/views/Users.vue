@@ -9,6 +9,7 @@
 				v-else
 				:users="usersList"
 				:state-hidden="infoUserHidden"
+				@update-users-list="updateUsersList"
 			/>
 			<UsersButtons
 				@order="orderUsers"
@@ -61,7 +62,9 @@
 				this.infoUserHidden = !this.infoUserHidden;
 			},
 			orderUsers() {
-				this.usersList.sort(() => Math.random() - 0.5);
+				this.usersList = [
+					...this.usersList,
+				].sort(() => Math.random() - 0.5);
 				this.$tools.setLocalStorage("users", this.usersList);
 			},
 			async getUsers() {
@@ -69,6 +72,9 @@
 			},
 			removeAllUsers() {
 				this.usersList = [];
+			},
+			updateUsersList(newUsers) {
+				this.usersList = newUsers;
 			},
 		},
 	};
