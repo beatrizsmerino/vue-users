@@ -100,14 +100,14 @@
 				this.isLoading = false;
 			},
 			checkUsers() {
-				if (this.$tools.getLocalStorage("users")) {
+				if (this.$tools.getLocalStorage("users")?.length > 0) {
 					this.recoverUsers();
 				} else {
 					this.setUsers();
 				}
 			},
 			handleUsersError() {
-				if (this.usersList.length === 0) {
+				if (this.usersList?.length === 0) {
 					this.usersError = {
 						"message": "Users not found",
 						"solution": "Click on the button 'GET USERS'",
