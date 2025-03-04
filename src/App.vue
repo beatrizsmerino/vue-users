@@ -96,7 +96,6 @@
 				const data = await this.fetchUsers();
 				const usersFormatted = await this.createUsers(data);
 				this.usersList = usersFormatted;
-				this.$tools.setLocalStorage("users", this.usersList);
 				this.handleUsersError();
 				this.isLoading = false;
 			},
@@ -123,6 +122,7 @@
 			},
 			updateUsers(newUsers) {
 				this.usersList = newUsers;
+				this.$tools.setLocalStorage("users", this.usersList);
 				this.handleUsersError();
 			},
 		},

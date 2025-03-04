@@ -55,7 +55,6 @@
 		"methods": {
 			userRemove(userToRemove) {
 				this.usersList = this.usersList.filter(user => user !== userToRemove);
-				this.$tools.setLocalStorage("users", this.usersList);
 			},
 		},
 	};
