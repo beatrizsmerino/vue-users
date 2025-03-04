@@ -74,18 +74,51 @@
 				this.handleFetchUsersSuccess();
 			},
 			async setUsers() {
-				this.isLoading = true;
-				const data = await this.fetchUsers();
-				const usersFormatted = await this.createUsers(data);
-				this.usersList = usersFormatted;
-				this.handleFetchUsersSuccess();
-				this.isLoading = false;
+				try {
+					this.isLoading = true;
+					const data = await this.fetchUsers();
+					const usersFormatted = await this.createUsers(data);
+					this.usersList = usersFormatted;
+					this.handleFetchUsersSuccess();
+					this.isLoading = false;
+				} catch (error) {
+					this.handleFetchUsersError(error);
+				} finally {
+					this.isLoading = false;
+				}
+			},
+			async fetchData(url, controller) {
+				const response = await fetch(url, {
+					"signal": controller.signal,
+				});
+
+				if (!response.ok) {
+					this.usersError = {
+						"message": "Server error",
+						"solution":
+							response.status && response.statusText
+								? `Error ${response.status}: ${response.statusText}`
+								: "Unexpected error, please try again later.",
+					};
+
+					throw new Error(this.usersError);
+				}
 			},
 			async fetchUsers() {
-				const response = await fetch("https://randomuser.me/api/?results=10");
-				const data = await response.json();
+				const controller = new AbortController();
+				const timeoutFetch = setTimeout(() => controller.abort(), 10000);
 
-				return data;
+				try {
+					const response = await this.fetchData("https://randomuser.me/api/?results=10", controller);
+					const data = await response.json();
+
+					return data;
+				} catch (error) {
+					this.handleFetchUsersError(error);
+					throw error;
+				} finally {
+					clearTimeout(timeoutFetch);
+				}
 			},
 			createUsers(data) {
 				const users = data.results.map(user => ({
@@ -114,10 +147,24 @@
 				if (this.usersList?.length === 0) {
 					this.usersError = {
 						"message": "Users not found",
-						"solution": "Click on the button 'GET USERS'",
+						"solution": "Click on the button 'GET USERS'.",
 					};
 				} else {
 					this.usersError = null;
+				}
+			},
+			handleFetchUsersError(error) {
+				console.error("Error fetching users:", error);
+				if (error.name === "AbortError") {
+					this.usersError = {
+						"message": "API request timed out",
+						"solution": "The server is taking too long to respond, please try again later.",
+					};
+				} else {
+					this.usersError = {
+						"message": "Invalid Domain",
+						"solution": "Please check your API url and try again.",
+					};
 				}
 			},
 			updateUsers(newUsers) {
