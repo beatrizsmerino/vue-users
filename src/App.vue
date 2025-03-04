@@ -71,14 +71,14 @@
 			},
 			recoverUsers() {
 				this.usersList = this.$tools.getLocalStorage("users");
-				this.handleUsersError();
+				this.handleFetchUsersSuccess();
 			},
 			async setUsers() {
 				this.isLoading = true;
 				const data = await this.fetchUsers();
 				const usersFormatted = await this.createUsers(data);
 				this.usersList = usersFormatted;
-				this.handleUsersError();
+				this.handleFetchUsersSuccess();
 				this.isLoading = false;
 			},
 			async fetchUsers() {
@@ -110,7 +110,7 @@
 
 				return users;
 			},
-			handleUsersError() {
+			handleFetchUsersSuccess() {
 				if (this.usersList?.length === 0) {
 					this.usersError = {
 						"message": "Users not found",
@@ -123,7 +123,7 @@
 			updateUsers(newUsers) {
 				this.usersList = newUsers;
 				this.$tools.setLocalStorage("users", this.usersList);
-				this.handleUsersError();
+				this.handleFetchUsersSuccess();
 			},
 		},
 	};
