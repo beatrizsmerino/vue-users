@@ -62,6 +62,25 @@
 			this.onCreatedGetUsers();
 		},
 		"methods": {
+			onCreatedGetUsers() {
+				if (this.$tools.getLocalStorage("users")?.length > 0) {
+					this.recoverUsers();
+				} else {
+					this.setUsers();
+				}
+			},
+			recoverUsers() {
+				this.usersList = this.$tools.getLocalStorage("users");
+				this.handleUsersError();
+			},
+			async setUsers() {
+				this.isLoading = true;
+				const data = await this.fetchUsers();
+				const usersFormatted = await this.createUsers(data);
+				this.usersList = usersFormatted;
+				this.handleUsersError();
+				this.isLoading = false;
+			},
 			async fetchUsers() {
 				const response = await fetch("https://randomuser.me/api/?results=10");
 				const data = await response.json();
@@ -91,21 +110,6 @@
 
 				return users;
 			},
-			async setUsers() {
-				this.isLoading = true;
-				const data = await this.fetchUsers();
-				const usersFormatted = await this.createUsers(data);
-				this.usersList = usersFormatted;
-				this.handleUsersError();
-				this.isLoading = false;
-			},
-			onCreatedGetUsers() {
-				if (this.$tools.getLocalStorage("users")?.length > 0) {
-					this.recoverUsers();
-				} else {
-					this.setUsers();
-				}
-			},
 			handleUsersError() {
 				if (this.usersList?.length === 0) {
 					this.usersError = {
@@ -115,10 +119,6 @@
 				} else {
 					this.usersError = null;
 				}
-			},
-			recoverUsers() {
-				this.usersList = this.$tools.getLocalStorage("users");
-				this.handleUsersError();
 			},
 			updateUsers(newUsers) {
 				this.usersList = newUsers;
