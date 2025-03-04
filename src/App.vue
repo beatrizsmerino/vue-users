@@ -59,7 +59,7 @@
 			},
 		},
 		created() {
-			this.checkUsers();
+			this.onCreatedGetUsers();
 		},
 		"methods": {
 			async fetchUsers() {
@@ -99,7 +99,7 @@
 				this.handleUsersError();
 				this.isLoading = false;
 			},
-			checkUsers() {
+			onCreatedGetUsers() {
 				if (this.$tools.getLocalStorage("users")?.length > 0) {
 					this.recoverUsers();
 				} else {
