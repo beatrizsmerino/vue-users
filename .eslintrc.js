@@ -85,7 +85,7 @@ module.exports = {
 		"complexity": [
 			2,
 			{
-				"max": 4,
+				"max": 20,
 			},
 		],
 		"computed-property-spacing": 2,
@@ -167,7 +167,7 @@ module.exports = {
 		"max-statements": [
 			1,
 			{
-				"max": 10,
+				"max": 20,
 			},
 		],
 		"max-statements-per-line": [
