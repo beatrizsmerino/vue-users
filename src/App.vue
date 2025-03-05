@@ -62,11 +62,14 @@
 			this.onCreatedGetUsers();
 		},
 		"methods": {
-			onCreatedGetUsers() {
-				if (this.$tools.getLocalStorage("users")?.length > 0) {
+			async onCreatedGetUsers() {
+				if (
+					Array.isArray(this.$tools.getLocalStorage("users")) &&
+					this.$tools.getLocalStorage("users").length > 0
+				) {
 					this.recoverUsers();
 				} else {
-					this.setUsers();
+					await this.setUsers();
 				}
 			},
 			recoverUsers() {
@@ -79,11 +82,10 @@
 					const data = await this.fetchUsers();
 					const usersFormatted = await this.createUsers(data);
 					this.usersList = usersFormatted;
-					this.handleFetchUsersSuccess();
-					this.isLoading = false;
 				} catch (error) {
 					this.handleFetchUsersError(error);
 				} finally {
+					this.handleFetchUsersSuccess();
 					this.isLoading = false;
 				}
 			},
@@ -103,6 +105,8 @@
 
 					throw new Error(this.usersError);
 				}
+
+				return response;
 			},
 			async fetchUsers() {
 				const controller = new AbortController();
@@ -110,6 +114,10 @@
 
 				try {
 					const response = await this.fetchData("https://randomuser.me/api/?results=10", controller);
+					if (!response) {
+						throw new Error("Invalid response from fetchData");
+					}
+
 					const data = await response.json();
 
 					return data;
@@ -121,25 +129,26 @@
 				}
 			},
 			createUsers(data) {
-				const users = data.results.map(user => ({
-					"name": user.name,
-					"username": user.login.username,
-					"gender": user.gender,
-					"nationality": user.nat,
-					"streetNumber": user.location.street.number,
-					"streetName": user.location.street.name,
-					"city": user.location.city,
-					"state": user.location.state,
-					"postcode": user.location.postcode,
-					"latitude": user.location.coordinates.latitude,
-					"longitude": user.location.coordinates.longitude,
-					"registered": user.registered.date,
-					"phone": user.phone,
-					"cell": user.cell,
-					"email": user.email,
-					"imageMedium": user.picture.medium,
-					"imageLarge": user.picture.large,
-				}));
+				const users =
+					data?.results?.map(user => ({
+						"name": user.name ?? "N/A",
+						"username": user.login?.username ?? "N/A",
+						"gender": user.gender ?? "N/A",
+						"nationality": user.nat ?? "N/A",
+						"streetNumber": user.location?.street?.number ?? "N/A",
+						"streetName": user.location?.street?.name ?? "N/A",
+						"city": user.location?.city ?? "N/A",
+						"state": user.location?.state ?? "N/A",
+						"postcode": user.location?.postcode ?? "N/A",
+						"latitude": user.location?.coordinates?.latitude ?? "N/A",
+						"longitude": user.location?.coordinates?.longitude ?? "N/A",
+						"registered": user.registered?.date ?? "N/A",
+						"phone": user.phone ?? "N/A",
+						"cell": user.cell ?? "N/A",
+						"email": user.email ?? "N/A",
+						"imageMedium": user.picture?.medium ?? "",
+						"imageLarge": user.picture?.large ?? "",
+					})) ?? [];
 
 				return users;
 			},
@@ -154,7 +163,6 @@
 				}
 			},
 			handleFetchUsersError(error) {
-				console.error("Error fetching users:", error);
 				if (error.name === "AbortError") {
 					this.usersError = {
 						"message": "API request timed out",
@@ -162,10 +170,11 @@
 					};
 				} else {
 					this.usersError = {
-						"message": "Invalid Domain",
-						"solution": "Please check your API url and try again.",
+						"message": "An unexpected error occurred",
+						"solution": error.message || "Please try again later.",
 					};
 				}
+				this.handleFetchUsersSuccess();
 			},
 			updateUsers(newUsers) {
 				this.usersList = newUsers;
