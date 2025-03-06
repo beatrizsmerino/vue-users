@@ -27,6 +27,7 @@
 		},
 		"props": {
 			"usersFetch": Array,
+			"usersError": Object,
 			"username": String,
 		},
 		data() {

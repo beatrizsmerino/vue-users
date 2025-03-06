@@ -2,13 +2,14 @@
 	<div class="page-main__inner">
 		<section class="page-section">
 			<UIError
-				v-if="usersList.length === 0"
-				:error="errorUsers"
+				v-if="usersError"
+				:error="usersError"
 			/>
 			<UsersList
 				v-else
 				:users="usersList"
 				:state-hidden="infoUserHidden"
+				@update-users-list="updateUsersList"
 			/>
 			<UsersButtons
 				@order="orderUsers"
@@ -34,15 +35,12 @@
 		},
 		"props": {
 			"usersFetch": Array,
+			"usersError": Object,
 		},
 		data() {
 			return {
 				"usersList": this.usersFetch,
 				"infoUserHidden": false,
-				"errorUsers": {
-					"message": "Users not found",
-					"solution": "Click on the button 'GET USERS'",
-				},
 			};
 		},
 		"watch": {
@@ -54,7 +52,7 @@
 			usersList(newVal, oldVal) {
 				if (newVal !== oldVal) {
 					this.usersList = newVal;
-					this.$tools.setLocalStorage("users", this.usersList);
+					this.$emit("update-users", this.usersList);
 				}
 			},
 		},
@@ -63,14 +61,18 @@
 				this.infoUserHidden = !this.infoUserHidden;
 			},
 			orderUsers() {
-				this.usersList.sort(() => Math.random() - 0.5);
-				this.$tools.setLocalStorage("users", this.usersList);
+				this.usersList = [
+					...this.usersList,
+				].sort(() => Math.random() - 0.5);
 			},
 			async getUsers() {
 				await this.$parent.setUsers();
 			},
 			removeAllUsers() {
 				this.usersList = [];
+			},
+			updateUsersList(newUsers) {
+				this.usersList = newUsers;
 			},
 		},
 	};

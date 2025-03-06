@@ -40,14 +40,21 @@
 			};
 		},
 		"watch": {
-			users(newValue) {
-				this.usersList = newValue;
+			users(newValue, oldValue) {
+				if (newValue !== oldValue) {
+					this.usersList = newValue;
+				}
+			},
+			usersList(newValue, oldValue) {
+				if (newValue !== oldValue) {
+					this.usersList = newValue;
+					this.$emit("update-users-list", this.usersList);
+				}
 			},
 		},
 		"methods": {
 			userRemove(userToRemove) {
-				this.usersList.splice(this.usersList.indexOf(userToRemove), 1);
-				this.$tools.setLocalStorage("users", this.usersList);
+				this.usersList = this.usersList.filter(user => user !== userToRemove);
 			},
 		},
 	};

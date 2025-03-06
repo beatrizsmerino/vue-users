@@ -88,11 +88,14 @@ module.exports = {
 			true,
 			{
 				"ignoreProperties": {
-					"box-shadow": [
-						"/^((inset\\s+)?[0-9.]+(px|rem|em|%)?\\s*){1,4}rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
+					"background-color": [
+						"/^rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
 					],
 					"border": [
 						"/^[0-9.]+(px|rem|em|%)\\s+(solid|dashed|dotted)\\s+(\\$[a-zA-Z0-9-_]+|rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\))$/",
+					],
+					"box-shadow": [
+						"/^((inset\\s+)?[0-9.]+(px|rem|em|%)?\\s*){1,4}rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
 					],
 				},
 			},
