@@ -198,19 +198,16 @@
 	// -----------------------------------------
 
 	/* animation title (WITH NAME FADE) */
-	.fade-enter {
-		opacity: 1;
-	}
-
 	.fade-enter-active {
 		transition: all 1s ease-in-out 0s;
 	}
 
-	.fade-leave-to {
-		opacity: 0;
+	.fade-leave-active {
+		transition: all 0s ease-in-out 0s;
 	}
 
-	.fade-leave-active {
-		transition: all 0.5s ease-in-out 0s;
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
 	}
 </style>
