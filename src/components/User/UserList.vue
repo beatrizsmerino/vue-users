@@ -34,6 +34,9 @@
 			"users": Array,
 			"stateHidden": Boolean,
 		},
+		"emits": [
+			"update-users-list",
+		],
 		data() {
 			return {
 				"usersList": this.users,

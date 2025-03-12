@@ -73,6 +73,9 @@
 			},
 			"isHidden": Boolean,
 		},
+		"emits": [
+			"remove",
+		],
 		"methods": {
 			userRemoveEmit(userToRemove) {
 				this.$emit("remove", userToRemove);

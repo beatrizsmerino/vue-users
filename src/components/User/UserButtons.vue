@@ -103,6 +103,12 @@
 		"components": {
 			UIButton,
 		},
+		"emits": [
+			"hide",
+			"order",
+			"get-all",
+			"remove-all",
+		],
 		data() {
 			return {
 				"showUserInfo": false,

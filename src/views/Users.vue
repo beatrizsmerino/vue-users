@@ -37,6 +37,9 @@
 			"usersFetch": Array,
 			"usersError": Object,
 		},
+		"emits": [
+			"update-users",
+		],
 		data() {
 			return {
 				"usersList": this.usersFetch,
