@@ -161,6 +161,7 @@
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
+			background-color: $color-brand-2;
 			cursor: pointer;
 
 			&__icon {
@@ -197,17 +198,6 @@
 			.button-close {
 				top: 0.5rem;
 				right: 0.5rem;
-				background-color: $color-light;
-
-				&:hover {
-					background-color: $color-brand-1;
-
-					.button-close {
-						&__icon {
-							color: $color-light;
-						}
-					}
-				}
 			}
 		}
 	}
