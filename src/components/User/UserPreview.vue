@@ -187,14 +187,6 @@
 			padding: 0.5rem;
 			border-radius: 50%;
 
-			.user-preview {
-				&__content {
-					display: none;
-					transition: all 0.5s ease-in-out 0s;
-					opacity: 0;
-				}
-			}
-
 			.button-close {
 				top: 0.5rem;
 				right: 0.5rem;
