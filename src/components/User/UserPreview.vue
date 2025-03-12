@@ -109,7 +109,7 @@
 
 			&.is-hidden {
 				display: none;
-				transition: all 0.5s ease-out 0s;
+				transition: all 0.5s ease-in-out 0s;
 				opacity: 0;
 			}
 		}
@@ -225,6 +225,6 @@
 	}
 
 	.fade-leave-active {
-		transition: all 0.5s ease-out 0s;
+		transition: all 0.5s ease-in-out 0s;
 	}
 </style>

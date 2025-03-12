@@ -92,7 +92,7 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			max-width: 70rem;
-			transition: all 0.5s ease-out 0.8s;
+			transition: all 0.5s ease-in-out 0.8s;
 
 			.user-list {
 				&__item {
@@ -129,6 +129,6 @@
 
 	/* animation button random (WITH THE NAME SLIDE) */
 	.slide-move {
-		transition: all 0.5s ease-out 0s !important;
+		transition: all 0.5s ease-in-out 0s !important;
 	}
 </style>
