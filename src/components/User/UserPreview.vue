@@ -154,9 +154,13 @@
 		}
 
 		.button-close {
+			display: flex;
 			position: absolute;
 			top: 2rem;
 			right: 2rem;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
 			cursor: pointer;
 
 			&__icon {
@@ -191,12 +195,8 @@
 			}
 
 			.button-close {
-				display: flex;
 				top: 0.5rem;
 				right: 0.5rem;
-				align-items: center;
-				justify-content: center;
-				border-radius: 50%;
 				background-color: $color-light;
 
 				&:hover {
