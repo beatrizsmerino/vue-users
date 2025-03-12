@@ -8,6 +8,7 @@
 
 		<transition name="fade">
 			<div
+				v-if="!isHidden"
 				class="user-preview__content"
 				:class="{ 'is-hidden': isHidden }"
 			>
