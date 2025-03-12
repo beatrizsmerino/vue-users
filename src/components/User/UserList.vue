@@ -14,7 +14,6 @@
 				<UserPreview
 					:data-user="user"
 					:is-hidden="stateHidden"
-					:class="{ 'is-hidden-info': stateHidden }"
 					@remove="userRemove"
 				/>
 			</li>

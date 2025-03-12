@@ -1,5 +1,8 @@
 <template>
-	<div class="user-preview">
+	<div
+		class="user-preview"
+		:class="{ 'is-hidden-info': isHidden }"
+	>
 		<img
 			:src="dataUser.imageMedium"
 			:alt="dataUser.name.first + ' ' + dataUser.name.last"
@@ -10,7 +13,6 @@
 			<div
 				v-if="!isHidden"
 				class="user-preview__content"
-				:class="{ 'is-hidden': isHidden }"
 			>
 				<h3 class="user-preview__name">
 					{{ dataUser.name.first }} {{ dataUser.name.last }}
@@ -106,12 +108,6 @@
 			width: calc(100% - 8rem - 1.6rem);
 			margin-left: 1.6rem;
 			color: $color-white;
-
-			&.is-hidden {
-				display: none;
-				transition: all 0.5s ease-in-out 0s;
-				opacity: 0;
-			}
 		}
 
 		&__name {
@@ -185,6 +181,14 @@
 			justify-content: center;
 			padding: 0.5rem;
 			border-radius: 50%;
+
+			.user-preview {
+				&__content {
+					display: none;
+					transition: all 0.5s ease-in-out 0s;
+					opacity: 0;
+				}
+			}
 
 			.button-close {
 				display: flex;
