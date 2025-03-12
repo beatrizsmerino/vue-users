@@ -108,22 +108,16 @@
 	// -----------------------------------------
 
 	/* animation list (WITH THE NAME SLIDE) */
-	.slide-enter {
+	.slide-enter-active,
+	.slide-leave-active {
 		transform: translateX(50rem);
-		opacity: 1;
-	}
-
-	.slide-enter-active {
 		transition: all 1s ease-in-out 0s !important;
 	}
 
+	.slide-enter-from,
 	.slide-leave-to {
 		transform: translateX(-50rem);
 		opacity: 0;
-	}
-
-	.slide-leave-active {
-		transition: all 1s ease-in-out 0s !important;
 	}
 
 	/* animation button random (WITH THE NAME SLIDE) */
