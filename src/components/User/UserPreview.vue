@@ -1,5 +1,8 @@
 <template>
-	<div class="user-preview">
+	<div
+		class="user-preview"
+		:class="{ 'is-hidden-info': isHidden }"
+	>
 		<img
 			:src="dataUser.imageMedium"
 			:alt="dataUser.name.first + ' ' + dataUser.name.last"
@@ -8,8 +11,8 @@
 
 		<transition name="fade">
 			<div
+				v-if="!isHidden"
 				class="user-preview__content"
-				:class="{ 'is-hidden': isHidden }"
 			>
 				<h3 class="user-preview__name">
 					{{ dataUser.name.first }} {{ dataUser.name.last }}
@@ -73,6 +76,9 @@
 			},
 			"isHidden": Boolean,
 		},
+		"emits": [
+			"remove",
+		],
 		"methods": {
 			userRemoveEmit(userToRemove) {
 				this.$emit("remove", userToRemove);
@@ -102,12 +108,6 @@
 			width: calc(100% - 8rem - 1.6rem);
 			margin-left: 1.6rem;
 			color: $color-white;
-
-			&.is-hidden {
-				display: none;
-				transition: all 0.5s ease-out 0s;
-				opacity: 0;
-			}
 		}
 
 		&__name {
@@ -154,9 +154,14 @@
 		}
 
 		.button-close {
+			display: flex;
 			position: absolute;
 			top: 2rem;
 			right: 2rem;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background-color: $color-brand-2;
 			cursor: pointer;
 
 			&__icon {
@@ -176,30 +181,14 @@
 		}
 
 		&.is-hidden-info {
-			display: flex;
 			align-items: center;
 			justify-content: center;
 			padding: 0.5rem;
 			border-radius: 50%;
 
 			.button-close {
-				display: flex;
 				top: 0.5rem;
 				right: 0.5rem;
-				align-items: center;
-				justify-content: center;
-				border-radius: 50%;
-				background-color: $color-light;
-
-				&:hover {
-					background-color: $color-brand-1;
-
-					.button-close {
-						&__icon {
-							color: $color-light;
-						}
-					}
-				}
 			}
 		}
 	}
@@ -208,19 +197,16 @@
 	// -----------------------------------------
 
 	/* animation title (WITH NAME FADE) */
-	.fade-enter {
-		opacity: 1;
-	}
-
 	.fade-enter-active {
 		transition: all 1s ease-in-out 0s;
 	}
 
-	.fade-leave-to {
-		opacity: 0;
+	.fade-leave-active {
+		transition: all 0s ease-in-out 0s;
 	}
 
-	.fade-leave-active {
-		transition: all 0.5s ease-out 0s;
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
 	}
 </style>
