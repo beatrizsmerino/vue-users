@@ -14,7 +14,6 @@
 				<UserPreview
 					:data-user="user"
 					:is-hidden="stateHidden"
-					:class="{ 'is-hidden-info': stateHidden }"
 					@remove="userRemove"
 				/>
 			</li>
@@ -34,6 +33,9 @@
 			"users": Array,
 			"stateHidden": Boolean,
 		},
+		"emits": [
+			"update-users-list",
+		],
 		data() {
 			return {
 				"usersList": this.users,
@@ -89,7 +91,7 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			max-width: 70rem;
-			transition: all 0.5s ease-out 0.8s;
+			transition: all 0.5s ease-in-out 0.8s;
 
 			.user-list {
 				&__item {
@@ -106,26 +108,20 @@
 	// -----------------------------------------
 
 	/* animation list (WITH THE NAME SLIDE) */
-	.slide-enter {
+	.slide-enter-active,
+	.slide-leave-active {
 		transform: translateX(50rem);
-		opacity: 1;
-	}
-
-	.slide-enter-active {
 		transition: all 1s ease-in-out 0s !important;
 	}
 
+	.slide-enter-from,
 	.slide-leave-to {
 		transform: translateX(-50rem);
 		opacity: 0;
 	}
 
-	.slide-leave-active {
-		transition: all 1s ease-in-out 0s !important;
-	}
-
 	/* animation button random (WITH THE NAME SLIDE) */
 	.slide-move {
-		transition: all 0.5s ease-out 0s !important;
+		transition: all 0.5s ease-in-out 0s !important;
 	}
 </style>

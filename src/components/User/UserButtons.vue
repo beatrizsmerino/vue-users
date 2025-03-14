@@ -103,6 +103,12 @@
 		"components": {
 			UIButton,
 		},
+		"emits": [
+			"hide",
+			"order",
+			"get-all",
+			"remove-all",
+		],
 		data() {
 			return {
 				"showUserInfo": false,
@@ -120,7 +126,7 @@
 		created() {
 			window.addEventListener("resize", this.handleResize);
 		},
-		destroyed() {
+		unmounted() {
 			window.removeEventListener("resize", this.handleResize);
 		},
 		mounted() {
