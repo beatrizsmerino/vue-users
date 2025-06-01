@@ -31,7 +31,7 @@
 		"vue2-leaflet": "^2.7.1"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.27.1",
+		"@babel/core": "^7.27.4",
 		"@babel/eslint-parser": "^7.27.1",
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
