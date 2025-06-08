@@ -10,6 +10,7 @@
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"postinstall": "npm run lint",
 		"prepare": "husky",
+		"env:create": "grep -v '^# ' .env.local.sample > .env.local",
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
 		"prettier:fix": "prettier --write \"./**/*.{css,scss,sass,json,js,cjs,mjs,vue}\"",
