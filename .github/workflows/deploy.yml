@@ -4,6 +4,7 @@ name: 🚀 Deploy project in GitHub Pages
 on:
   push:
     branches: [ master ]
+  workflow_dispatch:
 jobs:
   gh-pages-deploy:
     name: 🧩 Deploying code to gh-pages branch
