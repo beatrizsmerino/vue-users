@@ -27,12 +27,12 @@
 		},
 		data() {
 			return {
-				"googleApiKey": "XXXXXX",
+				"googleApiKey": process.env.VUE_APP_TOKEN_GOOGLE_MAPS || "",
 			};
 		},
 		"computed": {
 			isGoogleMaps() {
-				return this.googleApiKey !== "XXXXXX";
+				return !!this.googleApiKey;
 			},
 		},
 	};
