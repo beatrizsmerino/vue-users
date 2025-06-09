@@ -27,7 +27,7 @@ Is developed with **[Vue 2](https://vuejs.org/)** a Javascript framework, use [V
 npm install
 ```
 
-### Create file for enviroment variables
+### Create file for enviroment variables for development
 
 ```bash
 npm run env:create
