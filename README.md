@@ -19,6 +19,47 @@ It has 3 views: the home, the user list and the user detail. There are several b
 
 Is developed with **[Vue 2](https://vuejs.org/)** a Javascript framework, use [Vue Cli](https://cli.vuejs.org/) and has dependencies as [Vue Router](https://router.vuejs.org/), [Vue Leaflet](https://vue2-leaflet.netlify.app/) and [Google Maps](https://www.npmjs.com/package/@googlemaps/js-api-loader).
 
+### Google Maps API Key Setup
+
+#### Create a Google Maps API Key
+
+To use Google Maps both in development and production, you need to create and configure an API key from Google Cloud.
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/).
+2. Create or select a project.
+3. Enable the **Maps JavaScript API**.
+4. Create a new **API key**.
+5. (Recommended) Restrict the key:
+   - **API restriction**: `Maps JavaScript API`
+   - **Web restriction**:
+     - `http://localhost:8080/*` (for development)
+     - `https://beatrizsmerino.github.io/` (for production)
+
+#### Development Setup (env)
+
+To use the API key in local development, assign it to the `VUE_APP_TOKEN_GOOGLE_MAPS` environment variable.
+
+1. If you don’t have a `.env.local` file yet, generate it with the `npm run env:create` command.
+2. Open `.env.local` file and set your API key as the value of `VUE_APP_TOKEN_GOOGLE_MAPS` variable.
+3. Restart the development server to apply changes with the `npm run serve` command.
+
+> This allows the Vue build process to access the Google Maps API key automatically, without exposing it in the source code.
+
+#### Production Setup (GitHub Actions, GitHub Pages)
+
+To use the API key in production builds (e.g., on GitHub Pages), store `VUE_APP_TOKEN_GOOGLE_MAPS` securely as a GitHub Actions secret.
+
+1. Go in your GitHub repository to [**Settings** → **Secrets** → **Actions**](https://github.com/beatrizsmerino/vue-users/settings/secrets/actions)
+2. Click **"New repository secret"**, set the name as `VUE_APP_TOKEN_GOOGLE_MAPS` and paste your API key as the value.
+3. Check in your GitHub Actions workflow, `.github/workflows/deploy.yml`, if the secret is already injected as an environment variable to use it:
+
+```yaml
+env:
+  VUE_APP_TOKEN_GOOGLE_MAPS: ${{ secrets.VUE_APP_TOKEN_GOOGLE_MAPS }}
+```
+
+> This allows the Vue build process to access the Google Maps API key automatically during `npm run build`, without exposing it in the source code.
+
 ## 🚀 Commands
 
 ### Install dependencies
