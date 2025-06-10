@@ -25,7 +25,11 @@
 				"required": true,
 			},
 			"userDataValue": {
-				"type": String || Date,
+				"type": [
+					String,
+					Number,
+					Date,
+				],
 				"required": true,
 			},
 		},
