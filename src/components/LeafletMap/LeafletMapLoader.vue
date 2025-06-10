@@ -1,30 +1,27 @@
 <template>
-	<div class="leaflet-map">
-		<LMap
-			v-if="showMap"
-			class="leaflet-map__map"
-			:zoom="zoom"
-			:center="center"
-			:options="mapOptions"
-			@update:center="centerUpdate"
-			@update:zoom="zoomUpdate"
-		>
-			<LTileLayer
-				:url="url"
-				:attribution="attribution"
-			/>
-			<LMarker :lat-lng="withPopup">
-				<LPopup>
-					Current location:
-					<p>
-						Latitude: {{ marker.position.lat }}
-						<br />
-						Longitude: {{ marker.position.lng }}
-					</p>
-				</LPopup>
-			</LMarker>
-		</LMap>
-	</div>
+	<LMap
+		v-if="showMap"
+		:zoom="zoom"
+		:center="center"
+		:options="mapOptions"
+		@update:center="centerUpdate"
+		@update:zoom="zoomUpdate"
+	>
+		<LTileLayer
+			:url="url"
+			:attribution="attribution"
+		/>
+		<LMarker :lat-lng="withPopup">
+			<LPopup>
+				Current location:
+				<p>
+					Latitude: {{ marker.position.lat }}
+					<br />
+					Longitude: {{ marker.position.lng }}
+				</p>
+			</LPopup>
+		</LMarker>
+	</LMap>
 </template>
 
 <script>
@@ -78,15 +75,3 @@
 		},
 	};
 </script>
-
-<style lang="scss" scoped>
-	.leaflet-map {
-		width: 100%;
-		height: 100%;
-
-		&__map {
-			width: 100%;
-			height: 100%;
-		}
-	}
-</style>

@@ -1,7 +1,5 @@
 <template>
-	<div class="map">
-		<LeafletMapLoader :marker="marker" />
-	</div>
+	<LeafletMapLoader :marker="marker" />
 </template>
 
 <script>
@@ -27,10 +25,3 @@
 		},
 	};
 </script>
-
-<style lang="scss" scoped>
-	.map {
-		width: 100%;
-		height: 100%;
-	}
-</style>
