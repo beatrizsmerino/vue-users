@@ -113,7 +113,7 @@
 	.user-detail {
 		display: flex;
 		flex-direction: column;
-		width: 70rem;
+		width: 120rem;
 		margin: 0 auto;
 		padding: 3rem;
 		background-color: $color-brand-2;
