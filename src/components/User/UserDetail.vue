@@ -22,7 +22,7 @@
 				<UserData
 					user-data-icon="fa fa-clock"
 					user-data-key="Registered"
-					:user-data-value="user.registered"
+					:user-data-value="new Date(user.registered)"
 				/>
 			</div>
 		</div>

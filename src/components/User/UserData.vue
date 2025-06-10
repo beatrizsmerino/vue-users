@@ -7,7 +7,7 @@
 			<strong>{{ userDataKey }}:</strong>
 		</h4>
 		<p class="user-data__value">
-			{{ userDataValue }}
+			{{ formatUserDataValue(userDataValue) }}
 		</p>
 	</div>
 </template>
@@ -25,12 +25,21 @@
 				"required": true,
 			},
 			"userDataValue": {
-				"type": String,
+				"type": String || Date,
 				"required": true,
 			},
 		},
 		data() {
 			return {};
+		},
+		"methods": {
+			formatUserDataValue(value) {
+				if (value instanceof Date) {
+					return this.$tools.formatDate(value);
+				}
+
+				return value || "N/A";
+			},
 		},
 	};
 </script>
