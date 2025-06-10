@@ -214,15 +214,14 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 18vh;
-			height: 18vh;
+			width: 100%;
+			max-width: 17rem;
 			overflow: hidden;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
 
 			@include media("sm") {
-				width: 15rem;
-				height: 15rem;
+				max-width: 15rem;
 			}
 
 			img {
