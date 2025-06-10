@@ -1,77 +1,33 @@
 <template>
 	<LMap
-		v-if="showMap"
 		:zoom="zoom"
 		:center="center"
 		:options="mapOptions"
-		@update:center="centerUpdate"
-		@update:zoom="zoomUpdate"
+		@update:center="$emit('update:center', $event)"
+		@update:zoom="$emit('update:zoom', $event)"
 	>
-		<LTileLayer
-			:url="url"
-			:attribution="attribution"
-		/>
-		<LMarker :lat-lng="withPopup">
-			<LPopup>
-				Current location:
-				<p>
-					Latitude: {{ marker.position.lat }}
-					<br />
-					Longitude: {{ marker.position.lng }}
-				</p>
-			</LPopup>
-		</LMarker>
+		<slot name="tile"></slot>
+		<slot name="marker"></slot>
 	</LMap>
 </template>
 
 <script>
 	import "leaflet/dist/leaflet.css";
-	import { latLng, Icon } from "leaflet";
-	import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
-
-	// eslint-disable-next-line no-underscore-dangle
-	delete Icon.Default.prototype._getIconUrl;
-	Icon.Default.mergeOptions({
-		"iconRetinaUrl": require("leaflet/dist/images/marker-icon-2x.png"),
-		"iconUrl": require("leaflet/dist/images/marker-icon.png"),
-		"shadowUrl": require("leaflet/dist/images/marker-shadow.png"),
-	});
+	import { LMap } from "vue2-leaflet";
 
 	export default {
 		"name": "LeafletMapLoader",
 		"components": {
 			LMap,
-			LTileLayer,
-			LMarker,
-			LPopup,
 		},
 		"props": {
-			"marker": Object,
+			"center": Object,
+			"zoom": Number,
+			"mapOptions": Object,
 		},
-		data() {
-			return {
-				"url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-				"attribution": '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-				"center": latLng(this.marker.position.lat, this.marker.position.lng),
-				"currentCenter": latLng(this.marker.position.lat, this.marker.position.lng),
-				"withPopup": latLng(this.marker.position.lat, this.marker.position.lng),
-				"zoom": 3,
-				"currentZoom": 11.5,
-				"mapOptions": {
-					"minZoom": 2,
-					"maxZoom": 10,
-					"zoomSnap": 0.5,
-				},
-				"showMap": true,
-			};
-		},
-		"methods": {
-			zoomUpdate(zoom) {
-				this.currentZoom = zoom;
-			},
-			centerUpdate(center) {
-				this.currentCenter = center;
-			},
-		},
+		"emits": [
+			"update:center",
+			"update:zoom",
+		],
 	};
 </script>
