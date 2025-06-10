@@ -111,11 +111,14 @@
 
 <style lang="scss" scoped>
 	.user-detail {
+		display: flex;
+		flex-direction: column;
 		width: 70rem;
 		margin: 0 auto;
 		padding: 3rem;
 		background-color: $color-brand-2;
 		font-size: 2.4rem;
+		gap: 3rem;
 
 		@include media("xl") {
 			width: inherit;
@@ -127,18 +130,14 @@
 			font-size: 2rem;
 		}
 
-		> * {
-			&:not(:last-child) {
-				margin-bottom: 3rem;
-			}
-		}
-
 		&__header {
+			gap: 2rem;
 			display: flex;
 			align-items: center;
 
-			> *:not(:last-child) {
-				margin-right: 2rem;
+			@include media("sm") {
+				flex-direction: column;
+				align-items: flex-start;
 			}
 		}
 
@@ -164,22 +163,16 @@
 
 		&__content {
 			display: flex;
+			gap: 2rem;
 
 			@include media("xs") {
 				flex-direction: column;
-			}
-
-			> *:not(:last-child) {
-				margin-right: 2rem;
-
-				@include media("xs") {
-					margin-bottom: 2rem;
-				}
 			}
 		}
 
 		&__column {
 			width: 50%;
+			gap: 2rem;
 
 			@include media("xl") {
 				display: flex;
@@ -190,33 +183,19 @@
 			@include media("md") {
 				flex-direction: column;
 			}
-
-			> *:not(:last-child) {
-				margin-bottom: 2rem;
-
-				@include media("xl") {
-					margin-right: 2rem;
-					margin-bottom: 0;
-				}
-
-				@include media("md") {
-					margin-right: 0;
-					margin-bottom: 2rem;
-				}
-			}
 		}
 
 		&__group {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
 			@include media("xl") {
 				flex: 1;
 			}
 
 			@include media("md") {
 				flex: none;
-			}
-
-			> *:not(:last-child) {
-				margin-bottom: 1.5rem;
 			}
 		}
 	}
