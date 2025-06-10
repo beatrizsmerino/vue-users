@@ -218,20 +218,6 @@
 			> *:not(:last-child) {
 				margin-bottom: 1rem;
 			}
-
-			&--inline {
-				.user-detail {
-					&__item {
-						flex-direction: row;
-						flex-wrap: wrap;
-						align-items: center;
-
-						&:not(:last-child) {
-							margin-bottom: 0;
-						}
-					}
-				}
-			}
 		}
 	}
 </style>
