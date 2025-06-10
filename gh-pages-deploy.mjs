@@ -3,9 +3,6 @@ import { execa } from "execa";
 import * as emoji from "node-emoji";
 import chalk from "chalk";
 import * as fs from "fs";
-import * as dotenv from "dotenv";
-
-dotenv.config({ "path": ".env.local" });
 
 const iconArrows = emoji.get("fast_forward");
 const iconRocket = emoji.get("rocket");
@@ -21,11 +18,7 @@ const iconRocket = emoji.get("rocket");
 		await execa("npm", [
 			"run",
 			"build",
-		], {
-			"env": {
-				...process.env,
-			},
-		});
+		]);
 
 		// Understand if it's dist or build folder
 		const folderName = fs.existsSync("dist") ? "dist" : "build";
