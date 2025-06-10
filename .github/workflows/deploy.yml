@@ -23,4 +23,6 @@ jobs:
           git config user.name "Beatriz Sopeña Merino"
           git config user.email "beatrizsmerino@gmail.com"
       - name: 🏗️ Deploy project
+        env:
+          VUE_APP_TOKEN_GOOGLE_MAPS: ${{ secrets.VUE_APP_TOKEN_GOOGLE_MAPS }}
         run: npm run deploy
