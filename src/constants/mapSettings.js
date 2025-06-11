@@ -20,7 +20,8 @@ const POINT_MARKER_ICON_CONFIG = {
 	"scale": 3,
 };
 
-const mapSettings = {
+// https://snazzymaps.com/
+const SNAZZY_MAPS_STYLES = {
 	"clickableIcons": false,
 	"streetViewControl": false,
 	"panControlOptions": false,
@@ -136,4 +137,4 @@ const mapSettings = {
 	],
 };
 
-export { mapSettings, POINT_MARKER_ICON_CONFIG };
+export { SNAZZY_MAPS_STYLES, POINT_MARKER_ICON_CONFIG };
