@@ -36,7 +36,7 @@ const MAP_CONFIG_OPTIONS = {
 	"maxZoom": 10,
 };
 
-const SNAZZY_MAPS_STYLES = {
+const MAP_CONFIG_STYLES = {
 	"styles": [
 		{
 			"featureType": "landscape",
@@ -140,4 +140,4 @@ const SNAZZY_MAPS_STYLES = {
 	],
 };
 
-export { MAP_CONFIG_OPTIONS, SNAZZY_MAPS_STYLES, MAP_MARKER_ICON };
+export { MAP_CONFIG_OPTIONS, MAP_CONFIG_STYLES, MAP_MARKER_ICON };
