@@ -20,7 +20,6 @@ const MAP_MARKER_ICON = {
 	"scale": 3,
 };
 
-// https://snazzymaps.com/
 const MAP_CONFIG_OPTIONS = {
 	"clickableIcons": false,
 	"streetViewControl": false,
@@ -36,6 +35,7 @@ const MAP_CONFIG_OPTIONS = {
 	"maxZoom": 10,
 };
 
+// https://snazzymaps.com/
 const MAP_CONFIG_STYLES = {
 	"styles": [
 		{
