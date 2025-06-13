@@ -21,7 +21,7 @@ const MAP_MARKER_ICON = {
 };
 
 // https://snazzymaps.com/
-const SNAZZY_MAPS_OPTIONS = {
+const MAP_CONFIG_OPTIONS = {
 	"clickableIcons": false,
 	"streetViewControl": false,
 	"panControlOptions": false,
@@ -140,4 +140,4 @@ const SNAZZY_MAPS_STYLES = {
 	],
 };
 
-export { SNAZZY_MAPS_OPTIONS, SNAZZY_MAPS_STYLES, MAP_MARKER_ICON };
+export { MAP_CONFIG_OPTIONS, SNAZZY_MAPS_STYLES, MAP_MARKER_ICON };
