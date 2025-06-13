@@ -136,4 +136,23 @@ const GOOGLE_MAP_CONFIG_STYLES = {
 	],
 };
 
-export { GOOGLE_MAP_COLORS, GOOGLE_MAP_MARKER_ICON, GOOGLE_MAP_CONFIG_OPTIONS, GOOGLE_MAP_CONFIG_STYLES };
+const LEAFLET_MAP_MARKER_ICON = {
+	"iconRetinaUrl": require("leaflet/dist/images/marker-icon-2x.png"),
+	"iconUrl": require("leaflet/dist/images/marker-icon.png"),
+	"shadowUrl": require("leaflet/dist/images/marker-shadow.png"),
+};
+
+const LEAFLET_MAP_CONFIG_OPTIONS = {
+	"url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+	"attribution": '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+	"zoom": 3,
+	"currentZoom": 11.5,
+	"mapOptions": {
+		"minZoom": 2,
+		"maxZoom": 10,
+		"zoomSnap": 0.5,
+	},
+	"showMap": true,
+};
+
+export { GOOGLE_MAP_COLORS, GOOGLE_MAP_MARKER_ICON, GOOGLE_MAP_CONFIG_OPTIONS, GOOGLE_MAP_CONFIG_STYLES, LEAFLET_MAP_MARKER_ICON, LEAFLET_MAP_CONFIG_OPTIONS };

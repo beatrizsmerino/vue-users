@@ -25,14 +25,11 @@
 	import LeafletMapLoader from "@/components/LeafletMap/LeafletMapLoader";
 	import LeafletMapTile from "@/components/LeafletMap/LeafletMapTile";
 	import LeafletMapMarker from "@/components/LeafletMap/LeafletMapMarker";
+	import { LEAFLET_MAP_MARKER_ICON, LEAFLET_MAP_CONFIG_OPTIONS } from "@/constants/mapSettings";
 
 	// eslint-disable-next-line no-underscore-dangle
 	delete Icon.Default.prototype._getIconUrl;
-	Icon.Default.mergeOptions({
-		"iconRetinaUrl": require("leaflet/dist/images/marker-icon-2x.png"),
-		"iconUrl": require("leaflet/dist/images/marker-icon.png"),
-		"shadowUrl": require("leaflet/dist/images/marker-shadow.png"),
-	});
+	Icon.Default.mergeOptions(LEAFLET_MAP_MARKER_ICON);
 
 	export default {
 		"name": "LeafletMap",
@@ -48,19 +45,10 @@
 			const position = latLng(parseFloat(this.user.latitude), parseFloat(this.user.longitude));
 
 			return {
-				"url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-				"attribution": '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+				...LEAFLET_MAP_CONFIG_OPTIONS,
 				"marker": { position },
 				"center": position,
 				"currentCenter": position,
-				"zoom": 3,
-				"currentZoom": 11.5,
-				"mapOptions": {
-					"minZoom": 2,
-					"maxZoom": 10,
-					"zoomSnap": 0.5,
-				},
-				"showMap": true,
 			};
 		},
 		"watch": {
