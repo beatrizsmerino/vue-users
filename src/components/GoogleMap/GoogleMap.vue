@@ -16,7 +16,7 @@
 <script>
 	import GoogleMapLoader from "@/components/GoogleMap/GoogleMapLoader";
 	import GoogleMapMarker from "@/components/GoogleMap/GoogleMapMarker";
-	import { SNAZZY_MAPS_STYLES } from "@/constants/mapSettings";
+	import { SNAZZY_MAPS_STYLES, SNAZZY_MAPS_OPTIONS } from "@/constants/mapSettings";
 
 	export default {
 		"name": "GoogleMap",
@@ -45,6 +45,7 @@
 			},
 			mapConfig() {
 				return {
+					...SNAZZY_MAPS_OPTIONS,
 					...SNAZZY_MAPS_STYLES,
 					"center": this.mapCenter,
 				};

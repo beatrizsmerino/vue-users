@@ -21,7 +21,7 @@ const POINT_MARKER_ICON_CONFIG = {
 };
 
 // https://snazzymaps.com/
-const SNAZZY_MAPS_STYLES = {
+const SNAZZY_MAPS_OPTIONS = {
 	"clickableIcons": false,
 	"streetViewControl": false,
 	"panControlOptions": false,
@@ -34,6 +34,9 @@ const SNAZZY_MAPS_STYLES = {
 	"zoom": 2,
 	"minZoom": 2,
 	"maxZoom": 10,
+};
+
+const SNAZZY_MAPS_STYLES = {
 	"styles": [
 		{
 			"featureType": "landscape",
@@ -137,4 +140,4 @@ const SNAZZY_MAPS_STYLES = {
 	],
 };
 
-export { SNAZZY_MAPS_STYLES, POINT_MARKER_ICON_CONFIG };
+export { SNAZZY_MAPS_OPTIONS, SNAZZY_MAPS_STYLES, POINT_MARKER_ICON_CONFIG };
