@@ -1,13 +1,9 @@
-import colorPalette from "@/constants/colorPalette";
-
-const { COLOR_LANDSCAPE, COLOR_BORDERS, COLOR_WATER, COLOR_POINT_FILL, COLOR_SELECTED_POINT } = colorPalette;
-
 const MAP_COLORS = {
-	"BORDERS": COLOR_BORDERS,
-	"LANDSCAPE": COLOR_LANDSCAPE,
-	"POINT": COLOR_SELECTED_POINT,
-	"POINT_FILL": COLOR_POINT_FILL,
-	"WATER": COLOR_WATER,
+	"BORDERS": "#c3e6ff",
+	"LANDSCAPE": "#42b883",
+	"POINT": "#42b883",
+	"POINT_FILL": "#35495e",
+	"WATER": "lightblue",
 };
 
 const MAP_MARKER_ICON = {
