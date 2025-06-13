@@ -4,12 +4,13 @@
 			ref="googleMap"
 			class="google-map__map"
 		></div>
-		<template v-if="Boolean(google) && Boolean(map)">
-			<slot
-				:google="google"
-				:map="map"
-			></slot>
-		</template>
+
+		<slot
+			v-if="Boolean(google) && Boolean(map)"
+			name="marker"
+			:google="google"
+			:map="map"
+		></slot>
 	</div>
 </template>
 
