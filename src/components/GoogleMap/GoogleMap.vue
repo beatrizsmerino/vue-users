@@ -16,7 +16,7 @@
 <script>
 	import GoogleMapLoader from "@/components/GoogleMap/GoogleMapLoader";
 	import GoogleMapMarker from "@/components/GoogleMap/GoogleMapMarker";
-	import { MAP_CONFIG_STYLES, MAP_CONFIG_OPTIONS } from "@/constants/mapSettings";
+	import { GOOGLE_MAP_CONFIG_STYLES, GOOGLE_MAP_CONFIG_OPTIONS } from "@/constants/mapSettings";
 
 	export default {
 		"name": "GoogleMap",
@@ -45,8 +45,8 @@
 			},
 			mapConfig() {
 				return {
-					...MAP_CONFIG_OPTIONS,
-					...MAP_CONFIG_STYLES,
+					...GOOGLE_MAP_CONFIG_OPTIONS,
+					...GOOGLE_MAP_CONFIG_STYLES,
 					"center": this.mapCenter,
 				};
 			},

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-	import { MAP_MARKER_ICON } from "@/constants/mapSettings";
+	import { GOOGLE_MAP_MARKER_ICON } from "@/constants/mapSettings";
 
 	export default {
 		"name": "GoogleMapMarker",
@@ -28,7 +28,7 @@
 				"position": this.marker.position,
 				"marker": this.marker,
 				"map": this.map,
-				"icon": MAP_MARKER_ICON,
+				"icon": GOOGLE_MAP_MARKER_ICON,
 			});
 		},
 	};
