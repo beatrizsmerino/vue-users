@@ -10,7 +10,7 @@ const MAP_COLORS = {
 	"WATER": COLOR_WATER,
 };
 
-const POINT_MARKER_ICON_CONFIG = {
+const MAP_MARKER_ICON = {
 	"path": "M 0, 0 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0",
 	"strokeOpacity": 0.7,
 	"strokeWeight": 6,
@@ -140,4 +140,4 @@ const SNAZZY_MAPS_STYLES = {
 	],
 };
 
-export { SNAZZY_MAPS_OPTIONS, SNAZZY_MAPS_STYLES, POINT_MARKER_ICON_CONFIG };
+export { SNAZZY_MAPS_OPTIONS, SNAZZY_MAPS_STYLES, MAP_MARKER_ICON };
