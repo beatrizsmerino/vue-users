@@ -3,7 +3,7 @@
 		:map-config="mapConfig"
 		:api-key="apiKey"
 	>
-		<template #default="{ google, map }">
+		<template #marker="{ google, map }">
 			<GoogleMapMarker
 				:marker="marker"
 				:google="google"
