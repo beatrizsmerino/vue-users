@@ -95,6 +95,11 @@
 			height: 8rem;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
+			background-color: $color-white;
+			color: $color-brand-2;
+			font-size: 1.2rem;
+			line-height: 4rem;
+			text-align: center;
 		}
 
 		&__content {
