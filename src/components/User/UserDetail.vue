@@ -145,14 +145,15 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 100%;
-			max-width: 17rem;
+			width: 17rem;
+			height: 17rem;
 			overflow: hidden;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
 
 			@include media("sm") {
-				max-width: 15rem;
+				width: 15rem;
+				height: 15rem;
 			}
 
 			img {
