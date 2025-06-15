@@ -27,7 +27,7 @@
 	import MapLeafletLoader from "@/components/Map/MapLeaflet/MapLeafletLoader";
 	import MapLeafletTile from "@/components/Map/MapLeaflet/MapLeafletTile";
 	import MapLeafletMarker from "@/components/Map/MapLeaflet/MapLeafletMarker";
-	import { MAP_LEAFLET_MARKER_ICON, MAP_LEAFLET_CONFIG_OPTIONS } from "@/constants/MapSettings";
+	import { MAP_LEAFLET_MARKER_ICON, MAP_LEAFLET_CONFIG_OPTIONS } from "@/constants/MapLeaflet";
 
 	// eslint-disable-next-line no-underscore-dangle
 	delete Icon.Default.prototype._getIconUrl;
