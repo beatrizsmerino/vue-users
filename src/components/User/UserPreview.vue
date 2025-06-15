@@ -41,23 +41,17 @@
 				<UIButton
 					:to="`/user/${dataUser.username}`"
 					class="button--bg-brand-1 button--width-auto"
-				>
-					<span class="button__icon">
-						<i class="fas fa-info"></i>
-					</span>
-					<span class="button__text">
-						more info
-					</span>
-				</UIButton>
+					icon="fas fa-info"
+					text="more info"
+				/>
 			</div>
 		</transition>
 
 		<UIButton
 			class="button-close button--icon"
+			icon="fas fa-times-circle"
 			@button-click="userRemoveEmit(dataUser)"
-		>
-			<i class="button-close__icon fas fa-times-circle"></i>
-		</UIButton>
+		/>
 	</div>
 </template>
 
@@ -153,28 +147,26 @@
 			}
 		}
 
-		.button-close {
-			display: flex;
-			position: absolute;
-			top: 2rem;
-			right: 2rem;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			background-color: $color-brand-2;
-			cursor: pointer;
+		:deep() {
+			.button-close {
+				position: absolute;
+				top: 2rem;
+				right: 2rem;
+				border-radius: 50%;
+				background-color: $color-brand-2;
 
-			&__icon {
-				display: inline-block;
-				color: $color-brand-1;
-				font-size: 2.8rem;
-				pointer-events: none;
-			}
-
-			&:hover {
-				.button-close {
+				.button {
 					&__icon {
-						color: $color-white;
+						color: $color-brand-1;
+						font-size: 2.8rem;
+					}
+				}
+
+				&:hover {
+					.button {
+						&__icon {
+							color: $color-white;
+						}
 					}
 				}
 			}
@@ -186,9 +178,11 @@
 			padding: 0.5rem;
 			border-radius: 50%;
 
-			.button-close {
-				top: 0.5rem;
-				right: 0.5rem;
+			:deep() {
+				.button-close {
+					top: 0.5rem;
+					right: 0.5rem;
+				}
 			}
 		}
 	}

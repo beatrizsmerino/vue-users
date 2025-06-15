@@ -27,10 +27,9 @@
 		</ul>
 		<UIButton
 			class="page-nav__button button button--icon"
+			icon="fa fa-bars"
 			@button-click="openCloseNav"
-		>
-			<i class="fa fa-bars"></i>
-		</UIButton>
+		/>
 	</nav>
 </template>
 
