@@ -1,43 +1,52 @@
-import colorPalette from "@/constants/colorPalette";
-
-const { COLOR_LANDSCAPE, COLOR_BORDERS, COLOR_WATER, COLOR_POINT_FILL, COLOR_SELECTED_POINT } = colorPalette;
-
-const COLORS = {
-	"BORDERS": COLOR_BORDERS,
-	"LANDSCAPE": COLOR_LANDSCAPE,
-	"POINT": COLOR_SELECTED_POINT,
-	"POINT_FILL": COLOR_POINT_FILL,
-	"WATER": COLOR_WATER,
+const MAP_GOOGLE_COLORS = {
+	"BORDERS": "#c3e6ff",
+	"LANDSCAPE": "#42b883",
+	"POINT": "#42b883",
+	"POINT_FILL": "#35495e",
+	"WATER": "lightblue",
 };
 
-const POINT_MARKER_ICON_CONFIG = {
+const MAP_GOOGLE_MARKER_ICON = {
 	"path": "M 0, 0 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0",
 	"strokeOpacity": 0.7,
 	"strokeWeight": 6,
-	"strokeColor": COLORS.POINT,
-	"fillColor": COLORS.POINT_FILL,
+	"strokeColor": MAP_GOOGLE_COLORS.POINT,
+	"fillColor": MAP_GOOGLE_COLORS.POINT_FILL,
 	"fillOpacity": 0.7,
 	"scale": 3,
 };
 
-const mapSettings = {
+const MAP_GOOGLE_CONFIG_OPTIONS = {
 	"clickableIcons": false,
 	"streetViewControl": false,
 	"panControlOptions": false,
 	"gestureHandling": "cooperative",
-	"backgroundColor": COLORS.LANDSCAPE,
+	"backgroundColor": MAP_GOOGLE_COLORS.LANDSCAPE,
 	"mapTypeControl": false,
 	"zoomControlOptions": {
 		"style": "SMALL",
 	},
-	"zoom": 2,
+	"zoom": 3,
 	"minZoom": 2,
 	"maxZoom": 10,
+	"restriction": {
+		"latLngBounds": {
+			"north": 85,
+			"south": -85,
+			"east": 180,
+			"west": -180,
+		},
+		"strictBounds": true,
+	},
+};
+
+// https://snazzymaps.com/
+const MAP_GOOGLE_CONFIG_STYLES = {
 	"styles": [
 		{
 			"featureType": "landscape",
 			"stylers": [
-				{ "hue": COLORS.LANDSCAPE },
+				{ "hue": MAP_GOOGLE_COLORS.LANDSCAPE },
 				{ "saturation": 50.2 },
 				{ "lightness": -34.8 },
 				{ "gamma": 1 },
@@ -52,7 +61,7 @@ const mapSettings = {
 		{
 			"featureType": "road.highway",
 			"stylers": [
-				{ "hue": COLORS.LANDSCAPE },
+				{ "hue": MAP_GOOGLE_COLORS.LANDSCAPE },
 				{ "saturation": -19.8 },
 				{ "lightness": -1.8 },
 				{ "gamma": 1 },
@@ -61,7 +70,7 @@ const mapSettings = {
 		{
 			"featureType": "road.arterial",
 			"stylers": [
-				{ "hue": COLORS.LANDSCAPE },
+				{ "hue": MAP_GOOGLE_COLORS.LANDSCAPE },
 				{ "saturation": 72.4 },
 				{ "lightness": -32.6 },
 				{ "gamma": 1 },
@@ -114,7 +123,7 @@ const mapSettings = {
 			"elementType": "geometry.stroke",
 			"stylers": [
 				{ "visibility": "on" },
-				{ "color": COLORS.BORDERS },
+				{ "color": MAP_GOOGLE_COLORS.BORDERS },
 			],
 		},
 		{
@@ -127,7 +136,7 @@ const mapSettings = {
 		{
 			"featureType": "water",
 			"stylers": [
-				{ "hue": COLORS.WATER },
+				{ "hue": MAP_GOOGLE_COLORS.WATER },
 				{ "saturation": -63.2 },
 				{ "lightness": 38 },
 				{ "gamma": 1 },
@@ -136,4 +145,4 @@ const mapSettings = {
 	],
 };
 
-export { mapSettings, POINT_MARKER_ICON_CONFIG };
+export { MAP_GOOGLE_COLORS, MAP_GOOGLE_MARKER_ICON, MAP_GOOGLE_CONFIG_OPTIONS, MAP_GOOGLE_CONFIG_STYLES };

@@ -1,28 +1,28 @@
 <template>
-	<GoogleMapLoader
+	<MapGoogleLoader
 		:map-config="mapConfig"
 		:api-key="apiKey"
 	>
-		<template #default="{ google, map }">
-			<GoogleMapMarker
+		<template #marker="{ google, map }">
+			<MapGoogleMarker
 				:marker="marker"
 				:google="google"
 				:map="map"
 			/>
 		</template>
-	</GoogleMapLoader>
+	</MapGoogleLoader>
 </template>
 
 <script>
-	import GoogleMapLoader from "@/components/GoogleMap/GoogleMapLoader";
-	import GoogleMapMarker from "@/components/GoogleMap/GoogleMapMarker";
-	import { mapSettings } from "@/constants/mapSettings";
+	import MapGoogleLoader from "@/components/Map/MapGoogle/MapGoogleLoader";
+	import MapGoogleMarker from "@/components/Map/MapGoogle/MapGoogleMarker";
+	import { MAP_GOOGLE_CONFIG_STYLES, MAP_GOOGLE_CONFIG_OPTIONS } from "@/constants/MapGoogle";
 
 	export default {
-		"name": "GoogleMap",
+		"name": "MapGoogle",
 		"components": {
-			GoogleMapLoader,
-			GoogleMapMarker,
+			MapGoogleLoader,
+			MapGoogleMarker,
 		},
 		"props": {
 			"user": Object,
@@ -45,7 +45,8 @@
 			},
 			mapConfig() {
 				return {
-					...mapSettings,
+					...MAP_GOOGLE_CONFIG_OPTIONS,
+					...MAP_GOOGLE_CONFIG_STYLES,
 					"center": this.mapCenter,
 				};
 			},

@@ -1,11 +1,18 @@
 <template>
 	<div class="user-map">
-		<GoogleMap
-			v-if="isGoogleMaps"
+		<UIButton
+			v-if="isMapGoogle"
+			class="user-map__button button--bg-white button--width-auto"
+			:text="`Switch to ${isSwitchMap ? 'Leaflet' : 'Google Maps'}`"
+			@button-click="toggleMap"
+		/>
+
+		<MapGoogle
+			v-if="isMapGoogle && isSwitchMap"
 			:user="user"
 			:api-key="googleApiKey"
 		/>
-		<LeafletMap
+		<MapLeaflet
 			v-else
 			:user="user"
 		/>
@@ -13,26 +20,34 @@
 </template>
 
 <script>
-	import GoogleMap from "@/components/GoogleMap/GoogleMap";
-	import LeafletMap from "@/components/LeafletMap/LeafletMap";
+	import UIButton from "@/components/UI/UIButton";
+	import MapGoogle from "@/components/Map/MapGoogle/MapGoogle";
+	import MapLeaflet from "@/components/Map/MapLeaflet/MapLeaflet";
 
 	export default {
 		"name": "UserMap",
 		"components": {
-			GoogleMap,
-			LeafletMap,
+			UIButton,
+			MapGoogle,
+			MapLeaflet,
 		},
 		"props": {
 			"user": Object,
 		},
 		data() {
 			return {
-				"googleApiKey": "XXXXXX",
+				"googleApiKey": process.env.VUE_APP_TOKEN_GOOGLE_MAPS || "",
+				"isSwitchMap": true,
 			};
 		},
 		"computed": {
-			isGoogleMaps() {
-				return this.googleApiKey !== "XXXXXX";
+			isMapGoogle() {
+				return !!this.googleApiKey;
+			},
+		},
+		"methods": {
+			toggleMap() {
+				this.isSwitchMap = !this.isSwitchMap;
 			},
 		},
 	};
@@ -40,10 +55,21 @@
 
 <style lang="scss" scoped>
 	.user-map {
+		position: relative;
 		width: 100%;
 
 		@include media("xl") {
 			height: 50rem;
+		}
+
+		&__button {
+			position: absolute;
+			z-index: 999;
+			bottom: 0;
+			left: 0;
+			margin: 3rem 1rem;
+			transform: scale(0.7);
+			transform-origin: left bottom;
 		}
 	}
 </style>

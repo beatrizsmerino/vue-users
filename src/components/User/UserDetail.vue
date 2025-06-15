@@ -1,158 +1,84 @@
 <template>
 	<div class="user-detail">
 		<div class="user-detail__header">
-			<div class="user-detail__image">
-				<img
-					:src="user.imageLarge"
-					:alt="user.username"
-				/>
-			</div>
+			<img
+				class="user-detail__image"
+				:src="user.imageLarge"
+				:alt="user.username"
+			/>
 
 			<div class="user-detail__group">
-				<div class="user-detail__item">
-					<h4 class="user-detail__label">
-						<span class="user-detail__icon">
-							<i class="fa fa-user"></i>
-						</span>
-						<strong>Name:</strong>
-					</h4>
-					<p class="user-detail__data">
-						{{ user.name.title }} {{ user.name.first }}
-						{{ user.name.last }}
-					</p>
-				</div>
-				<div class="user-detail__item">
-					<h4 class="user-detail__label">
-						<span class="user-detail__icon">
-							<i class="fa fa-user-lock"></i>
-						</span>
-						<strong>Username:</strong>
-					</h4>
-					<p class="user-detail__data">
-						{{ user.username }}
-					</p>
-				</div>
-				<div class="user-detail__item">
-					<h4 class="user-detail__label">
-						<span class="user-detail__icon">
-							<i class="fa fa-clock"></i>
-						</span>
-						<strong>Registered:</strong>
-					</h4>
-					<p class="user-detail__data">
-						{{ user.registered }}
-					</p>
-				</div>
+				<UserData
+					user-data-icon="fa fa-user"
+					user-data-key="Name"
+					:user-data-value="`${user.name.title} ${user.name.first} ${user.name.last}`"
+				/>
+				<UserData
+					user-data-icon="fa fa-user-lock"
+					user-data-key="Username"
+					:user-data-value="user.username"
+				/>
+				<UserData
+					user-data-icon="fa fa-clock"
+					user-data-key="Registered"
+					:user-data-value="new Date(user.registered)"
+				/>
 			</div>
 		</div>
 
 		<div class="user-detail__content">
 			<div class="user-detail__column">
 				<div class="user-detail__group">
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-globe"></i>
-							</span>
-							<strong>Nationality:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.nationality }}
-						</p>
-					</div>
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-flag"></i>
-							</span>
-							<strong>State:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.state }}
-						</p>
-					</div>
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-city"></i>
-							</span>
-							<strong>City:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.city }}
-						</p>
-					</div>
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-street-view"></i>
-							</span>
-							<strong>Street:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.streetName }}, {{ user.streetNumber }}
-						</p>
-					</div>
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-mail-bulk"></i>
-							</span>
-							<strong>Postcode:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.postcode }}
-						</p>
-					</div>
+					<UserData
+						user-data-icon="fa fa-globe"
+						user-data-key="Nationality"
+						:user-data-value="user.nationality"
+					/>
+					<UserData
+						user-data-icon="fa fa-flag"
+						user-data-key="State"
+						:user-data-value="user.state"
+					/>
+					<UserData
+						user-data-icon="fa fa-city"
+						user-data-key="City"
+						:user-data-value="user.city"
+					/>
+					<UserData
+						user-data-icon="fa fa-street-view"
+						user-data-key="Street"
+						:user-data-value="`${user.streetName}, ${user.streetNumber}`"
+					/>
+					<UserData
+						user-data-icon="fa fa-mail-bulk"
+						user-data-key="Postcode"
+						:user-data-value="user.postcode"
+					/>
 				</div>
 			</div>
 
 			<div class="user-detail__column">
 				<div class="user-detail__group">
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-venus-mars"></i>
-							</span>
-							<strong>Gender:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.gender }}
-						</p>
-					</div>
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-envelope"></i>
-							</span>
-							<strong>Email:</strong>
-						</h4>
-						<p class="user-detail__data user-detail__data--email">
-							{{ user.email }}
-						</p>
-					</div>
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-phone"></i>
-							</span>
-							<strong>Phone:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.phone }}
-						</p>
-					</div>
-					<div class="user-detail__item">
-						<h4 class="user-detail__label">
-							<span class="user-detail__icon">
-								<i class="fa fa-phone"></i>
-							</span>
-							<strong>Cell:</strong>
-						</h4>
-						<p class="user-detail__data">
-							{{ user.cell }}
-						</p>
-					</div>
+					<UserData
+						user-data-icon="fa fa-venus-mars"
+						user-data-key="Gender"
+						:user-data-value="user.gender"
+					/>
+					<UserData
+						user-data-icon="fa fa-envelope"
+						user-data-key="Email"
+						:user-data-value="user.email"
+					/>
+					<UserData
+						user-data-icon="fa fa-phone"
+						user-data-key="Phone"
+						:user-data-value="user.phone"
+					/>
+					<UserData
+						user-data-icon="fa fa-phone"
+						user-data-key="Cell"
+						:user-data-value="user.cell"
+					/>
 				</div>
 			</div>
 		</div>
@@ -160,8 +86,13 @@
 </template>
 
 <script>
+	import UserData from "@/components/User/UserData";
+
 	export default {
 		"name": "UserDetail",
+		"components": {
+			UserData,
+		},
 		"props": {
 			"user": Object,
 		},
@@ -179,11 +110,14 @@
 
 <style lang="scss" scoped>
 	.user-detail {
-		width: 70rem;
+		display: flex;
+		flex-direction: column;
+		width: 120rem;
 		margin: 0 auto;
 		padding: 3rem;
 		background-color: $color-brand-2;
 		font-size: 2.4rem;
+		gap: 3rem;
 
 		@include media("xl") {
 			width: inherit;
@@ -195,60 +129,47 @@
 			font-size: 2rem;
 		}
 
-		> * {
-			&:not(:last-child) {
-				margin-bottom: 3rem;
-			}
-		}
-
 		&__header {
+			gap: 2rem;
 			display: flex;
 			align-items: center;
 
-			> *:not(:last-child) {
-				margin-right: 2rem;
+			@include media("sm") {
+				flex-direction: column;
+				align-items: flex-start;
 			}
 		}
 
 		&__image {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 18vh;
-			height: 18vh;
-			overflow: hidden;
+			width: 17rem;
+			height: 17rem;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
+			background-color: $color-white;
+			color: $color-brand-2;
+			font-size: 1.6rem;
+			line-height: 17rem;
+			text-align: center;
 
 			@include media("sm") {
 				width: 15rem;
 				height: 15rem;
-			}
-
-			img {
-				width: 100%;
-				height: 100%;
+				line-height: 15rem;
 			}
 		}
 
 		&__content {
 			display: flex;
+			gap: 2rem;
 
 			@include media("xs") {
 				flex-direction: column;
-			}
-
-			> *:not(:last-child) {
-				margin-right: 2rem;
-
-				@include media("xs") {
-					margin-bottom: 2rem;
-				}
 			}
 		}
 
 		&__column {
 			width: 50%;
+			gap: 2rem;
 
 			@include media("xl") {
 				display: flex;
@@ -259,72 +180,19 @@
 			@include media("md") {
 				flex-direction: column;
 			}
-
-			> *:not(:last-child) {
-				margin-bottom: 2rem;
-
-				@include media("xl") {
-					margin-right: 2rem;
-					margin-bottom: 0;
-				}
-
-				@include media("md") {
-					margin-right: 0;
-					margin-bottom: 2rem;
-				}
-			}
 		}
 
 		&__group {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
 			@include media("xl") {
 				flex: 1;
 			}
 
 			@include media("md") {
 				flex: none;
-			}
-
-			> *:not(:last-child) {
-				margin-bottom: 1rem;
-			}
-
-			&--inline {
-				.user-detail {
-					&__item {
-						flex-direction: row;
-						flex-wrap: wrap;
-						align-items: center;
-
-						&:not(:last-child) {
-							margin-bottom: 0;
-						}
-					}
-				}
-			}
-		}
-
-		&__item {
-			display: flex;
-			flex-direction: column;
-		}
-
-		&__label {
-			margin-bottom: 0.5rem;
-			color: $color-brand-1;
-			font-size: 1.8rem;
-		}
-
-		&__icon {
-			margin-right: 0.5rem;
-			color: $color-brand-1;
-		}
-
-		&__data {
-			color: $color-light;
-			font-size: 1.6rem;
-
-			&--email {
-				word-break: break-all;
 			}
 		}
 	}

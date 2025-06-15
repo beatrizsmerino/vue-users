@@ -7,7 +7,17 @@
 		class="button"
 		@click="buttonClick"
 	>
-		<slot></slot>
+		<span
+			v-if="icon"
+			class="button__icon"
+		>
+			<i :class="icon"></i>
+		</span>
+		<span
+			v-if="text"
+			class="button__text"
+			v-html="text"
+		></span>
 	</component>
 </template>
 
@@ -24,6 +34,14 @@
 				"default": null,
 			},
 			"value": {
+				"type": String,
+				"default": null,
+			},
+			"icon": {
+				"type": String,
+				"default": null,
+			},
+			"text": {
 				"type": String,
 				"default": null,
 			},
@@ -131,6 +149,15 @@
 			&:hover {
 				background-color: $color-light;
 				color: $color-brand-2;
+			}
+		}
+
+		&--bg-white {
+			background-color: $color-white;
+			color: $color-gray;
+
+			&:hover {
+				background-color: $color-light;
 			}
 		}
 	}
