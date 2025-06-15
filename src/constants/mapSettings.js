@@ -1,4 +1,4 @@
-const GOOGLE_MAP_COLORS = {
+const MAP_GOOGLE_COLORS = {
 	"BORDERS": "#c3e6ff",
 	"LANDSCAPE": "#42b883",
 	"POINT": "#42b883",
@@ -6,22 +6,22 @@ const GOOGLE_MAP_COLORS = {
 	"WATER": "lightblue",
 };
 
-const GOOGLE_MAP_MARKER_ICON = {
+const MAP_GOOGLE_MARKER_ICON = {
 	"path": "M 0, 0 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0",
 	"strokeOpacity": 0.7,
 	"strokeWeight": 6,
-	"strokeColor": GOOGLE_MAP_COLORS.POINT,
-	"fillColor": GOOGLE_MAP_COLORS.POINT_FILL,
+	"strokeColor": MAP_GOOGLE_COLORS.POINT,
+	"fillColor": MAP_GOOGLE_COLORS.POINT_FILL,
 	"fillOpacity": 0.7,
 	"scale": 3,
 };
 
-const GOOGLE_MAP_CONFIG_OPTIONS = {
+const MAP_GOOGLE_CONFIG_OPTIONS = {
 	"clickableIcons": false,
 	"streetViewControl": false,
 	"panControlOptions": false,
 	"gestureHandling": "cooperative",
-	"backgroundColor": GOOGLE_MAP_COLORS.LANDSCAPE,
+	"backgroundColor": MAP_GOOGLE_COLORS.LANDSCAPE,
 	"mapTypeControl": false,
 	"zoomControlOptions": {
 		"style": "SMALL",
@@ -32,12 +32,12 @@ const GOOGLE_MAP_CONFIG_OPTIONS = {
 };
 
 // https://snazzymaps.com/
-const GOOGLE_MAP_CONFIG_STYLES = {
+const MAP_GOOGLE_CONFIG_STYLES = {
 	"styles": [
 		{
 			"featureType": "landscape",
 			"stylers": [
-				{ "hue": GOOGLE_MAP_COLORS.LANDSCAPE },
+				{ "hue": MAP_GOOGLE_COLORS.LANDSCAPE },
 				{ "saturation": 50.2 },
 				{ "lightness": -34.8 },
 				{ "gamma": 1 },
@@ -52,7 +52,7 @@ const GOOGLE_MAP_CONFIG_STYLES = {
 		{
 			"featureType": "road.highway",
 			"stylers": [
-				{ "hue": GOOGLE_MAP_COLORS.LANDSCAPE },
+				{ "hue": MAP_GOOGLE_COLORS.LANDSCAPE },
 				{ "saturation": -19.8 },
 				{ "lightness": -1.8 },
 				{ "gamma": 1 },
@@ -61,7 +61,7 @@ const GOOGLE_MAP_CONFIG_STYLES = {
 		{
 			"featureType": "road.arterial",
 			"stylers": [
-				{ "hue": GOOGLE_MAP_COLORS.LANDSCAPE },
+				{ "hue": MAP_GOOGLE_COLORS.LANDSCAPE },
 				{ "saturation": 72.4 },
 				{ "lightness": -32.6 },
 				{ "gamma": 1 },
@@ -114,7 +114,7 @@ const GOOGLE_MAP_CONFIG_STYLES = {
 			"elementType": "geometry.stroke",
 			"stylers": [
 				{ "visibility": "on" },
-				{ "color": GOOGLE_MAP_COLORS.BORDERS },
+				{ "color": MAP_GOOGLE_COLORS.BORDERS },
 			],
 		},
 		{
@@ -127,7 +127,7 @@ const GOOGLE_MAP_CONFIG_STYLES = {
 		{
 			"featureType": "water",
 			"stylers": [
-				{ "hue": GOOGLE_MAP_COLORS.WATER },
+				{ "hue": MAP_GOOGLE_COLORS.WATER },
 				{ "saturation": -63.2 },
 				{ "lightness": 38 },
 				{ "gamma": 1 },
@@ -136,13 +136,13 @@ const GOOGLE_MAP_CONFIG_STYLES = {
 	],
 };
 
-const LEAFLET_MAP_MARKER_ICON = {
+const MAP_LEAFLET_MARKER_ICON = {
 	"iconRetinaUrl": require("leaflet/dist/images/marker-icon-2x.png"),
 	"iconUrl": require("leaflet/dist/images/marker-icon.png"),
 	"shadowUrl": require("leaflet/dist/images/marker-shadow.png"),
 };
 
-const LEAFLET_MAP_CONFIG_OPTIONS = {
+const MAP_LEAFLET_CONFIG_OPTIONS = {
 	"url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 	"attribution": '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 	"zoom": 3,
@@ -156,10 +156,10 @@ const LEAFLET_MAP_CONFIG_OPTIONS = {
 };
 
 export {
-	GOOGLE_MAP_COLORS,
-	GOOGLE_MAP_MARKER_ICON,
-	GOOGLE_MAP_CONFIG_OPTIONS,
-	GOOGLE_MAP_CONFIG_STYLES,
-	LEAFLET_MAP_MARKER_ICON,
-	LEAFLET_MAP_CONFIG_OPTIONS,
+	MAP_GOOGLE_COLORS,
+	MAP_GOOGLE_MARKER_ICON,
+	MAP_GOOGLE_CONFIG_OPTIONS,
+	MAP_GOOGLE_CONFIG_STYLES,
+	MAP_LEAFLET_MARKER_ICON,
+	MAP_LEAFLET_CONFIG_OPTIONS,
 };
