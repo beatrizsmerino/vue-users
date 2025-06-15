@@ -5,75 +5,41 @@
 				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
+					:icon="showUserInfo ? 'fa fa-eye' : 'fa fa-eye-slash'"
+					:text="!isMobile ? (showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO') : null"
 					:title="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
 					@button-click="showHideInfoUserEmit"
-				>
-					<span class="button__icon">
-						<i
-							class="fa"
-							:class="showUserInfo ? 'fa-eye' : 'fa-eye-slash'"
-						></i>
-					</span>
-					<span
-						v-if="!isMobile"
-						class="button__text"
-						v-html="showUserInfo ? 'SHOW USER INFO' : 'HIDE USER INFO'"
-					></span>
-				</UIButton>
+				/>
 			</li>
 			<li class="user-buttons__item">
 				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
+					icon="fa fa-sort"
+					:text="!isMobile ? 'ORDER USERS' : null"
 					title="ORDER USERS"
 					@button-click="orderUsersEmit"
-				>
-					<span class="button__icon">
-						<i class="fa fa-sort"></i>
-					</span>
-					<span
-						v-if="!isMobile"
-						class="button__text"
-					>
-						ORDER USERS
-					</span>
-				</UIButton>
+				/>
 			</li>
 			<li class="user-buttons__item">
 				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
+					icon="fa fa-user-plus"
+					:text="!isMobile ? 'GET USERS' : null"
 					title="GET USERS"
 					@button-click="getUsersEmit"
-				>
-					<span class="button__icon">
-						<i class="fa fa-user-plus"></i>
-					</span>
-					<span
-						v-if="!isMobile"
-						class="button__text"
-					>
-						GET USERS
-					</span>
-				</UIButton>
+				/>
 			</li>
 			<li class="user-buttons__item">
 				<UIButton
 					class="button--bg-brand-2"
 					:class="{ 'button--circle': isMobile }"
+					icon="fa fa-user-minus"
+					:text="!isMobile ? 'REMOVE ALL USERS' : null"
 					title="REMOVE ALL USERS"
 					@button-click="removeAllUsersEmit"
-				>
-					<span class="button__icon">
-						<i class="fa fa-user-minus"></i>
-					</span>
-					<span
-						v-if="!isMobile"
-						class="button__text"
-					>
-						REMOVE ALL USERS
-					</span>
-				</UIButton>
+				/>
 			</li>
 		</ul>
 
