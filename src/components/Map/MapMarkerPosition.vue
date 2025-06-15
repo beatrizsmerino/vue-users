@@ -33,7 +33,9 @@
 		display: flex;
 		flex-direction: column;
 		width: fit-content;
+		color: $color-brand-2;
 		font-size: 1.5rem;
+		font-weight: 400;
 		gap: 1.5rem;
 
 		&__title {
