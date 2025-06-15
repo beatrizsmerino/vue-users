@@ -26,7 +26,7 @@ const MAP_GOOGLE_CONFIG_OPTIONS = {
 	"zoomControlOptions": {
 		"style": "SMALL",
 	},
-	"zoom": 2,
+	"zoom": 3,
 	"minZoom": 2,
 	"maxZoom": 10,
 	"restriction": {
