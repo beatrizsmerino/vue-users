@@ -18,7 +18,7 @@
 	import googleMapsApiLoader from "google-maps-api-loader";
 
 	export default {
-		"name": "GoogleMapLoader",
+		"name": "MapGoogleLoader",
 		"props": {
 			"mapConfig": Object,
 			"apiKey": String,

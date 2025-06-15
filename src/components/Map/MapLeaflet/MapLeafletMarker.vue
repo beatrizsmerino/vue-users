@@ -22,7 +22,7 @@
 	import { LMarker, LPopup } from "vue2-leaflet";
 
 	export default {
-		"name": "LeafletMapMarker",
+		"name": "MapLeafletMarker",
 		"components": {
 			LMarker,
 			LPopup,

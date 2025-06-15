@@ -6,7 +6,7 @@
 	import { GOOGLE_MAP_MARKER_ICON } from "@/constants/mapSettings";
 
 	export default {
-		"name": "GoogleMapMarker",
+		"name": "MapGoogleMarker",
 		"props": {
 			"google": {
 				"type": Object,

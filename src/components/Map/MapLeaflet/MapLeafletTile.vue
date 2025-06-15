@@ -9,7 +9,7 @@
 	import { LTileLayer } from "vue2-leaflet";
 
 	export default {
-		"name": "LeafletMapTile",
+		"name": "MapLeafletTile",
 		"components": {
 			LTileLayer,
 		},
