@@ -91,14 +91,14 @@
 		background-color: $color-brand-2;
 
 		&__image {
-			width: 8rem;
-			height: 8rem;
+			width: 10rem;
+			height: 10rem;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
 			background-color: $color-white;
 			color: $color-brand-2;
 			font-size: 1.2rem;
-			line-height: 4rem;
+			line-height: 5rem;
 			text-align: center;
 		}
 

@@ -96,8 +96,8 @@
 			.user-list {
 				&__item {
 					flex: none;
-					width: 10rem;
-					height: 10rem;
+					width: 12rem;
+					height: 12rem;
 					margin: 1rem;
 				}
 			}
