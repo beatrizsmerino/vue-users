@@ -56,3 +56,33 @@
 		},
 	};
 </script>
+
+<style lang="scss">
+	// wrapper
+	.gm-style-iw {
+		padding: 1.3rem 2.4rem 1.3rem 2rem !important;
+	}
+
+	// header
+	.gm-style-iw-chr {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+
+		.gm-style-iw-ch {
+			display: none !important;
+		}
+
+		button,
+		button > * {
+			width: 1.5rem !important;
+			height: 1.5rem !important;
+			margin: 0 !important;
+		}
+	}
+
+	// content
+	.gm-style-iw-d {
+		overflow: auto !important;
+	}
+</style>
