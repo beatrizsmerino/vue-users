@@ -2,6 +2,8 @@
 	<LMap
 		:zoom="zoom"
 		:center="center"
+		:max-bounds="maxBounds"
+		:max-bounds-viscosity="maxBoundsViscosity"
 		:options="mapOptions"
 		@update:center="$emit('update:center', $event)"
 		@update:zoom="$emit('update:zoom', $event)"
@@ -24,6 +26,8 @@
 			"center": Object,
 			"zoom": Number,
 			"mapOptions": Object,
+			"maxBounds": Array,
+			"maxBoundsViscosity": Number,
 		},
 		"emits": [
 			"update:center",

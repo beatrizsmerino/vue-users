@@ -3,6 +3,8 @@
 		v-if="showMap"
 		:center="center"
 		:zoom="zoom"
+		:max-bounds="maxBounds"
+		:max-bounds-viscosity="maxBoundsViscosity"
 		:map-options="mapOptions"
 		@update:center="handleCenterUpdate"
 		@update:zoom="handleZoomUpdate"

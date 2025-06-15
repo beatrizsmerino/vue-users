@@ -26,9 +26,18 @@ const MAP_GOOGLE_CONFIG_OPTIONS = {
 	"zoomControlOptions": {
 		"style": "SMALL",
 	},
-	"zoom": 2,
+	"zoom": 3,
 	"minZoom": 2,
 	"maxZoom": 10,
+	"restriction": {
+		"latLngBounds": {
+			"north": 85,
+			"south": -85,
+			"east": 180,
+			"west": -180,
+		},
+		"strictBounds": true,
+	},
 };
 
 // https://snazzymaps.com/
@@ -152,6 +161,17 @@ const MAP_LEAFLET_CONFIG_OPTIONS = {
 		"maxZoom": 10,
 		"zoomSnap": 0.5,
 	},
+	"maxBounds": [
+		[
+			-85,
+			-180,
+		],
+		[
+			85,
+			180,
+		],
+	],
+	"maxBoundsViscosity": 1.0,
 	"showMap": true,
 };
 
