@@ -5,7 +5,7 @@
 	>
 		<img
 			:src="dataUser.imageMedium"
-			:alt="dataUser.name.first + ' ' + dataUser.name.last"
+			:alt="dataUser.username"
 			class="user-preview__image"
 		/>
 
