@@ -6,7 +6,7 @@
 		<img
 			:src="dataUser.imageMedium"
 			:alt="dataUser.name.first + ' ' + dataUser.name.last"
-			class="user-preview__img"
+			class="user-preview__image"
 		/>
 
 		<transition name="fade">
@@ -90,7 +90,7 @@
 		padding: 2rem 6rem 2rem 2rem;
 		background-color: $color-brand-2;
 
-		&__img {
+		&__image {
 			width: 8rem;
 			height: 8rem;
 			border: 0.3rem solid $color-white;
