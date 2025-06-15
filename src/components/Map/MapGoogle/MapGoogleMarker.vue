@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	import { MAP_GOOGLE_MARKER_ICON } from "@/constants/MapSettings";
+	import { MAP_GOOGLE_MARKER_ICON } from "@/constants/MapGoogle";
 	import MapMarkerPosition from "@/components/Map/MapMarkerPosition";
 
 	export default {
