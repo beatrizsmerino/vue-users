@@ -5,8 +5,8 @@
 	>
 		<img
 			:src="dataUser.imageMedium"
-			:alt="dataUser.name.first + ' ' + dataUser.name.last"
-			class="user-preview__img"
+			:alt="dataUser.username"
+			class="user-preview__image"
 		/>
 
 		<transition name="fade">
@@ -90,11 +90,16 @@
 		padding: 2rem 6rem 2rem 2rem;
 		background-color: $color-brand-2;
 
-		&__img {
-			width: 8rem;
-			height: 8rem;
+		&__image {
+			width: 10rem;
+			height: 10rem;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
+			background-color: $color-white;
+			color: $color-brand-2;
+			font-size: 1.2rem;
+			line-height: 5rem;
+			text-align: center;
 		}
 
 		&__content {

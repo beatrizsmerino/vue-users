@@ -1,12 +1,11 @@
 <template>
 	<div class="user-detail">
 		<div class="user-detail__header">
-			<div class="user-detail__image">
-				<img
-					:src="user.imageLarge"
-					:alt="user.username"
-				/>
-			</div>
+			<img
+				class="user-detail__image"
+				:src="user.imageLarge"
+				:alt="user.username"
+			/>
 
 			<div class="user-detail__group">
 				<UserData
@@ -142,22 +141,20 @@
 		}
 
 		&__image {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			max-width: 17rem;
-			overflow: hidden;
+			width: 17rem;
+			height: 17rem;
 			border: 0.3rem solid $color-white;
 			border-radius: 50%;
+			background-color: $color-white;
+			color: $color-brand-2;
+			font-size: 1.6rem;
+			line-height: 17rem;
+			text-align: center;
 
 			@include media("sm") {
-				max-width: 15rem;
-			}
-
-			img {
-				width: 100%;
-				height: 100%;
+				width: 15rem;
+				height: 15rem;
+				line-height: 15rem;
 			}
 		}
 
