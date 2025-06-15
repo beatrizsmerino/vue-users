@@ -16,7 +16,7 @@
 <script>
 	import MapGoogleLoader from "@/components/Map/MapGoogle/MapGoogleLoader";
 	import MapGoogleMarker from "@/components/Map/MapGoogle/MapGoogleMarker";
-	import { MAP_GOOGLE_CONFIG_STYLES, MAP_GOOGLE_CONFIG_OPTIONS } from "@/constants/mapSettings";
+	import { MAP_GOOGLE_CONFIG_STYLES, MAP_GOOGLE_CONFIG_OPTIONS } from "@/constants/MapSettings";
 
 	export default {
 		"name": "MapGoogle",

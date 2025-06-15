@@ -3,7 +3,7 @@
 </template>
 
 <script>
-	import { MAP_GOOGLE_MARKER_ICON } from "@/constants/mapSettings";
+	import { MAP_GOOGLE_MARKER_ICON } from "@/constants/MapSettings";
 
 	export default {
 		"name": "MapGoogleMarker",
