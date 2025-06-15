@@ -1,5 +1,5 @@
 <template>
-	<LeafletMapLoader
+	<MapLeafletLoader
 		v-if="showMap"
 		:center="center"
 		:zoom="zoom"
@@ -8,35 +8,35 @@
 		@update:zoom="handleZoomUpdate"
 	>
 		<template #tile>
-			<LeafletMapTile
+			<MapLeafletTile
 				:url="url"
 				:attribution="attribution"
 			/>
 		</template>
 
 		<template #marker>
-			<LeafletMapMarker :position="marker.position" />
+			<MapLeafletMarker :position="marker.position" />
 		</template>
-	</LeafletMapLoader>
+	</MapLeafletLoader>
 </template>
 
 <script>
 	import { latLng, Icon } from "leaflet";
-	import LeafletMapLoader from "@/components/LeafletMap/LeafletMapLoader";
-	import LeafletMapTile from "@/components/LeafletMap/LeafletMapTile";
-	import LeafletMapMarker from "@/components/LeafletMap/LeafletMapMarker";
-	import { LEAFLET_MAP_MARKER_ICON, LEAFLET_MAP_CONFIG_OPTIONS } from "@/constants/mapSettings";
+	import MapLeafletLoader from "@/components/Map/MapLeaflet/MapLeafletLoader";
+	import MapLeafletTile from "@/components/Map/MapLeaflet/MapLeafletTile";
+	import MapLeafletMarker from "@/components/Map/MapLeaflet/MapLeafletMarker";
+	import { MAP_LEAFLET_MARKER_ICON, MAP_LEAFLET_CONFIG_OPTIONS } from "@/constants/MapSettings";
 
 	// eslint-disable-next-line no-underscore-dangle
 	delete Icon.Default.prototype._getIconUrl;
-	Icon.Default.mergeOptions(LEAFLET_MAP_MARKER_ICON);
+	Icon.Default.mergeOptions(MAP_LEAFLET_MARKER_ICON);
 
 	export default {
-		"name": "LeafletMap",
+		"name": "MapLeaflet",
 		"components": {
-			LeafletMapLoader,
-			LeafletMapTile,
-			LeafletMapMarker,
+			MapLeafletLoader,
+			MapLeafletTile,
+			MapLeafletMarker,
 		},
 		"props": {
 			"user": Object,
@@ -45,7 +45,7 @@
 			const position = latLng(parseFloat(this.user.latitude), parseFloat(this.user.longitude));
 
 			return {
-				...LEAFLET_MAP_CONFIG_OPTIONS,
+				...MAP_LEAFLET_CONFIG_OPTIONS,
 				"marker": { position },
 				"center": position,
 				"currentCenter": position,

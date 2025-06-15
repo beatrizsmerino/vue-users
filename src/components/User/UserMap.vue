@@ -1,11 +1,11 @@
 <template>
 	<div class="user-map">
-		<GoogleMap
-			v-if="isGoogleMaps"
+		<MapGoogle
+			v-if="isMapGoogle"
 			:user="user"
 			:api-key="googleApiKey"
 		/>
-		<LeafletMap
+		<MapLeaflet
 			v-else
 			:user="user"
 		/>
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-	import GoogleMap from "@/components/GoogleMap/GoogleMap";
-	import LeafletMap from "@/components/LeafletMap/LeafletMap";
+	import MapGoogle from "@/components/Map/MapGoogle/MapGoogle";
+	import MapLeaflet from "@/components/Map/MapLeaflet/MapLeaflet";
 
 	export default {
 		"name": "UserMap",
 		"components": {
-			GoogleMap,
-			LeafletMap,
+			MapGoogle,
+			MapLeaflet,
 		},
 		"props": {
 			"user": Object,
@@ -31,7 +31,7 @@
 			};
 		},
 		"computed": {
-			isGoogleMaps() {
+			isMapGoogle() {
 				return !!this.googleApiKey;
 			},
 		},

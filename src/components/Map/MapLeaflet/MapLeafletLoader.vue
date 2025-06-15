@@ -16,7 +16,7 @@
 	import { LMap } from "vue2-leaflet";
 
 	export default {
-		"name": "LeafletMapLoader",
+		"name": "MapLeafletLoader",
 		"components": {
 			LMap,
 		},
