@@ -151,5 +151,14 @@
 				color: $color-brand-2;
 			}
 		}
+
+		&--bg-white {
+			background-color: $color-white;
+			color: $color-gray;
+
+			&:hover {
+				background-color: $color-light;
+			}
+		}
 	}
 </style>
