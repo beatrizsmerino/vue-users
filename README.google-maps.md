@@ -31,7 +31,7 @@ To use Google Maps both in development and production, you need to create and co
 
 To use the API key in local development, assign it to the `VUE_APP_TOKEN_GOOGLE_MAPS` environment variable.
 
-1. If you don’t have a `.env.local` file yet, generate it with the `npm run env:create` command.
+1. If you don't have a `.env.local` file yet, generate it with the `npm run env:create` command.
 2. Open `.env.local` file and set your API key to `VUE_APP_TOKEN_GOOGLE_MAPS` variable.
 3. Restart the development server to apply changes with the `npm run serve` command.
 
