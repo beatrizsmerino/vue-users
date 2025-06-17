@@ -3,7 +3,7 @@ const MAP_GOOGLE_COLORS = {
 	"LANDSCAPE": "#42b883",
 	"POINT": "#42b883",
 	"POINT_FILL": "#35495e",
-	"WATER": "lightblue",
+	"WATER": "#a0d6ff",
 };
 
 const MAP_GOOGLE_MARKER_ICON = {
