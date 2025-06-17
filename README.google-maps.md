@@ -13,9 +13,9 @@ This document describes how to configure and securely use a **Google Maps API ke
 
 ## 🔑 Google Maps
 
-### Create a Google Maps API Key
+### Create a Google Maps `API Key`
 
-To use Google Maps both in development and production, you need to create and configure an API key from Google Cloud.
+To use Google Maps both in development and production, you need to create and configure an `API key` from Google Cloud.
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/).
 2. Create or select a project.
@@ -29,10 +29,10 @@ To use Google Maps both in development and production, you need to create and co
 
 ### Development Setup (env)
 
-To use the API key in local development, assign it to the `VUE_APP_TOKEN_GOOGLE_MAPS` environment variable.
+To use the `API key` in local development, assign it to the `VUE_APP_TOKEN_GOOGLE_MAPS` environment variable.
 
 1. If you don't have a `.env.local` file yet, generate it with the `npm run env:create` command.
-2. Open `.env.local` file and set your API key to `VUE_APP_TOKEN_GOOGLE_MAPS` variable.
+2. Open `.env.local` file and set your `API key` to `VUE_APP_TOKEN_GOOGLE_MAPS` variable.
 3. Restart the development server to apply changes with the `npm run serve` command.
 
 > The `.env.local` file is generated from a `.env.local.sample` template to provide a consistent starting point for environment variables across the team. Only `.env.local` is used at runtime and should contain your actual sensitive values, this file is gitignored to avoid exposing secrets.  
@@ -40,11 +40,11 @@ To use the API key in local development, assign it to the `VUE_APP_TOKEN_GOOGLE_
 
 ### Production Setup (GitHub Actions, GitHub Pages)
 
-To use the API key in production builds (GitHub Pages), store `VUE_APP_TOKEN_GOOGLE_MAPS` securely as a GitHub Actions secret.
+To use the `API key` in production builds (GitHub Pages), store `VUE_APP_TOKEN_GOOGLE_MAPS` securely as a GitHub Actions secret.
 
 1. Go in your GitHub repository to [**Settings** → **Secrets** → **Actions**](https://github.com/beatrizsmerino/vue-users/settings/secrets/actions)
-2. Click **"New repository secret"**, set the name as `VUE_APP_TOKEN_GOOGLE_MAPS` and add your API key as the value.
+2. Click **"New repository secret"**, set the name as `VUE_APP_TOKEN_GOOGLE_MAPS` and add your `API key` as the value.
 3. To apply changes use the `npm run deploy` command.
 
-> During the deployment process (`npm run deploy`), the `gh-pages-deploy.mjs` script runs the `npm run build` command, that loads the API key from `.env.local` in local environments. However, this file does not exist in the GitHub Actions environment, so the key must be provided as a GitHub Actions secret. The workflow passes the secret as an environment variable named `VUE_APP_TOKEN_GOOGLE_MAPS`, so that Vue can access the key and inject it into the compiled code—just like in local development.  
-> This ensures that the Vue build has access to the API key without exposing it in the codebase, keeping the production build consistent with local development.
+> During the deployment process (`npm run deploy`), the `gh-pages-deploy.mjs` script runs the `npm run build` command, that loads the `API key` from `.env.local` in local environments. However, this file does not exist in the GitHub Actions environment, so the key must be provided as a GitHub Actions secret. The workflow passes the secret as an environment variable named `VUE_APP_TOKEN_GOOGLE_MAPS`, so that Vue can access the key and inject it into the compiled code—just like in local development.  
+> This ensures that the Vue build has access to the `API key` without exposing it in the codebase, keeping the production build consistent with local development.
