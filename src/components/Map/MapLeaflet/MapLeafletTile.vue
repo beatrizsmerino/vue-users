@@ -25,3 +25,9 @@
 		},
 	};
 </script>
+
+<style lang="scss">
+	.leaflet-container {
+		font-size: 1rem;
+	}
+</style>
