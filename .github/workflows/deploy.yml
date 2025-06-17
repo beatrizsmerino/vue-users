@@ -25,4 +25,5 @@ jobs:
       - name: 🏗️ Deploy project
         env:
           VUE_APP_TOKEN_GOOGLE_MAPS: ${{ secrets.VUE_APP_TOKEN_GOOGLE_MAPS }}
+          VUE_APP_ID_GOOGLE_MAPS: ${{ secrets.VUE_APP_ID_GOOGLE_MAPS }}
         run: npm run deploy
