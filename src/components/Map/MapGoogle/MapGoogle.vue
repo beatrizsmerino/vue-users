@@ -16,7 +16,7 @@
 <script>
 	import MapGoogleLoader from "@/components/Map/MapGoogle/MapGoogleLoader";
 	import MapGoogleMarker from "@/components/Map/MapGoogle/MapGoogleMarker";
-	import { MAP_GOOGLE_CONFIG_STYLES, MAP_GOOGLE_CONFIG_OPTIONS } from "@/constants/MapGoogle";
+	import { MAP_GOOGLE_CONFIG_OPTIONS } from "@/constants/MapGoogle";
 
 	export default {
 		"name": "MapGoogle",
@@ -46,7 +46,7 @@
 			mapConfig() {
 				return {
 					...MAP_GOOGLE_CONFIG_OPTIONS,
-					...MAP_GOOGLE_CONFIG_STYLES,
+					"mapId": process.env.VUE_APP_ID_GOOGLE_MAPS || "",
 					"center": this.mapCenter,
 				};
 			},

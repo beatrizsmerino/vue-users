@@ -29,7 +29,8 @@
 			},
 		},
 		mounted() {
-			const { Marker, InfoWindow } = this.google.maps;
+			const { InfoWindow } = this.google.maps;
+			const { AdvancedMarkerElement } = this.google.marker;
 
 			this.$nextTick(() => {
 				const infoWindowContent = this.$refs.googleMapsPopupRef?.$el;
@@ -42,17 +43,53 @@
 					"content": infoWindowContent,
 				});
 
-				const marker = new Marker({
-					"position": this.marker.position,
-					"marker": this.marker,
+				const marker = new AdvancedMarkerElement({
 					"map": this.map,
-					"icon": MAP_GOOGLE_MARKER_ICON,
+					"position": this.marker.position,
+					"title": this.marker.title || "",
+					"content": this.createSvgIcon(),
+					"gmpClickable": true,
 				});
 
-				marker.addListener("click", () => {
+				marker.addListener("gmp-click", () => {
 					infowindow.open(this.map, marker);
 				});
 			});
+		},
+		"methods": {
+			createSvgIcon() {
+				const {
+					viewBox,
+					width,
+					height,
+					path,
+					strokeOpacity,
+					strokeWeight,
+					strokeColor,
+					fillColor,
+					fillOpacity,
+					scale,
+				} = MAP_GOOGLE_MARKER_ICON;
+				const svgNS = "http://www.w3.org/2000/svg";
+
+				const svg = document.createElementNS(svgNS, "svg");
+				svg.setAttribute("viewBox", viewBox);
+				svg.setAttribute("width", width);
+				svg.setAttribute("height", height);
+
+				const pathEl = document.createElementNS(svgNS, "path");
+				pathEl.setAttribute("d", path);
+				pathEl.setAttribute("stroke", strokeColor);
+				pathEl.setAttribute("stroke-opacity", strokeOpacity);
+				pathEl.setAttribute("stroke-width", strokeWeight);
+				pathEl.setAttribute("fill", fillColor);
+				pathEl.setAttribute("fill-opacity", fillOpacity);
+				pathEl.setAttribute("scale", scale);
+
+				svg.appendChild(pathEl);
+
+				return svg;
+			},
 		},
 	};
 </script>

@@ -20,10 +20,10 @@
 		"deploy": "node gh-pages-deploy.mjs"
 	},
 	"dependencies": {
+		"@googlemaps/js-api-loader": "^1.16.8",
 		"chalk": "^5.4.1",
 		"core-js": "^3.43.0",
 		"execa": "^9.6.0",
-		"google-maps-api-loader": "^1.1.1",
 		"leaflet": "^1.9.4",
 		"node-emoji": "^2.2.0",
 		"svg-symbol-sprite-loader": "^5.1.0",

@@ -3,10 +3,13 @@ const MAP_GOOGLE_COLORS = {
 	"LANDSCAPE": "#42b883",
 	"POINT": "#42b883",
 	"POINT_FILL": "#35495e",
-	"WATER": "lightblue",
+	"WATER": "#a0d6ff",
 };
 
 const MAP_GOOGLE_MARKER_ICON = {
+	"viewBox": "-10 -10 20 20",
+	"width": "3rem",
+	"height": "3rem",
 	"path": "M 0, 0 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0",
 	"strokeOpacity": 0.7,
 	"strokeWeight": 6,
