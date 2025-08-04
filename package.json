@@ -21,7 +21,7 @@
 	},
 	"dependencies": {
 		"@googlemaps/js-api-loader": "^1.16.10",
-		"chalk": "^5.4.1",
+		"chalk": "^5.5.0",
 		"core-js": "^3.44.0",
 		"execa": "^9.6.0",
 		"leaflet": "^1.9.4",
