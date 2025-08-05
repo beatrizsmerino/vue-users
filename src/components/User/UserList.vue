@@ -66,7 +66,7 @@
 	.user-list {
 		display: flex;
 		flex-wrap: wrap;
-		max-width: 85rem;
+		max-width: 90rem;
 		margin: 0 auto;
 		padding: 0;
 
