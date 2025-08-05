@@ -116,7 +116,7 @@
 			line-height: 100%;
 			text-transform: capitalize;
 
-			@include media("sm") {
+			@include media("lg") {
 				font-size: 2rem;
 			}
 		}
@@ -146,7 +146,7 @@
 			&__text {
 				font-size: 2rem;
 
-				@include media("sm") {
+				@include media("lg") {
 					font-size: 1.8rem;
 				}
 			}
