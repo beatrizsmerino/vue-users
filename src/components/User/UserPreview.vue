@@ -87,6 +87,7 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
+		gap: 1.6rem;
 		padding: 2rem 6rem 2rem 2rem;
 		background-color: $color-brand-2;
 
@@ -104,8 +105,7 @@
 
 		&__content {
 			display: inline-block;
-			width: calc(100% - 8rem - 1.6rem);
-			margin-left: 1.6rem;
+			width: calc(100% - 10rem);
 			color: $color-white;
 		}
 
