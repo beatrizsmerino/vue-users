@@ -40,7 +40,7 @@
 
 				<UIButton
 					:to="`/user/${dataUser.username}`"
-					class="button--bg-brand-1 button--width-auto"
+					class="button-more button--bg-brand-1 button--width-auto"
 					icon="fas fa-info"
 					text="more info"
 				/>
@@ -87,6 +87,7 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
+		gap: 1.6rem;
 		padding: 2rem 6rem 2rem 2rem;
 		background-color: $color-brand-2;
 
@@ -104,8 +105,7 @@
 
 		&__content {
 			display: inline-block;
-			width: calc(100% - 8rem - 1.6rem);
-			margin-left: 1.6rem;
+			width: calc(100% - 10rem);
 			color: $color-white;
 		}
 
@@ -116,7 +116,7 @@
 			line-height: 100%;
 			text-transform: capitalize;
 
-			@include media("sm") {
+			@include media("lg") {
 				font-size: 2rem;
 			}
 		}
@@ -146,7 +146,7 @@
 			&__text {
 				font-size: 2rem;
 
-				@include media("sm") {
+				@include media("lg") {
 					font-size: 1.8rem;
 				}
 			}
@@ -172,6 +172,20 @@
 						&__icon {
 							color: $color-white;
 						}
+					}
+				}
+			}
+
+			.button-more {
+				padding: 1rem 1.4rem;
+
+				.button {
+					&__icon {
+						font-size: 1.4rem;
+					}
+
+					&__text {
+						font-size: 1.6rem;
 					}
 				}
 			}
