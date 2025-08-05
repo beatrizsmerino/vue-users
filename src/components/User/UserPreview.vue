@@ -40,7 +40,7 @@
 
 				<UIButton
 					:to="`/user/${dataUser.username}`"
-					class="button--bg-brand-1 button--width-auto"
+					class="button-more button--bg-brand-1 button--width-auto"
 					icon="fas fa-info"
 					text="more info"
 				/>
@@ -172,6 +172,20 @@
 						&__icon {
 							color: $color-white;
 						}
+					}
+				}
+			}
+
+			.button-more {
+				padding: 1rem 1.4rem;
+
+				.button {
+					&__icon {
+						font-size: 1.4rem;
+					}
+
+					&__text {
+						font-size: 1.6rem;
 					}
 				}
 			}
