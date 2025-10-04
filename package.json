@@ -43,7 +43,7 @@
 		"@vue/cli-service": "^5.0.9",
 		"@vue/eslint-config-prettier": "^10.2.0",
 		"dotenv-cli": "^10.0.0",
-		"eslint": "^8.57.0",
+		"eslint": "^9.37.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-json": "^3.1.0",
 		"eslint-plugin-prettier": "^5.5.4",
