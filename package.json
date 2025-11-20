@@ -68,5 +68,12 @@
 	"engines": {
 		"node": "20.18.0",
 		"npm": "10.8.2"
+	},
+	"overrides": {
+		"cross-spawn": "^7.0.6",
+		"webpack-dev-server": "^5.2.1",
+		"@vue/component-compiler-utils": {
+			"postcss": "^8.4.31"
+		}
 	}
 }
