@@ -1,5 +1,5 @@
 {
-	"version": "4.0.2",
+	"version": "4.0.3",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
@@ -22,7 +22,7 @@
 	"dependencies": {
 		"@googlemaps/js-api-loader": "^2.0.2",
 		"chalk": "^5.6.2",
-		"core-js": "^3.46.0",
+		"core-js": "^3.47.0",
 		"execa": "^9.6.0",
 		"leaflet": "^1.9.4",
 		"node-emoji": "^2.2.0",
@@ -54,7 +54,7 @@
 		"postcss": "^8.5.6",
 		"postcss-html": "^1.8.0",
 		"prettier": "^3.6.2",
-		"sass": "^1.93.3",
+		"sass": "^1.94.2",
 		"sass-loader": "^16",
 		"stylelint": "^16.25.0",
 		"stylelint-config-property-sort-order-smacss": "^10.0.0",
@@ -68,5 +68,12 @@
 	"engines": {
 		"node": "20.18.0",
 		"npm": "10.8.2"
+	},
+	"overrides": {
+		"cross-spawn": "^7.0.6",
+		"webpack-dev-server": "^5.2.1",
+		"@vue/component-compiler-utils": {
+			"postcss": "^8.4.31"
+		}
 	}
 }
