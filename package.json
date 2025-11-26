@@ -1,10 +1,26 @@
 {
-	"version": "4.0.3",
+	"version": "4.1.0",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/beatrizsmerino/vue-users.git"
+	},
+	"homepage": "https://beatrizsmerino.github.io/vue-users",
+	"bugs": {
+		"url": "https://github.com/beatrizsmerino/vue-users/issues"
+	},
+	"keywords": [
+		"vue",
+		"javascript",
+		"leaflet",
+		"google-maps",
+		"maps",
+		"api"
+	],
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
