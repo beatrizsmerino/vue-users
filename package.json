@@ -1,5 +1,5 @@
 {
-	"version": "4.2.0",
+	"version": "4.2.1",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
@@ -82,8 +82,8 @@
 		"vue-template-compiler": "^2.7.16"
 	},
 	"engines": {
-		"node": "24.12.0",
-		"npm": "11.6.2"
+		"node": "22.21.1",
+		"npm": "10.9.4"
 	},
 	"overrides": {
 		"cross-spawn": "^7.0.6",
