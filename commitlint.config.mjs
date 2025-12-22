@@ -13,6 +13,10 @@ export default {
 			"always",
 			1000,
 		],
+		"footer-leading-blank": [
+			0,
+			"always",
+		],
 		"footer-max-line-length": [
 			2,
 			"always",
