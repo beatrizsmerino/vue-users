@@ -142,9 +142,6 @@ module.exports = {
 		"scss/no-global-function-names": null,
 		"selector-class-pattern": [
 			"^([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?$",
-			{
-				"resolveNestedSelectors": true,
-			},
 		],
 		"selector-id-pattern": [
 			"error",
