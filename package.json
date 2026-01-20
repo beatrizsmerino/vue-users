@@ -4,7 +4,7 @@
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
 	"author": "beatrizsmerino@gmail.com",
-	"license": "ISC",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/beatrizsmerino/vue-users.git"
