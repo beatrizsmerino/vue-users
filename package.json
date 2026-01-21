@@ -92,6 +92,7 @@
 	},
 	"overrides": {
 		"cross-spawn": "^7.0.6",
+		"stylelint-config-recommended": "17.0.0",
 		"webpack-dev-server": "^5.2.1",
 		"@vue/component-compiler-utils": {
 			"postcss": "^8.4.31"
