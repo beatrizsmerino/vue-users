@@ -1,38 +1,34 @@
 {
-  "arrowParens": "avoid",
-  "bracketSameLine": false,
-  "bracketSpacing": true,
-  "embeddedLanguageFormatting": "auto",
-  "htmlWhitespaceSensitivity": "ignore",
-  "insertPragma": false,
-  "jsxSingleQuote": false,
-  "overrides": [
-    {
-      "files": [
-        ".prettierrc"
-      ],
-      "options": {
-        "parser": "json"
-      }
-    },
-    {
-      "files": [
-        "*.json"
-      ],
-      "options": {
-        "printWidth": 0
-      }
-    }
-  ],
-  "printWidth": 120,
-  "proseWrap": "always",
-  "quoteProps": "preserve",
-  "requirePragma": false,
-  "semi": true,
-  "singleAttributePerLine": true,
-  "singleQuote": false,
-  "tabWidth": 4,
-  "trailingComma": "all",
-  "useTabs": true,
-  "vueIndentScriptAndStyle": true
+	"arrowParens": "avoid",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"embeddedLanguageFormatting": "auto",
+	"htmlWhitespaceSensitivity": "ignore",
+	"insertPragma": false,
+	"jsxSingleQuote": false,
+	"overrides": [
+		{
+			"files": [".prettierrc"],
+			"options": {
+				"parser": "json"
+			}
+		},
+		{
+			"files": ["*.json"],
+			"options": {
+				"printWidth": 0
+			}
+		}
+	],
+	"printWidth": 120,
+	"proseWrap": "always",
+	"quoteProps": "preserve",
+	"requirePragma": false,
+	"semi": true,
+	"singleAttributePerLine": true,
+	"singleQuote": false,
+	"tabWidth": 4,
+	"trailingComma": "all",
+	"useTabs": true,
+	"vueIndentScriptAndStyle": true
 }
