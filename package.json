@@ -33,10 +33,10 @@
 		"env:create": "grep -v '^# ' .env.local.sample > .env.local",
 		"serve": "vue-cli-service serve",
 		"build": "dotenv -e .env.local -- vue-cli-service build",
-		"prettier:fix": "prettier --write \"./**/*.{css,scss,json,yml,yaml,js,cjs,mjs,vue}\"",
-		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,cjs,mjs,vue}\" --fix --ignore-path .eslintignore",
-		"stylelint:fix": "stylelint \"**/*.{css,scss,vue}\" --fix --ignore-path .stylelintignore",
-		"lint": "npm run prettier:fix && npm run stylelint:fix && npm run eslint:fix",
+		"prettier:fix": "prettier --write './**/*.{css,scss,json,yml,yaml,js,cjs,mjs,vue}'",
+		"eslint:fix": "vue-cli-service lint '**/*.{json,js,cjs,mjs,vue}' --fix --ignore-path .eslintignore",
+		"stylelint:fix": "stylelint '**/*.{css,scss,vue}' --fix --ignore-path .stylelintignore",
+		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
 		"deploy": "node gh-pages-deploy.mjs"
 	},
 	"dependencies": {
