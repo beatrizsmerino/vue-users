@@ -39,6 +39,14 @@ Remove `node_modules` and `package-lock.json` to reinstall from scratch.
 npm run install:clean
 ```
 
+### Lint after install
+
+Runs automatically after `npm install` to run `npm run lint` on all project files.
+
+```bash
+npm run postinstall
+```
+
 ### Create file for enviroment variables for development
 
 ```bash
