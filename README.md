@@ -27,6 +27,8 @@ For information on how to configure the Google Maps API, see the dedicated [Goog
 
 ### Install dependencies
 
+Install all dependencies listed in `package.json`.
+
 ```bash
 npm install
 ```
