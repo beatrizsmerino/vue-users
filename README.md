@@ -31,6 +31,14 @@ For information on how to configure the Google Maps API, see the dedicated [Goog
 npm install
 ```
 
+### Clean install dependencies
+
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
+
+```bash
+npm run install:clean
+```
+
 ### Create file for enviroment variables for development
 
 ```bash
