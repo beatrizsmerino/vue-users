@@ -59,6 +59,8 @@ npm run prepare
 
 ### Create file for enviroment variables for development
 
+Create `.env.local` file from `.env.local.sample` for local development.
+
 ```bash
 npm run env:create
 ```
