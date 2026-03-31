@@ -73,14 +73,6 @@ Launch the development server on `localhost` with hot reload.
 npm run serve
 ```
 
-### Compiles and minifies for production
-
-Build and minify the project for production.
-
-```bash
-npm run build
-```
-
 ### Lints and fixes files
 
 Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
@@ -97,6 +89,14 @@ Format CSS, SCSS, JSON, YAML, JS and Vue files with [Prettier](https://prettier.
 npm run prettier:fix
 ```
 
+### Lint and fix files with ESLint
+
+Lint and fix JSON, JS and Vue files with [ESLint](https://eslint.org/).
+
+```bash
+npm run eslint:fix
+```
+
 ### Lint and fix styles with Stylelint
 
 Lint and fix CSS, SCSS and Vue files with [Stylelint](https://stylelint.io/).
@@ -105,12 +105,12 @@ Lint and fix CSS, SCSS and Vue files with [Stylelint](https://stylelint.io/).
 npm run stylelint:fix
 ```
 
-### Lint and fix files with ESLint
+### Compiles and minifies for production
 
-Lint and fix JSON, JS and Vue files with [ESLint](https://eslint.org/).
+Build and minify the project for production.
 
 ```bash
-npm run eslint:fix
+npm run build
 ```
 
 ### Publish in Github Pages
