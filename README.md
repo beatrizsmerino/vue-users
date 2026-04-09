@@ -21,7 +21,7 @@ It has 3 views: the home, the user list and the user detail. There are several b
 
 Is developed with **[Vue 2](https://vuejs.org/)** a Javascript framework, use [Vue Cli](https://cli.vuejs.org/) and has dependencies as [Vue Router](https://router.vuejs.org/), [Vue Leaflet](https://vue2-leaflet.netlify.app/) and [Google Maps](https://www.npmjs.com/package/@googlemaps/js-api-loader).
 
-For information on how to configure the Google Maps API, see the dedicated [Google Maps setup guide](./README.google-maps.md).
+For information on how to configure the Google Maps API, see the dedicated [Google Maps setup guide](./README-google-maps.md).
 
 ## 🚀 Commands
 
