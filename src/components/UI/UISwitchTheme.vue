@@ -74,7 +74,7 @@
 			transform: translate(0, -50%);
 			opacity: 0;
 
-			&:checked + .switch-theme__bullet:before {
+			&:checked + .switch-theme__bullet::before {
 				right: 0.5rem;
 				left: initial;
 				background-color: $color-brand-2;
@@ -93,7 +93,7 @@
 			box-shadow: inset 0 0 1rem rgba($color-black, 0.5);
 			cursor: pointer;
 
-			&:before {
+			&::before {
 				content: "";
 				display: inline-block;
 				position: absolute;
@@ -109,7 +109,7 @@
 			&--rounded {
 				border-radius: 2rem;
 
-				&:before {
+				&::before {
 					border-radius: 50%;
 				}
 			}
@@ -118,13 +118,13 @@
 		&:hover {
 			.switch-theme {
 				&__field {
-					&:checked + .switch-theme__bullet:before {
+					&:checked + .switch-theme__bullet::before {
 						background-color: $color-brand-2;
 					}
 				}
 
 				&__bullet {
-					&:before {
+					&::before {
 						background-color: $color-white;
 					}
 				}
