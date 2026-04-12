@@ -30,7 +30,7 @@
 			width: 1.5em;
 			text-align: left;
 
-			&:after {
+			&::after {
 				content: "";
 				display: inline-block;
 				animation: loaderDots 2.5s infinite steps(4);

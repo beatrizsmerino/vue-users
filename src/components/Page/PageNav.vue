@@ -152,7 +152,7 @@
 			font-weight: 600;
 			text-align: center;
 
-			&:after {
+			&::after {
 				content: "";
 				display: inline-block;
 				position: absolute;
@@ -169,7 +169,7 @@
 			&.router-link-exact-active {
 				color: $color-light;
 
-				&:after {
+				&::after {
 					width: 100%;
 					background-color: $color-light;
 				}
