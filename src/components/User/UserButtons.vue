@@ -165,7 +165,7 @@
 				}
 			}
 
-			&:after {
+			&::after {
 				content: "";
 				display: inline-block;
 				position: absolute;
@@ -183,7 +183,7 @@
 			}
 
 			&:hover {
-				&:after {
+				&::after {
 					@include media("md") {
 						transform: translate3d(-50%, -3.5rem, 0);
 						opacity: 1;
