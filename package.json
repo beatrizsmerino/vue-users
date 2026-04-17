@@ -1,5 +1,5 @@
 {
-	"version": "4.5.2",
+	"version": "4.5.3",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
@@ -72,9 +72,9 @@
 		"file-loader": "^6.2.0",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.4.0",
-		"postcss": "^8.5.9",
+		"postcss": "^8.5.10",
 		"postcss-html": "^1.8.1",
-		"prettier": "^3.8.2",
+		"prettier": "^3.8.3",
 		"sass": "^1.99.0",
 		"sass-loader": "^16",
 		"stylelint": "^16.26.1",
