@@ -1,5 +1,5 @@
 {
-	"version": "4.5.3",
+	"version": "4.5.4",
 	"private": true,
 	"name": "vue-users",
 	"description": "Vue app that get/set a list of random users from an API.",
@@ -67,7 +67,7 @@
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-json": "^3.1.0",
 		"eslint-plugin-prettier": "^5.5.5",
-		"eslint-plugin-vue": "10.6.2",
+		"eslint-plugin-vue": "10.9.0",
 		"eslint-webpack-plugin": "^5.0.3",
 		"file-loader": "^6.2.0",
 		"husky": "^9.1.7",
@@ -87,8 +87,8 @@
 		"vue-template-compiler": "^2.7.16"
 	},
 	"engines": {
-		"node": "24.14.1",
-		"npm": "11.11.0"
+		"node": "24.15.0",
+		"npm": "11.12.1"
 	},
 	"overrides": {
 		"cross-spawn": "^7.0.6",
