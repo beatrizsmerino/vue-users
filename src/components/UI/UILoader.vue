@@ -33,7 +33,7 @@
 			&::after {
 				content: "";
 				display: inline-block;
-				animation: loaderDots 2.5s infinite steps(4);
+				animation: loader-dots 2.5s infinite steps(4);
 			}
 		}
 	}
