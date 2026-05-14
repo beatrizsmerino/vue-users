@@ -137,7 +137,7 @@
 	.page {
 		&.is-theme-dark {
 			.page-body {
-				background-color: $color-brand-2--dark;
+				background-color: $color-brand-2-dark;
 				color: $color-white;
 			}
 
